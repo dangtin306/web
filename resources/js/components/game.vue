@@ -30,7 +30,7 @@
         
 
     <input type="radio" class="btn-check" value="10" v-model="picked" id="10" autocomplete="off">
-    <label class="btn btn-outline-danger" for="10">10. xu</label>
+    <label class="btn btn-outline-danger" for="10">10 xu</label>
 
     <input type="radio" class="btn-check" value="20" v-model="picked" id="20" autocomplete="off">
     <label class="btn btn-outline-danger" for="20">20 xu</label>
