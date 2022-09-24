@@ -27,6 +27,7 @@ Route::get('/testapi.php', 'UserController@testapi');
 Route::post('/testapi.php', 'UserController@testapi');
 Route::post('/logintest','TestController@check');
 Route::post('/order', 'orderController@order');
+Route::post('/order2', 'order2Controller@order');
 Route::post('/random', 'randomController@random');
 
 
@@ -41,6 +42,9 @@ Route::get('/appvue',  function () {
 });
 Route::get('/okluon',  function () {
     return view('welcome');
+});
+Route::get('/naptien',  function () {
+    return view('appvue');
 });
 Route::get('/home',  function () {
     return view('login');

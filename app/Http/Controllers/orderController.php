@@ -23,7 +23,7 @@ class orderController extends Controller
 $key = DB::table('users')->where('key', $apikey )->first();
 
 $username  = $key->username ;
-$orders = DB::table('orders')->orderBy('id')->where('service_name', 'chuyenxu' )->where('username', $username  )->limit(5)->offset(5)->get();
+$orders = DB::table('orders')->where('service_name', 'chuyenxu' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
 
 echo ($orders);
 

@@ -30,7 +30,19 @@
       </div>
     </button>
   <!-- {{ ok2 }} -->
-  <h1 v-if="info">  kết quả {{ info }}</h1>
+  <div v-if="thanhcong">  
+    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+      <div class="flex flex-col items-center justify-center py-2">
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-200 to-purple-600 shadow-lg transform rotate-6 rounded-3xl">
+
+        </div>
+        <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+         <h2 class="text-3xl text-break font-bold">
+          kết quả {{ info }}.</h2></div></div></div>
+    </div>
+    <div v-if="info" class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+  </div>
 </form>
 <a href="javascript:history.go(-1)">
   <button class="btn btn-primary" > quay lại </button>
@@ -58,7 +70,6 @@ console.log(indexOf);
             ok2 : this.$cookies.get("apikey") ,
               name : '',
               age : '',
-              // foo: '',
               info : ''
           }
       },
@@ -86,10 +97,11 @@ console.log(indexOf);
   .catch(error => console.log(error) ,
 
       // this.age = info
-      console.log( this.info )
+      this.thanhcong = this.info.order     ,
+      this.loi = this.info.error     ,
+      console.log( this.thanhcong )
       )
-              this.name = ' '  ,
-              this.age = ''                    
+                           
           }
       }
   }

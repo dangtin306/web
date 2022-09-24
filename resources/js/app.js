@@ -20,11 +20,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 
    import Home from './components/ExampleComponent.vue'
+   import naptien from './components/naptien.vue'
     import test from './components/UsersIndex.vue'
     import time from './components/time.vue'
     import game from './components/game.vue'
     import okluon from './components/test.vue'
     import testcode from './components/testcode.vue'
+    import order from './components/order.vue'
     import VueCookies from 'vue-cookies';
     const app = createApp(
       {
@@ -70,6 +72,24 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: game
+  }
+  ,
+  {
+    path: '/naptien',
+    name: 'naptien',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: naptien
+  }
+  ,
+  {
+    path: '/order',
+    name: 'order',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: order
   }
   ,
   {
