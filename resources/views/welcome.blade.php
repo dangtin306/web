@@ -75,7 +75,7 @@ echo ("Tải khoản của bạn là : ".$username)  ;
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{-- <link rel="stylesheet" type="text/css" href="/css/app.css"> --}}
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <title>VÍ điện tử Hust Media</title>
+        <title>Hust Media</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

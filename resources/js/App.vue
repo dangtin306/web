@@ -208,7 +208,7 @@
                 <!-- <option>Lịch sử</option> -->
                 <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><router-link class="dropdown-item"  to="/test">Lịch sử chuyển tiền</router-link></li>
+                  <li><router-link class="dropdown-item"  to="/test">Lịch sử chuyển xu</router-link></li>
                   <li><router-link class="dropdown-item"  to="/order">Lịch sử đơn hàng</router-link></li>
                 </ul>
              
