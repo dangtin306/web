@@ -13,52 +13,61 @@
          
           <div class='max-w-md mx-auto  space-y-6'>
          
-              <div  x-show="showen">
-    
-                    <div class="space-y-2 text-gray-700" x-data="{isshow:false}">
-                    <label class="block font-medium text-sm   mx-auto " for="password">
-                      Số bình luận {{ socmt }}
-    </label>                <div class="relative  focus-within:text-gray-900 dark:focus-within:text-gray-800 ">
-        
-        <div aria-hidden="true" class="absolute inset-y-0 flex items-center px-4 pointer-events-none">
-            <svg aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-    </svg>
-        </div>
-        <textarea class="pl-11 text-gray-800 pr-4 pr-11 py-2 border-gray-600 rounded-md focus:border-gray-400 focus:ring
-    focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-white dark:border-gray-600 dark:bg-primary-darker
-     dark:focus:ring-offset-dark-eval-1 block w-full" id="name2"
-  
-       name="name2" required="required"   v-model="name2" @keyup="countLine"
-       autocomplete="new-password" placeholder="nhập bình luận bạn muốn tăng" type="text">
-    </textarea>
-
-
-        <div class="absolute right-0 z-30 inset-y-1 flex items-center px-4 ">
-            <button type="button"  class="z-30 ">
-                                    <svg x-show="!isshow" aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-    </svg>                                <svg x-show="isshow" aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
-    </svg>                            </button>
-        </div>
-        </div>
-    
-                        
-                </div>
-                </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                      <label class="form-control-label" for="input-first-name">Chọn dịch vụ</label>
+                      <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn thể loại</label>
       
-                <select class="selectpicker " id="" @change="onChange()"   name="nhamang" v-model="selected">
+                <select  id="countries2" class="selectpicker sp1"  @change="onChange()"   name="nhamang" v-model="theloai">
                     <option v-for="option in options" :value="option.value">
                       {{ option.text }}
                     </option>
                   </select>
+                  <br>
+                  {{ content }}
+                  <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn dịch vụ</label>
+                  <select  id="countries" class="selectpicker sp2"  @change="onChange2()"   name="dichvu" v-model="dichvu">
+                    <option v-for="option in options2" :value="option.id">
+                      {{ option.name }}
+                    </option>
+                  </select>
                     </div>
                   </div>
+                  
+              <div  v-if="chondichvu == 1" x-show="showen">
+    
+                <div class="space-y-2 text-gray-700" x-data="{isshow:false}">
+                <label class="block font-medium text-sm   mx-auto " for="password">
+                  Số bình luận {{ socmt }}
+</label>                <div class="relative  focus-within:text-gray-900 dark:focus-within:text-gray-800 ">
+    
+    <div aria-hidden="true" class="absolute inset-y-0 flex items-center px-4 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+</svg>
+    </div>
+    <textarea class="pl-11 text-gray-800 pr-4 pr-11 py-2 border-gray-600 rounded-md focus:border-gray-400 focus:ring
+focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-white dark:border-gray-600 dark:bg-primary-darker
+ dark:focus:ring-offset-dark-eval-1 block w-full" id="name2"
+
+   name="name2" required="required"   v-model="name2" @keyup="countLine"
+   autocomplete="new-password" placeholder="nhập bình luận bạn muốn tăng" type="text">
+</textarea>
+
+
+    <div class="absolute right-0 z-30 inset-y-1 flex items-center px-4 ">
+        <button type="button"  class="z-30 ">
+                                <svg x-show="!isshow" aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+</svg>                                <svg x-show="isshow" aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
+</svg>                            </button>
+    </div>
+    </div>
+
+                    
+            </div>
+            </div>
                 <button  @click="xacnhan"
                 class='flex break-inside bg-black rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
                 <div class='flex items-center justify-between flex-1'>
@@ -70,6 +79,43 @@
                   </svg>
                 </div>
               </button>
+             
+                <div
+                    class="bg-white border border-slate-300 shadow-lg rounded-md gap-4 p-4  flex-row items-center justify-center">
+                    <section class="w-6 flex flex-col items-center justify-start">
+                        <svg width="100%" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 13.25C10.9518 13.25 13.75 10.4518 13.75 7C13.75 3.54822 10.9518 0.75 7.5 0.75C4.04822 0.75 1.25 3.54822 1.25 7C1.25 10.4518 4.04822 13.25 7.5 13.25Z"
+                                stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M4.3269 7.96143C4.80767 9.69219 6.73075 10.7499 8.46152 10.2691C9.51921 9.8845 10.3846 9.01912 10.6731 7.96143"
+                                stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M10.0481 5.55767C9.91536 5.55767 9.80774 5.45005 9.80774 5.31729C9.80774 5.18453 9.91536 5.0769 10.0481 5.0769"
+                                stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M10.0481 5.5577C10.1809 5.5577 10.2885 5.45008 10.2885 5.31732C10.2885 5.18456 10.1809 5.07693 10.0481 5.07693"
+                                stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M4.95193 5.55767C4.81917 5.55767 4.71155 5.45005 4.71155 5.31729C4.71155 5.18453 4.81917 5.0769 4.95193 5.0769"
+                                stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M4.95197 5.5577C5.08473 5.5577 5.19235 5.45008 5.19235 5.31732C5.19235 5.18456 5.08473 5.07693 4.95197 5.07693"
+                                stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </section>
+                    <section class=" flex flex-col items-start justify-end gap-1">
+                        <h1 class="text-base font-semibold text-zinc-800 antialiased">Tổng : {{ tientra }}</h1>
+                        <p class="text-sm font-medium text-zinc-400 antialiased">
+Tối thiểu {{minorder }} 
+<br>
+Tối đa {{maxorder  }}
+
+                        </p>
+                    </section>
+                  
+                
+            </div>
         </div>
    
         </div>
@@ -98,10 +144,11 @@
                 urlsplit: '0928889798' ,
                 selected: null ,
       options: [
-        { text: 'Viettel', value: 'VIETTEL' },
-        { text: 'Vinaphone', value: 'Vinaphone' },
-        { text: 'Mobifone', value: 'MOBIFONE' }
+        { text: 'TikTok', value: 'tiktok_comment' },
+        { text: 'Facebook', value: 'facebook.buff.cmt' },
+        { text: 'Instagram', value: 'ig_comment' }
       ],
+      options2: null ,
                 lienket: null ,
                 status: null ,
                 status2: null ,
@@ -115,6 +162,7 @@
                 socmt: null ,
                 response: null,
                 status3: null ,
+                tientra: null ,
                 doisodt: null,
                 message: null ,
                 magiaodich : '' ,
@@ -137,7 +185,7 @@
                     console.log(this.getCookie('urlsdt'));
                     $('.selectpicker').selectpicker('refresh');
                     setTimeout(() => {     
-         $('.selectpicker').selectpicker('toggle');  }, 300)
+         $('.sp1').selectpicker('toggle');  }, 300)
                 }, 300) ;
             },
         methods : {
@@ -160,13 +208,56 @@
     countLine(){
 var comment= this.name2;
 this.socmt=(comment=='') ? '0' : (comment.split("\n").length)   ;
+this.tientra=this.tientra1*this.socmt ;
 },
     onChange() {
-        $('.selectpicker').change(function () {
-        var selectedItem = $('.selectpicker').val();
-      this.nhamang = selectedItem ;
-      console.log(this.nhamang) ;
-    });
+    
+   
+
+    if(!this.theloai){
+                    alert('Please điền đầy đủ thông tin')
+                    return
+                }
+               axios
+         .post('./checkdichvu', {
+      theloai: this.theloai ,
+    })
+    .then( response => (
+    console.log(response.data ) ,
+    this.testFunction2(response )
+    ))
+    .catch(error => console.log(error) ,
+        // this.age = info
+      
+       
+       
+  
+        ) ;
+    
+    },
+    onChange2() {
+       
+
+    if(!this.dichvu){
+                    alert('Please điền đầy đủ thông tin')
+                    return
+                }
+               axios
+         .post('./checkdichvu', {
+            dichvu: this.dichvu ,
+    })
+    .then( response => (
+    console.log(response.data ) ,
+    this.testFunction3(response )
+    ))
+    .catch(error => console.log(error) ,
+        // this.age = info
+      
+       
+       
+  
+        ) ;
+    
     },
     testFunction(response)
     {
@@ -186,23 +277,34 @@ this.socmt=(comment=='') ? '0' : (comment.split("\n").length)   ;
 },
     testFunction2(response)
     {
-      this.info = response.data ;
-        if ( this.info.status != "1" )
-        {
-          Swal.fire(this.info.message ) ;
-        }
-        else
-        {
+      this.options2 = response.data ;
+
+console.log(this.options2) ;
+console.log(this.options) ;
+        //   Swal.fire(this.info.message ) ;
+
+  setTimeout(() => {    
+                 
+                    $('.sp2').selectpicker('refresh');
+                    setTimeout(() => {     
+                        $('.sp2').selectpicker('toggle');;  }, 300)
+                }, 300) ;
        
       //     this.urlsdt = this.getCookie('urlsdt') ,
       //  console.log(this.urlsdt) ,
-        this.$router.push('/sms') 
-        }
+  
     },
-    doiso()
+    testFunction3(response)
     {
-  this.doisodt = 1 ;
-  this.status2 = 0 ;
+        this.chondichvu = 1 ,
+      this.info = response.data ,
+      this.service = this.info.service ,
+      this.maxorder = this.info.maxorder ,
+      this.minorder = this.info.minorder ,
+      this.tientra1 = this.info.money ,
+      this.name = this.info.name ,
+      this.content = this.info.content
+      console.log(this.name);
     },
     testFunction4(response)
     {
@@ -211,94 +313,7 @@ this.socmt=(comment=='') ? '0' : (comment.split("\n").length)   ;
       this.phonechuan = this.info.phonechuan ,
       this.money = this.info.money 
     },
-    testFunction3(response)
-    {
-      this.info = response.data ;
-        if ( this.info.status != "1" )
-        {
-          Swal.fire(this.info.message ) ;
-        }
-        else
-        {
-          this.message = this.info.message     ,
-        this.status = this.info.status     ,
-        this.status3 =  this.status  ,
-        this.status2 = 3 ,
     
-        console.log( this.message )
-        }
-      
-    },
-          xacnhan(){
-
-             
-        // var selectedItem = $('.selectpicker').val();
-      this.nhamang = this.selected ;
-      console.log(this.nhamang) ,
-      console.log(this.name2) ;
-     var  str = this.name2 ;
-              this.chedo = 'phone2' ;
-              var  str=str.replace(/(?:\r\n|\r|\n)/g, '<br>');
-              // this.intervalFetchData(); 
-                if(!this.name2){
-                    alert('Please điền đầy đủ thông tin')
-                    return
-                }
-                else if(!this.nhamang){
-                    alert('Please vui lòng chọn nhà mạng')
-                    return
-                }
-               axios
-         .post('./checkmomo', {
-          apikey: this.ok2 ,
-      user2: str ,
-      chedo: this.chedo , 
-      nhamang: this.nhamang ,
-    })
-    .then( response => (
-    console.log(response.data ) ,
-    this.testFunction(response )
-    ))
-    .catch(error => console.log(error) ,
-        // this.age = info
-      
-       
-       
-  
-        ) ;
-        
-       
-            } ,
-            tele(){
-    
-          
-                if(!this.name2){
-                    alert('Vui lòng điền lại sdt')
-                    
-                }
-             else
-             {
-                this.chedo = 'checkxu2'
-              // this.intervalFetchData(); 
-       
-                axios
-         .post('./checkmomo', {
-          apikey: this.ok2 ,
-      magiaodich: this.magiaodich ,
-      user2: this.name2 ,
-      chedo: this.chedo 
-    })
-    .then(response => (  this.testFunction2(response )))
-    .catch(error => console.log(error) ,
-  
-        // this.age = info
-  
-   
-        )
-             }
-          
-                   
-            } ,
            
             btcTrkAPICall: function () {
               this.chedo = 'checkxu' ;

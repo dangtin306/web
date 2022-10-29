@@ -21,10 +21,11 @@ Route::get('/', function () {
 
 Route::group([
     'namespace' => 'App\Http\Controllers',
-
+    
 ], function () {
 Route::get('/testapi.php', 'UserController@testapi');
 Route::post('/testapi.php', 'UserController@testapi');
+Route::post('/checkdichvu', 'checkdichvuController@checkdichvu');
 Route::post('/logintest','TestController@check');
 Route::post('/order', 'orderController@order');
 Route::post('/order2', 'order2Controller@order');

@@ -14,7 +14,7 @@
   
       <div class="container2 ">
       <div class="tinhchinh2">
-    <div class="row ">
+    <div class="row tinhchinh3">
       
     
   <!-- partial:index.partial.html -->
@@ -194,10 +194,10 @@
           <li>
             <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/">Trang chủ</router-link> 
           </li>
-        
-            <li>
-              <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/chuyenxu">Chuyển xu</router-link> 
-            </li>
+        <li>
+            <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/comment">Tăng comment</router-link> 
+          </li>
+
           
             
             <div class="relative inline-flex">
@@ -240,15 +240,27 @@
                 </ul>
              
             </div>
+            <div class="relative inline-flex">
+              <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+              <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+              type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+              Nạp , chuyển xu   </button>
+                <!-- <option>Lịch sử</option> -->
+                <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><router-link class="dropdown-item"  to="/naptien">Nạp xu</router-link></li>
+                  <li><router-link class="dropdown-item"  to="/chuyenxu"> Chuyển xu</router-link></li>
+                
+                </ul>
+             
+            </div>
             <li>
               <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/okluon">Hướng dẫn sử dụng</router-link>
             </li>
             <li>
               <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/testcode">Test tính năng</router-link>
             </li>
-            <li>
-              <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/naptien">Nạp xu</router-link>
-            </li>
+         
             <li>
               <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/aboutus">About Us</router-link>
             </li>
@@ -267,6 +279,9 @@
 .tinhchinh2 {
   max-width: 400px !important;
   margin: auto;
+}
+.tinhchinh3 {
+  --bs-gutter-x: 0rem !important;
 }
 .container2  {
     width: 88%;
