@@ -3,10 +3,11 @@
 
         <article class="information [ card ]">
           <span class="tag">Feature ( Tính năng )</span>
-          <h2 class="title">appssssp iss super app platform.(ứng dụng là nền tảng siêu app . )</h2>
+          <h2 class="title">Về ứng dụng</h2>
           <p class="info">
-            Basic features of super app: Social media advertising platform, global e-wallet, e-commerce,Vietnam's only social network...
-        (Các tính năng cơ bản của siêu app : Nền tảng quảng cáo truyền thông trên mạng xã hội , ví điện tử toàn cầu , thương mại điện tử ,mạng xã hội của người Việt Nam...)</p>
+            Chúng tôi mang đến cho các bạn giải pháp tăng tương tác miễn phí và an toàn.
+cung cấp cho khách hàng những giải pháp tối ưu nhất trong việc tìm kiếm khách hàng, kinh doanh buôn bán hiệu quả trên các nền tảng mạng xã hội. 
+hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền tảng mạng xã hội.</p>
         <router-link to="/okluon">
         <button class="button">
             <span>Learn more ( Xem thêm )</span>
@@ -24,8 +25,11 @@
                 $Free <small>/ m</small>
               </span>
             </span>
-            <h2 class="title">Professional </h2>
-            <p class="info">This plan is for those who have a team already and running a large business.</p>
+            <h2 class="title">Chuyên nghiệp </h2>
+            <p class="info">This plan is for those who have a team already and running a large business.
+
+              ( Bạn có thể lựa chọn cấp độ tài khoản cho những kế hoạch kinh doanh chuyên nghiệp )
+            </p>
             <ul class="features">
               <li>
                 <span class="icon">
@@ -34,7 +38,7 @@
                     <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="currentColor" />
                   </svg>
                 </span>
-                <span><strong>20</strong> team members</span>
+                <span><strong>Free</strong> bắt đầu hoàn toàn miễn phí</span>
               </li>
               <li>
                 <span class="icon">
@@ -43,7 +47,7 @@
                     <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="currentColor" />
                   </svg>
                 </span>
-                <span>Plan <strong>team meetings</strong></span>
+                <span>Giảm giá   <strong>nhiều dịch vụ</strong></span>
               </li>
               <li>
                 <span class="icon">
@@ -52,27 +56,29 @@
                     <path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z" fill="currentColor" />
                   </svg>
                 </span>
-                <span>File sharing</span>
+                <span>Chat realtime qua app chat tự viết 24/7</span>
               </li>
             </ul>
             <router-link to="/plan">
             <button class="button">
-              Choose plan
+              Choose plan ( Nâng cấp ngay )
             </button>
             </router-link>
           </div>
         </article>
         <article class="information [ card ]">
-          <h2 class="title">The only tool you need to schedule your day</h2>
-          <p class="info">Always keep updated with this simple tool on the go, when and where ever you need.</p>
+          <h2 class="title">We Make Things Better</h2>
+          <p class="info">Save thousands to millions of bucks by using single tool
+            for different amazing and great useful admin.</p>
           <dl class="details">
             <div>
-              <dt>Satisfaction</dt>
-              <dd>100%</dd>
+              <dt>Orders</dt>
+              <dd>27,050,905+</dd>
             </div>
             <div>
-              <dt>Customers</dt>
-              <dd>4.5K</dd>
+              <dt>
+                Price Starting From</dt>
+              <dd>Free</dd>
             </div>
           </dl>
         </article>

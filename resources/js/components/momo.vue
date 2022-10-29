@@ -57,6 +57,7 @@ số điện thoại hiện tại là {{ phonechuan }}
                 </svg>
               </div>
             </button>
+            <p>Trò chơi trong app không phài là game cờ bạc , game tạo ra nhằm mục đích giữ chân người dùng , khiến app thú vị hơn và được viết trên ngôn ngữ game html5 </p>
       </div>
     </form>
       </div>

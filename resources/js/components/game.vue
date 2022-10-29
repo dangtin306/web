@@ -52,6 +52,7 @@
 <label class="btn btn-outline-danger" for="5000">5000 xu</label>
 
 <br><br>
+<p>Trò chơi trong app không phài là game cờ bạc , game tạo ra nhằm mục đích giữ chân người dùng , khiến app thú vị hơn và được viết trên ngôn ngữ game html5 </p>
         <button class="btn btn-primary" @click="play">chơi ngay</button>
         <p v-if="error2">{{ error2 }}</p>
         <p v-if="show">{{ show }}</p>
