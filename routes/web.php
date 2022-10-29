@@ -29,8 +29,18 @@ Route::post('/logintest','TestController@check');
 Route::post('/order', 'orderController@order');
 Route::post('/order2', 'order2Controller@order');
 Route::post('/random', 'randomController@random');
+Route::post(
+    '/theloai', 'theloaiController@theloai'
 
+);
+Route::post(
+    '/checkmomo', 'checkmomoController@checkmomo'
 
+);
+Route::post(
+    '/truyen', 'profileController@profile'
+
+);
 Route::get('/test',  function () {
     return view('test'); });
     Route::get('/test2',  function () {
@@ -40,14 +50,67 @@ Route::get('/test',  function () {
 Route::get('/appvue',  function () {
         return view('appvue');
 });
+Route::get('/7IagZVOqvKUHGEsngd1tMQa_m_A3O8SWa2kc.html', 'htmlController@html');
+Route::get('/momo',  function () {
+    return view('welcome');
+});
 Route::get('/okluon',  function () {
     return view('welcome');
 });
 Route::get('/naptien',  function () {
     return view('appvue');
 });
+Route::get('/chuyenxu',  function () {
+    return view('appvue');
+});
+Route::get('/sms',  function () {
+    return view('appvue');
+});
+Route::get('/themsdt',  function () {
+    return view('appvue');
+});
 Route::get('/home',  function () {
     return view('login');
+});
+Route::get('/link',  function () {
+    return view('appvue');
+});
+Route::get('/plan',  function () {
+    return view('appvue');
+});
+Route::get('/testcode',  function () {
+    return view('appvue');
+});
+Route::get('the-loai/{name}', function($name)
+{
+    return view('theloai');
+});
+Route::get('profile/truyen-tranh/{name}', function($name)
+{
+    return view('profile');
+});
+Route::get('/realtime', function()
+{
+    return view('appvue');
+});
+Route::get('/realtime2', function()
+{
+    return view('realtime');
+});
+Route::get('/congdong', function()
+{
+    return view('appvue');
+});
+Route::get('/profile', function()
+{
+    return view('appvue');
+});
+Route::get('/truyen-tranh/{name}', function($name)
+{
+    $name = "https://hust.media/truyen-tranh/".$name ;
+    header('Location: '.$name);
+exit;
+    return view($name);
 });
 }
 ) ;

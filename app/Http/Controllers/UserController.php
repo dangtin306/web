@@ -20,7 +20,7 @@ class UserController extends Controller
 $key = $request->key ;
 $user = $request->user ;
 $money = $request->money  ;
-      $endpoint = "https://tuongtac.fun/testapi.php";
+      $endpoint = "https://hust.media/testapi.php";
 $client = new \GuzzleHttp\Client();
 $id = 5;
 $value = "ABC";

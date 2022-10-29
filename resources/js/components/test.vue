@@ -110,7 +110,7 @@
         </div>
           <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
             <div v-if="picked == 'chay6'"> 
-                <iframe width=100% height="1000px" src="https://hust.pro/dinhcao/video.php/8326794986421719551"  allowfullscreen></iframe>
+              <div id="napbank" ></div> 
             </div>
           
           </div>
@@ -238,15 +238,18 @@ chay4() {
 postscribe('#dangbai', `<script data-telegram-post="freefltiktok/24" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
     
 },
+chay6() {
+  this.picked = 'chay6' ;
+   this.message = this.message.split('').reverse().join('')
+        setTimeout( function() {   
+postscribe('#napbank', `<script data-telegram-post="freefltiktok/33" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
+    
+},
 chay5() {
     this.picked = 'chay5' ,
    this.message = this.message.split('').reverse().join('')
         setTimeout( function() {   
 postscribe('#muafollow', `<script data-telegram-post="freefltiktok/28" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
-    
-},
-chay6() {
-    this.picked = 'chay6' ;
     
 },
     notify() {

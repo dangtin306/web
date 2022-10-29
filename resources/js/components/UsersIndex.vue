@@ -30,7 +30,7 @@
   </template>
   <script>
   import axios from 'axios';
-  import DemoGrid from './Grid.vue'
+  import DemoGrid from './Grid2.vue'
   export default {
     components: {
     DemoGrid
