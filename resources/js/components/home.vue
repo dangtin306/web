@@ -3,7 +3,7 @@
 
         <article class="information [ card ]">
           <span class="tag">Feature ( Tính năng )</span>
-          <h2 class="title">appsp iss super app platform.(ứng dụng là nền tảng siêu app . )</h2>
+          <h2 class="title">appssssp iss super app platform.(ứng dụng là nền tảng siêu app . )</h2>
           <p class="info">
             Basic features of super app: Social media advertising platform, global e-wallet, e-commerce,Vietnam's only social network...
         (Các tính năng cơ bản của siêu app : Nền tảng quảng cáo truyền thông trên mạng xã hội , ví điện tử toàn cầu , thương mại điện tử ,mạng xã hội của người Việt Nam...)</p>
