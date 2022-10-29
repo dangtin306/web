@@ -36,6 +36,8 @@
         "postscribe": "^2.0.8",
         "sweetalert2": "^11.4.34",
         "vue-cookies": "^1.8.1",
+        "vue-google-adsense": "^2.0.0",
+        "vue-scriptx": "^0.2.5",
         "vuex": "^4.0.2"
     }
 }

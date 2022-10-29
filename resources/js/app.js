@@ -38,6 +38,10 @@ import momo from './components/momo.vue'
     import plan from './congdong/plan.vue'
     import profile2 from './congdong/profile.vue'
     import sms from './components/sms.vue'
+    import ScriptX from 'vue-scriptx'
+
+import Ads from 'vue-google-adsense'
+
     import VueCookies from 'vue-cookies';
     import comment from "./order/comment.vue"; 
     import aboutus from "./congdong/aboutus.vue"; 
@@ -47,6 +51,10 @@ import momo from './components/momo.vue'
         }
      
     );
+    app.use(ScriptX);
+    app.use(Ads.Adsense);
+    app.use(Ads.InArticleAdsense);
+    app.use(Ads.InFeedAdsense);
     app.use(VueCookies);
     app.use(store);
 // app.use(store);

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\DB;
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    
     </head>
     <body>
         
