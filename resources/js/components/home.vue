@@ -85,12 +85,14 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
       </div>
       <br>
 
-      <ins class="adsbygoogle"
-      style="display:block"
+      <amp-ad width="100vw" height="320"
+      type="adsense"
       data-ad-client="ca-pub-4574266110812955"
-      data-ad-slot="3259681051"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
+      data-ad-slot="8795043992"
+      data-auto-format="rspv"
+      data-full-width="">
+   <div overflow=""></div>
+ </amp-ad>
 
 </template>
 
