@@ -64,7 +64,7 @@ Route::get('/chuyenxu',  function () {
     return view('appvue');
 });
 Route::get('/sms',  function () {
-    return view('appvue');
+    return view('welcome');
 });
 Route::get('/themsdt',  function () {
     return view('appvue');
@@ -82,6 +82,9 @@ Route::get('/plan',  function () {
     return view('appvue');
 });
 Route::get('/testcode',  function () {
+    return view('appvue');
+});
+Route::get('/comment',  function () {
     return view('appvue');
 });
 Route::get('the-loai/{name}', function($name)

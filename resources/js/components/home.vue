@@ -83,8 +83,41 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
           </dl>
         </article>
       </div>
+      <br>
+
+      <amp-ad width="100vw" height="320"
+      type="adsense"
+      data-ad-client="ca-pub-4574266110812955"
+      data-ad-slot="3259681051"
+      data-auto-format="rspv"
+      data-full-width="">
+   <div overflow=""></div>
+ </amp-ad>
+
 </template>
 
 <style lang="scss" scoped>
 @import "cards.scss"; //new scss file from resources/sass directory
 </style>
+<script>
+ export default {
+          data() {
+              return {
+                  loading: false,
+                  users: null,
+                  userss: null,
+                  size: null ,
+                  ketqua: null ,
+                  lienket: null,
+                  hientruyen: null ,
+                  error: null,
+                  infoBox: null,
+                  width:0,
+                  height:0
+              };
+          },
+          created() {
+
+        },}
+          
+              </script>

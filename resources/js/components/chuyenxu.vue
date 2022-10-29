@@ -30,7 +30,7 @@
       </div>
     </button>
     <br>
- <p>Xu ở đây là điểm trong app nó không có ý nghĩa là VND </p>
+ <p>Xu ở đây là điểm trong app nó không có ý nghĩa về mặt tiền tệ </p>
   <!-- {{ ok2 }} -->
   <!-- <div v-if="thanhcong">  
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">

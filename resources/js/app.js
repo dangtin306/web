@@ -39,7 +39,8 @@ import momo from './components/momo.vue'
     import profile2 from './congdong/profile.vue'
     import sms from './components/sms.vue'
     import VueCookies from 'vue-cookies';
-    import VueCardStack from "./components/card.js"; 
+    import comment from "./order/comment.vue"; 
+    import aboutus from "./congdong/aboutus.vue"; 
     const app = createApp(
       {
           // propsData: { foo }
@@ -52,6 +53,7 @@ import momo from './components/momo.vue'
 // app.use(BootstrapVue)
 app.component('appvue', require('./App.vue').default) ;
 app.component('theloai', require('./components/theloai.vue').default) ;
+app.component('notfound', require('./components/404.vue').default) ;
 app.component('profile', require('./components/profile.vue').default) ;
 app.component('ExampleComponent', require('./components/chuyenxu.vue').default) ;
 // app.component('okluon', require('./App.vue').default)  ;
@@ -66,6 +68,16 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
+  },
+  {
+    path: '/aboutus',
+    name: 'aboutus',
+    component: aboutus
+  },
+  {
+    path: '/comment',
+    name: 'comment',
+    component: comment
   },
   {
     path: '/history',

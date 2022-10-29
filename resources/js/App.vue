@@ -249,6 +249,9 @@
             <li>
               <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/naptien">Nạp xu</router-link>
             </li>
+            <li>
+              <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/aboutus">About Us</router-link>
+            </li>
           </ul>
         </div>
     
