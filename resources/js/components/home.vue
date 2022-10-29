@@ -87,7 +87,9 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
 
     <Adsense
     data-ad-client="ca-pub-4574266110812955"
-      data-ad-slot="8795043992">
+     data-ad-slot="8795043992"
+     data-ad-format="auto"
+     data-full-width-responsive="true">
 </Adsense>
 
 </template>
