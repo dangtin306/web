@@ -113,7 +113,7 @@ Route::get('/profile', function()
 });
 Route::get('/truyen-tranh/{name}', function($name)
 {
-    $name = "https://hust.media/truyen-tranh/".$name ;
+    $name = "https://tuongtac.fun/truyen-tranh/".$name ;
     header('Location: '.$name);
 exit;
     return view($name);
