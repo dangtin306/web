@@ -23,6 +23,7 @@ import momo from './components/momo.vue'
    import chuyenxu from './components/chuyenxu.vue'
    import naptien from './components/naptien.vue'
     import test from './components/UsersIndex.vue'
+    import history from './components/history.vue'
     import realtime from './components/realtime.vue'
     import time from './components/time.vue'
     import game from './components/game.vue'
@@ -65,6 +66,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
+  },
+  {
+    path: '/history',
+    name: 'history',
+    component: history
   },
   {
     path: '/plan',

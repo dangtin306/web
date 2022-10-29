@@ -47,7 +47,7 @@
   
     </label>
     <!-- TAB 3 -->
-    <input type="radio" name="tab" onclick="loading03()"  id="tab-03" />
+    <input @click="tap3" type="radio" name="tab" onclick="loading03()"  id="tab-03" />
     <label for="tab-03">
       <svg>
         <use xlink:href="#icon-03" class="icon" />
@@ -307,6 +307,9 @@ tap1(){
 },
 tap2(){
   this.$router.push('/okluon') 
+},
+tap3(){
+  this.$router.push('/history') 
 },
 tap4(){
   this.$router.push('/profile') 

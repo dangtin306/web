@@ -72,6 +72,9 @@ Route::get('/themsdt',  function () {
 Route::get('/home',  function () {
     return view('login');
 });
+Route::get('/history',  function () {
+    return view('appvue');
+});
 Route::get('/link',  function () {
     return view('appvue');
 });

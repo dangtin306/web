@@ -25,7 +25,7 @@
         </div>
       </div> -->
       <div v-if="read != 1" class="p-4 md:w-1/3" >
-    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg ">
         <div class="w-full">
             <div class="w-full flex p-2">
                 <div class="p-2 ">
