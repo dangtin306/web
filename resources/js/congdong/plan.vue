@@ -58,7 +58,7 @@ Chức năng này đang cập nhật hiện chưa có
                 <td class="p-3">{{ item.thucnhan }}</td>
                 <td class="p-3"  >
                   
-                  <div v-bind:id="item.cuphap">{{ item.cuphap }} gửi {{ sonhantin }} <span @click="saochepp(item.cuphap)">
+                  <div v-bind:id="item.cuphap">{{ item.cuphap }} <span @click="saochepp(item.cuphap)">
                   <div class="float-right">
                   <button class='text-xs font-medium rounded-full px-4 py-2 space-x-1 bg-white text-black'>
                <div v-if="id == item.cuphap ">{{ dasaochep }}</div> <div v-else > Nhận thưởng ngay</div> 
@@ -104,12 +104,12 @@ Chức năng này đang cập nhật hiện chưa có
                 sonhantin: null,
                 VIETTEL: 
 [{ tongdai: '9029' } ,
-  { tien: 'Nạp 10,000' , thucnhan: '+5,000' , cuphap: 'MOZ DK10 3QAFK NT_napxu' }, 
-{ tien: 'Nạp 20,000' , thucnhan: '+10,000' , cuphap: 'MOZ DK20 3QAFK NT_napxu' }, 
-{ tien: 'Nạp 50,000' , thucnhan: '+25,000' , cuphap: 'MOZ DK50 3QAFK NT_napxu' }, 
-{ tien: 'Nạp 100,000' , thucnhan: '+50,000' , cuphap: 'MOZ DK100 3QAFK NT_napxu' }, 
-{ tien: 'Nạp 200,000' , thucnhan: '+100,000' , cuphap: 'MOZ DK200 3QAFK NT_napxu' }, 
-{ tien: 'Nạp 500,000' , thucnhan: '+250,000' , cuphap: 'MOZ DK500 3QAFK NT_napxu' },
+  { tien: '10,000' , thucnhan: '+100' , cuphap: 'Nhận 100 xu' }, 
+{ tien: '20,000' , thucnhan: '+300' , cuphap: 'Nhận 300 xu giảm giá 1% tổng dịch vụ' }, 
+{ tien: '30,000' , thucnhan: '+500' , cuphap: 'Nhận 500 xu' }, 
+{ tien: '50,000' , thucnhan: '+1000' , cuphap: 'Chưa có' }, 
+{ tien: '70,000' , thucnhan: '+100,000' , cuphap: 'Chưa có' }, 
+{ tien: '100,000' , thucnhan: '+250,000' , cuphap: 'Chưa có' },
 ],
             }},
            

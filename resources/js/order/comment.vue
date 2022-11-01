@@ -18,7 +18,7 @@
                       <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn thể loại</label>
       
                 <select  id="countries2" class="
-                selectpicker sp1 form-control"  @change="onChange()"   name="nhamang" v-model="theloai">
+                selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="theloai">
                     <option v-for="option in options" :value="option.value">
                       {{ option.text }}
                     </option>
