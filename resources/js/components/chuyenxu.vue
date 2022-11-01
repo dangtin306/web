@@ -85,6 +85,7 @@ console.log(indexOf);
               const newInformation = {
                   id: Math.floor(Math.random() * 100000),
                   name : this.name,
+                  service : '34839' ,
                   age : this.age,
                   reminder : this.reminder
               }

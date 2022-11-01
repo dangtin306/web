@@ -166,6 +166,28 @@ else if ( $chedo == 'checkxu' )
     ]);
  }
 }
+else if ( $chedo == 'checkxu3' )
+{
+  if( $key  ) {
+
+    return json_encode([
+      'status' => 0,
+      'money' => $checkxu ,
+      'chietkhau' => $key->ck
+      
+      ]);
+
+  }
+ else
+ {
+  return json_encode([
+    'status' => 0,
+    'money' => $checkxu ,
+    'phonechuan' => 'chưa có'
+    
+    ]);
+ }
+}
 else if ( $chedo == 'checkxu2' )
 {
   if( isset($checkmomo->phone ) ) {
