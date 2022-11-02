@@ -118,7 +118,9 @@
         </svg>
         </button></div>
   </div>
-  </div></div></div>
+  </div></div>
+  <br><br><br>
+</div>
 
   </div>
   </template>
@@ -167,17 +169,20 @@
 
     },
         created() {
-            
+        
                 this.fetchData();
                 this.intervalFetchData() ;
-                console.log(this.getCookie('urlsdt'));
+
                 this.onWindowLoad();
                 $('.selectpicker').selectpicker('refresh');
                 window.addEventListener("load", this.onWindowLoad());
                 setTimeout(() => {    
-                    console.log(this.getCookie('urlsdt'));
+      
                     $('.selectpicker').selectpicker('refresh');
-                    setTimeout(() => {     
+                    setTimeout(() => {
+                      this.urlsdt = this.getCookie('urlsdt') ,
+                      this.urlsdt =  decodeURI( this.urlsdt) ,
+                      console.log(this.urlsdt) ;     
          $('.selectpicker').selectpicker('toggle');  }, 300)
                 }, 300) ;
             },
@@ -236,9 +241,7 @@
         else
         {
        
-      //     this.urlsdt = this.getCookie('urlsdt') ,
-      //  console.log(this.urlsdt) ,
-        this.$router.push('/sms') 
+        this.$router.push(this.urlsdt) 
         }
     },
     doiso()
