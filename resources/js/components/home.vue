@@ -64,6 +64,11 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
               Choose plan ( Nâng cấp ngay )
             </button>
             </router-link>
+            <a href="https://tecom.pro">
+              <button class="button">
+          test web
+              </button>
+              </a>
           </div>
         </article>
         <article class="information [ card ]">

@@ -11477,13 +11477,13 @@ video {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 .my-3 {
   margin-top: 0.75rem;
@@ -11504,9 +11504,6 @@ video {
 }
 .mb-4 {
   margin-bottom: 1rem;
-}
-.mt-4 {
-  margin-top: 1rem;
 }
 .mb-5 {
   margin-bottom: 1.25rem;
@@ -11537,6 +11534,9 @@ video {
 }
 .mr-1 {
   margin-right: 0.25rem;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .-mt-7 {
   margin-top: -1.75rem;
@@ -11583,9 +11583,6 @@ video {
 .h-7 {
   height: 1.75rem;
 }
-.h-5 {
-  height: 1.25rem;
-}
 .h-12 {
   height: 3rem;
 }
@@ -11597,6 +11594,9 @@ video {
 }
 .h-4 {
   height: 1rem;
+}
+.h-5 {
+  height: 1.25rem;
 }
 .h-16 {
   height: 4rem;
@@ -11622,9 +11622,6 @@ video {
 .w-10 {
   width: 2.5rem;
 }
-.w-5 {
-  width: 1.25rem;
-}
 .w-12 {
   width: 3rem;
 }
@@ -11645,6 +11642,9 @@ video {
 }
 .w-4 {
   width: 1rem;
+}
+.w-5 {
+  width: 1.25rem;
 }
 .w-16 {
   width: 4rem;
@@ -11855,13 +11855,13 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
-.border-gray-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(75 85 99 / var(--tw-border-opacity));
-}
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 .border-gray-400 {
   --tw-border-opacity: 1;
@@ -12038,6 +12038,10 @@ video {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -12045,10 +12049,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 .px-5 {
   padding-left: 1.25rem;
@@ -12067,15 +12067,6 @@ video {
 .pr-10 {
   padding-right: 2.5rem;
 }
-.pl-11 {
-  padding-left: 2.75rem;
-}
-.pr-4 {
-  padding-right: 1rem;
-}
-.pr-11 {
-  padding-right: 2.75rem;
-}
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -12084,6 +12075,15 @@ video {
 }
 .pr-3 {
   padding-right: 0.75rem;
+}
+.pl-11 {
+  padding-left: 2.75rem;
+}
+.pr-4 {
+  padding-right: 1rem;
+}
+.pr-11 {
+  padding-right: 2.75rem;
 }
 .text-left {
   text-align: left;
