@@ -56,6 +56,7 @@ Route::get('/N3mlivOzCXrCPCX3Bgv-8q-YQUbD1UqvWn0D.html', 'htmlController@html');
 Route::get('/momo',  function () {
     return view('welcome');
 });
+
 Route::get('/okluon',  function () {
     return view('welcome');
 });
@@ -110,6 +111,10 @@ Route::get('/congdong', function()
     return view('appvue');
 });
 Route::get('/profile', function()
+{
+    return view('appvue');
+});
+Route::get('/nativeapp/{name}', function($name)
 {
     return view('appvue');
 });
