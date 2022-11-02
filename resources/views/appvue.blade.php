@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\DB;
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#ffe4e1">
         <meta name="apple-mobile-web-app-title" content="hust.media">
-        <link rel="manifest" href="https://hust.media/manifest.json">
         <link rel="apple-touch-icon" href="https://i.imgur.com/33DklOK.png">
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
