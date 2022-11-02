@@ -11813,9 +11813,6 @@ video {
 .rounded-md {
   border-radius: 0.375rem;
 }
-.rounded {
-  border-radius: 0.25rem;
-}
 .rounded-l {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -11836,18 +11833,11 @@ video {
 .border-0 {
   border-width: 0px;
 }
-.border-x-4 {
-  border-left-width: 4px;
-  border-right-width: 4px;
-}
 .border-r-2 {
   border-right-width: 2px;
 }
 .border-b-2 {
   border-bottom-width: 2px;
-}
-.border-solid {
-  border-style: solid;
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
@@ -11884,10 +11874,6 @@ video {
 .border-slate-300 {
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
-}
-.border-indigo-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 .border-opacity-60 {
   --tw-border-opacity: 0.6;
@@ -11987,9 +11973,6 @@ video {
 .bg-cover {
   background-size: cover;
 }
-.bg-clip-padding {
-  background-clip: padding-box;
-}
 .bg-center {
   background-position: center;
 }
@@ -12018,9 +12001,6 @@ video {
 }
 .p-0 {
   padding: 0px;
-}
-.p-2\.5 {
-  padding: 0.625rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -12077,10 +12057,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
 }
 .pt-4 {
   padding-top: 1rem;
@@ -12320,9 +12296,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
-.hover\:border-t-4:hover {
-  border-top-width: 4px;
-}
 .hover\:border-gray-400:hover {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -12367,18 +12340,6 @@ video {
 .focus\:border-gray-400:focus {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
-}
-.focus\:border-blue-600:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity));
-}
-.focus\:bg-white:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.focus\:text-gray-700:focus {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 .focus\:outline-none:focus {
   outline: 2px solid transparent;

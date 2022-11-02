@@ -9,8 +9,12 @@
     <router-link type="button" class="mx-2  btn btn-primary" to="/themsdt">Sửa số điện thoại</router-link>
 
     
+
+
+  <p type="button"  class="mx-2 btn btn-primary">Nhà Mạng Hiện Tại <br>  {{ nhamang2 }}</p>
+
+
 </div>
-   
           <div class=" items-center justify-center">
 
         <table class="table-auto relative w-full border border-separate text-break text-sm">
@@ -105,6 +109,7 @@ MOBIFONE:
             }
         },
         created() {
+          this.setCookie('urlsdt','/sms', 1) ;
           this.chedo = 'checkxu2' ;
               axios    
                   .post('./checkmomo', {
@@ -135,7 +140,9 @@ MOBIFONE:
             this.ketqua = 'đã sao chép ' ;
      
         await navigator.clipboard.writeText(urlsplit);
+      
         this.ketqua = 'đã sao chép ' ;
+        NativeAndroid.copyToClipboard(urlsplit);
     
     },
     saochepp(id)
@@ -154,15 +161,13 @@ navigator.clipboard.writeText(copyText);
       this.id = id ;
       this.dasaochep = 'Đã sao chép' ;
       console.log(this.dasaochep);
+      NativeAndroid.copyToClipboard(urlsplit);
     },
     testFunction(response)
     {
       this.info1 = response.data ,
       this.status = this.info1.status     ,
-        this.message = this.info1.message    ,
-        this.setCookie('urlsdt','/sms', 1),
-        console.log(this.getCookie('urlsdt')) ;
-
+        this.message = this.info1.message    
     },
     getCookie(cookieName) {
   let cookie = {};
@@ -208,6 +213,7 @@ navigator.clipboard.writeText(copyText);
       }
       else if (this.nhamang)
       {
+        this.nhamang2 = this.nhamang ; 
         if(  this.nhamang ==  'VIETTEL')
 {
 this.nhamang = this.VIETTEL 

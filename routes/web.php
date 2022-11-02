@@ -23,6 +23,7 @@ Route::group([
     'namespace' => 'App\Http\Controllers',
     
 ], function () {
+
 Route::get('/testapi.php', 'UserController@testapi');
 Route::post('/testapi.php', 'UserController@testapi');
 Route::post('/checkdichvu', 'checkdichvuController@checkdichvu');

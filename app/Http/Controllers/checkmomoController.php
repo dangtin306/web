@@ -237,6 +237,87 @@ else if ( $chedo == 'checkxu2' )
     ]);
  }
 }
+else if ( $chedo == 'doiso' )
+{
+  if( isset($checkmomo ) ) {
+    if ( $checkmomo->username )
+    {
+        $username = $checkmomo->username ;
+        $affected = DB::table('checkmomo')
+          ->where('username', $username2)
+          ->update(['phone' => '' ,
+          'chedo' => '' ,
+          'keyweb' => $keyweb ,
+          'checkgiaodich' => 'NO'
+        
+        ]);
+        return json_encode([
+            'status' => 1,
+            'message' => '  Chúc mừng bạn dữ liệu đã lưu vào hệ thống vui lòng chuyển chuyển 100 vnd vào số điện thoải ở dưới để xác nhận chính chủ ',
+    
+        ]);
+    }
+}
+
+}
+else if ( $chedo == 'checkxu4' )
+{
+  if( isset($checkmomo->phone ) ) {
+    $phone = $request->user2 ;
+    $checkphone = DB::table('checkmomo')->where('checkgiaodich', 'YES' )->where('phone', $phone )->where('username', $username2 )->first();
+    $checkphone2 = DB::table('checkmomo')->where('checkgiaodich', 'YES' )->where('username', $username2 )->first();
+    $chedomomo = $checkmomo->chedo ;
+    if ($chedomomo == '' )
+    {
+      return json_encode([
+        'status' => 2,
+        'money' => $checkxu ,
+        'phonechuan' => '' ,
+        'message' => 'chưa chọn chế độ'
+        ]);
+    }
+    else if (isset($checkphone))
+    {
+      return json_encode([
+        'status' => 1,
+        'money' => $checkxu ,
+        'phonechuan' => $checkmomo->phone,
+        'chedo' => $checkmomo->chedo,
+        'message' => 'thành công' 
+        ]);
+    }
+    else if (isset($checkphone2))
+    {
+      return json_encode([
+        'status' => 1,
+        'money' => $checkxu ,
+        'phonechuan' => $checkmomo->phone,
+        'chedo' => $checkmomo->chedo,
+        'message' => 'thành công' 
+        ]);
+    }
+    else
+    {
+      return json_encode([
+        'status' => 0,
+        'money' => $checkxu ,
+        'phonechuan' => '' ,
+        'message' => 'chưa xác nhận số dt ở telegram'
+        ]);
+    }
+   
+
+  }
+ else
+ {
+  return json_encode([
+    'status' => 0,
+    'money' => $checkxu ,
+    'phonechuan' => '' ,
+    'message' => 'chưa nhập sdt' 
+    ]);
+ }
+}
 else if ( $chedo == 'chan' )
 {
   if( isset($checkmomo->checkchedo )  )

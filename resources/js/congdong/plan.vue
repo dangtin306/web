@@ -105,8 +105,8 @@ Chức năng này đang cập nhật hiện chưa có
                 VIETTEL: 
 [{ tongdai: '9029' } ,
   { tien: '10,000' , thucnhan: '+100' , cuphap: 'Nhận 100 xu' }, 
-{ tien: '20,000' , thucnhan: '+300' , cuphap: 'Nhận 300 xu giảm giá 1% tổng dịch vụ' }, 
-{ tien: '30,000' , thucnhan: '+500' , cuphap: 'Nhận 500 xu' }, 
+{ tien: '20,000' , thucnhan: '+300' , cuphap: 'Nhận 400 xu ( 100 xu từ cấp độ trước đó ) giảm giá 1% tổng dịch vụ' }, 
+{ tien: '30,000' , thucnhan: '+500' , cuphap: 'Nhận 900 xu ( 400 xu từ cấp độ trước đó )' }, 
 { tien: '50,000' , thucnhan: '+1000' , cuphap: 'Chưa có' }, 
 { tien: '70,000' , thucnhan: '+100,000' , cuphap: 'Chưa có' }, 
 { tien: '100,000' , thucnhan: '+250,000' , cuphap: 'Chưa có' },
