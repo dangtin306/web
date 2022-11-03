@@ -8,7 +8,7 @@ số điện thoại hiện tại là {{ phonechuan }}
     
 
 <div v-if="checktele == 'YES' || checktele == 'chedo' || status2 == 1 ||  status3 == 0 "  >
-<div class="col-xl-4 mt-0">
+<div class="">
     <div  class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
         <p class="font-normal text-gray-700 dark:text-gray-400">  Chọn chế độ nạp.
        <br>

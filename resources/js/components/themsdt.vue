@@ -46,7 +46,7 @@
                         
                 </div>
                 </div>
-                <div class="col-lg-6">
+                <div v-if="urlsdt != '/momo' " class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-first-name">Chọn Nhà mạng</label>
       
@@ -57,7 +57,7 @@
                   </select>
                     </div>
                   </div>
-                <button type='submit' @click="onSubmit"
+                <button v-if="urlsdt != '/momo' " type='submit' @click="onSubmit"
                 class='flex break-inside bg-black rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
                 <div class='flex items-center justify-between flex-1'>
                   <span class='text-lg font-medium text-white'>Xác nhận</span>
@@ -68,6 +68,17 @@
                   </svg>
                 </div>
               </button>
+              <button v-if="urlsdt == '/momo' " type='submit' @click="onSubmit2"
+              class='flex break-inside bg-black rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
+              <div class='flex items-center justify-between flex-1'>
+                <span class='text-lg font-medium text-white'>Xác nhận</span>
+                <svg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path fillRule='evenodd' clipRule='evenodd'
+                    d='M0 8.71423C0 8.47852 0.094421 8.25246 0.262491 8.08578C0.430562 7.91911 0.658514 7.82547 0.896201 7.82547H13.9388L8.29808 2.23337C8.12979 2.06648 8.03525 1.84013 8.03525 1.60412C8.03525 1.36811 8.12979 1.14176 8.29808 0.974875C8.46636 0.807989 8.6946 0.714233 8.93259 0.714233C9.17057 0.714233 9.39882 0.807989 9.5671 0.974875L16.7367 8.08499C16.8202 8.16755 16.8864 8.26562 16.9316 8.3736C16.9767 8.48158 17 8.59733 17 8.71423C17 8.83114 16.9767 8.94689 16.9316 9.05487C16.8864 9.16284 16.8202 9.26092 16.7367 9.34348L9.5671 16.4536C9.39882 16.6205 9.17057 16.7142 8.93259 16.7142C8.6946 16.7142 8.46636 16.6205 8.29808 16.4536C8.12979 16.2867 8.03525 16.0604 8.03525 15.8243C8.03525 15.5883 8.12979 15.362 8.29808 15.1951L13.9388 9.603H0.896201C0.658514 9.603 0.430562 9.50936 0.262491 9.34268C0.094421 9.17601 0 8.94995 0 8.71423Z'
+                    fill='white' />
+                </svg>
+              </div>
+            </button>
         </div>
       </form>
         </div>
@@ -155,6 +166,7 @@
                 ketqua: null  ,
                 money: null ,
                 response: null,
+                urlsdt: null,
                 status3: null ,
                 doisodt: null,
                 message: null ,
@@ -290,7 +302,8 @@
                 else if(!this.nhamang){
                     alert('Please vui lòng chọn nhà mạng')
                     return
-                }
+ 
+                  }
                axios
          .post('./checkmomo', {
           apikey: this.ok2 ,
@@ -312,6 +325,33 @@
         
        
             } ,
+            onSubmit2(e)
+            {
+              this.chedo = 'phone' ,
+              // this.intervalFetchData(); 
+                e.preventDefault()
+                if(!this.name2){
+                    alert('Please điền đầy đủ thông tin')
+                    return
+                }
+               axios
+         .post('./checkmomo', {
+          apikey: this.ok2 ,
+      user2: this.name2 ,
+      chedo: this.chedo , 
+    })
+    .then( response => (
+    console.log(response.data ) ,
+    this.testFunction(response )
+    ))
+    .catch(error => console.log(error) ,
+        // this.age = info
+      
+       
+       
+  
+        ) ;
+            },
             tele(){
     
           
@@ -361,33 +401,7 @@
               setInterval(() => {    
                   this.btcTrkAPICall();
                   }, 5000 );    
-          } ,
-          chan() {
-              this.chedo  = 'chan' ,
-              axios
-         .post('./checkmomo', {
-          apikey: this.ok2 ,
-      chedo: this.chedo 
-    })
-    .then(response => (this.testFunction3(response  )))
-    .catch(error => console.log(error) 
-  
-        // this.age = info
-  
-        ) 
-          } ,
-          le() {
-              this.chedo  = 'chan' ,
-              axios
-         .post('./checkmomo', {
-          apikey: this.ok2 ,
-      chedo: this.chedo 
-    })
-    .then(response => (this.testFunction3(response  )))
-    .catch(error => console.log(error) 
-        )
-  
-          }
+          } 
         }
     }
     

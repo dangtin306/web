@@ -211,6 +211,10 @@ navigator.clipboard.writeText(copyText);
       {
         this.$router.push('/themsdt')
       }
+      else  if ( !this.nhamang )
+      {
+        this.$router.push('/themsdt')
+      }
       else if (this.nhamang)
       {
         this.nhamang2 = this.nhamang ; 
@@ -226,6 +230,7 @@ else if (this.nhamang == 'MOBIFONE')
 {
   this.nhamang = this.MOBIFONE 
 }
+
         var obj = JSON.stringify(this.nhamang);
                 this.sonhantin = this.nhamang[0].tongdai ;
                 console.log (this.sonhantin);
