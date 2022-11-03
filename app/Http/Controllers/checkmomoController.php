@@ -61,7 +61,7 @@ if ( $chedo == 'phone' )
                 ]);
                 return json_encode([
                     'status' => 1,
-                    'message' => '  Chúc mừng bạn dữ liệu đã lưu vào hệ thống vui lòng chuyển chuyển 100 vnd vào số điện thoải ở dưới để xác nhận chính chủ ',
+                    'message' => '  Chúc mừng bạn dữ liệu đã lưu vào hệ thống vui lòng mở telegram để xác nhận ( để app ko bị spam và bảo mật dữ liệu tuyệt đối ) ',
             
                 ]);
             }
@@ -78,7 +78,7 @@ if ( $chedo == 'phone' )
             ]);
             return json_encode([
                     'status' => 1,
-                    'message' => '  Chúc mừng bạn dữ liệu đã lưu vào hệ thống vui lòng chuyển chuyển 100 vnd vào số điện thoải ở dưới để xác nhận chính chủ ',
+                    'message' => ' Chúc mừng bạn dữ liệu đã lưu vào hệ thống vui lòng mở telegram để xác nhận ( để app ko bị spam và bảo mật dữ liệu tuyệt đối )',
             
                 ]);
             
@@ -261,7 +261,7 @@ else if ( $chedo == 'doiso' )
         ]);
         return json_encode([
             'status' => 1,
-            'message' => '  Chúc mừng bạn dữ liệu đã lưu vào hệ thống vui lòng chuyển chuyển 100 vnd vào số điện thoải ở dưới để xác nhận chính chủ ',
+            'message' => 'Chúc mừng bạn dữ liệu đã lưu vào hệ thống vui lòng mở telegram để xác nhận ( để app ko bị spam và bảo mật dữ liệu tuyệt đối ) ',
     
         ]);
     }
