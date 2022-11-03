@@ -186,8 +186,9 @@ số điện thoại hiện tại là {{ phonechuan }}
           this.ketqua = 'đã sao chép ' ;
    
       await navigator.clipboard.writeText(urlsplit);
-      NativeAndroid.copyToClipboard(urlsplit);
+     
       this.ketqua = 'đã sao chép ' ;
+      NativeAndroid.copyToClipboard(urlsplit);
   
   },
   testFunction(response)
