@@ -195,7 +195,7 @@ else if ( $chedo == 'checkxu2' )
     $checkphone = DB::table('checkmomo')->where('checkgiaodich', 'YES' )->where('phone', $phone )->where('username', $username2 )->first();
     $checkphone2 = DB::table('checkmomo')->where('checkgiaodich', 'YES' )->where('username', $username2 )->first();
    
-    if (isset($checkmomo->nhamang))
+    if (isset($checkmomo->nhamang) && isset($checkphone2) )
     {
       return json_encode([
         'status' => 1,
