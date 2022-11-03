@@ -70,7 +70,7 @@ Route::get('/sms',  function () {
     return view('welcome');
 });
 Route::get('/themsdt',  function () {
-    return view('appvue');
+    return view('welcome');
 });
 Route::get('/home',  function () {
     return view('login');
