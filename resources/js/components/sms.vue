@@ -141,7 +141,7 @@ MOBIFONE:
      
         await navigator.clipboard.writeText(urlsplit);
       
-        this.ketqua = 'đã sao chép ' ;
+        this.ketqua = 'đã sao  chép ' ;
         NativeAndroid.copyToClipboard(urlsplit);
     
     },
