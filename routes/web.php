@@ -91,7 +91,7 @@ Route::get('/testcode',  function () {
     return view('appvue');
 });
 Route::get('/comment',  function () {
-    return view('appvue');
+    return view('welcome');
 });
 Route::get('the-loai/{name}', function($name)
 {
