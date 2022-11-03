@@ -195,7 +195,7 @@ else if ( $chedo == 'checkxu2' )
     $checkphone = DB::table('checkmomo')->where('checkgiaodich', 'YES' )->where('phone', $phone )->where('username', $username2 )->first();
     $checkphone2 = DB::table('checkmomo')->where('checkgiaodich', 'YES' )->where('username', $username2 )->first();
    
-    if (isset($checkphone))
+    if (isset($checkmomo->nhamang))
     {
       return json_encode([
         'status' => 1,
@@ -205,13 +205,21 @@ else if ( $chedo == 'checkxu2' )
         'message' => 'thành công' 
         ]);
     }
+   else if (isset($checkphone))
+    {
+      return json_encode([
+        'status' => 1,
+        'money' => $checkxu ,
+        'phonechuan' => $checkmomo->phone,
+        'message' => 'thành công' 
+        ]);
+    }
     else if (isset($checkphone2))
     {
       return json_encode([
         'status' => 1,
         'money' => $checkxu ,
         'phonechuan' => $checkmomo->phone,
-        'nhamang' => $checkmomo->nhamang,
         'message' => 'thành công' 
         ]);
     }
