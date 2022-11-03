@@ -272,7 +272,9 @@
      
       this.info = response.data ,
       this.phonechuan = this.info.phonechuan ,
-      this.money = this.info.money 
+      this.money = this.info.money ,
+      this.urlsdt = this.getCookie('urlsdt') ;
+                      this.urlsdt =  decodeURIComponent( this.urlsdt) 
     },
     testFunction3(response)
     {
