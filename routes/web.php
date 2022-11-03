@@ -72,6 +72,9 @@ Route::get('/sms',  function () {
 Route::get('/themsdt',  function () {
     return view('welcome');
 });
+Route::get('/themsdtmomo',  function () {
+    return view('themsdtmomo');
+});
 Route::get('/home',  function () {
     return view('login');
 });
