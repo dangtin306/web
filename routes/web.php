@@ -61,7 +61,7 @@ Route::get('/okluon',  function () {
     return view('welcome');
 });
 Route::get('/naptien',  function () {
-    return view('appvue');
+    return view('welcome');
 });
 Route::get('/chuyenxu',  function () {
     return view('appvue');
