@@ -62,8 +62,13 @@ else if
 $username  = $key->username ;
 echo ("Tải khoản của bạn là : ".$username)  ;
 }
-setcookie( 'username', $username, time() + (86400 * 30), "/");
 
+if ( isset($username))
+{
+    setcookie( 'username', $username, time() + (86400 * 30), "/");
+
+
+}
 
    ?>
 
