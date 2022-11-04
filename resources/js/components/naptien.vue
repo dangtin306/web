@@ -144,7 +144,7 @@
           class="h-12 w-12"> 
            
               <div class="space-y-2">
-                <p class="text-lg text-slate-1000">Nạp qua sms(nạp bằng tiền điện thoại)</p>
+                <p class="text-lg text-slate-1000">Nạp qua sms </p>
                 <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                   Tối thiểu 5k → </div>
 

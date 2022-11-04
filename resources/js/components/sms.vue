@@ -109,21 +109,27 @@ MOBIFONE:
             }
         },
         created() {
-          this.setCookie('urlsdt','/sms', 1) ;
-          this.chedo = 'checkxu2' ;
-              axios    
-                  .post('./checkmomo', {
-          apikey: this.ok2 ,
-      magiaodich: this.magiaodich ,
-      chedo: this.chedo 
-    })  
-                  .then(response => (this.testFunction4(response  ))  )  
-                  .catch(error => console.log(error) ,
+
+         
+          Swal.fire('hiện đang bảo trì' ) ;
+          
+          setTimeout(() => {     
+            window.location.href =  'https://hust.media';  }, 2000)
+    //       this.setCookie('urlsdt','/sms', 1) ;
+    //       this.chedo = 'checkxu2' ;
+    //           axios    
+    //               .post('./checkmomo', {
+    //       apikey: this.ok2 ,
+    //   magiaodich: this.magiaodich ,
+    //   chedo: this.chedo 
+    // })  
+    //               .then(response => (this.testFunction4(response  ))  )  
+    //               .catch(error => console.log(error) ,
   
-                  console.log(this.btctrk) 
-                  )    
-                this.fetchData();
-                this.intervalFetchData() ;
+    //               console.log(this.btctrk) 
+    //               )    
+    //             this.fetchData();
+    //             this.intervalFetchData() ;
 
              
                

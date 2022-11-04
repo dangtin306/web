@@ -50,7 +50,6 @@ else
     return redirect()->intended('/login');
 }
 }
-       
 
 // $_COOKIE["apikey"] 
 }
@@ -63,6 +62,7 @@ else if
 $username  = $key->username ;
 echo ("Tải khoản của bạn là : ".$username)  ;
 }
+setcookie( 'username', $username, time() + (86400 * 30), "/");
 
 
    ?>
