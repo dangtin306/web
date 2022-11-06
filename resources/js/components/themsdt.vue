@@ -46,7 +46,7 @@
                         
                 </div>
                 </div>
-                <div v-if="urlsdt != '/momo' && urlsdt != 'https://hust.media/ruttien.php' " class="col-lg-6">
+                <div v-if="urlsdt != '/profile' && urlsdt != '/momo' && urlsdt != 'https://hust.media/ruttien.php' " class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-first-name">Chọn Nhà mạng</label>
       
@@ -58,7 +58,7 @@
                     </div>
                   </div>
           
-                <button v-if="urlsdt != '/momo' && urlsdt != 'https://hust.media/ruttien.php' " type='submit' @click="onSubmit"
+                <button v-if="urlsdt != '/profile' && urlsdt != '/momo' && urlsdt != 'https://hust.media/ruttien.php' " type='submit' @click="onSubmit"
                 class='flex break-inside bg-black rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
                 <div class='flex items-center justify-between flex-1'>
                   <span class='text-lg font-medium text-white'>Xác nhận</span>
@@ -69,7 +69,7 @@
                   </svg>
                 </div>
               </button>
-              <button v-if="urlsdt == '/momo' ||  urlsdt == 'https://hust.media/ruttien.php' " type='submit' @click="onSubmit2"
+              <button v-if="urlsdt == '/profile' || urlsdt == '/momo' ||  urlsdt == 'https://hust.media/ruttien.php' " type='submit' @click="onSubmit2"
               class='flex break-inside bg-black rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
               <div class='flex items-center justify-between flex-1'>
                 <span class='text-lg font-medium text-white'>Xác nhận</span>

@@ -17,7 +17,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-
+import orders from './order/orders.vue'
 import momo from './components/momo.vue'
    import home from './components/home.vue'
    import chuyenxu from './components/chuyenxu.vue'
@@ -76,6 +76,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
+  },
+  {
+    path: '/orders',
+    name: 'orders',
+    component: orders
   },
   {
     path: '/aboutus',

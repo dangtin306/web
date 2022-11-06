@@ -63,6 +63,9 @@ Route::get('/okluon',  function () {
 Route::get('/naptien',  function () {
     return view('welcome');
 });
+Route::get('/orders',  function () {
+    return view('welcome');
+});
 Route::get('/chuyenxu',  function () {
     return view('appvue');
 });

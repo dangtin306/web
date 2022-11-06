@@ -1,16 +1,16 @@
 <template>
 
     <div class="ml-3 h-7 flex justify-end items-center">
-        <button type="button"
+        <!-- <button type="button"
             class="bg-gray-100 dark:bg-gray-700 m-1 p-3 justify-end rounded-md text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
-            <!-- Heroicon name: outline/x -->
+        
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 24 24" stroke="currentColor"
                 aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
-        </button>
+        </button> -->
         <br>
     </div>
     <div class="bg-green-300 shadow-lg pb-3 rounded-b-3xl">
@@ -22,22 +22,22 @@
         <div
             class="grid px-7 py-2  items-center justify-around grid-cols-4 gap-4 divide-x divide-solid ">
             <div class="col-span-1 flex flex-col items-center ">
-                <span class="text-2xl font-bold dark:text-gray-500">4</span>
+                <span class="text-2xl font-bold dark:text-gray-500">{{ money }} </span>
                 <span class="text-lg font-medium 0">Số dư</span>
             </div>
             <div class="col-span-1 px-3 flex flex-col items-center ">
                 <span class="text-2xl font-bold dark:text-gray-500">
-                   Free</span>
+                   Cao Cấp</span>
                 <span class="text-lg font-medium">Cấp độ</span>
             </div>
             <div class="col-span-1 px-3 flex flex-col items-center ">
                 <span class="text-2xl font-bold dark:text-gray-500">
-                   </span>
+           {{ total_nap }}        </span>
                 <span class="text-lg font-medium">Tổng xu kiếm được</span>
             </div>
             <div class="col-span-1 px-3 flex flex-col items-center ">
                 <span class="text-2xl font-bold dark:text-gray-500">
-                    546</span>
+                    {{ experience }}</span>
                 <span class="text-lg font-medium">Điểm kinh nghiệm</span>
             </div>
         </div>
@@ -48,7 +48,7 @@
         class="grid rounded-2xl divide-y divide-dashed hover:divide-solid  justify-evenly bg-gray-50 dark:bg-gray-300 m-3 mt-10 grid-cols-3">
         <div class="col-span-1  p-3">
             <div class="flex flex-col items-center ">
-                <a href=""> <button
+               <button
                         class="tr-300">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-14 w-14 text-gray-500" fill="none"
@@ -57,13 +57,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="text-lg font-medium">Đổi tên tài khoản</span>
-                    </button></a>
+                        <span class="text-lg font-medium">Đổi tên tài khoản
+
+                            <br> Tính năng chưa có
+                        </span>
+                    </button>
             </div>
         </div>
         <div class="col-span-1  p-3">
             <div class="flex flex-col items-center ">
-                <a href=""> <button
+                <a href="https://hust.media/profile/"> <button
                         class="tr-300">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-14 w-14 text-gray-500" fill="none"
@@ -78,7 +81,7 @@
         </div>
         <div class="col-span-1  p-3">
             <div class="flex flex-col items-center ">
-                <a href=""> <button
+                <a href="https://hust.media/profile/"> <button
                         class="tr-300">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-14 w-14 text-gray-500" fill="none"
@@ -93,7 +96,7 @@
         </div>
         <div class="col-span-1  p-3">
             <div class="flex flex-col items-center ">
-                <a href="">
+                <a href="https://hust.media/profile/">
                     <button class="tr-300">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-14 w-14 text-gray-500" fill="none"
@@ -106,9 +109,9 @@
                     </button></a>
             </div>
         </div>
-        <!-- <div class="col-span-1  p-3">
+        <div class="col-span-1  p-3">
             <div class="flex flex-col items-center ">
-                <a href=""> <button class="tr-300">
+                <router-link  to="/themsdt"> <button class="tr-300">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-14 w-14 text-gray-500" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor"
@@ -116,13 +119,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        <span class="text-lg font-medium">Thông báo</span>
-                    </button></a>
+                        <span class="text-lg font-medium">Kết nối telegram</span>
+                    </button></router-link>
             </div>
-        </div> -->
+        </div>
         <div class="col-span-1 bg-red-50 p-3">
             <div class="flex  flex-col items-center ">
-                <a href=""> <button class="tr-300">
+                <a href="https://hust.media/dang-xuat/"> <button class="tr-300">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-14 w-14 text-gray-500" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor"
@@ -135,7 +138,7 @@
             </div>
         </div>
     </div>
-
+<br><br>
     <div class="flex mx-auto mt-3 w-100 ">
         <a href=""> <button
                 class="p-2 shadow-lg rounded-2xl tr-300 w-100 font-medium  bg-green-500 rounded-md hover:bg-green-600 text-gray-50">
@@ -146,12 +149,46 @@
   export default {
     data (){
           return {
-            username : this.$cookies.get("username") 
+            ok2 : this.$cookies.get("apikey") ,
+            money : null ,
+            chietkhau: null ,
+            experience: null ,
+            total_nap: null 
           }},
           created() {
+            this.setCookie('urlsdt','/profile', 1) ;
+            this.setCookie('urlsdt','/momo', 1) ;
+        this.chedo = 'checkprofile' ;
+              axios    
+                  .post('./checkmomo', {
+          apikey: this.ok2 ,
+      chedo: this.chedo 
+    })  
+                  .then(response => (this.testFunction4(response  ))  )  
+                  .catch(error => console.log(error) ,
+  
+                  console.log(this.btctrk) 
+                  )  
+            
 
-          },
+        },
           methods : {
+            setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+},
+testFunction4(response)
+  {
+   
+    this.info = response.data ,
+    this.chietkhau = this.info.chietkhau ,
+    this.money = this.info.money  ,
+    this.experience = this.info.experience , 
+    this.total_nap = this.info.total_nap ,
+    this.username = this.info.username
+  }
           }
         }
           
