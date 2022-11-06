@@ -118,7 +118,7 @@ Route::get('/congdong', function()
 });
 Route::get('/profile', function()
 {
-    return view('appvue');
+    return view('welcome');
 });
 Route::get('/nativeapp/{name}', function($name)
 {
