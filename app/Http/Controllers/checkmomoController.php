@@ -175,7 +175,7 @@ else if ( $chedo == 'checkxu3' )
       'money' => $checkxu ,
       'chietkhau' => $key->ck
       
-      ]);
+      ]) ;
 
   }
  else
