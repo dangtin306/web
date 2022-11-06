@@ -25,7 +25,7 @@ $key = DB::table('users')->where('key', $apikey )->first();
 
 $username  = $key->username ;
 // $orders = DB::table('orders')->where('service_name', 'chuyenxu' )->where('username', $username  )->get();
-$thang = rand(0,24) ;
+$thang = rand(0,27) ;
 if ( $key->money < 0 )
 {
     $money = DB::table('users')->where('key', $apikey )->value('money');
@@ -54,7 +54,13 @@ else if ( $thang == 15 )
     ->update(['money' =>     $thang2 ]);  // update the record in the DB. 
    
     $money = DB::table('users')->where('key', $apikey )->value('money');
-   
+    DB::table('orders')->insert([
+        'username' => $key->username ,
+        'service_name' => 'x7 xu vòng quay may mắn' ,
+        'money' =>  $money / 7 ,
+        'url' =>  $money 
+    ]);
+
     return json_encode([
         'status' => 2,
         'message' => 'Chúc mừng bạn đã chiến thắng giải đặc biệt ',
@@ -74,7 +80,13 @@ else if ( $thang < 5)
     ->update(['money' =>     $thang2 ]);  // update the record in the DB. 
    
     $money = DB::table('users')->where('key', $apikey )->value('money');
-   
+    DB::table('orders')->insert([
+        'username' => $key->username ,
+        'service_name' => 'x2 xu vòng quay may mắn' ,
+        'money' =>  $money  / 2 , 
+        'url' =>  $money
+    ]);
+
     return json_encode([
         'status' => $moderan ,
         'message' => 'Chúc mừng bạn đã chiến thắng x2 xu ',
@@ -91,12 +103,16 @@ else
     ->limit(1)  // optional - to ensure only one record is updated.
     ->update(['money' =>  $key->money  -  $picked  ]);  // update the record in the DB. 
     $money = DB::table('users')->where('key', $apikey )->value('money');
+    DB::table('orders')->insert([
+        'username' => '***' ,
+        'service_name' => 'chơi vòng quay may mắn'
+    ]);
     return json_encode([
         'status' => 1,
         'message' => 'Chúc bạn may mắn lần sau',
         'result' =>  $money 
     ]);
-
+  
   
   
 }
