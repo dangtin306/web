@@ -70,10 +70,10 @@ else if ( $thang == 15 )
     
   
 }
-else if ( $thang < 5)
+else if ( $thang < 5 )
 {
     $xuhientai = $key->money ;
-    $moderan = rand(5,11);
+    $moderan = rand(4,11);
    $thang2 =  $picked * 2 + $xuhientai ;
     DB::table('users')
     ->where('key', $apikey )  // find your user by their email

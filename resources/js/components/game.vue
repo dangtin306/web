@@ -117,6 +117,7 @@
         results: [0, 0, 0],
         win: "",
         specified: [1, 2, 3],
+        specified1: [1, 2, 3],
         specified2: [2, 3, 4],
         specified3: [3, 4, 5],
         specified4: [4, 5, 6],
@@ -224,7 +225,7 @@ else
     console.log( this.moder ) ,
       this.play2()
   ))
-  .catch(error => console.log(error) ,
+  .catch(error => console.log(error) 
 
      
     //   console.log( this.info )  ,
@@ -238,6 +239,8 @@ else
       
       play2(){
         this.results = this.generateResults(this.mode);
+        console.log( this.results );
+
         if (!this.isRunning) {
           for (let i = 0; i < this.slots.length; i++) {
             this.slots[i].running = true;
@@ -344,47 +347,68 @@ else
             .split("")
             .map(item => item * 1);
         }
-        if (mode === 5) {
+        else   if (mode === 4) {
+          return [...this.specified];
+        }
+        else  if (mode === 5) {
             return [...this.specified1];
         }
-        if (mode === 6) {
+        else  if (mode === 6) {
             return [...this.specified2];
         }
-        if (mode === 7) {
+        else   if (mode === 7) {
             return [...this.specified3];
         }
-        if (mode === 8) {
+        else  if (mode === 8) {
             return [...this.specified4];
         }
-        if (mode === 9) {
+        else if (mode === 9) {
             return [...this.specified5];
         }
-        if (mode === 10) {
+        else if (mode === 10) {
             return [...this.specified6];
         }
-        if (mode === 11) {
+       else if (mode === 11) {
             return [...this.specified7];
         }
 
 
 
-
-
-
-        if (mode === 4) {
-          return [...this.specified];
-        }
-        const results = this.results.map(() =>
-          Math.floor(Math.random() * this.colors.length)
+        else
+        {
+          const results = this.results.map(() =>
+          Math.floor(Math.random() * this.colors.length),
+         
         );
-        if (mode === 3 && results.every(item => item === results[0])) {
-          const excluded = this.colors.map((item, index) => index);
-          excluded.splice(results[0], 1);
-          results[Math.floor(Math.random() * results.length)] =
-            excluded[Math.floor(Math.random() * excluded.length)];
-        }
+        // if (mode === 3 && results.every(item => item === results[0])) {
+        //   const excluded = this.colors.map((item, index) => index);
+        //   excluded.splice(results[0], 1);
+        //   results[Math.floor(Math.random() * results.length)] =
+        //     excluded[Math.floor(Math.random() * excluded.length)];
+        // }
+        console.log( results ) ;
+        const arrayy =  JSON.stringify(results);
+        const somot = arrayy.charAt(1);
+        const sohai = arrayy.charAt(3);
+        const soba = arrayy.charAt(5);
+if (somot == sohai &&  sohai == soba)
+{
+  const results = this.results.map(() =>
+          Math.floor(Math.random() * this.colors.length),
+         
+        );
         return results;
-    
+
+}
+else
+{
+  return results;
+
+}
+ 
+
+        }
+     
        
       },
       showResult() {
