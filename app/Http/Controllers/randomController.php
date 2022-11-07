@@ -57,15 +57,16 @@ else if ( $thang == 15 )
     DB::table('orders')->insert([
         'username' => $key->username ,
         'service_name' => 'x7 xu vòng quay may mắn' ,
-        'money' =>  $money / 7 ,
-        'url' =>  $money ,
+        'money' =>  $picked ,
+        'url' =>  $picked ,
         'createdate' => now() 
     ]);
 
     return json_encode([
         'status' => 2,
         'message' => 'Chúc mừng bạn đã chiến thắng giải đặc biệt ',
-        'result' =>  $money 
+        'result' =>  $money , 
+        'status' => 'hoantat'
     ]);
     
   
@@ -84,9 +85,10 @@ else if ( $thang < 5 )
     DB::table('orders')->insert([
         'username' => $key->username ,
         'service_name' => 'x2 xu vòng quay may mắn' ,
-        'money' =>  $money  / 2 , 
-        'url' =>  $money ,
-        'createdate' => now() 
+        'money' =>  $picked  , 
+        'url' =>  $picked ,
+        'createdate' => now() , 
+        'status' => 'hoantat'
     ]);
 
     return json_encode([
@@ -108,7 +110,8 @@ else
     DB::table('orders')->insert([
         'username' => '***' ,
         'service_name' => 'chơi vòng quay may mắn',
-        'createdate' => now() 
+        'createdate' => now() , 
+        'status' => 'hoantat'
     ]);
     return json_encode([
         'status' => 1,
