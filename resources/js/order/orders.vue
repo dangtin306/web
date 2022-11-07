@@ -15,29 +15,42 @@
          
                 <div class="col-lg-6">
                     <div class="form-group">
-                      <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn thể loại</label>
+                      <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn nền tảng</label>
       
                 <select  id="countries2" class="
-                selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="theloai">
+                selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="social">
                     <option v-for="option in options" :value="option.value">
                       {{ option.text }}
                     </option>
                   </select>
                   <br>
-                  {{ content }}
-                  <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn dịch vụ</label>
-                  <select  id="countries" class="form-control selectpicker sp2"  @change="onChange2()"   name="dichvu" v-model="dichvu">
-                    <option v-for="option in options2" :value="option.id">
+               
+                  <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn thể loại</label>
+                  <select  id="countries" class="form-control selectpicker sp2"  @change="onChange2()"   name="theloai" v-model="theloai">
+                    <option v-for="option in options2" :value="option.code">
                       {{ option.name }}
                     </option>
                   </select>
+                  <div  v-if="chondichvu == 1" x-show="showen">
+                    <label for="dichvu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn dịch vụ</label>
+                    <select  id="dichvu" class="form-control selectpicker sp3" data-width="auto" data-size="7"  data-live-search="true"  @change="onChange3()"   name="dichvu" v-model="dichvu">
+                      <option v-for="option in options3" :value="option.id">
+                        {{ option.name }}
+                      </option>
+                    </select>
+                    </div>
                     </div>
                   </div>
                   <p>Link bài viết ,video, ảnh cần chạy</p>
 <input class="form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
+{{ content }}
+<div  v-if="chondichvu2 == 1">
+<p>Số lượng tăng</p>
+<input @keyup="countamount" class="form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
+</div>
               <div  v-if="chondichvu == 1" x-show="showen">
     
-                <div class="space-y-2 text-gray-700" x-data="{isshow:false}">
+                <!-- <div class="space-y-2 text-gray-700" x-data="{isshow:false}">
                 <label class="block font-medium text-sm   mx-auto " for="password">
                   Số bình luận tăng là: {{ socmt }}
 </label>                <div class="relative  focus-within:text-gray-900 dark:focus-within:text-gray-800 ">
@@ -68,7 +81,7 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
     </div>
 
                     
-            </div>
+            </div> -->
             </div>
                 <button  @click="xacnhan"
                 class='flex break-inside bg-purple-400 hover:bg-purple-300 rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
@@ -152,13 +165,14 @@ Tối đa {{maxorder  }}
                 urlsplit: '0928889798' ,
                 selected: null ,
       options: [
-        { text: 'TikTok', value: 'tiktok_comment' },
-        { text: 'Facebook', value: 'facebook.buff.cmt' },
-        { text: 'Instagram', value: 'ig_comment' }
+        { text: 'Telegram', value: 'Telegram' }
       ],
       options2: null ,
+      options3: null ,
                 lienket: null ,
                 chondichvu: null,
+                chondichvu2: null ,
+                soluongtang: null ,
                 lienketchay: null ,
                 status: null ,
                 status2: null ,
@@ -169,6 +183,7 @@ Tối đa {{maxorder  }}
                 phonechuan: null ,
                 nhamang: null,
                 selected: null ,
+                social: null,
                 chietkhau: null,
                 ketqua: null  ,
                 money: null ,
@@ -202,6 +217,10 @@ Tối đa {{maxorder  }}
                 }, 300) ;
             },
         methods : {
+          countamount()
+          {
+            this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 ;
+          },
           xacnhan(){
             var xulybinhluan = this.name2 ;
             this.nutxuly = 1 ;
@@ -211,9 +230,9 @@ Tối đa {{maxorder  }}
          .post('./testapi.php', {
           key: this.ok2 ,
           service: this.service ,
-      soluong: this.socmt ,
-      lienketchay: this.lienketchay,
-      binhluan: this.binhluan
+      soluong: this.soluongtang ,
+      lienketchay: this.lienketchay
+      // binhluan: this.binhluan
     })
     .then( response => (
     console.log(response.data ) ,
@@ -258,13 +277,13 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
     
    
 
-    if(!this.theloai){
+    if(!this.social){
                     alert('Please điền đầy đủ thông tin')
                     return
                 }
                axios
          .post('./checkdichvu', {
-      theloai: this.theloai ,
+            social: this.social ,
     })
     .then( response => (
     console.log(response.data ) ,
@@ -277,13 +296,13 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
     onChange2() {
        
 
-    if(!this.dichvu){
+    if(!this.theloai){
                     alert('Please điền đầy đủ thông tin')
                     return
                 }
                axios
          .post('./checkdichvu', {
-            dichvu: this.dichvu ,
+            theloai2: this.theloai ,
     })
     .then( response => (
     console.log(response.data ) ,
@@ -293,6 +312,25 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
         ) ;
     
     },
+    onChange3() {
+       
+
+       if(!this.theloai){
+                       alert('Please điền đầy đủ thông tin')
+                       return
+                   }
+                  axios
+            .post('./checkdichvu', {
+              dichvu2: this.dichvu ,
+       })
+       .then( response => (
+       console.log(response.data ) ,
+       this.testFunction5(response )
+       ))
+       .catch(error => console.log(error) ,
+           ) ;
+       
+       },
     testFunction(response)
     {
       this.info1 = response.data ,
@@ -326,7 +364,22 @@ console.log(this.options) ;
     },
     testFunction3(response)
     {
-        this.chondichvu = 1 ,
+      this.options3 = response.data , 
+      this.info = response.data ,
+      
+      this.chondichvu = 1 ,
+      console.log(this.options3);
+      console.log(this.name);
+      setTimeout(() => {    
+                 
+                 $('.sp3').selectpicker('refresh');
+                 setTimeout(() => {     
+                     $('.sp3').selectpicker('toggle');;  }, 300)
+             }, 300) ;
+    },
+    testFunction5(response)
+    {
+      this.chondichvu2 = 1 ,
       this.info = response.data ,
       this.service = this.info.id ,
       this.maxorder = this.info.maxorder ,
@@ -334,8 +387,7 @@ console.log(this.options) ;
       this.tientra1 = this.info.money ,
       this.name = this.info.name ,
       this.content = this.info.content,
-      this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ,
-      console.log(this.name);
+      this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 
     },
     testFunction4(response)
     {
