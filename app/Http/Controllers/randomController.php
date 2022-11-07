@@ -58,7 +58,8 @@ else if ( $thang == 15 )
         'username' => $key->username ,
         'service_name' => 'x7 xu vòng quay may mắn' ,
         'money' =>  $money / 7 ,
-        'url' =>  $money 
+        'url' =>  $money ,
+        'createdate' => now() 
     ]);
 
     return json_encode([
@@ -84,7 +85,8 @@ else if ( $thang < 5)
         'username' => $key->username ,
         'service_name' => 'x2 xu vòng quay may mắn' ,
         'money' =>  $money  / 2 , 
-        'url' =>  $money
+        'url' =>  $money ,
+        'createdate' => now() 
     ]);
 
     return json_encode([
@@ -105,7 +107,8 @@ else
     $money = DB::table('users')->where('key', $apikey )->value('money');
     DB::table('orders')->insert([
         'username' => '***' ,
-        'service_name' => 'chơi vòng quay may mắn'
+        'service_name' => 'chơi vòng quay may mắn',
+        'createdate' => now() 
     ]);
     return json_encode([
         'status' => 1,
