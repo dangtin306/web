@@ -165,6 +165,7 @@ Tối đa {{maxorder  }}
                 urlsplit: '0928889798' ,
                 selected: null ,
       options: [
+        { text: 'Telegram', value: 'Telegram' } , 
         { text: 'Telegram', value: 'Telegram' }
       ],
       options2: null ,
