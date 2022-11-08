@@ -43,7 +43,7 @@
                   </div>
                   <p>Link bài viết ,video, ảnh cần chạy</p>
 <input class="form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
-{{ content }}
+{{ content }} thời gian ước tính {{ timeuoctinh }}
 <div  v-if="chondichvu2 == 1">
 <p>Số lượng tăng</p>
 <input @keyup="countamount" class="form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
@@ -175,6 +175,7 @@ Tối đa {{maxorder  }}
                 chondichvu2: null ,
                 soluongtang: null ,
                 lienketchay: null ,
+                timeuoctinh: null,
                 status: null ,
                 status2: null ,
                 nutorder: 'xác nhận' ,
@@ -386,6 +387,7 @@ console.log(this.options) ;
       this.maxorder = this.info.maxorder ,
       this.minorder = this.info.minorder ,
       this.tientra1 = this.info.money ,
+      this.timeuoctinh = this.info.time ,
       this.name = this.info.name ,
       this.content = this.info.content,
       this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 
