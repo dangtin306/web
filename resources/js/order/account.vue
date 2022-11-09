@@ -231,6 +231,8 @@ Swal.fire('Mua thành công') ;
        this.VIETTEL = JSON.stringify(response.data) ;
        this.VIETTEL = this.VIETTEL.replace( 'tds', 'hust media') ;
        this.VIETTEL = this.VIETTEL.replace( 'TDS', 'hust media') ;
+       this.VIETTEL = this.VIETTEL.replace( 'Tds', 'hust media') ;
+       this.VIETTEL = this.VIETTEL.replace( 'Ttc', 'hust media') ;
        this.VIETTEL = this.VIETTEL.replace( 'TTC', 'hust media') ;
        this.VIETTEL = this.VIETTEL.replace( 'ttc', 'hust media') ;
        this.VIETTEL = JSON.parse(this.VIETTEL) ;
