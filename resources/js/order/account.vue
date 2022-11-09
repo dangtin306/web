@@ -136,6 +136,7 @@ import Swal from 'sweetalert2' ;
                 clonethem : null ,
                 dasaochep: null,
                 options: [
+                    { text: 'Vui lòng chọn 1 nền tảng', value: 'vuilongchon1cai' } ,
         { text: 'Tiktok', value: 'tiktok' } , 
         { text: 'Facebook', value: 'facebook' } ,
         { text: 'Instagram', value: 'instagram' }
