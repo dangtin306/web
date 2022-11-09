@@ -43,7 +43,9 @@ import momo from './components/momo.vue'
 import Ads from 'vue-google-adsense'
 
     import VueCookies from 'vue-cookies';
+    import historyclone from "./order/historyclone.vue"; 
     import comment from "./order/comment.vue"; 
+    import account from "./order/account.vue"; 
     import aboutus from "./congdong/aboutus.vue"; 
     const app = createApp(
       {
@@ -81,6 +83,11 @@ const routes = [
     path: '/orders',
     name: 'orders',
     component: orders
+  },
+  {
+    path: '/historyclone',
+    name: 'historyclone',
+    component: historyclone
   },
   {
     path: '/aboutus',
@@ -134,6 +141,12 @@ const routes = [
     path: '/game',
     name: 'game',
     component: game
+  }
+  ,
+  {
+    path: '/account',
+    name: 'account',
+    component: account
   }
   ,
   {

@@ -60,6 +60,9 @@ Route::get('/momo',  function () {
 Route::get('/okluon',  function () {
     return view('welcome');
 });
+Route::get('/account ',  function () {
+    return view('welcome');
+});
 Route::get('/naptien',  function () {
     return view('welcome');
 });

@@ -57,7 +57,8 @@
             console.log(apikey);
             axios
                 .post('/order', {
-                  apikey: apikey 
+                  apikey: apikey ,
+                  chedo: 'chuyenxu' 
     })
                 .then(response => {
                        this.loading = false;

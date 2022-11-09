@@ -17,13 +17,23 @@ class orderController extends Controller
     public function order(Request $request)  
     {
         $apikey = $request->apikey ;
+        $chedo = $request->chedo ;
       // return response()->json([$request->all()]);  
 // echo( response()->json([$request->all()])) ;
 
 $key = DB::table('users')->where('key', $apikey )->first();
 
 $username  = $key->username ;
-$orders = DB::table('orders')->where('service_name', 'chuyenxu' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
+if ( $chedo == 'clonetiktok' )
+{
+  $orders = DB::table('orders')->where('category_code', 'clonetiktok' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
+
+}
+else
+{
+  $orders = DB::table('orders')->where('service_name', 'chuyenxu' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
+
+}
 
 echo ($orders);
 
