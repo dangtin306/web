@@ -39,6 +39,10 @@ Route::post(
     '/checkmomo', 'checkmomoController@checkmomo'
 
 );
+Route::options(
+    '/checkmomo', 'checkmomoController@checkmomo'
+
+);
 Route::post(
     '/truyen', 'profileController@profile'
 
