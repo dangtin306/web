@@ -6,9 +6,10 @@
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
+$uri2 = $_SERVER['REQUEST_URI'] ;
 
 $uri = urldecode(
-    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? ''
+    parse_url($uri2 , PHP_URL_PATH) ?? ''
 );
 
 // This file allows us to emulate Apache's "mod_rewrite" functionality from the

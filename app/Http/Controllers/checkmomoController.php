@@ -12,10 +12,18 @@ use App\Models\Contact;
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
 
+header('access-control-allow-credentials: true' );
+header('Access-Control-Allow-Headers: *' );
+header('access-control-allow-methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS' );
+header('Access-Control-Allow-Origin: *' );
+header('server: hust.media' );
+header('Content-type: application/json; charset=UTF-8');
+header('x-hustmedia-region: AWS - ap-southeast-1' );
 class checkmomoController extends Controller
 {
     public function checkmomo(Request $request)  
     {
+      
         $chucmungchanle =
         "Chúc mừng mọi chuyện đã xong vui lòng chuyển vào số điện thoại ở dưới để tự động cộng xu nhé"
         ;

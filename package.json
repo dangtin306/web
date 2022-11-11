@@ -29,6 +29,7 @@
     "dependencies": {
         "bootstrap-select": "^1.13.18",
         "es6-tween": "^5.5.11",
+        "firebase": "^9.13.0",
         "jquery": "^3.6.1",
         "konva": "^8.3.12",
         "less": "^4.1.3",

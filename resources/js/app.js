@@ -36,6 +36,7 @@ import momo from './components/momo.vue'
     import themsdt from './components/themsdt.vue'
     import congdong from './congdong/congdong.vue'
     import plan from './congdong/plan.vue'
+    import webapp from './congdong/biolink.vue'
     import profile2 from './congdong/profile.vue'
     import sms from './components/sms.vue'
     import ScriptX from 'vue-scriptx'
@@ -62,6 +63,7 @@ import Ads from 'vue-google-adsense'
 // app.use(store);
 // app.use(BootstrapVue)
 app.component('appvue', require('./App.vue').default) ;
+app.component('webapp', require('./congdong/biolink.vue').default) ;
 app.component('theloai', require('./components/theloai.vue').default) ;
 app.component('notfound', require('./components/404.vue').default) ;
 app.component('profile', require('./components/profile.vue').default) ;
@@ -73,6 +75,11 @@ const routes = [
     path: '/chuyenxu',
     name: 'chuyenxu',
     component: chuyenxu
+  },
+  {
+    path: '/webapp',
+    name: 'webapp',
+    component: webapp
   },
   {
     path: '/',
