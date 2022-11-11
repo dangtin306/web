@@ -28,9 +28,15 @@ class checkmomoController extends Controller
         "Chúc mừng mọi chuyện đã xong vui lòng chuyển vào số điện thoại ở dưới để tự động cộng xu nhé"
         ;
         header('Content-type: application/json; charset=UTF-8');
-        $apikey = $request->apikey ;
         $chedo = $request->chedo ;
-      // return response()->json([$request->all()]);  
+        $apikey = $request->apikey ;
+        if ( $chedo == '' )
+        {
+
+        }      
+else
+{
+        // return response()->json([$request->all()]);  
 // echo( response()->json([$request->all()])) ;
 
 $key = DB::table('users')->where('key', $apikey )->first();
@@ -504,6 +510,7 @@ else
    
 
   
+}
 }
     }
 }
