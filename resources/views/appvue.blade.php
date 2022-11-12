@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\DB;
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       
         <title>OK</title>
-
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
+        crossorigin="anonymous"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     

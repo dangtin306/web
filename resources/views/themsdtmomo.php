@@ -68,3 +68,5 @@ $chuyensdt = './themsdt?=key='.$keyusers ;
 header("Location: $chuyensdt");
 exit;
    ?>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
+     crossorigin="anonymous"></script>
