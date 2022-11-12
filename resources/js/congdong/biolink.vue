@@ -32,9 +32,59 @@
         <div class="bg-green-300 shadow-lg pb-3 rounded-b-3xl">
             <div
                 class="flex  rounded-b-3xl bg-gray-100 dark:bg-gray-700 space-y-5 flex-col items-center py-7">
-                <a href="#"> <span
-                        class="text-h1">{{ usernamebio }} </span></a>
+             <span
+                        class="text-h1">{{ usernamebio }} </span>
+                        <div class="container max-w-screen-lg mx-auto">
+                            <div>
+                        
+                              <div class="flex flex-wrap justify-center gap-2">
+                                <div v-for="(value, key) in usersocial"  :key="value">
+                                    <div v-if="key == 'facebook'">
+                                        <a :href="value" target="_blank">
+                                            <button class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                                                <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                                              </button>
+                                        </a>                                    
+                                    </div>
+                                    <div v-if="key == 'instagram'">
+                                        <a :href="value" target="_blank">
+                                            <button class="bg-red-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                                                <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 24 24"><path 
+                                                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                                              </button>
+                                        </a>                                    
+                                    </div>
+                                    <div v-if="key == 'tiktok'">
+                                        <a :href="value" target="_blank">
+                                            <button class="bg-pink-300 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="w-6 h-6 fill-current" viewBox="0 0 250 250" xml:space="preserve">
+            
+            
+                                                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                                                        <path d="M 36.203 35.438 v -3.51 c -1.218 -0.173 -2.447 -0.262 -3.677 -0.268 c -15.047 0 -27.289 12.244 -27.289 27.291 c 0 9.23 4.613 17.401 11.65 22.342 c -4.712 -5.039 -7.332 -11.681 -7.328 -18.58 C 9.559 47.88 21.453 35.784 36.203 35.438" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                                        <path d="M 36.847 75.175 c 6.714 0 12.19 -5.341 12.44 -11.997 l 0.023 -59.417 h 10.855 c -0.232 -1.241 -0.349 -2.5 -0.35 -3.762 H 44.989 l -0.025 59.419 c -0.247 6.654 -5.726 11.993 -12.438 11.993 c -2.015 0.001 -4 -0.49 -5.782 -1.431 C 29.079 73.238 32.839 75.171 36.847 75.175 M 80.441 23.93 v -3.302 c -3.989 0.004 -7.893 -1.157 -11.232 -3.339 c 2.928 3.371 6.869 5.701 11.234 6.641" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                                        <path d="M 69.209 17.286 c -3.272 -3.744 -5.075 -8.549 -5.073 -13.522 h -3.972 C 61.203 9.318 64.472 14.205 69.209 17.286 M 32.526 46.486 c -6.88 0.008 -12.455 5.583 -12.463 12.463 c 0.004 4.632 2.576 8.88 6.679 11.032 c -1.533 -2.114 -2.358 -4.657 -2.358 -7.268 c 0.007 -6.88 5.582 -12.457 12.463 -12.465 c 1.284 0 2.515 0.212 3.677 0.577 V 35.689 c -1.218 -0.173 -2.447 -0.262 -3.677 -0.268 c -0.216 0 -0.429 0.012 -0.643 0.016 v 11.626 C 35.014 46.685 33.774 46.49 32.526 46.486" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,79); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                                        <path d="M 80.441 23.93 v 11.523 c -7.689 0 -14.81 -2.459 -20.627 -6.633 v 30.13 c 0 15.047 -12.24 27.289 -27.287 27.289 c -5.815 0 -11.207 -1.835 -15.639 -4.947 c 5.151 5.555 12.384 8.711 19.959 8.709 c 15.047 0 27.289 -12.242 27.289 -27.287 v -30.13 c 6.009 4.321 13.226 6.642 20.627 6.633 V 24.387 c -1.484 0 -2.927 -0.161 -4.323 -0.46" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,79); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                                        <path d="M 59.813 58.949 v -30.13 c 6.009 4.322 13.226 6.642 20.627 6.633 V 23.93 c -4.364 -0.941 -8.305 -3.272 -11.232 -6.644 c -4.737 -3.081 -8.006 -7.968 -9.045 -13.522 H 49.309 l -0.023 59.417 c -0.249 6.654 -5.726 11.995 -12.44 11.995 c -4.007 -0.004 -7.768 -1.938 -10.102 -5.194 c -4.103 -2.151 -6.676 -6.399 -6.681 -11.032 c 0.008 -6.88 5.583 -12.455 12.463 -12.463 c 1.282 0 2.513 0.21 3.677 0.577 V 35.438 C 21.453 35.784 9.559 47.88 9.559 62.713 c 0 7.173 2.787 13.703 7.328 18.58 c 4.578 3.223 10.041 4.95 15.639 4.945 C 47.574 86.238 59.813 73.996 59.813 58.949" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                                    </g>
+                                                    </svg>
+                                              </button>
+                                        </a>                                    
+                                    </div>
+                                  </div>
+                               
+                        
+                               
+                                
+                              </div>
+                            </div>
+                          </div>
             </div>
+           
+               
+
             <div
                 class="grid px-7 py-2  items-center justify-around grid-cols-3 gap-4 divide-x divide-solid ">
                 <div class="col-span-1 flex flex-col items-center ">
@@ -56,7 +106,7 @@
     
         </div>
         <div  class="max-w-7xl mx-2 py-2 mb-2">
-            <a :href="lienket">
+            <a :href="lienket" target="_blank">
             <div class="relative group">
               <div class="absolute -inset-1 bg-gradient-to-r 
               from-purple-600 to-pink-600 rounded-lg blur opacity-25 
@@ -85,14 +135,27 @@
             </div>
         </a>
           </div>
-        <div v-if="ketqua" >
+          <div style="text-decoration: none" >
+            <button @click="saochep(usernamebio)" type='button'
+            class='flex break-inside bg-white text-black border-2 border-black rounded-3xl px-6 py-3 mb-4 w-full dark:bg-slate-800 dark:text-white'>
+            <div class='m-auto'>
+              <div class='flex items-center justify-start flex-1 space-x-4'>
+                <span class='font-medium mb-[-2px]'>Sao chép link bio </span>
+                <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+                  <path d='M5 12h13M12 5l7 7-7 7' />
+              </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <!-- <div v-if="ketqua" >
             <div class='break-inside relative overflow-hidden flex flex-col justify-between space-y-3 text-sm rounded-xl max-w-[23rem] p-4 mb-4 bg-white text-black dark:bg-slate-800 dark:text-white'>
                 <h3>{{ketqua}}</h3>
                    </div>
     
-        </div>
+        </div> -->
         
-        <div class='break-inside relative overflow-hidden flex flex-col justify-between space-y-3 text-sm rounded-xl max-w-[23rem] p-4 mb-4 bg-white text-black dark:bg-slate-800 dark:text-white'>
+        <!-- <div class='break-inside relative overflow-hidden flex flex-col justify-between space-y-3 text-sm rounded-xl max-w-[23rem] p-4 mb-4 bg-white text-black dark:bg-slate-800 dark:text-white'>
             <div class='flex items-center justify-between font-medium'>
                 <span class='uppercase text-xs text-green-500'>Bước 2 mở bằng trình duyệt</span>
                 <span class='text-xs text-slate-500'>#hustmedia</span>
@@ -135,12 +198,13 @@
                 </svg>
                 </button>
             </div>
-            </div>
+            </div> -->
     </div>
     </body>
     </template>
     <script>
     import {    doc,  onSnapshot   } from "firebase/firestore" ;
+    import Swal from 'sweetalert2' ;
     import db from '../firebase/init.js' ;
          export default {
               data() {
@@ -153,6 +217,7 @@
                       usernamebio: null,
                       mota: null ,
                       hientruyen: null ,
+                      usersocial: null ,
                       error: null,
                       infoBox: null,
                       width:0,
@@ -163,6 +228,7 @@
                   this.fetchData();
                   setTimeout( () => {
     this.biolinklienket() ;
+    this.biolinksocial() ;
       }, 500);
                   
               },
@@ -171,7 +237,7 @@
                   fetchData() {
           
                     var url = location.href  ;
-        var splitter = 'webapp?' ;
+        var splitter = 'webapp/' ;
         
         
         var urlsplit = url.split(splitter)[1];
@@ -185,17 +251,26 @@ this.lienket = snap.data().lienket
 this.mota = snap.data().mota
 })
 },
+async biolinksocial() {
+       onSnapshot(doc(db, this.usernamebio, 'social'), (snap) => {
+        this.usersocial = snap.data() ;
+console.log( this.usersocial );
+      })
+
+},
+saochep(urlsplit) {
+        Swal.fire({
+  title: 'Sao chép thành công' 
+ 
+})
+urlsplit = 'https://vip.hust.media'+'/webapp/'+ urlsplit ;
+                navigator.clipboard.writeText(urlsplit);
+               
+      },
     molienket(){
         window.location.href = this.lienket ;
-    },
-    async saochep(urlsplit) {
-        try {
-          await navigator.clipboard.writeText(urlsplit);
-          this.ketqua = 'đã sao chép liên kết' ;
-        } catch($e) {
-          this.ketqua = 'chưa sao chép' ;
-        }
-      }
+    }
+    
     }}
               
     </script>

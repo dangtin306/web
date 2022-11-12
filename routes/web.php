@@ -88,7 +88,8 @@ Route::get('/themsdtmomo',  function () {
 Route::get('/home',  function () {
     return view('login');
 });
-Route::get('/webapp',  function () {
+Route::get('webapp/{name}', function($name)
+{
     return view('biolink');
 });
 Route::get('/history',  function () {
