@@ -105,8 +105,10 @@
             </div>
     
         </div>
+        
         <div  class="max-w-7xl mx-2 py-2 mb-2">
-            <a :href="lienket" target="_blank">
+            <div class=" mb-2" v-for="user in useraddlink" :key="user.firstName">
+            <a :href="user.lienket" target="_blank">
             <div class="relative group">
               <div class="absolute -inset-1 bg-gradient-to-r 
               from-purple-600 to-pink-600 rounded-lg blur opacity-25 
@@ -122,7 +124,8 @@
                   <p class="text-lg text-slate-1000">
                     <!-- <img src="https://inkythuatso.com/uploads/images/2021/11/mb-bank-logo-inkythuatso-01-10-09-01-10.jpg"    class="h-7 w-7 cananh"> -->
                   
-                    {{ mota }}
+               Mô tả: {{ user.mota }}
+                  
                   </p>
                   <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                  xem ngay ->   </div>
@@ -132,8 +135,8 @@
               
               </div>
            
-            </div>
-        </a>
+            </div></a>
+        </div>  
           </div>
           <div style="text-decoration: none" >
             <button @click="saochep(usernamebio)" type='button'
@@ -203,7 +206,7 @@
     </body>
     </template>
     <script>
-    import {    doc,  onSnapshot   } from "firebase/firestore" ;
+    import {  collection,  doc , onSnapshot  } from "firebase/firestore" ;
     import Swal from 'sweetalert2' ;
     import db from '../firebase/init.js' ;
          export default {
@@ -219,6 +222,8 @@
                       hientruyen: null ,
                       usersocial: null ,
                       error: null,
+                      seraddlink: [] ,
+              testuseraddlink: [] ,
                       infoBox: null,
                       width:0,
                       height:0
@@ -246,10 +251,27 @@
     } ,
     async biolinklienket() {
 
-onSnapshot(doc(db, this.usernamebio, 'biolink'), (snap) => {
-this.lienket = snap.data().lienket
-this.mota = snap.data().mota
-})
+   onSnapshot(collection(db, this.usernamebio), (snap) => {
+          this.useraddlink = [] ,
+          this.testuseraddlink = [] ,
+          snap.forEach((doc) => {
+
+          this.testuseraddlink.push(doc.data()) ;
+       this.testoj =   this.testuseraddlink[Object.keys(this.testuseraddlink)[Object.keys(this.testuseraddlink).length - 1]] ;
+       this.testoj =   JSON.stringify(this.testoj) ;
+       if ( this.testoj.indexOf('addlink') > -1 )
+       {
+        this.useraddlink.push(doc.data()) ;
+         console.log( JSON.stringify(this.useraddlink) );
+       }
+         
+          
+        })
+         
+
+        // this.lienket = snap.data().lienket
+        // this.mota = snap.data().mota
+      })
 },
 async biolinksocial() {
        onSnapshot(doc(db, this.usernamebio, 'social'), (snap) => {
