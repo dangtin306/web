@@ -332,7 +332,7 @@ back(){
 }
 ,
 tap1(){
-  this.$router.push('/') 
+  this.$router.push('/home/') 
 },
 tap2(){
   this.$router.push('/okluon') 

@@ -107,6 +107,9 @@ Route::get('/testcode',  function () {
 Route::get('/comment',  function () {
     return view('welcome');
 });
+Route::get('/home/',  function () {
+    return view('appvue');
+});
 Route::get('the-loai/{name}', function($name)
 {
     return view('theloai');

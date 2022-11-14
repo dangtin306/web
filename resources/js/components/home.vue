@@ -106,6 +106,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
  export default {
           data() {
               return {
+                ok2 : this.$cookies.get("apikey") ,
                   loading: false,
                   users: null,
                   userss: null,
@@ -120,6 +121,15 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
               };
           },
           created() {
+            var laylinkhome = location.href  ;
+            let result = laylinkhome.includes("/home/");
+            if ( result == true )
+            {
+              if ( this.ok2 != ''  )
+            {
+              window.location.replace("https://hust.media");
+            }
+            }
 
         },}
           
