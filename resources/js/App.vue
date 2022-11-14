@@ -192,7 +192,7 @@
               md:pt-0"
           >
           <li>
-            <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/">Trang chủ</router-link> 
+            <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/home/">Trang chủ</router-link> 
           </li>
      
           <div class="relative inline-flex">
