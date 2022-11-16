@@ -206,6 +206,7 @@
                 <li><router-link class="dropdown-item"  to="/comment">Tăng comment</router-link></li>
                 <li><router-link class="dropdown-item"  to="/orders">Tăng tương tác telegram</router-link></li>
                 <li><router-link class="dropdown-item"  to="/account">Mua clone</router-link></li>
+                <li><router-link class="dropdown-item"  to="/id">Lấy id</router-link></li>
               </ul>
            
           </div>

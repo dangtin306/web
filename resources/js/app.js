@@ -4,7 +4,7 @@ require('./bootstrap');
 import { createApp } from "vue";
 import store from './store/index.js';
 import { createRouter, createWebHistory } from 'vue-router'
-
+import { createMetaManager } from 'vue-meta' ;
 // import router from "./router.js";
 /**
  * The following block of code may be used to automatically register your
@@ -48,6 +48,7 @@ import Ads from 'vue-google-adsense'
     import comment from "./order/comment.vue"; 
     import account from "./order/account.vue"; 
     import aboutus from "./congdong/aboutus.vue"; 
+    import id from "./order/id.vue"; 
     const app = createApp(
       {
           // propsData: { foo }
@@ -62,6 +63,7 @@ import Ads from 'vue-google-adsense'
     app.use(store);
 // app.use(store);
 // app.use(BootstrapVue)
+app.use(createMetaManager()) ;
 app.component('appvue', require('./App.vue').default) ;
 app.component('webapp', require('./congdong/biolink.vue').default) ;
 app.component('theloai', require('./components/theloai.vue').default) ;
@@ -85,6 +87,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
+  },
+  {
+    path: '/id',
+    name: 'id',
+    component: id
   },
   {
     path: '/home/',
