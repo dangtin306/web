@@ -4,7 +4,7 @@
   
   số xu hiện tại lại là {{money }}
   <metainfo>
-    <template v-slot:title="{ content }">{{ content ? `${content} | SITE_NAME` : `SITE_NAME` }}</template>
+    <template v-slot:title="{ content }">{{ content }}</template>
   </metainfo>  <header />
     <div class="fixrow row">
       <div v-if="status2 != 1 && status2 != 3" >
@@ -180,17 +180,25 @@ import { useMeta } from 'vue-meta' ;
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.css' ;
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css' ;
     import '../../../node_modules/bootstrap-select/js/bootstrap-select.js' ;
-
+    import { computed } from "vue";
     export default {
 
   setup () {
-    useMeta({
-    title: 'Tìm lấy id ,uid Facebook , TikTok,instagram Online | Find ID ',
-    meta: [
-      { name: 'description', content: 'Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.' },
+    useMeta(
+      computed(() => ({
+    title: 'Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID ',
+    og: {
+    image: 'https://tuongtac.fun/img/icon/idcards.png'
+  },
+  description: {
+      content: 'Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.' }
+   ,   meta: {
+    name: 'keywords' ,
+      content: 'Tìm lấy id ,Tìm lấy id Facebook,Tìm lấy id TikTok ,find id facebook,get id facebook' }
 
-    ]
-  })
+  }
+  
+  )))
   },
       data (){
             return {
@@ -199,6 +207,7 @@ import { useMeta } from 'vue-meta' ;
                 urlsplit: '0928889798' ,
                 selected: null ,
       options: [
+        { text: 'Chọn 1 lựa chọn', value: 'chonmxh' } , 
         { text: 'Facebook', value: 'facebook' } , 
         { text: 'TikTok', value: 'tiktok' } ,
         { text: 'Instagram', value: 'instgram' }

@@ -4,7 +4,13 @@ require('./bootstrap');
 import { createApp } from "vue";
 import store from './store/index.js';
 import { createRouter, createWebHistory } from 'vue-router'
-import { createMetaManager } from 'vue-meta' ;
+
+import { plugin as vueMetaPlugin } from "vue-meta";
+import { createMetaManager, defaultConfig, plugin as metaPlugin } from 'vue-meta'
+const metaManager = createMetaManager(false, {
+    ...defaultConfig,
+    meta: { tag: 'meta', nameless: true },
+});
 // import router from "./router.js";
 /**
  * The following block of code may be used to automatically register your
@@ -63,7 +69,8 @@ import Ads from 'vue-google-adsense'
     app.use(store);
 // app.use(store);
 // app.use(BootstrapVue)
-app.use(createMetaManager()) ;
+
+app.use(metaManager);
 app.component('appvue', require('./App.vue').default) ;
 app.component('webapp', require('./congdong/biolink.vue').default) ;
 app.component('theloai', require('./components/theloai.vue').default) ;
