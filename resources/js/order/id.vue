@@ -209,6 +209,7 @@ import { useMeta } from 'vue-meta' ;
               ok2 : this.$cookies.get("apikey") ,
               name2 : '',
                 urlsplit: '0928889798' ,
+                theloai: null ,
                 selected: null ,
       options: [
         { text: 'Chọn 1 lựa chọn', value: 'chonmxh' } , 
