@@ -5,6 +5,10 @@
   số xu hiện tại lại là {{money }}
   <metainfo>
     <template v-slot:title="{ content }">{{ content }}</template>
+    <title>Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID </title>
+    <meta property="og:image" content="https://tuongtac.fun/img/icon/idcards.png">
+    <meta name="description" content="Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.">
+    <meta name="keywords" content="Tìm lấy id ,Tìm lấy id Facebook,Tìm lấy id TikTok ,find id facebook,get id facebook">
   </metainfo>  <header />
     <div class="fixrow row">
       <div v-if="status2 != 1 && status2 != 3" >
