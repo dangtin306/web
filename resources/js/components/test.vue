@@ -68,7 +68,8 @@
           <button    @click="chay5" class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Hướng dẫn mua dịch vụ</button>
           <button @click="chay6"  class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Hướng dẫn nạp xu</button>
           <button class="nav-link" id="hotro-tab" data-bs-toggle="pill" data-bs-target="#hotro" type="button" role="tab" aria-controls="hotro" aria-selected="false">Hướng dẫn tạo hỗ trợ</button>
-
+          <button @click="chay7" class="nav-link" id="layid-tab" data-bs-toggle="pill" data-bs-target="#layid" type="button" role="tab" aria-controls="layid" aria-selected="false">Lấy uid gốc facebook , tiktok</button>
+          <button @click="chay8" class="nav-link" id="connecttele-tab" data-bs-toggle="pill" data-bs-target="#connecttele" type="button" role="tab" aria-controls="connecttele" aria-selected="false">Kết nối app với telegram</button>
         </div>
         <div class="tab-content" id="v-pills-tabContent">
             
@@ -117,11 +118,16 @@
           <div class="tab-pane fade" id="hotro" role="tabpanel" aria-labelledby="hotro" tabindex="0">
             <h1>  Bạn vụ lòng ấn vô biểu tượng hỗ trợ ở góc dưới bên phải màn hình nhé </h1> 
           </div>
+          <div class="tab-pane fade" id="layid" role="tabpanel" aria-labelledby="layid" tabindex="0">
+            <div id="layid2" ></div>  
+          </div>
+          <div class="tab-pane fade" id="connecttele" role="tabpanel" aria-labelledby="connecttele" tabindex="0">
+            <div id="connecttele2" ></div>  
+          </div>
         </div>
       </div></div>
     </div>
  
-   
 
   
     
@@ -250,6 +256,20 @@ chay5() {
    this.message = this.message.split('').reverse().join('')
         setTimeout( function() {   
 postscribe('#muafollow', `<script data-telegram-post="freefltiktok/28" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
+    
+},
+chay7() {
+    this.picked = 'chay7' ,
+   this.message = this.message.split('').reverse().join('')
+        setTimeout( function() {   
+postscribe('#layid2', `<script data-telegram-post="freefltiktok/34" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
+    
+},
+chay8() {
+    this.picked = 'chay8' ,
+   this.message = this.message.split('').reverse().join('')
+        setTimeout( function() {   
+postscribe('#connecttele2', `<script data-telegram-post="freefltiktok/35" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
     
 },
     notify() {
