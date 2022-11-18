@@ -10,7 +10,15 @@ số điện thoại hiện tại là {{ phonechuan }}
 <div v-if="checktele == 'YES' || checktele == 'chedo' || status2 == 1 ||  status3 == 0 "  >
 <div class="">
     <div  class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <p class="font-normal text-gray-700 dark:text-gray-400">  Chọn chế độ nạp.
+        <p class="font-normal text-gray-700 dark:text-gray-400">  
+         <div  v-if="chedomomo == 'chan' || chedomomo == 'le' ">
+          Để thay đổi chẵn sang lẻ vui lòng ấn vô thay đổi số điện thoại và làm lại từ đầu
+         </div>
+         <div  v-if="chedomomo != 'chan' && chedomomo != 'le' ">
+          Chọn chế độ nạp.
+         </div>
+         
+
        <br>
             - Chẵn lẻ là một game tính kết quả bằng 1 số cuối mã giao dịch.
             <br>
@@ -85,6 +93,72 @@ số điện thoại hiện tại là {{ phonechuan }}
      
     
     </div>
+    <div v-if="chedomomo == 'chan' || chedomomo == 'le' " class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
+  
+     
+  
+      <div v-if="chedomomo == 'chan'" class="max-w-7xl mx-2 py-2 mb-2">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r 
+          from-purple-600 to-pink-600 rounded-lg blur opacity-25 
+          group-hover:opacity-100 transition duration-1000 
+          group-hover:duration-200"></div>
+          <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
+         rounded-2xl leading-none flex items-top justify-start space-x-3">
+         
+         
+         
+            <div class="space-y-2">
+              
+              <p class="text-lg text-slate-1000">
+                <img src="data:image/png;base64,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"
+                class="h-7 w-7 cananh">  
+             Chế độ nạp hiện tại là  Chẵn </p>
+              <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
+                Số cuối là 2 - 4 - 6 - 8 x 2.35 tiền nhận xu → </div>
+
+                <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+            </div>
+          
+          </div>
+       
+        </div>
+      </div>
+      
+
+
+      <div v-if="chedomomo == 'le'" class="max-w-7xl mx-2 py-2 mb-2">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r 
+          from-purple-600 to-pink-600 rounded-lg blur opacity-25 
+          group-hover:opacity-100 transition duration-1000 
+          group-hover:duration-200"></div>
+          <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
+         rounded-2xl leading-none flex items-top justify-start space-x-3">
+         
+         
+         
+            <div class="space-y-2">
+              
+              <p class="text-lg text-slate-1000">
+                <img src="https://inkythuatso.com/uploads/images/2021/11/mb-bank-logo-inkythuatso-01-10-09-01-10.jpg"
+                class="h-7 w-7 cananh">  
+                Chế độ nạp hiện tại là  lẻ</p>
+              <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
+                  Số cuối là 1 - 3 - 5 - 7 x 2.35 tiền nhận xu → </div>
+
+                <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+            </div>
+          
+          </div>
+       
+        </div>
+      </div>
+      
+
+   
+  
+  </div>
     <div v-if="  status3 == 1  || checktele == 'YES'  ">
       <div class="col-xl-4 mt-0">
       <div class='flex items-center py-7 flex-col mx-2 '>
@@ -126,6 +200,7 @@ số điện thoại hiện tại là {{ phonechuan }}
       </svg>
     </div>
   </button>
+  <br><br><br><br><br>
     </div>
   </div>
 </div>
@@ -144,6 +219,7 @@ số điện thoại hiện tại là {{ phonechuan }}
               status2: null ,
               checktele: null ,
               phonechuan: null ,
+              chedomomo: null ,
               ketqua: null  ,
               money: null ,
               response: null,
@@ -229,6 +305,7 @@ số điện thoại hiện tại là {{ phonechuan }}
   {
    
     this.info = response.data ,
+    this.chedomomo = this.info.chedo ,
     this.phonechuan = this.info.phonechuan ,
     this.money = this.info.money 
     this.status = this.info.status 
