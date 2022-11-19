@@ -56,7 +56,7 @@ Route::get('/test',  function () {
 Route::get('/appvue',  function () {
         return view('appvue');
 });
-Route::get('/N3mlivOzCXrCPCX3Bgv-8q-YQUbD1UqvWn0D.html', 'htmlController@html');
+Route::get('/rNywzJ1mHoQmhk2FGWSqxQIEzcIgFLcDIHIM.html', 'htmlController@html');
 Route::get('/momo',  function () {
     return view('welcome');
 });
