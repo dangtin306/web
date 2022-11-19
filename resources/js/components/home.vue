@@ -59,14 +59,14 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
                 <span>Chat realtime qua app chat tự viết 24/7</span>
               </li>
             </ul>
-            <router-link to="/plan">
+            <a href="https://hust.media/dang-ky3.php">
             <button class="button">
-              Choose plan ( Nâng cấp ngay )
+           Đăng ký miễn phí
             </button>
-            </router-link>
-            <a href="https://tecom.pro">
+          </a>
+            <a href="https://hust.media/dang-nhap2.php">
               <button class="button">
-          test web
+          Đăng nhập
               </button>
               </a>
           </div>
@@ -125,7 +125,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
             let result = laylinkhome.includes("/home/");
             if ( result == true )
             {
-              if ( this.ok2 != ''  )
+              if ( this.ok2 != '' && this.ok2 != null  )
             {
               window.location.replace("https://hust.media");
             }

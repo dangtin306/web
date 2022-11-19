@@ -1,18 +1,20 @@
 <template>
     <!-- This is an example component -->
-  
-  
-  số xu hiện tại lại là {{money }}
+
   <metainfo>
     <template v-slot:title="{ content }">{{ content }}</template>
     
   </metainfo>  <header />
     <div class="fixrow row">
+      
       <div v-if="status2 != 1 && status2 != 3" >
+       
     <div class="col mt-0">
-    <div  class='mt-4 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500 '>
-  
-      <div  class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
+    <div  class='mt-1 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500 '>
+      <div class="text-center">
+        Công cụ miễn phí giúp bạn dễ dàng lấy id , UID Facebook , TikTok , instagram một cách dễ dàng.
+      </div>
+      <div  class='w-full max-w-lg px-8 py-4 mx-auto bg-white rounded-lg shadow-xl'>
          
           <div class='max-w-md mx-auto  space-y-6'>
          
