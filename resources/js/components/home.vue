@@ -85,6 +85,13 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
                 Price Starting From</dt>
               <dd>Free</dd>
             </div>
+         
+        <Adsense
+        data-ad-client="ca-pub-4574266110812955"
+         data-ad-slot="8795043992"
+         data-ad-format="auto"
+         ins-style="display:inline-block;height:50px">
+    </Adsense>
           </dl>
         </article>
       </div>
