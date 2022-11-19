@@ -86,14 +86,17 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
               <dd>Free</dd>
             </div>
          
-        <Adsense
-        data-ad-client="ca-pub-4574266110812955"
-         data-ad-slot="8795043992"
-         data-ad-format="auto"
-         ins-style="display:inline-block;height:50px">
-    </Adsense>
           </dl>
+          <br>
+          <Adsense
+          data-ad-client="ca-pub-4574266110812955"
+           data-ad-slot="8795043992"
+           data-ad-format="auto"
+           data-full-width-responsive="true"
+           ins-style="display:inline-block;height:50px">
+      </Adsense>
         </article>
+      
       </div>
       <br>
 
