@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
         <title>Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID </title>
         <link rel="icon" href="https://tuongtac.fun/img/icon/idcards.png">
     <meta property="og:image" content="https://tuongtac.fun/img/icon/idcards.png">
+    <meta property="og:title" content="Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID ">
+    <meta property="og:description" content="Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.">
     <meta name="description" content="Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.">
     <meta name="keywords" content="Tìm lấy id ,Tìm lấy id Facebook,Tìm lấy id TikTok ,find id facebook,get id facebook">
         <meta name="apple-mobile-web-app-capable" content="yes">

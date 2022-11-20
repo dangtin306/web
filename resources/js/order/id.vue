@@ -191,7 +191,9 @@ import { useMeta } from 'vue-meta' ;
       computed(() => ({
     title: 'Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID ',
     og: {
-    image: 'https://tuongtac.fun/img/icon/idcards.png'
+    image: 'https://tuongtac.fun/img/icon/idcards.png' ,
+    title: 'Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID ',
+    description : 'Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.' 
   },link: [
       { rel: 'icon', href: 'https://tuongtac.fun/img/icon/idcards.png' }
     ],
