@@ -342,10 +342,17 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
     onChange() {
     
    this.thanhcong = null ;
+   
 if ( this.social == 'facebook' )
 {
     this.options2 =  [
         { name: 'Lấy id', code: 'facebook' }
+      ]
+}
+else if ( this.social == 'chonmxh' )
+{
+    this.options2 =  [
+        { name: 'Ấn Chọn nền tảng nhé', code: '' }
       ]
 }
 else if ( this.social == 'tiktok' )
@@ -374,7 +381,7 @@ setTimeout(() => {
         this.thanhcong = null ;
 
     if(!this.theloai){
-                    alert('Please điền đầy đủ thông tin')
+                    alert('Please Ấn chọn nền tảng nha')
                     return
                 }
                axios
