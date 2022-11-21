@@ -358,7 +358,9 @@ else if ( this.social == 'tiktok' )
 else if ( this.social == 'instgram' )
 {
     this.options2 =  [
-        { name: 'Lấy uid trang cá nhân', code: 'profileinstgram' } 
+        { name: 'Lấy uid trang cá nhân', code: 'profileinstgram' } ,
+        { name: 'Lấy id post instgram', code: 'idvideoinstgram' } ,
+        { name: 'Lấy uid post instgram', code: 'uidvideoinstgram' } ,
       ]
 }
 setTimeout(() => {    
