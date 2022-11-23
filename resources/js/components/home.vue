@@ -18,7 +18,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
           </button></router-link>
           <div class="text-center">
 
-            <h2 class="text-uppercase">Get it on</h2>
+            <h2 class="text-uppercase"> Get it on</h2>
           
             <div class="buttons justify-content-center mt-3">
           <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hm.hustmedia">
