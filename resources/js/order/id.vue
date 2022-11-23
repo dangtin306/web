@@ -359,7 +359,7 @@ else if ( this.social == 'chonmxh' )
         { name: 'Ấn Chọn nền tảng nhé', code: '' }
       ]
 }
-else if ( this.social == 'tiktok' )
+else if ( this.social == 'tiktok'  )
 {
     this.options2 =  [
         { name: 'Lấy uid trang cá nhân', code: 'profiletiktok' } , 
