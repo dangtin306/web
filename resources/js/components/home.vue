@@ -59,7 +59,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
                 <span>Chat realtime qua app chat tự viết 24/7</span>
               </li>
             </ul>
-            <a href="https://hust.media/dang-ky3.php">
+            <a href="https://hust.media/dang-ky4.php?=code=new">
             <button class="button">
            Đăng ký miễn phí
             </button>

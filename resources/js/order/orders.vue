@@ -35,7 +35,7 @@
                     <label for="dichvu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn dịch vụ</label>
                     <select  id="dichvu" class="form-control selectpicker sp3" data-width="auto" data-size="7"  data-live-search="true"  @change="onChange3()"   name="dichvu" v-model="dichvu">
                       <option v-for="option in options3" :value="option.id">
-                        {{ option.name }}
+                        {{ option.money }} Xu     {{ option.name }}
                       </option>
                     </select>
                     </div>
@@ -165,8 +165,9 @@ Tối đa {{maxorder  }}
                 urlsplit: '0928889798' ,
                 selected: null ,
       options: [
-        { text: 'Telegram', value: 'Telegram' } , 
-        { text: 'Telegram', value: 'Telegram' }
+        { text: 'Chọn 1 nền tảng', value: 'Telegram' } , 
+        { text: 'Telegram', value: 'Telegram' } ,
+        { text: 'Shopee', value: 'Shopee' } 
       ],
       options2: null ,
       options3: null ,
