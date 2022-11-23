@@ -10,42 +10,39 @@
                   <div class="col">
                       <span class="h2 font-weight-bold mb-0">
                           
-                      A detailed description of the project
-  <br><br>
-  The project is a website where users get paid when they follow others on tiktok. The amount paid is taken from paying customers to increase followers on tiktok . 
-  The project helps other people get more followers by paying people who follow them. That's how the project works.
-   In addition,The money you earn is digitally encrypted real money and you can buy services provided by me and other parties.The project is not a cross-border monetization tool. But it's just a media marketing Communications  on tiktok that helps people create effects by following each other. The project is not really profitable, profits are earned from integrating google adsend ads on the web. 
-  <br><br>
-  Who We Are:
-  <br><br>
-  We will help you grow on TikTok Media Platforms
-  
-  
-  We will provide instant services.
-  
-  We provide services from real accounts for your targeted audience.
-  
-  <br><br>
-  Why Hust Media started media marketing service on tiktok?
-  <br><br>
-  
-  Hust media has tried many ways of marketing communication. For example: running ads, posting, editing videos, making movies, calling for support from acquaintances, etc... but in general, without the support of interactions, the effect will not be good. so I created a community for people to help each other get followed
-  <br><br>
-  Why Hust Media works as an e-commerce site
-  <br><br>
-  With market research experience in my country is Vietnam. I realized that if there really was a commercially integrated application platform, it would be more user-friendly than just the available features. So the integration aims to make the project more attractive.
-  <br><br>
-  Customer information policy
-  <br><br>
-  Hust Media  all user input information such as: phone number, email, ip, uid and seeding content
-  <br><br>
-  Privacy Policy
-  <br><br>
-  
-  
-  - All user information is kept confidential..
-  <br>
-      <br>                    
+                        FAQ <br>
+                        A detailed description of the project
+    <br><br>
+    The project was established with the purpose of creating an e-commerce website. Because of the technical difficulty the project has split into several steps to develop . On the browser you can access the web to use the full features on the android and iphone apps you can download from the app store with limited functionality because of technical limitations. The android app is distributed by us as a platform to help users buy and sell digital products. On ios we will provide bio link creation feature to help people easily share useful information with friends.
+    <br><br>
+    Who We Are:
+    <br><br>
+    We are group of students from hust university. With a passion for digital, we make a marketing communication product to make a profit and continue with our passion.
+    
+    <br><br>
+    Why did Hust Media start a media marketing service??
+    <br><br>
+    
+    Hust media has tried many ways of marketing communication. For example: running ads, posting, editing videos, making movies, calling for support from acquaintances, etc... but in general, without the support of interactions, the effect will not be good. so I created a community for people to help each other get followed
+    <br><br>
+    Why Hust Media works as an e-commerce site
+    <br><br>
+    With market research experience in my country is Vietnam. I realized that if there really was a commercially integrated application platform, it would be more user-friendly than just the available features. So the integration aims to make the project more attractive.
+    <br><br>
+    Customer information policy
+    <br><br>
+    - Hust Media secures all user input information such as: phone number, email, ip, uid and seeding content
+    <br>
+    - Information on the history of accessing pages on the app is collected by google adsend and google admob. You can visit their official page for more informationt
+    <br><br>
+    Privacy Policy
+    <br><br>
+    
+    
+    - All user information is secure end-to-end encryption.
+    <br>
+    - We do not sell your information to third parties.
+    <br>                 
                           
       REGULATIONS ON COINS
   <br><br>
