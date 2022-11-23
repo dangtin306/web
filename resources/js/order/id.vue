@@ -349,7 +349,7 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
 if ( this.social == 'facebook' )
 {
     this.options2 =  [
-        { name: 'Lấy id , uid từ liên kết', code: 'facebook' } ,
+        { name: 'Lấy id ,uid từ liên kết', code: 'facebook' } ,
         { name: 'Lấy mã 2fa', code: '2fa' }
       ]
 }
