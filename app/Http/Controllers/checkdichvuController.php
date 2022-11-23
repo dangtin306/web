@@ -38,6 +38,12 @@ class checkdichvuController extends Controller
             $okk = DB::table('service')->where('webcon', 'hustmedia' )->where('status', 'show' )->where('category', $theloai )->limit(50)->select(array('id', 'stt','minorder', 'maxorder', 'name', 'money', 'status' ))->get();
             echo ($okk);
         }
+        else  if (isset($request->theloai2) )
+        {
+            $theloai = $request->theloai2 ;
+            $okk = DB::table('service')->where('webcon', 'hustmedia' )->where('status', 'show' )->where('category', $theloai )->limit(50)->select(array('id', 'stt','minorder', 'maxorder', 'name', 'money', 'status' ))->get();
+            echo ($okk);
+        }
         else if (isset($request->dichvu2))
         {
             $dichvu = $request->dichvu2  ;
