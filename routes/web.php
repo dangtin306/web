@@ -85,9 +85,7 @@ Route::get('/themsdt',  function () {
 Route::get('/themsdtmomo',  function () {
     return view('themsdtmomo');
 });
-Route::get('/home',  function () {
-    return view('login');
-});
+
 Route::get('webapp/{name}', function($name)
 {
     return view('biolink');
