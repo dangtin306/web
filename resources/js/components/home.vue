@@ -16,6 +16,20 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
               <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />
             </svg>
           </button></router-link>
+          <div class="text-center">
+
+            <h2 class="text-uppercase">Get it on</h2>
+          
+            <div class="buttons justify-content-center mt-3">
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hm.hustmedia">
+          <button class="btn btn-dark app-button mb-3"><i class="fa fa-play fa-2x"></i><span class="text-uppercase ml-2">Google store</span></button>
+          </a>
+          <a target="_blank" href="https://apps.apple.com/app/hust-media/id6444485454">
+          <button class="btn btn-dark app-button mb-3"><i class="fa fa-apple fa-2x"></i><span class="text-uppercase ml-2">Apple store</span></button>
+          </a> 
+             
+            </div>
+          </div>
         </article>
         <article class="plan [ card ]">
           <div class="inner">
@@ -105,20 +119,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
      data-full-width-responsive="true">
 </Adsense>
 
-<div class="text-center">
 
-  <h2 class="text-uppercase">Get it on</h2>
-
-  <div class="buttons justify-content-center mt-3">
-<a target="_blank" href="https://play.google.com/store/apps/details?id=com.hm.hustmedia">
-<button class="btn btn-dark app-button mb-3"><i class="fa fa-play fa-2x"></i><span class="text-uppercase ml-2">Google store</span></button>
-</a>
-<a target="_blank" href="https://apps.apple.com/app/hust-media/id6444485454">
-<button class="btn btn-dark app-button mb-3"><i class="fa fa-apple fa-2x"></i><span class="text-uppercase ml-2">Apple store</span></button>
-</a> 
-   
-  </div>
-</div>
 <br>
 <br>
 <br>
