@@ -86,8 +86,12 @@ Route::get('/themsdtmomo',  function () {
     return view('themsdtmomo');
 });
 
-Route::get('/public/home',  function () {
-    header('Location: /home/');
+Route::get('/public/{name}',  function () {
+?>
+<script>  window.location="/home/";
+</script>
+
+<?php
 });
 Route::get('webapp/{name}', function($name)
 {
