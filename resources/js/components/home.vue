@@ -92,7 +92,6 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
           data-ad-client="ca-pub-4574266110812955"
            data-ad-slot="8795043992"
            data-ad-format="auto"
-           data-full-width-responsive="true"
            ins-style="display:inline-block;height:50px">
       </Adsense>
         </article>
@@ -107,6 +106,27 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
      data-full-width-responsive="true">
 </Adsense>
 
+<div class="text-center">
+
+  <h2 class="text-uppercase">Get it on</h2>
+
+  <div class="buttons justify-content-center mt-3">
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.hm.hustmedia">
+<button class="btn btn-dark app-button mb-3"><i class="fa fa-play fa-2x"></i><span class="text-uppercase ml-2">Google store</span></button>
+</a>
+<a target="_blank" href="https://apps.apple.com/app/hust-media/id6444485454">
+<button class="btn btn-dark app-button mb-3"><i class="fa fa-apple fa-2x"></i><span class="text-uppercase ml-2">Apple store</span></button>
+</a> 
+   
+  </div>
+
+
+
+</div>
+<br>
+<br>
+<br>
+<br>
 </template>
 
 <style lang="scss" scoped>
