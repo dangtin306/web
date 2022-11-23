@@ -163,7 +163,10 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
                 
             </div>
         </div>
-   
+        <div v-if="chondichvu != 1" class="text-center">
+          <router-link type="button" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" to="/okluon">Hướng dẫn</router-link>
+          
+  </div>
         </div>
         <br><br><br><br>
       </div>
@@ -346,7 +349,8 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
 if ( this.social == 'facebook' )
 {
     this.options2 =  [
-        { name: 'Lấy id', code: 'facebook' }
+        { name: 'Lấy id , uid từ liên kết', code: 'facebook' } ,
+        { name: 'Lấy mã 2fa', code: '2fa' }
       ]
 }
 else if ( this.social == 'chonmxh' )
