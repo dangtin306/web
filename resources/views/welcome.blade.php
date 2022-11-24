@@ -75,7 +75,6 @@ if ( isset($username))
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta name="a.validate.02" content="-i1bUBgEAzU9zq6YWhH-caAuNF96SocRzS_Y" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
      crossorigin="anonymous"></script>
         <meta name="apple-mobile-web-app-capable" content="yes">
