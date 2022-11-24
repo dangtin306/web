@@ -25,7 +25,7 @@ $key = DB::table('users')->where('key', $apikey )->first();
 
 $username  = $key->username ;
 // $orders = DB::table('orders')->where('service_name', 'chuyenxu' )->where('username', $username  )->get();
-$thang = rand(0,27) ;
+$thang = rand(0,28) ;
 if ( $key->money < 0 )
 {
     $money = DB::table('users')->where('key', $apikey )->value('money');
