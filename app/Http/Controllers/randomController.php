@@ -71,7 +71,7 @@ else if ( $thang == 15 )
     
   
 }
-else if ( $thang < 5 )
+else if ( $thang < 4 )
 {
     $xuhientai = $key->money ;
     $moderan = rand(4,11);
