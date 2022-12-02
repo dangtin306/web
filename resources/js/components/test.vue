@@ -2,6 +2,7 @@
 
 
 <template>
+  <title>Hướng dẫn sử dụng App Hust Media</title>
   <div class="row">
 
         <div class="col-xl-9 order-xl-2 mb-5 mb-xl-0">
@@ -84,6 +85,8 @@
 
     <input type="radio" class="btn-check" value="chay4"  @click="chay4" v-model="picked" id="chay4" autocomplete="off">
     <label class="btn btn-outline-danger" for="chay4">Đăng clip</label>
+    <input type="radio" class="btn-check" value="chay10"  @click="chay10" v-model="picked" id="chay10" autocomplete="off">
+    <label class="btn btn-outline-danger" for="chay10">Đánh giá app</label>
         <br>
     <div v-if="picked == 'chay1'"> 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/PI8q3YssSvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -97,6 +100,9 @@
     <div v-if="picked == 'chay4'"> 
         <div id="dangbai" ></div> 
     </div>
+    <div v-if="picked == 'chay10'"> 
+      <div id="danhgiapp" ></div> 
+  </div>
         </div>
           <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">   
         <h1>   Để nhận follow miễn phí bạn vui lòng tìm hiểu cách kiếm xu miễn phí rồi dùng số xu đó để mua dịch vụ follow trên hust media nhé </h1> 
@@ -270,6 +276,12 @@ chay8() {
    this.message = this.message.split('').reverse().join('')
         setTimeout( function() {   
 postscribe('#connecttele2', `<script data-telegram-post="freefltiktok/35" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
+    
+},
+chay10() {
+   this.message = this.message.split('').reverse().join('')
+        setTimeout( function() {   
+postscribe('#danhgiapp', `<script data-telegram-post="freefltiktok/37" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`,)} , 200);    
     
 },
     notify() {
