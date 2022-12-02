@@ -283,11 +283,170 @@
   </header>
   
   <router-view/>
+  <div class="floatingButtonWrap">  
+    <div  id="getMessage" class="floatingButtonInner">
+    <div class="message2">   
+                  <h2 class="text-pink"><div class="message"> Hỗ    Trợ    </div></h2> </div>
+      <a href="#" class="floatingButton">
+            
+            <!-- <i class="fa fa-plus icon-default">
+            
+            </i> -->
+            <div class="chatokluon">
   
+              <svg class="svg-inline--fa fa-comment" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="" fill="currentColor" d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"></path></svg>
+          </div>
+        </a>
+       
+                    
+        <ul class="floatingMenu">
+        <li>
+                <a href="https://t.me/freetiktokfb"> Liên hệ Hỗ trợ </a>
+            </li>
+               <li>
+                <a href="https://t.me/hustmedia"> Liên kết hỗ trợ zalo </a>
+            </li>
+             <li>
+                <a href="https://www.facebook.com/groups/3847726625345377"> Liên hệ facebook </a>
+            </li>
+            <li>
+                <a href="https://zalo.me/g/vzufiz588"> Nhóm zalo  </a>
+            </li>
+            <li>
+                <a href="https://zalo.me/g/mvezii813">  liên hệ phụ </a>
+            </li>
+           </ul>
+    </div>
+</div>
+<!-- partial -->
+ 
 </body>
 
   </template>
   <style>
+  .chatokluon{
+    width: 47px;
+    height: 3rem;
+    bottom: -30 ;
+    font-weight: 900 ;
+  }
+.message2 {
+    
+    display: block;
+     width: 247px;
+     height: 56px;
+     text-align: center;
+    
+ 
+     line-height: 50px;
+     position: absolute;
+    
+     bottom: -17px;
+     right: -20px;
+     /*border: 5px solid #b2bedc;*/
+     /* opacity: 0.3; */
+     opacity: 1;
+     transition: all 0.4s;
+    
+ }
+ .floatingButtonWrap {
+  bottom: 79px;
+}
+.floatingButtonWrap {
+  display: block;
+  position: fixed;
+  bottom: 66px;
+  right: 45px;
+  z-index: 999999999;
+}
+
+.floatingButtonInner {
+  position: relative;
+}
+
+.floatingButton {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background: -webkit-linear-gradient(45deg, #8769a9, #507cb3);
+  background: -o-linear-gradient(45deg, #8769a9, #507cb3);
+  background: linear-gradient(45deg, #8769a9, #507cb3);
+  color: #fff;
+  line-height: 50px;
+  position: absolute;
+  border-radius: 50% 50%;
+  bottom: 0px;
+  right: 0px;
+  border: 5px solid #b2bedc;
+  /* opacity: 0.3; */
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.floatingButton .fa {
+  font-size: 25px !important;
+  height: 90px; /* Important */ 
+  line-height: 45px; /* Important */ 
+
+}
+
+.floatingButton.open,
+.floatingButton:hover,
+.floatingButton:focus,
+.floatingButton:active {
+  opacity: 1;
+  color: #fff;
+}
+
+
+.floatingButton .fa {
+  transform: rotate(0deg);
+  transition: all 0.4s;
+  height: 45px; /* Important */ 
+  line-height: 45px; /* Important */ 
+}
+
+.floatingButton.open .fa {
+  transform: rotate(225deg);
+}
+
+.floatingMenu {
+  position: absolute;
+  bottom: 60px;
+  right: 0px;
+  /* width: 200px; */
+  display: none;
+}
+
+.floatingMenu li {
+  width: 100%;
+  float: right;
+  list-style: none;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.floatingMenu li a {
+  padding: 8px 15px;
+  display: inline-block;
+  background: #ccd7f5;
+  color: #6077b0;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.4s;
+  /* -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.22); */
+  -webkit-box-shadow: 1px 3px 5px rgba(211, 224, 255, 0.5);
+  box-shadow: 1px 3px 5px rgba(211, 224, 255, 0.5);
+}
+
+.floatingMenu li a:hover {
+  margin-right: 10px;
+  text-decoration: none;
+}
+                  
 .tinhchinh2 {
   max-width: 400px !important;
   margin: auto;
@@ -312,7 +471,7 @@
   </style>  
 
   <script>
-
+import $ from "jquery";
 export default {
     data() {
         return {
@@ -325,7 +484,63 @@ export default {
 
     },
     created() {
-
+      $(document).ready(function(){
+        $('.floatingButton').on('click',
+            function(e){
+              
+                e.preventDefault();
+                $(this).toggleClass('open');
+                if($(this).children('.fa').hasClass('fa-plus'))
+                {
+                  $(".message").html('');
+                    $(this).children('.fa').removeClass('fa-close');
+                    $(this).children('.fa').addClass('fa-plus');
+                } 
+                else if ($(this).children('.fa').hasClass('fa-close')) 
+                {
+                 
+                
+                    $(this).children('.fa').removeClass('fa-close');
+                    $(this).children('.fa').addClass('fa-plus');
+                }
+                else 
+                {
+                  
+                }
+                $('.floatingMenu').stop().slideToggle();
+            }
+        );
+        $(this).on('click', function(e) {
+          
+            var container = $(".floatingButton");
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && $('.floatingButtonWrap').has(e.target).length === 0) 
+            {
+             
+                if(container.hasClass('open'))
+                {
+                    container.removeClass('open');
+                    
+                }
+                if (container.children('.fa').hasClass('fa-close')) 
+                {
+                  
+                    container.children('.fa').removeClass('fa-close');
+                    container.children('.fa').addClass('fa-plus');
+                }
+                $('.floatingMenu').hide();
+                
+            }
+          
+            // if the target of the click isn't the container and a descendant of the menu
+            if(!container.is(e.target) && ($('.floatingMenu').has(e.target).length > 0)) 
+            {
+              
+                $('.floatingButton').removeClass('open');
+                $('.floatingMenu').stop().slideToggle();
+            } 
+        });
+    });
     },
     methods: {
 back(){
