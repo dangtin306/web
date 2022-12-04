@@ -172,7 +172,7 @@ console.log(urlsplit);
                   .get(urlsplit ,config)
                   .then(response => {
       console.log(response.data);
-                this.laymetachuan = response.data ;
+                this.laymetachuan = response.data  ;
                 $('#loadingg').hide();
                })
                ;
