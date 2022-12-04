@@ -43,6 +43,7 @@
         "vue-google-adsense": "^2.0.0",
         "vue-meta": "^3.0.0-alpha.10",
         "vue-scriptx": "^0.2.5",
+        "vue3-runtime-template": "^1.0.2",
         "vuex": "^4.0.2"
     }
 }

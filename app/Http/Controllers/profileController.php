@@ -16,7 +16,7 @@ class profileController extends Controller
     public function profile(Request $request)  
     {
         $apikey = $request->apikey ;
-    $endpoint = "https://hust.media/truyen-tranh/api.php?".$apikey ;
+    $endpoint = "https://hust.media/truyen-tranh/api2.php?".$apikey ;
     $client = new \GuzzleHttp\Client();
     $id = 5;
     $value = "ABC";

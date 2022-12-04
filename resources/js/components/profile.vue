@@ -37,10 +37,10 @@
     <div class="overlay-header"></div>
     
     <div class="bodyok">
-        <a :href="chap1">
+        <router-link :to="chap1">
             <img  src="https://i.pinimg.com/originals/50/8f/11/508f1181449ccca9dc2f8f49afdc928b.gif"
              alt="Hugh Jackman" class="body-image ava" />
-        </a>
+        </router-link>
       <div class="body-action-button u-flex-center">
         <svg fill="#ffffff" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
           <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
@@ -68,9 +68,10 @@
             <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
           </svg>
         </span>
-        <div v-html="listtruyen">
-
-            </div>
+     
+          <v-runtime-template :template="listtruyen"></v-runtime-template>
+      
+  <br><br>
     
         <ul class="card-list">
          
@@ -81,11 +82,12 @@
   </div>
 </template>
 <script>
+import VRuntimeTemplate from "vue3-runtime-template";
     import axios from 'axios';
     export default {
       data() {
           return {
-            chap1: null,
+            chap1: '/',
               loading: false,
               users: null,
               userss: null,
@@ -101,6 +103,9 @@
               height:0
           };
       },
+      components: {
+    VRuntimeTemplate
+  },
       created() {
           this.fetchData();
           
@@ -130,6 +135,7 @@ var urlsplit = url.split(splitter)[1];
                 this.userss =  JSON.parse(this.users) ;
                 this.danhmuctruyen =   this.userss.danhmuctruyen ;
                 this.tentacpham =   this.userss.tentacpham ;
+                this.linkanh =   this.userss.anhtruyen ;
                 this.mota =   this.userss.mota ;
                 this.listtruyen =   this.userss.listtruyen ;
                 this.chap1 =   this.userss.chap1 ;

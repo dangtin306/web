@@ -282,7 +282,7 @@
     </nav>
   </header>
   
-  <router-view/>
+  <router-view :key="$route.path" />
   <div class="floatingButtonWrap">  
     <div  id="getMessage" class="floatingButtonInner">
     <div class="message2">   

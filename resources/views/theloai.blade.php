@@ -7,13 +7,42 @@ use Illuminate\Support\Facades\DB;
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <?php
+        $urigia = $_SERVER['REQUEST_URI'];
+if (str_contains( $urigia , '/profile/truyen-tranh/')) { 
+}
+else if (str_contains( $urigia , '/truyen-tranh/')) {
+    $urigia = substr($urigia, strpos($urigia, '/truyen-tranh/') + 14);
+    $urigia = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/'.$urigia ;
+    echo  $urigia ;
+    $curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => $urigia ,
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+}
+
+
+        ?>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
      crossorigin="anonymous"></script>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="/css/app.css">
-        <title>OK</title>
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -21,6 +50,7 @@ use Illuminate\Support\Facades\DB;
     <body>
         
         <div id="app">
+            <appvue></appvue>
             <theloai></theloai>
         </div>     
         <script src="https://js.pusher.com/7.2/pusher.min.js"></script>

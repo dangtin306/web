@@ -15,7 +15,7 @@
             {{ error }}
         </div>
 
-        <router-view/>
+ 
         <div v-if="hientruyen">
           
         </div>
@@ -25,9 +25,10 @@
                 <li v-for="{ tentruyen , sochap , linktruyen , linkanh } in userss"> 
                     <!-- <a :href="'https://hust.media' + linktruyen" > -->
                         <router-link class="md:p-4 py-2 block hover:text-purple-400" :to="{
-                            path:  '/profile' + linktruyen  ,
-                            query: { id: linkanh }
+                            path:  '/profile' + linktruyen  
+                           
                     }" >
+                    <!-- ,query: { id: linkanh } -->
                         <div @click="tattruyen" class="b-game-card" ref="infoBox" >
                             <div class="b-game-card__cover">
                                 <span class="test" 

@@ -11691,6 +11691,9 @@ video {
 .max-w-screen-lg {
   max-width: 1024px;
 }
+.max-w-2xl {
+  max-width: 42rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -12133,6 +12136,10 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pt-4 {
   padding-top: 1rem;

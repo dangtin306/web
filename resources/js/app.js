@@ -37,6 +37,8 @@ import momo from './components/momo.vue'
     import testcode from './components/testcode.vue'
     import order from './components/order.vue'
     import theloai from './components/theloai.vue'
+    import truyentranh from './truyen/truyen.vue'
+    import truyenchuyen from './truyen/truyenchuyen.vue'
     import profile from './components/profile.vue'
     import link from './components/link.vue'
     import themsdt from './components/themsdt.vue'
@@ -78,7 +80,6 @@ app.use(metaManager);
 app.component('appvue', require('./App.vue').default) ;
 app.component("font-awesome-icon", FontAwesomeIcon) ;
 app.component('webapp', require('./congdong/biolink.vue').default) ;
-app.component('theloai', require('./components/theloai.vue').default) ;
 app.component('notfound', require('./components/404.vue').default) ;
 app.component('profile', require('./components/profile.vue').default) ;
 app.component('ExampleComponent', require('./components/chuyenxu.vue').default) ;
@@ -94,6 +95,17 @@ const routes = [
     path: '/webapp',
     name: 'webapp',
     component: webapp
+  },
+  {
+    path: '/truyen-tranh/:name2',
+    name: 'truyentranh',
+    component: truyentranh ,
+  },
+  {
+    path: '/truyenchuyen/:name',
+    name: 'truyenchuyen',
+    component: truyenchuyen
+    
   },
   {
     path: '/',
@@ -233,7 +245,7 @@ const routes = [
     component: sms
   },
   {
-    path: '/theloai',
+    path: '/the-loai/:id',
     name: 'theloai',
     component: theloai
   },

@@ -124,7 +124,7 @@ Route::get('the-loai/{name}', function($name)
 });
 Route::get('profile/truyen-tranh/{name}', function($name)
 {
-    return view('profile');
+    return view('theloai');
 });
 Route::get('/realtime', function()
 {
@@ -148,11 +148,21 @@ Route::get('/nativeapp/{name}', function($name)
 });
 Route::get('/truyen-tranh/{name}', function($name)
 {
-    $name = "https://hust.media/truyen-tranh/".$name ;
-    header('Location: '.$name);
-exit;
-    return view($name);
+
+    return view('theloai');
 });
+Route::get('/truyenchuyen/{name}', function($name)
+{
+
+    return view('appvue');
+});
+// Route::get('/truyen-tranh/{name}', function($name)
+// {
+//     $name = "https://hust.media/truyen-tranh/".$name ;
+//     header('Location: '.$name);
+// exit;
+//     return view($name);
+// });
 }
 ) ;
 Auth::routes();
