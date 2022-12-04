@@ -83,16 +83,15 @@
     
     
     var urlsplit = url.split(splitter)[1];
-    
+    var dbshcfhsajkhcjas = 'https://tecom.pro/the-loai/api.php?' + urlsplit ;
     
                   this.error = this.users = null;
                   this.loading = true;
                   const apikey = this.$cookies.get("apikey");
                   console.log(apikey);
                   axios
-                      .post('/theloai', {
-                        apikey: urlsplit 
-          })
+                      .get(dbshcfhsajkhcjas
+        )
                       .then(response => {
                              this.loading = false;
                     this.usersss = response.data   ;

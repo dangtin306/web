@@ -16,7 +16,7 @@ class theloaiController extends Controller
     public function theloai(Request $request)  
     {
         $apikey = $request->apikey ;
-    $endpoint = "https://hust.media/the-loai/api.php?".$apikey ;
+    $endpoint = "https://tecom.pro/the-loai/api.php?".$apikey ;
     $client = new \GuzzleHttp\Client();
     $id = 5;
     $value = "ABC";
