@@ -119,15 +119,13 @@ var splitter = '/truyen-tranh/' ;
 
 var urlsplit = url.split(splitter)[1];
 
-
+var ahdhajdnhk = 'https://tecom.pro/truyen-tranh/api2.php?' + urlsplit ;
               this.error = this.users = null;
               this.loading = true;
               const apikey = this.$cookies.get("apikey");
               console.log(apikey);
               axios
-                  .post('/truyen', {
-                    apikey: urlsplit 
-      })
+                  .get(ahdhajdnhk)
                   .then(response => {
                          this.loading = false;
                 this.usersss = response.data   ;
