@@ -14,7 +14,7 @@ if (str_contains( $urigia , '/profile/truyen-tranh/')) {
 else if (str_contains( $urigia , '/truyen-tranh/')) {
     $urigia = substr($urigia, strpos($urigia, '/truyen-tranh/') + 14);
     $urigia = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/'.$urigia ;
-    echo  $urigia ;
+  
     $curl = curl_init();
 
 curl_setopt_array($curl, array(

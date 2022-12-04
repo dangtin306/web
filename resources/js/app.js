@@ -48,9 +48,7 @@ import momo from './components/momo.vue'
     import profile2 from './congdong/profile.vue'
     import sms from './components/sms.vue'
     import ScriptX from 'vue-scriptx'
-    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-    import { library } from "@fortawesome/fontawesome-svg-core";
-    import { fas } from '@fortawesome/free-solid-svg-icons';
+
     
 import Ads from 'vue-google-adsense'
 
@@ -60,7 +58,6 @@ import Ads from 'vue-google-adsense'
     import account from "./order/account.vue"; 
     import aboutus from "./congdong/aboutus.vue"; 
     import id from "./order/id.vue"; 
-    library.add(fas) ;
     const app = createApp(
       {
           // propsData: { foo }
@@ -78,7 +75,6 @@ import Ads from 'vue-google-adsense'
 
 app.use(metaManager);
 app.component('appvue', require('./App.vue').default) ;
-app.component("font-awesome-icon", FontAwesomeIcon) ;
 app.component('webapp', require('./congdong/biolink.vue').default) ;
 app.component('notfound', require('./components/404.vue').default) ;
 app.component('profile', require('./components/profile.vue').default) ;
