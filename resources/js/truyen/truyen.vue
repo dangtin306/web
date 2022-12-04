@@ -1,4 +1,5 @@
 <template>
+    <v-runtime-template :template="laymetachuan"></v-runtime-template>
     <div id="loadingg">
         <img id="loading-image" src="https://hust.media/img/icon/loadgau.png" alt="Loading..." />
       </div>
@@ -87,6 +88,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
               listtruyen: null ,
               mota: null ,
               hientruyen: null ,
+              laymetachuan: null ,
               error: null,
               linkanh: null,
               infoBox: null,
@@ -101,6 +103,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
       created() {
         setTimeout(function(){
     $('#loadingg').hide();}, 5000) ;
+    this.laymeta();
           this.fetchData();
           this.$watch(
       () => this.$route.params,
@@ -145,32 +148,33 @@ let config = {
 var urlsplit = url.split(splitter)[1];
 urlsplit = 'https://tecom.pro/truyen-tranh/apidoctruyen.php/' + urlsplit ;
 console.log(urlsplit);
-
-    //           this.error = this.users = null;
-    //           this.loading = true;
-    //           const apikey = this.$cookies.get("apikey");
-    //           console.log(apikey);
               axios
                   .get(urlsplit ,config)
                   .then(response => {
-    //                      this.loading = false;
-    //             this.usersss = response.data   ;
-    //             this.users =  JSON.stringify(this.usersss) ;
-    //             this.userss =  JSON.parse(this.users) ;
-    //             this.danhmuctruyen =   this.userss.danhmuctruyen ;
-    //             this.tentacpham =   this.userss.tentacpham ;
-    //             this.mota =   this.userss.mota ;
-    //             this.listtruyen =   this.userss.listtruyen ;
-    //             this.chap1 =   this.userss.chap1 ;
-    //             console.log(this.listtruyen   );
-    //             console.log(this.mota   );
-               
-                // this.size=this.$refs.infoBox.clientWidth;
-                // this.Height= size + 'px' ;
-                console.log(response.data);
+      console.log(response.data);
                 this.hientruyen = response.data ;
                 $('#loadingg').hide();
                }).catch(error => this.error2(error)   )
+               ;
+          },
+          laymeta()
+          {
+            var url = location.href  ;
+var splitter = '/truyen-tranh/' ;
+
+let config = {
+    timeout: 7000,
+};
+var urlsplit = url.split(splitter)[1];
+urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
+console.log(urlsplit);
+              axios
+                  .get(urlsplit ,config)
+                  .then(response => {
+      console.log(response.data);
+                this.laymetachuan = response.data ;
+                $('#loadingg').hide();
+               })
                ;
           }
       }
