@@ -32,7 +32,7 @@
     <br>
  <p>Xu ở đây là điểm trong app nó không có ý nghĩa về mặt tiền tệ <br>
 số lượng tối thiểu 1000 xu <br>
-Phí chuyển xu 4%  
+Phí chuyển xu 5%  
 
 </p>
   <!-- {{ ok2 }} -->
