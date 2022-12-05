@@ -136,152 +136,153 @@
       to-indigo-400
     "
   >
-  <header>
-     <nav
-        class="
-         flex-wrap
-          flex 
-          items-center
-          justify-between
-          w-full
-          py-2
-          md:py-0
-          px-2
-          text-lg text-gray-700
-          bg-white
-        "
+  <div class="sticky-top">
+    <nav
+    class="
+     flex-wrap
+      flex 
+      items-center
+      justify-between
+      w-full
+      py-2
+      md:py-0
+      px-2
+      text-lg text-gray-700
+      bg-white
+    "
+  >
+   <div>
+      <a href="https://hust.media">
+        Hust<br>Media
+      </a>
+    </div>
+    <div class="inline-flex">
+      <button @click="back" class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded-l">
+     <h4>Trước</h4>   
+      </button>
+      <button @click="next"  class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded-r">
+        <h4>Next</h4>   
+      </button>
+    </div>
+    <div  @click="doSomething" class="py-2 px-2" >     
+          <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        id="menubutton"
+        class="h-6 w-6 cursor-pointer md:hidden block"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      
       >
-       <div>
-          <a href="https://hust.media">
-            Hust<br>Media
-          </a>
-        </div>
-        <div class="inline-flex">
-          <button @click="back" class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded-l">
-         <h4>Trước</h4>   
-          </button>
-          <button @click="next"  class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded-r">
-            <h4>Next</h4>   
-          </button>
-        </div>
-        <div  @click="doSomething" class="py-2 px-2" >     
-              <svg 
-            xmlns="http://www.w3.org/2000/svg"
-            id="menubutton"
-            class="h-6 w-6 cursor-pointer md:hidden block"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-          </div>
-       <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
-          <ul
-            class="
-              pt-4
-              text-base text-gray-700
-              md:flex
-              md:justify-between 
-              md:pt-0"
-          >
-          <li>
-            <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/home/">Trang chủ</router-link> 
-          </li>
-     
-          <div class="relative inline-flex">
-            <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-            <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-            type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-             Tăng tương tác</button>
-              <!-- <option>Lịch sử</option> -->
-              <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><router-link class="dropdown-item"  to="/comment">Tăng comment</router-link></li>
-                <li><router-link class="dropdown-item"  to="/orders">Tăng tương tác telegram</router-link></li>
-                <li><router-link class="dropdown-item"  to="/account">Mua clone</router-link></li>
-                <li><router-link class="dropdown-item"  to="/id">Lấy id</router-link></li>
-              </ul>
-           
-          </div>
-          
-            
-            <div class="relative inline-flex">
-              <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-              <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-              type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-               Lịch sử </button>
-                <!-- <option>Lịch sử</option> -->
-                <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><router-link class="dropdown-item"  to="/test">Lịch sử chuyển xu</router-link></li>
-                  <li><router-link class="dropdown-item"  to="/order">Lịch sử đơn hàng</router-link></li>
-                </ul>
-             
-            </div>
-            <div class="relative inline-flex">
-              <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-              <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-              type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-              rút gọn link </button>
-                <!-- <option>Lịch sử</option> -->
-                <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><router-link class="dropdown-item"  to="/link">lấy link rút gọn</router-link></li>
-                  <li><router-link class="dropdown-item"  to="/order">Lịch sử đơn hàng</router-link></li>
-                </ul>
-             
-            </div>
-            <div class="relative inline-flex">
-              <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-              <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-              type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-              Game  </button>
-                <!-- <option>Lịch sử</option> -->
-                <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><router-link class="dropdown-item"  to="/game">Thử vân may</router-link></li>
-                  <li><router-link class="dropdown-item"  to="/momo"> Momo</router-link></li>
-                
-                </ul>
-             
-            </div>
-            <div class="relative inline-flex">
-              <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-              <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-              type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-              Nạp , chuyển xu   </button>
-                <!-- <option>Lịch sử</option> -->
-                <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><router-link class="dropdown-item"  to="/naptien">Nạp xu</router-link></li>
-                  <li><router-link class="dropdown-item"  to="/chuyenxu"> Chuyển xu</router-link></li>
-                
-                </ul>
-             
-            </div>
-            <li>
-              <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/okluon">Hướng dẫn sử dụng</router-link>
-            </li>
-            <li>
-              <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/testcode">Test tính năng</router-link>
-            </li>
-         
-            <li>
-              <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/aboutus">About Us</router-link>
-            </li>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+      </div>
+   <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+      <ul
+        class="
+          pt-4
+          text-base text-gray-700
+          md:flex
+          md:justify-between 
+          md:pt-0"
+      >
+      <li>
+        <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/home/">Trang chủ</router-link> 
+      </li>
+ 
+      <div class="relative inline-flex">
+        <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+        <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+        type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+         Tăng tương tác</button>
+          <!-- <option>Lịch sử</option> -->
+          <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><router-link class="dropdown-item"  to="/comment">Tăng comment</router-link></li>
+            <li><router-link class="dropdown-item"  to="/orders">Tăng tương tác telegram</router-link></li>
+            <li><router-link class="dropdown-item"  to="/account">Mua clone</router-link></li>
+            <li><router-link class="dropdown-item"  to="/id">Lấy id</router-link></li>
           </ul>
+       
+      </div>
+      
+        
+        <div class="relative inline-flex">
+          <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+          <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+          type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+           Lịch sử </button>
+            <!-- <option>Lịch sử</option> -->
+            <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><router-link class="dropdown-item"  to="/test">Lịch sử chuyển xu</router-link></li>
+              <li><router-link class="dropdown-item"  to="/order">Lịch sử đơn hàng</router-link></li>
+            </ul>
+         
         </div>
-    
-    </nav>
-  </header>
-  
+        <div class="relative inline-flex">
+          <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+          <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+          type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+          rút gọn link </button>
+            <!-- <option>Lịch sử</option> -->
+            <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><router-link class="dropdown-item"  to="/link">lấy link rút gọn</router-link></li>
+              <li><router-link class="dropdown-item"  to="/order">Lịch sử đơn hàng</router-link></li>
+            </ul>
+         
+        </div>
+        <div class="relative inline-flex">
+          <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+          <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+          type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+          Game  </button>
+            <!-- <option>Lịch sử</option> -->
+            <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><router-link class="dropdown-item"  to="/game">Thử vân may</router-link></li>
+              <li><router-link class="dropdown-item"  to="/momo"> Momo</router-link></li>
+            
+            </ul>
+         
+        </div>
+        <div class="relative inline-flex">
+          <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+          <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+          type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+          Nạp , chuyển xu   </button>
+            <!-- <option>Lịch sử</option> -->
+            <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><router-link class="dropdown-item"  to="/naptien">Nạp xu</router-link></li>
+              <li><router-link class="dropdown-item"  to="/chuyenxu"> Chuyển xu</router-link></li>
+            
+            </ul>
+         
+        </div>
+        <li>
+          <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/okluon">Hướng dẫn sử dụng</router-link>
+        </li>
+        <li>
+          <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/testcode">Test tính năng</router-link>
+        </li>
+     
+        <li>
+          <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/aboutus">About Us</router-link>
+        </li>
+      </ul>
+    </div>
+
+</nav>
+
+  </div>
+ 
   <router-view :key="$route.path" />
   <div class="floatingButtonWrap">  
     <div  id="getMessage" class="floatingButtonInner">

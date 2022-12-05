@@ -30,7 +30,11 @@
       </div>
     </button>
     <br>
- <p>Xu ở đây là điểm trong app nó không có ý nghĩa về mặt tiền tệ </p>
+ <p>Xu ở đây là điểm trong app nó không có ý nghĩa về mặt tiền tệ <br>
+số lượng tối thiểu 1000 xu <br>
+Phí chuyển xu 4%  
+
+</p>
   <!-- {{ ok2 }} -->
   <!-- <div v-if="thanhcong">  
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">

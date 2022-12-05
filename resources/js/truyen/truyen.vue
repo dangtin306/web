@@ -102,7 +102,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
   
       created() {
         setTimeout(function(){
-    $('#loadingg').hide();}, 5000) ;
+    $('#loadingg').hide();}, 6000) ;
     this.laymeta();
           this.fetchData();
           this.$watch(
@@ -143,7 +143,7 @@ $('#loadingg').hide();
 var splitter = '/truyen-tranh/' ;
 
 let config = {
-    timeout: 7000,
+    timeout: 8000,
 };
 var urlsplit = url.split(splitter)[1];
 urlsplit = 'https://tecom.pro/truyen-tranh/apidoctruyen.php/' + urlsplit ;

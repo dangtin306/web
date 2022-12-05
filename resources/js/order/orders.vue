@@ -167,7 +167,8 @@ Tối đa {{maxorder  }}
       options: [
         { text: 'Chọn 1 nền tảng', value: 'Telegram' } , 
         { text: 'Telegram', value: 'Telegram' } ,
-        { text: 'Shopee', value: 'Shopee' } 
+        { text: 'Shopee', value: 'Shopee' }  ,
+        { text: 'TikTok', value: 'Tiktok' }  ,
       ],
       options2: null ,
       options3: null ,
