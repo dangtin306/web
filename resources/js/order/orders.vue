@@ -160,7 +160,7 @@ Tối đa {{maxorder  }}
     export default {
       data (){
             return {
-              ok2 : this.$cookies.get("apikey") ,
+              ok2 : this.$cookies.get("apikey")  ,
               name2 : '',
                 urlsplit: '0928889798' ,
                 selected: null ,
