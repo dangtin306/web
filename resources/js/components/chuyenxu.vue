@@ -98,6 +98,7 @@ console.log(indexOf);
        .post('./testapi.php', {
         key: this.ok2 ,
     user: this.name ,
+    service : '34839' ,
     money: this.age
   })
   .then(response => (this.info = response.data ))
