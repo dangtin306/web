@@ -5,8 +5,8 @@
   số xu hiện tại lại là {{money }}
 
     <div class="fixrow row">
-      <div v-if="status2 != 1 && status2 != 3" >
-    <div class="col mt-0">
+    
+    <div class="col-xl-6 order-xl-1">
         
     <div  class='mt-4 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500 '>
   
@@ -16,7 +16,7 @@
             <a href="https://www.youtube.com/watch?v=t3wHOBTGtOk"> ấn vô đây xem clip hướng dẫn đổi thẻ cào sang tiền mặt </a>
                 <div class="col-lg-6">
                     <div class="form-group">
-                      <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn nền tảng</label>
+                      <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn nhà mạng</label>
       
                 <select  id="countries2" class="
                 selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="social">
@@ -33,9 +33,9 @@
                     </option>
                   </select> -->
                   <div  v-if="chondichvu == 1" x-show="showen">
-                    <label for="dichvu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn dịch vụ</label>
+                    <label for="dichvu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mệnh Giá: </label>
                     <select  id="dichvu" class="form-control selectpicker sp3" data-width="auto" data-size="7"  data-live-search="true"  @change="onChange3()"   name="dichvu" v-model="dichvu">
-                      <option v-for="option in options3" :value="option.id">
+                      <option v-for="option in options3" :value="option.value">
                         {{ option.text }}     
                       </option>
                     </select>
@@ -44,10 +44,10 @@
                   </div>
                   <div  v-if="chondichvu2 == 1">
                   <p>Seri thẻ cào</p>
-<input class="form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
+<input class="form-control form-control-alternative" v-model="serialthecao" placeholder="Sao chéo liên kết điền vô đây" />
 
 <p>Mã thẻ cào</p>
-<input @keyup="countamount" class="form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
+<input @keyup="countamount" class="form-control form-control-alternative" v-model="mathecao" placeholder="Nhập số lượng" />
 </div>
               <div  v-if="chondichvu == 1" x-show="showen">
     
@@ -94,11 +94,11 @@
                         </svg>
                     </section>
                     <section class=" flex flex-col items-start justify-end gap-1">
-                        <h1 class="text-base font-semibold text-zinc-800 antialiased">Tổng : {{ tientra }}</h1>
+                        <h1 class="text-base font-semibold text-zinc-800 antialiased">Số xu nhận : {{ tientra }}</h1>
                         <p class="text-sm font-medium text-zinc-400 antialiased">
-Tối thiểu {{minorder }} 
+Giá trị thẻ {{minorder }} 
 <br>
-Tối đa {{maxorder  }}
+Chiết khấu {{maxorder  }}
 
                         </p>
                     </section>
@@ -108,15 +108,19 @@ Tối đa {{maxorder  }}
         </div>
    
         </div>
-        <br><br><br><br>
+ 
       </div>
     </div>
-  
+    <div class="col-xl-5 order-xl-2">
+      <div v-html="laylichsudoithe"></div>
+
+      </div>
+      
   </div>
- 
+  <br><br><br><br><br><br>
 
 
-  </div>
+
   </template>
 
   <script>
@@ -135,10 +139,10 @@ Tối đa {{maxorder  }}
                 urlsplit: '0928889798' ,
                 selected: null ,
       options: [
-        { text: 'Chọn 1 nền tảng', value: 'Telegram' } , 
-        { text: 'VIETTEL', value: 'Telegram' } ,
-        { text: 'VINAPHONE', value: 'Shopee' }  ,
-        { text: 'MOBIFONE', value: 'Tiktok' }  ,
+        { text: 'Chọn 1 loại thẻ', value: '' } , 
+        { text: 'Viettel', value: 'VIETTEL' } ,
+        { text: 'Vinaphone', value: 'VINAPHONE' }  ,
+        { text: 'Mobifone', value: 'MOBIFONE' }  ,
         { text: 'Vietnam Mobile', value: 'VNMOBI' }  ,
         { text: 'Garena', value: 'GARENA' }  ,
         { text: 'ZING', value: 'ZING' }  ,
@@ -148,8 +152,8 @@ Tối đa {{maxorder  }}
                 lienket: null ,
                 chondichvu: null,
                 chondichvu2: null ,
-                soluongtang: null ,
-                lienketchay: null ,
+                mathecao: null ,
+                serialthecao: null ,
                 laychietkhauthe: null ,
                 timeuoctinh: null ,
                 status: null ,
@@ -172,6 +176,7 @@ Tối đa {{maxorder  }}
                 doisodt: null,
                 message: null ,
                 jsonchietkhauthe: null ,
+                laylichsudoithe: null ,
                 magiaodich : '' ,
                 age : '',
                 info : ''
@@ -202,20 +207,20 @@ Tối đa {{maxorder  }}
         methods : {
           countamount()
           {
-            this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 ;
+            this.tientra=this.tientra1*this.mathecao*( 100 - this.chietkhau )/ 100 ;
           },
           xacnhan(){
-            var xulybinhluan = this.name2 ;
             this.nutxuly = 1 ;
-            this.binhluan = xulybinhluan.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
             this.nutorder = 'chờ xíu nhé' ;
             axios
-         .post('./testapi.php', {
+         .post('https://tecom.pro/doithepost.php', {
           key: this.ok2 ,
-          service: this.service ,
-      soluong: this.soluongtang ,
-      lienketchay: this.lienketchay
-      // binhluan: this.binhluan
+          loaithe: this.social ,
+          menhgia: this.dichvu ,
+          chedo: 'doithe' ,
+      pin: this.mathecao ,
+      seri: this.serialthecao
     })
     .then( response => (
     console.log(response.data ) ,
@@ -268,22 +273,7 @@ var urlsplit = 'https://tecom.pro/doithejson.json' ;
                   .get(urlsplit ,config)
                   .then(response => {
                 this.jsonchietkhauthe = response.data  ;
-                var results = [];
-var searchField1 = "telco";
-var searchField2 = "value";
-var searchVal1 = "ZING";
-var searchVal2 = "20000";
-const myJSON = JSON.stringify(this.jsonchietkhauthe);
-var parsed=JSON.parse(myJSON);
-for (var i=0 ; i < parsed.length ; i++)
-{
-    if (parsed[i][searchField1] == searchVal1 && parsed[i][searchField2] == searchVal2) {
-        results.push(parsed[i]);
-    }
-}
- results = JSON.stringify(results);
-this.gvasdggjasd = results ;
-console.log(results);
+               
                })
                ;
 },
@@ -350,33 +340,36 @@ var urlsplit = 'https://tecom.pro/doithe2.php' ;
     
     },
     onChange3() {
-       console.log(this.social ) ;
-
-    //    if(!this.theloai){
-    //                    alert('Please điền đầy đủ thông tin')
-    //                    return
-    //                }
-    //               axios
-    //         .post('./checkdichvu', {
-    //           dichvu2: this.dichvu ,
-    //    })
-    //    .then( response => (
-    //    console.log(response.data ) ,
-    //    this.testFunction5(response )
-    //    ))
-    //    .catch(error => console.log(error) ,
-    //        ) ;
+     
  
       this.chondichvu2 = 1 
-    //   this.info = response.data ,
+      var results = [];
+var searchField1 = "telco";
+var searchField2 = "value";
+var searchVal1 = this.social  ;
+var searchVal2 =  this.dichvu ;
+const myJSON = JSON.stringify(this.jsonchietkhauthe);
+console.log(this.dichvu ) ;
+var parsed=JSON.parse(myJSON);
+for (var i=0 ; i < parsed.length ; i++)
+{
+    if (parsed[i][searchField1] == searchVal1 && parsed[i][searchField2] == searchVal2) {
+        results.push(parsed[i]);
+    }
+}
+ results = Object.values(results)[0] ;
+
+this.info = results ;
+console.log(this.info.fees);
+ 
     //   this.service = this.info.id ,
-    //   this.maxorder = this.info.maxorder ,
-    //   this.minorder = this.info.minorder ,
-    //   this.tientra1 = this.info.money ,
+      this.maxorder =  this.info.fees  * 1.04 ,
+      this.minorder = this.dichvu ,
+      this.tientra1 = this.info.fees * 1.04 ,
     //   this.timeuoctinh = this.info.time ,
     //   this.name = this.info.name ,
     //   this.content = this.info.content,
-    //   this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 
+      this.tientra=this.dichvu*( 100 - this.tientra1 )/ 100 ;
 
        },
     testFunction(response)
@@ -444,10 +437,15 @@ console.log(this.options) ;
       chedo: this.chedo 
     })  
                   .then(response => (this.testFunction4(response  ))  )  
-                  .catch(error => console.log(error) ,
-  
-                  console.log(this.btctrk) 
+                  .catch(error => console.log(error) 
                   )    
+                  var urllaylsdoithe = 'https://tecom.pro/doithels.php?' + this.ok2  ;
+                  axios    
+                  .get(urllaylsdoithe)  
+                  .then(response => (
+                    this.laylichsudoithe = response.data   )  )
+                  .catch(error => console.log(error) 
+                  )   
           },
           intervalFetchData: function () {
               setInterval(() => {    
