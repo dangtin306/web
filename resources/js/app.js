@@ -55,6 +55,7 @@ import Ads from 'vue-google-adsense'
     import VueCookies from 'vue-cookies';
     import historyclone from "./order/historyclone.vue"; 
     import comment from "./order/comment.vue"; 
+    import doithe from "./order/doithe.vue";
     import account from "./order/account.vue"; 
     import aboutus from "./congdong/aboutus.vue"; 
     import id from "./order/id.vue"; 
@@ -91,6 +92,11 @@ const routes = [
     path: '/webapp',
     name: 'webapp',
     component: webapp
+  },
+  {
+    path: '/doithe',
+    name: 'doithe',
+    component: doithe
   },
   {
     path: '/truyen-tranh/:name2',

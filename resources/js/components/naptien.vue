@@ -59,8 +59,8 @@
 
        
         <div class="col-xl-4 mt-0">
-        <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
-      
+        <!-- <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
+       -->
          
          
           <a  href="https://hust.media/vietcomauto/" >
@@ -93,7 +93,7 @@
             </div>
             
           </a>
-       
+<!--        
             <a  href="https://hust.media/vietcomauto4.php" >
             <div class="max-w-7xl mx-2 py-2 mb-2">
               <div class="relative group">
@@ -126,7 +126,7 @@
           </a>
          
         
-        </div>
+        </div> -->
         </div>
 <!--      
        <div class="col-xl-4   ">
