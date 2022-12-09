@@ -62,11 +62,17 @@
         <div class="d-flex align-items-start">
    
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Kiếm xu miễn phí</button>
+          <button 
+          class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"
+          
+          >Kiếm xu miễn phí</button>
           <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
            data-bs-target="#v-pills-profile" type="button" role="tab" 
            aria-controls="v-pills-profile" aria-selected="false">Follow miễn phí</button>
-          <button    @click="chay5" class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Hướng dẫn mua dịch vụ</button>
+          <button    @click="chay5" class="nav-link"
+           id="v-pills-messages-tab" 
+           data-bs-toggle="pill" 
+           data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Hướng dẫn mua dịch vụ</button>
           <button @click="chay6"  class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Hướng dẫn nạp xu</button>
           <button class="nav-link" id="hotro-tab" data-bs-toggle="pill" data-bs-target="#hotro" type="button" role="tab" aria-controls="hotro" aria-selected="false">Hướng dẫn tạo hỗ trợ</button>
           <button @click="chay7" class="nav-link" id="layid-tab" data-bs-toggle="pill" data-bs-target="#layid" type="button" role="tab" aria-controls="layid" aria-selected="false">Lấy uid gốc facebook , tiktok</button>
