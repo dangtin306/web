@@ -44,10 +44,10 @@
                   </div>
                   <div  v-if="chondichvu2 == 1">
                   <p>Seri thẻ cào</p>
-<input class="form-control form-control-alternative" v-model="serialthecao" placeholder="Sao chéo liên kết điền vô đây" />
+<input class="form-control form-control-alternative" v-model="serialthecao" placeholder="số seri hiện sẵn ở mỗi thẻ" />
 
 <p>Mã thẻ cào</p>
-<input @keyup="countamount" class="form-control form-control-alternative" v-model="mathecao" placeholder="Nhập số lượng" />
+<input @keyup="countamount" class="form-control form-control-alternative" v-model="mathecao" placeholder="số hiện ra khi cào thẻ" />
 </div>
               <div  v-if="chondichvu == 1" x-show="showen">
     
