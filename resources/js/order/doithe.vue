@@ -112,6 +112,9 @@ Chiết khấu {{maxorder  }}
       </div>
     </div>
     <div class="col-xl-5 order-xl-2">
+      <div v-if="laylichsudoithe == null" class="text-center spinner-border" role="status">
+                 
+      </div>
       <div v-html="laylichsudoithe"></div>
 
       </div>
