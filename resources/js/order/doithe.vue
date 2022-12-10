@@ -194,6 +194,7 @@ Chiết khấu {{maxorder  }}
 
     },
         created() {
+          this.apilaylichsudoithe() ;
             this.laychietkhautheok();
             this.layjsondoithe();
                 this.fetchData();
@@ -270,7 +271,7 @@ layjsondoithe()
     timeout: 7000,
 };
 
-var urlsplit = 'https://tecom.pro/doithejson.json' ;
+var urlsplit = 'https://tecom.pro/doithejson2.php' ;
 
               axios
                   .get(urlsplit ,config)
@@ -429,6 +430,16 @@ console.log(this.options) ;
       this.chietkhau = this.info.chietkhau ,
       this.money = this.info.money 
     },
+    apilaylichsudoithe()
+    {
+      var urllaylsdoithe = 'https://tecom.pro/doithels.php?' + this.ok2  ;
+                  axios    
+                  .get(urllaylsdoithe)  
+                  .then(response => (
+                    this.laylichsudoithe = response.data   )  )
+                  .catch(error => console.log(error) 
+                  )   
+    },
     
            
             btcTrkAPICall: function () {
@@ -442,13 +453,7 @@ console.log(this.options) ;
                   .then(response => (this.testFunction4(response  ))  )  
                   .catch(error => console.log(error) 
                   )    
-                  var urllaylsdoithe = 'https://tecom.pro/doithels.php?' + this.ok2  ;
-                  axios    
-                  .get(urllaylsdoithe)  
-                  .then(response => (
-                    this.laylichsudoithe = response.data   )  )
-                  .catch(error => console.log(error) 
-                  )   
+                this.apilaylichsudoithe() ;
           },
           intervalFetchData: function () {
               setInterval(() => {    
