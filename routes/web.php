@@ -109,7 +109,12 @@ Route::get('/plan',  function () {
 Route::get('/testcode',  function () {
     return view('appvue');
 });
-Route::get('/laylienket',  function () {
+Route::get('laylienket', function()
+{
+    return view('welcome');
+});
+Route::get('laylienket/{name}', function($name)
+{
     return view('welcome');
 });
 Route::get('/doithe',  function () {

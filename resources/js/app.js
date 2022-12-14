@@ -116,6 +116,11 @@ const routes = [
     component: home
   },
   {
+    path: '/laylienket/:laylienket',
+    name: 'laylienket',
+    component: laylienket
+  },
+  {
     path: '/laylienket',
     name: 'laylienket',
     component: laylienket
