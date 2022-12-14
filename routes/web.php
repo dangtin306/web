@@ -109,6 +109,9 @@ Route::get('/plan',  function () {
 Route::get('/testcode',  function () {
     return view('appvue');
 });
+Route::get('/laylienket',  function () {
+    return view('welcome');
+});
 Route::get('/doithe',  function () {
     return view('welcome');
 });

@@ -57,6 +57,7 @@ import Ads from 'vue-google-adsense'
     import comment from "./order/comment.vue"; 
     import doithe from "./order/doithe.vue";
     import account from "./order/account.vue"; 
+    import laylienket from "./order/laylienket.vue";
     import aboutus from "./congdong/aboutus.vue"; 
     import id from "./order/id.vue"; 
     const app = createApp(
@@ -113,6 +114,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
+  },
+  {
+    path: '/laylienket',
+    name: 'laylienket',
+    component: laylienket
   },
   {
     path: '/id',
