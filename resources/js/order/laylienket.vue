@@ -3,7 +3,7 @@
       <div>
         
         <div
-        class="
+         class="
           antialiased
           bg-gradient-to-r
           from-pink-300
