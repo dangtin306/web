@@ -232,7 +232,7 @@
     
       
       <div class="col-xl-4   ">
-        <router-link  to="/doithe"  >
+        <router-link  to="/doithe" >
         <div class="max-w-7xl mx-4 py-2 mb-2">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r 
