@@ -103,19 +103,39 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
           </dl>
           <br>
    <div class="adsense-inject">
-   
+   <br>
+   <component :is="'script'" type="text/javascript"
+   async   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
+   crossorigin="anonymous"></component>
+
+    <component :is="'script'"  type="text/javascript" >
+   (adsbygoogle = window.adsbygoogle || []).push({});</component>
+
+
         </div>
       </div>
       </div>
       <br>
       
-      <Adsense
-      data-ad-client="ca-pub-4574266110812955"
-       data-ad-slot="8795043992"
-       data-ad-format="auto"
-       data-full-width-responsive="true">
-  </Adsense>
-  
+      <div class="adsense-inject">
+        <br>
+        <component :is="'script'" type="text/javascript"
+        async   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
+        crossorigin="anonymous"></component>
+     
+         <component :is="'script'"  type="text/javascript" >
+        (adsbygoogle = window.adsbygoogle || []).push({});</component>
+     
+     
+             </div>
+             <br>
+  <Adsense
+  data-ad-client="ca-pub-4574266110812955"
+   data-ad-slot="8795043992"
+   data-ad-format="auto"
+   data-full-width-responsive="true">
+</Adsense>
+
 
 <br>
 <br>
@@ -152,10 +172,9 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
           
             $(this).append(`
             <ins class="adsbygoogle"
-             style="display:inline-block;width:auto;height:50px" 
+             style="display:inline-block;width:auto;height:100px" 
             data-ad-client="ca-pub-4574266110812955"
              data-ad-slot="1627514116" 
-             data-ad-format="auto"
          ></ins>`);
             (adsbygoogle = window.adsbygoogle || []).push({});
         }); 
