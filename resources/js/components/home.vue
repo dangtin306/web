@@ -102,17 +102,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
          
           </dl>
           <br>
-   <div class="adsense-inject">
-   <br>
-   <component :is="'script'" type="text/javascript"
-   async   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
-   crossorigin="anonymous"></component>
-
-    <component :is="'script'"  type="text/javascript" >
-   (adsbygoogle = window.adsbygoogle || []).push({});</component>
-
-
-        </div>
+ 
       </div>
       </div>
       <br>
