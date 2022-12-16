@@ -155,6 +155,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
              style="display:inline-block;width:auto;height:50px" 
             data-ad-client="ca-pub-4574266110812955"
              data-ad-slot="1627514116" 
+             data-ad-format="auto"
          ></ins>`);
             (adsbygoogle = window.adsbygoogle || []).push({});
         }); 
