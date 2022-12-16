@@ -13,19 +13,12 @@
         </button> -->
         <br>
     </div>
-    <div class="bg-green-300 shadow-lg pb-3 rounded-b-3xl">
+    <div class="mx-2 py-2 bg-green-300 shadow-lg pb-3 rounded-b-3xl">
         <div
             class="flex  rounded-b-3xl bg-gray-100 dark:bg-gray-700 space-y-5 flex-col items-center py-7">
             <a href="#"> <span
                   class="text-h1">{{ username }} </span></a>
                 </div>
-                <Adsense
-                data-ad-client="ca-pub-4574266110812955"
-                 data-ad-slot="1627514116"
-                 data-full-width-responsive="yes"
-                 data-ad-format="horizontal"
-                 >
-              </Adsense>
         <div
             class="grid px-7 py-2  items-center justify-around grid-cols-4 gap-4 divide-x divide-solid ">
             <div class="col-span-1 flex flex-col items-center ">
@@ -48,7 +41,16 @@
                 <span class="text-lg font-medium">Điểm kinh nghiệm</span>
             </div>
         </div>
-
+ 
+        <div  style=" height: 100px !important;" >
+            <Adsense
+            data-ad-client="ca-pub-4574266110812955"
+             data-ad-slot="1627514116"
+             data-full-width-responsive="no"
+             data-ad-format="auto"
+             >
+            </Adsense>
+        </div>  
     </div>
     <div v-if="optionprofile != null" class="col mt-0">
         
@@ -219,6 +221,11 @@
               Thăng cấp tài khoản </button></a>
     </div>
 </template>
+<style>
+.áddasasd{
+    height: 70px !important;
+}
+</style>
 <script>
 import axios from 'axios' ;
 import Swal from 'sweetalert2' ;

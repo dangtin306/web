@@ -54,15 +54,20 @@
 <br><br>
 <p>Trò chơi trong app không phài là game cờ bạc , game tạo ra nhằm mục đích giữ chân người dùng , khiến app thú vị hơn và được viết trên ngôn ngữ game html5 </p>
         <button class="btn btn-primary" @click="play">chơi ngay</button>
-        <Adsense
-        data-ad-client="ca-pub-4574266110812955"
-         data-ad-slot="1627514116"
-         data-full-width-responsive="yes"
-         data-ad-format="horizontal"
-         >
-      </Adsense>
+    
         <p v-if="error2">{{ error2 }}</p>
         <p v-if="show">{{ show }}</p>
+        <div class="w-75 ">
+          <Adsense
+          data-ad-client="ca-pub-4574266110812955"
+           data-ad-slot="1627514116"
+           data-full-width-responsive="yes"
+           data-ad-format="rectangle,horizontal"
+           >
+          </Adsense>
+      </div>
+      
+   
       </div>
       <div>
         <!-- <div class="options">
