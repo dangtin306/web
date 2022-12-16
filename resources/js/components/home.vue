@@ -102,7 +102,17 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
          
           </dl>
           <br>
-   <div class="adsense-inject"></div>
+   <div class="adsense-inject">
+    <script type="application/javascript" defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
+    crossorigin="anonymous"></script>
+    <script type="application/javascript" defer >
+    <ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:50px"
+     data-ad-client="ca-pub-4574266110812955"
+     data-ad-slot="1627514116"></ins>
+    (adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+   </div>
         </div>
       
       </div>
@@ -147,7 +157,9 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
             $(document).ready(function()
     {
         $(".adsense-inject").each(function () {
-            $(this).append(`<ins class="adsbygoogle"
+          
+            $(this).append(`
+            <ins class="adsbygoogle"
              style="display:inline-block;width:auto;height:50px" 
             data-ad-client="ca-pub-4574266110812955"
              data-ad-slot="1627514116" 
