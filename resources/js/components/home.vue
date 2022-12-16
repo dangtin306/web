@@ -107,7 +107,6 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
            data-ad-slot="8795043992"
            data-full-width-responsive="true"
            data-ad-format="rectangle"
-           ins-style="display: block; height: 100px;"
            >
         </Adsense>
         
