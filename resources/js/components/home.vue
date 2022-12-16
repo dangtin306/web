@@ -102,24 +102,18 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
          
           </dl>
           <br>
-          <Adsense
-          data-ad-client="ca-pub-4574266110812955"
-           data-ad-slot="8795043992"
-           data-ad-format="auto"
-           data-full-width-responsive="true">
-      </Adsense>
-      
+   <div class="adsense-inject"></div>
         </div>
       
       </div>
       <br>
       <Adsense
-      ins-style="display:inline-block;width:200px;height:50px"
       data-ad-client="ca-pub-4574266110812955"
-       data-ad-slot="1627514116"
-       data-full-width-responsive="no"
-       >
+       data-ad-slot="8795043992"
+       data-ad-format="auto"
+       data-full-width-responsive="true">
   </Adsense>
+  
 
 <br>
 <br>
@@ -144,11 +138,23 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
                   hientruyen: null ,
                   error: null,
                   infoBox: null,
+                  testadsend: null ,
                   width:0,
                   height:0
               };
           },
           created() {
+            $(document).ready(function()
+    {
+        $(".adsense-inject").each(function () {
+            $(this).append(`<ins class="adsbygoogle"
+             style="display:inline-block;width:auto;height:50px" 
+            data-ad-client="ca-pub-4574266110812955"
+             data-ad-slot="1627514116" 
+         ></ins>`);
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        }); 
+    }); ;
             var laylinkhome = location.href  ;
             let result = laylinkhome.includes("/home/");
             if ( result == true )
