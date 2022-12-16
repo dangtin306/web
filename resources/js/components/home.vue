@@ -107,7 +107,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
     crossorigin="anonymous"></script>
     <script type="application/javascript" defer >
     <ins class="adsbygoogle"
-     style="display:inline-block;width:200px;height:50px"
+     style="display:inline-block;height:50px"
      data-ad-client="ca-pub-4574266110812955"
      data-ad-slot="1627514116"></ins>
     (adsbygoogle = window.adsbygoogle || []).push({});</script>
