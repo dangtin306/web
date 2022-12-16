@@ -102,7 +102,14 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
          
           </dl>
           <br>
- 
+          <Adsense
+          data-ad-client="ca-pub-4574266110812955"
+           data-ad-slot="8795043992"
+           data-ad-format="horizontal"
+           ins-style="display: block; height: 100px;"
+           data-full-width-responsive="true">
+        </Adsense>
+        
       </div>
       </div>
       <br>
@@ -115,19 +122,14 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
         <ins class="adsbygoogle"
         style="display:inline-block;height:100px"
         data-ad-client="ca-pub-4574266110812955"
-        data-ad-slot="1627514116"></ins>
+        data-ad-slot="1627514116"
+        data-full-width-responsive="true"></ins>
          <component :is="'script'"  type="text/javascript" >
         (adsbygoogle = window.adsbygoogle || []).push({});</component>
      
      
              </div>
              <br>
-  <Adsense
-  data-ad-client="ca-pub-4574266110812955"
-   data-ad-slot="8795043992"
-   data-ad-format="auto"
-   data-full-width-responsive="true">
-</Adsense>
 
 
 <br>
@@ -137,6 +139,10 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
 </template>
 
 <style lang="scss" scoped>
+.cauhinhads
+{
+  height:50px ;
+}
 @import "cards.scss"; //new scss file from resources/sass directory
 </style>
 <script>
