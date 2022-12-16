@@ -105,8 +105,8 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
           <Adsense
           data-ad-client="ca-pub-4574266110812955"
            data-ad-slot="8795043992"
-           data-full-width-responsive="true"
-           data-ad-format="rectangle"
+           data-full-width-responsive="yes"
+           data-ad-format="horizontal"
            >
         </Adsense>
         
@@ -120,7 +120,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
         async   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
         crossorigin="anonymous"></component>
         <ins class="adsbygoogle"
-        style="display:inline-block;height:100px;width=200px"
+        style="display:inline-block;height:100px;width:200px"
         data-ad-client="ca-pub-4574266110812955"
         data-ad-slot="1627514116"
         data-full-width-responsive="true"></ins>
