@@ -123,11 +123,9 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
         async   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4574266110812955"
         crossorigin="anonymous"></component>
         <ins class="adsbygoogle"
-    style="display:inline-block;height:100px"
-    data-ad-client="ca-pub-4574266110812955"
-    data-ad-slot="1627514116"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
+        style="display:inline-block;height:100px"
+        data-ad-client="ca-pub-4574266110812955"
+        data-ad-slot="1627514116"></ins>
          <component :is="'script'"  type="text/javascript" >
         (adsbygoogle = window.adsbygoogle || []).push({});</component>
      
