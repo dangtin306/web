@@ -17,7 +17,7 @@
         <div
             class="flex  rounded-b-3xl bg-gray-100 dark:bg-gray-700 space-y-5 flex-col items-center py-7">
             <a href="#"> <span
-                    class="text-h1">{{ username }} </span></a>
+                  class="text-h1">{{ username }} </span></a>
                 </div>
                 <Adsense
                 data-ad-client="ca-pub-4574266110812955"
@@ -30,7 +30,7 @@
             class="grid px-7 py-2  items-center justify-around grid-cols-4 gap-4 divide-x divide-solid ">
             <div class="col-span-1 flex flex-col items-center ">
                 <span class="text-2xl font-bold dark:text-gray-500">{{ money }} </span>
-                <span class="text-lg font-medium 0">Số dư</span>
+                <span class="text-lg font-medium 0">Số Dư</span>
             </div>
             <div class="col-span-1 px-3 flex flex-col items-center ">
                 <span class="text-2xl font-bold dark:text-gray-500">
