@@ -85,7 +85,7 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
               </a>
           </div>
         </article>
-        <article class="information [ card ]">
+        <div class="information [ card ]">
           <h2 class="title">We Make Things Better</h2>
           <p class="info">Save thousands to millions of bucks by using single tool
             for different amazing and great useful admin.</p>
@@ -103,24 +103,23 @@ hust.media sẽ giúp các bạn trở nên nổi bật hơn trên các nền t�
           </dl>
           <br>
           <Adsense
-          ins-style="display:inline-block;width:200px;height:50px"
           data-ad-client="ca-pub-4574266110812955"
-           data-ad-slot="1627514116"
-           data-full-width-responsive="no"
-           >
+           data-ad-slot="8795043992"
+           data-ad-format="auto"
+           data-full-width-responsive="true">
       </Adsense>
-        </article>
+      
+        </div>
       
       </div>
       <br>
-
-    <Adsense
-    data-ad-client="ca-pub-4574266110812955"
-     data-ad-slot="8795043992"
-     data-ad-format="auto"
-     data-full-width-responsive="true">
-</Adsense>
-
+      <Adsense
+      ins-style="display:inline-block;width:200px;height:50px"
+      data-ad-client="ca-pub-4574266110812955"
+       data-ad-slot="1627514116"
+       data-full-width-responsive="no"
+       >
+  </Adsense>
 
 <br>
 <br>
