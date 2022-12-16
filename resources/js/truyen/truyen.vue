@@ -163,7 +163,7 @@ console.log(urlsplit);
 var splitter = '/truyen-tranh/' ;
 
 let config = {
-    timeout: 7000,
+    timeout: 9000,
 };
 var urlsplit = url.split(splitter)[1];
 urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
