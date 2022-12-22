@@ -49,7 +49,8 @@ import momo from './components/momo.vue'
     import sms from './components/sms.vue'
     import ScriptX from 'vue-scriptx'
 
-    
+    import xulytruyen from './components/xulytruyen.vue'
+  
 import Ads from 'vue-google-adsense'
 
     import VueCookies from 'vue-cookies';
@@ -77,6 +78,7 @@ import Ads from 'vue-google-adsense'
 
 app.use(metaManager);
 app.component('appvue', require('./App.vue').default) ;
+app.component('appvue2', require('./App2.vue').default) 
 app.component('webapp', require('./congdong/biolink.vue').default) ;
 app.component('notfound', require('./components/404.vue').default) ;
 app.component('profile', require('./components/profile.vue').default) ;
@@ -114,6 +116,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
+  },
+  {
+    path: '/xulytruyen',
+    name: 'xulytruyen',
+    component: xulytruyen
   },
   {
     path: '/laylienket/:laylienket',

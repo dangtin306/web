@@ -113,6 +113,10 @@ Route::get('laylienket', function()
 {
     return view('welcome');
 });
+Route::get('xulytruyen', function()
+{
+    return view('welcome');
+});
 Route::get('laylienket/{name}', function($name)
 {
     return view('welcome');
@@ -122,6 +126,9 @@ Route::get('/doithe',  function () {
 });
 Route::get('/comment',  function () {
     return view('welcome');
+});
+Route::get('/appvue2',  function () {
+    return view('appvue2');
 });
 Route::get('/home/',  function () {
     return view('appvue');

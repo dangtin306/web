@@ -102,8 +102,9 @@
                 Thông tin đầy đủ : {{ clonethem }}
             </h2></div></div></div>
         </div>
-        <br><br><br><br>
+       
          </div>
+         <br><br><br><br><br>
 </template>
 <style>
   
