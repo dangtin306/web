@@ -1,6 +1,13 @@
 <?php 
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
+$client = new \GuzzleHttp\Client();
+$endpoint = "https://tuongtac.fun/loadcute3.php" ;
+$response = $client->request('GET', $endpoint);
+$statusCode = $response->getStatusCode();
+$content = $response->getBody();
+header('Content-type: application/json; charset=UTF-8');
+echo  $content ;
 
    ?>
 
@@ -38,6 +45,10 @@ use Illuminate\Support\Facades\DB;
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
         <script src="/js/app.js?v=0.3.7"></script>
+        <script>
+            setTimeout(function(){
+            $('#loadingg').hide();}, 200) ;
+        </script>
     </body>
 </html>
 
