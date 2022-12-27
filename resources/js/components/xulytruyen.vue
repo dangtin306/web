@@ -13,7 +13,7 @@
                         <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn nền tảng</label>
         
                   <select  id="countries2" class="
-                  selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="social">
+                  selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="modeok">
                       <option v-for="option in options" :value="option.value">
                         {{ option.text }}
                       </option>
@@ -21,9 +21,9 @@
                     <br>
                  
                     <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn thể loại</label>
-                    <select  id="countries" class="form-control selectpicker sp2"  @change="onChange2()"   name="theloai" v-model="theloai">
-                      <option v-for="option in options2" :value="option.code">
-                        {{ option.name }}
+                    <select  id="countries" class="form-control selectpicker sp2"  @change="onChange2()"   name="theloai" v-model="modeok">
+                      <option v-for="option in options2" :value="option.value">
+                        {{ option.text }}
                       </option>
                     </select>
                     <div  v-if="chondichvu == 1" x-show="showen">
@@ -144,11 +144,11 @@
     </div>
 </template>
 <script>
-import helloworld from '!raw-loader!./pg32846.txt' ;
+// import helloworld from '!raw-loader!./pg32846.txt' ;
 import Swal from 'sweetalert2' ;
-    import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.css' ;
-    import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css' ;
-    import '../../../node_modules/bootstrap-select/js/bootstrap-select.js' ;
+    // import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.css' ;
+    // import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css' ;
+    // import '../../../node_modules/bootstrap-select/js/bootstrap-select.js' ;
 
    export default {
     
@@ -156,13 +156,22 @@ import Swal from 'sweetalert2' ;
         return {
         fileContent: '' ,
         ashdbhabsdk: null ,
+        modeok: null ,
+        helloworld: null ,
+        nutxuly: null ,
+        nutorder: 'xacnhan',
         options: [
-        { text: 'Chọn 1 nền tảng', value: 'Telegram' } , 
+        { text: 'Chọn 1 nền tảng', value: '' } , 
+        { text: 'Thống kê tên riêng', value: 'thongketenrieng' } ,
+        { text: 'Đánh dấu chỉ mục theo thứ tự dòng', value: 'đanhdaumuc2' }  ,
+        { text: 'Đánh chỉ mục riêng của chuyện ', value: 'đanhdaumuc3' }  ,
+      ],
+      options2:  [
+        { text: 'Chọn 1 nền tảng', value: '' } , 
         { text: 'Thống kê tên riêng', value: 'đanhdaumuc1' } ,
         { text: 'Đánh dấu chỉ mục theo thứ tự dòng', value: 'đanhdaumuc2' }  ,
         { text: 'Đánh chỉ mục riêng của chuyện ', value: 'đanhdaumuc3' }  ,
       ],
-      options2: null ,
       options3: null ,
         }
       },
@@ -173,16 +182,41 @@ import Swal from 'sweetalert2' ;
                     setTimeout(() => {     
          $('.sp1').selectpicker('toggle');  }, 300)
                 }, 300) ;
-        var asdsadasd = helloworld ;
-this.docfile(asdsadasd) ;
+                this.getfiletext() ;
+     
       },
       methods: {
-        docfile(asdsadasd) { 
+        getfiletext()
+        {
+
+            axios
+                .get('https://hust.media/img/truyen.php')
+                .then(response => {
+                       
+              this.helloworld = response.data  ;
+              console.log(this.helloworld);
+            
+                });
+        },xacnhan(){
+            this.nutxuly = 1 ;
+            this.nutorder = 'chờ xíu nhé' ;
+        console.log(this.modeok);
+        if (this.modeok == 'thongketenrieng'  )
+        {
+          var asdsadasd = this.helloworld ;
+          var fdgdfgdfgfd = this.lienketchay ;
+          this.demthongke(asdsadasd , fdgdfgdfgfd) 
+        // console.log(this.lienketchay);
+        }
+          },
+        demthongke(asdsadasd , fdgdfgdfgfd ) { 
             var ashdbhabsdk = asdsadasd ;
             this.fileContent = asdsadasd ;
+            var fdgdfgdfgfd = fdgdfgdfgfd ;
+            console.log(fdgdfgdfgfd);
             console.log(ashdbhabsdk)
-       
-var count = (ashdbhabsdk.match(/Deuceace/g) || []).length;
+            
+var count = ashdbhabsdk.split(fdgdfgdfgfd).length - 1;;
 console.log(count); //should output '2'
 
     },
