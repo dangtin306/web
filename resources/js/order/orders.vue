@@ -33,17 +33,21 @@
                   </select>
                   <div  v-if="chondichvu == 1" x-show="showen">
                     <label for="dichvu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn dịch vụ</label>
-                    <select  id="dichvu" class="form-control selectpicker sp3" data-width="auto" data-size="7"  data-live-search="true"  @change="onChange3()"   name="dichvu" v-model="dichvu">
-                      <option v-for="option in options3" :value="option.id">
-                        {{ option.money }} Xu     {{ option.name }}
-                      </option>
-                    </select>
+                    <div @click="onChange3()">
+                      <select   id="dichvu" class="form-control selectpicker sp3" data-width="auto" data-size="7"  data-live-search="true"     name="dichvu" v-model="dichvu">
+                        <option v-for="option in options3" :value="option.id">
+                          {{ option.money }} Xu     {{ option.name }}
+                        </option>
+                      </select>
+                    </div>
+                 
                     </div>
                     </div>
                   </div>
                   <p>Link bài viết ,video, ảnh cần chạy</p>
 <input class="form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
-{{ content }} thời gian ước tính {{ timeuoctinh }}
+<v-runtime-template :template="content"></v-runtime-template>
+thời gian ước tính {{ timeuoctinh }}
 <div  v-if="chondichvu2 == 1">
 <p>Số lượng tăng</p>
 <input @keyup="countamount" class="form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
@@ -98,7 +102,20 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
                   </svg>
                 </div>
               </button>
+              <div class="max-h-16">
+                <div class="cards">
              
+                  <Adsense
+              data-ad-client="ca-pub-4574266110812955"
+               data-ad-slot="8795043992"
+               data-full-width-responsive="no"
+               ins-class="display: block; height: 50px;"
+               ins-style="display: block; height: 50px;"
+               data-ad-format="horizontal"
+               >
+            </Adsense>
+            </div>
+          </div>
                 <div
                     class="bg-white border border-slate-300 shadow-lg rounded-md gap-4 p-4  flex-row items-center justify-center">
                     <section class="w-6 flex flex-col items-center justify-start">
@@ -151,13 +168,16 @@ Tối đa {{maxorder  }}
 
   <script>
 //   import $ from 'jquery' ;
-
+import VRuntimeTemplate from "vue3-runtime-template";
     import Swal from 'sweetalert2' ;
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.css' ;
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css' ;
     import '../../../node_modules/bootstrap-select/js/bootstrap-select.js' ;
 
     export default {
+      components: {
+    VRuntimeTemplate
+  },
       data (){
             return {
               ok2 : this.$cookies.get("apikey")  ,
@@ -172,7 +192,12 @@ Tối đa {{maxorder  }}
       ],
       options2: null ,
       options3: null ,
+      dichvu: null ,
                 lienket: null ,
+                theloai: null ,
+                minorder:null ,
+                maxorder:null ,
+                content: null,
                 chondichvu: null,
                 chondichvu2: null ,
                 soluongtang: null ,
@@ -278,8 +303,6 @@ this.socmt=(comment=='') ? '0' : (comment.split("\n").length)   ;
 this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
 },
     onChange() {
-    
-   
 
     if(!this.social){
                     alert('Please điền đầy đủ thông tin')
@@ -363,7 +386,7 @@ console.log(this.options) ;
                  
                     $('.sp2').selectpicker('refresh');
                     setTimeout(() => {     
-                        $('.sp2').selectpicker('toggle');;  }, 300)
+                        $('.sp2').selectpicker('toggle');  }, 300)
                 }, 300) ;
     },
     testFunction3(response)
@@ -378,7 +401,7 @@ console.log(this.options) ;
                  
                  $('.sp3').selectpicker('refresh');
                  setTimeout(() => {     
-                     $('.sp3').selectpicker('toggle');;  }, 300)
+                     $('.sp3').selectpicker('toggle'); }, 300)
              }, 300) ;
     },
     testFunction5(response)

@@ -115,7 +115,7 @@ Route::get('laylienket', function()
 });
 Route::get('xulytruyen', function()
 {
-    return view('welcome');
+    return view('appvue');
 });
 Route::get('laylienket/{name}', function($name)
 {
