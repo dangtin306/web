@@ -81,9 +81,10 @@ echo ("Tải khoản của bạn là : ".$username)  ;
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/api.php"  crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        
+       
         <div id="app">
             <appvue></appvue>
         </div>     
@@ -94,5 +95,11 @@ echo ("Tải khoản của bạn là : ".$username)  ;
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
           
         <script src="/js/app.js"></script>
+        <script src="https://tuongtac.fun/okok/assets/vendor/js/helpers.js"></script>
+        <script src="https://tuongtac.fun/okok/assets/js/config.js"></script>
+      <script src="https://tuongtac.fun/okok/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    
+    <script src="https://tuongtac.fun/okok/assets/vendor/js/menu.js"></script>
+    <script src="https://tuongtac.fun/okok/assets/js/main.js"></script>
     </body>
 </html>

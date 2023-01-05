@@ -34,7 +34,7 @@
                   </select> -->
                   <div  v-if="chondichvu == 1" x-show="showen">
                     <label for="dichvu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mệnh Giá: </label>
-                    <select  id="dichvu" class="form-control selectpicker sp3" data-width="auto" data-size="7"  data-live-search="true"  @change="onChange3()"   name="dichvu" v-model="dichvu">
+                    <select  id="dichvu" class="form-control selectpicker sp3" data-width="auto" data-size="7"  data-live-search="false"  @change="onChange3()"   name="dichvu" v-model="dichvu">
                       <option v-for="option in options3" :value="option.value">
                         {{ option.text }}     
                       </option>

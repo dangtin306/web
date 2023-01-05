@@ -1,7 +1,17 @@
 <?php 
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
-
+// $endpoint = "https://tuongtac.fun/okok/assets/vendor/api.php" ;
+//     $client = new \GuzzleHttp\Client();
+//     $id = 5;
+//     $value = "ABC";
+//     $response = $client->request('GET', $endpoint,  [
+//       'form_params' => [
+         
+//       ]]);
+//     // url will be: https://vinasupport.com/test.php?key1=5&key2=ABC;
+//     $statusCode = $response->getStatusCode();
+//     $content = $response->getBody();
    ?>
 
 <!DOCTYPE html>
@@ -16,17 +26,14 @@ use Illuminate\Support\Facades\DB;
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-      
+        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/api.php"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
         {{-- <title>OK</title> --}}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-123456789"
         crossorigin="anonymous"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/fonts/boxicons.css" />
-        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/css/core.css" class="template-customizer-core-css" />
-        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    
+      
     </head>
     <body>
         
@@ -42,14 +49,14 @@ use Illuminate\Support\Facades\DB;
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
         <script src="/js/app.js?v=0.3.5"></script>
+    
         <script src="https://tuongtac.fun/okok/assets/vendor/js/helpers.js"></script>
         <script src="https://tuongtac.fun/okok/assets/js/config.js"></script>
       <script src="https://tuongtac.fun/okok/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     
     <script src="https://tuongtac.fun/okok/assets/vendor/js/menu.js"></script>
-    
     <script src="https://tuongtac.fun/okok/assets/js/main.js"></script>
-    
+ 
     
     </body>
 </html>

@@ -1,9 +1,15 @@
 <?php 
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
+$client = new \GuzzleHttp\Client();
+$endpoint = "https://tuongtac.fun/loadcute3.php" ;
+$response = $client->request('GET', $endpoint);
+$statusCode = $response->getStatusCode();
+$content = $response->getBody();
+header('Content-type: application/json; charset=UTF-8');
+echo  $content ;
 
    ?>
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

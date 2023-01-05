@@ -143,6 +143,7 @@
       to-indigo-400
     "
   >
+  
   <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
   <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
@@ -158,31 +159,84 @@
 
       <ul class="menu-inner py-1">
         <!-- Dashboard -->
+    
         <li class="menu-item <?=$active2;?>">
           <a href="/" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div data-i18n="Analytics">Trang chủ</div>
           </a>
         </li>
-      
-       
+        <li class="menu-item" style="">
+          <a  class="menu-link  menu-toggle">
+          <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:27px;height:27px">
+          <div data-i18n="Analytics">Rút tiền và nạp tiền </div>
+          </a>
+          <ul class="menu-sub">
+          <li>
+            <router-link to="/naptien" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; "> Nạp tiền
+          <i class="ni ni-check-bold"></i>
+        </router-link>
+          <a href="https://hust.media/ruttien.php" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; "> Rút tiền
+
+          </a>
+          </li>
+          </ul>
+          </li>
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Dịch vụ </span>
+            </li>
         <li class="menu-item ">
-          <a href="https://vip.hust.media/okluon" class="menu-link">
-          <img src="https://tuongtac.fun/img/icon/giphy (7).gif"
+          <a href="https://hust.media/home/" class="menu-link">
+          <img src="https://tuongtac.fun/img/icon/tiktok2.gif" style="width:32px;height:32px">
+          <div data-i18n="Analytics">Tăng tương tác mạng xã hội</div>
+          </a>
+          </li>
+        <li class="menu-item ">
+          <router-link class="menu-link layout-menu-toggle"   to="/doithe">
+          <img src="data:image/png;base64,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" style="width:27px;height:27px">
+          <div data-i18n="Analytics">Đổi thẻ sang tiền việt</div>
+        </router-link>
+          </li>
+        <li class="menu-item">
+          <a class="menu-link"  href="https://hust.media/themotp.php">
+          <img src="https://tuongtac.fun/img/icon/4298126.png" style="width:27px;height:27px">
+          <div data-i18n="Analytics">Thuê sim nhận code lấy mã otp</div>
+        </a>
+          </li>
+        <li class="menu-item ">
+          <router-link class="menu-link layout-menu-toggle"  to="/okluon">
+            <img src="https://tuongtac.fun/img/icon/giphy (7).gif"
            style="width:27px;height:27px">
             <div data-i18n="Analytics">Hướng dẫn sử dụng</div>
-          </a>
+          </router-link>
         </li>
+        <li class="menu-item ">
+          <router-link class="menu-link layout-menu-toggle"  to="/orders">
+          <img src="https://tuongtac.fun/img/icon/telegram.png" style="width:27px;height:27px">
+          <div data-i18n="Analytics">Tăng mem Telegram Việt Nam</div>
+        </router-link>
+          </li>
         <!-- Components -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Giải trí</span></li>
         <!-- Cards -->
-      
         <li class="menu-item">
-          <a href="https://vip.hust.media/id" class="menu-link">
+          <router-link class="menu-link layout-menu-toggle"  to="/history">
+          <img src="https://tuongtac.fun/img/icon/history.svg" style="width:27px;height:27px">
+          <div data-i18n="Basic">Nhật ký đơn hàng</div>
+        </router-link>
+          </li>
+        <li class="menu-item">
+          <router-link class="menu-link layout-menu-toggle"  to="/id">
           <img src="https://tuongtac.fun/img/icon/idcards.png" style="width:27px;height:27px">
             <div data-i18n="Basic">Tìm lấy id facebook , tiktok , instagram</div>
-          </a>
+           </router-link>
         </li>
+        <li class="menu-item">
+          <a href="https://hust.media/hustpro/test.php" class="menu-link">
+          <img src="https://tuongtac.fun/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
+          <div data-i18n="Basic">Đọc truyện tranh</div>
+          </a>
+          </li>
         <li class="menu-item">
           <a href="/game/index.php" class="menu-link">
           <img src="https://tuongtac.fun/img/icon/images.png" style="width:27px;height:27px">
@@ -205,28 +259,28 @@
           </a>
         </li>
         <li class="menu-item <?=$active5;?>">
-          <a href="/top-nap/" class="menu-link">
+          <a href="https://hust.media/top-nap/" class="menu-link">
             <i class="menu-icon tf-icons bx bx-table"></i>
             <div data-i18n="Tables">Top Nạp</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="/page/" class="menu-link">
+          <a href="https://hust.media/page/" class="menu-link">
             <i class="menu-icon tf-icons bx bx-table"></i>
             <div data-i18n="Tables">Thông báo</div>
           </a>
         </li>
         <li class="menu-item ">
-          <a href="/aboutus.php" class="menu-link">
+          <a href="https://hust.media/aboutus.php" class="menu-link">
             <i class="menu-icon tf-icons bx bx-table"></i>
-            <div data-i18n="Tables">Chính sach trang web</div>
+            <div data-i18n="Tables">Chính sách ứng dụng</div>
           </a>
         </li>
         <!-- Misc -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
         <li class="menu-item">
           <a
-            href="/ho-tro/"
+            href="https://hust.media/ho-tro/"
          
             class="menu-link"
           >
@@ -245,7 +299,7 @@
       items-center
       justify-between
       w-full
-      py-2
+      py-1
       md:py-0
       px-2
       text-lg text-gray-700
@@ -254,19 +308,22 @@
   >
   <div  class=" layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
     <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-    Hello
-    <br>
-    Mở
+      <svg xmlns="http://www.w3.org/2000/svg" id="menubutton" class="h-6 w-6 cursor-pointer md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
     </a>
    
   </div>
     <div class="inline-flex">
-      <button @click="back" class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded-l">
-     <h4>Trước</h4>   
+      <button @click="back" class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-mot rounded-l">
+     <h5>Trước</h5>   
       </button>
-      <button @click="next"  class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded-r">
-        <h4>Next</h4>   
+      
+      <button @click="next"  class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-mot rounded-r">
+        <h5>Next</h5>   
       </button>
+
+      <div class="text-break bg-pink-200 hover:bg-pink-300 text-gray-800 font-bold px-mot rounded-r  " style="text-align: justify">
+        <h6> Hust<br> Media</h6> 
+        </div>
     </div>
     <div  @click="doSomething" class="py-2 px-2" >     
           <svg 
@@ -286,7 +343,7 @@
         />
       </svg>
       </div>
-   <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+   <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu2">
       <ul
         class="
           pt-4
@@ -299,36 +356,7 @@
         <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/home/">Trang chủ</router-link> 
       </li>
  
-      <div class="relative inline-flex">
-        <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-        <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-        type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-         Tăng tương tác</button>
-          <!-- <option>Lịch sử</option> -->
-          <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><router-link class="dropdown-item"  to="/comment">Tăng comment</router-link></li>
-            <li><router-link class="dropdown-item"  to="/orders">Tăng tương tác telegram</router-link></li>
-            <li><router-link class="dropdown-item"  to="/account">Mua clone</router-link></li>
-            <li><router-link class="dropdown-item"  to="/id">Lấy id</router-link></li>
-          </ul>
-       
-      </div>
-      
-        
-        <div class="relative inline-flex">
-          <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-          <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-          type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-           Lịch sử </button>
-            <!-- <option>Lịch sử</option> -->
-            <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><router-link class="dropdown-item"  to="/test">Lịch sử chuyển xu</router-link></li>
-              <li><router-link class="dropdown-item"  to="/order">Lịch sử đơn hàng</router-link></li>
-            </ul>
-         
-        </div>
+
         <div class="relative inline-flex">
           <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
           <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
@@ -356,22 +384,8 @@
             </ul>
          
         </div>
-        <div class="relative inline-flex">
-          <svg class="w-2 h-2 absolute topok right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-          <button  class=" border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-          type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-          Nạp , chuyển xu   </button>
-            <!-- <option>Lịch sử</option> -->
-            <!-- <option>   <router-link class="md:p-4 py-2 block hover:text-purple-400"  to="/test">Lịch sử chuyển tiền</router-link> </option> -->
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><router-link class="dropdown-item"  to="/naptien">Nạp xu</router-link></li>
-              <li><router-link class="dropdown-item"  to="/chuyenxu"> Chuyển xu</router-link></li>
-            
-            </ul>
-         
-        </div>
         <li>
-          <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/okluon">Hướng dẫn sử dụng</router-link>
+          <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/profile">Tài khoản của tôi</router-link>
         </li>
         <li>
           <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/testcode">Test tính năng</router-link>
@@ -584,7 +598,7 @@ export default {
     data() {
         return {
           button : document.querySelector('#menubutton'),
-          menu : document.querySelector('#menu')
+          menu2 : document.querySelector('#menu')
         };
     },
    
@@ -676,7 +690,7 @@ next(){
         // const button = document.querySelector('#menubutton');
 // const menu = document.querySelector('#menu');
  
-  menu.classList.toggle('hidden');
+menu2.classList.toggle('hidden');
 
 
 
