@@ -160,12 +160,7 @@ data-template="vertical-menu-template-free"
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
   
-      <li class="menu-item <?=$active2;?>">
-        <a href="/" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-home-circle"></i>
-          <div data-i18n="Analytics">Trang chủ</div>
-        </a>
-      </li>
+
       <li class="menu-item" style="">
         <a  class="menu-link  menu-toggle">
         <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:27px;height:27px">
@@ -320,10 +315,12 @@ data-template="vertical-menu-template-free"
     <button @click="next"  class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-mot rounded-r">
       <h5>Next</h5>   
     </button>
-
-    <div class="text-break bg-pink-200 hover:bg-pink-300 text-gray-800 font-bold px-mot rounded-r  " style="text-align: justify">
-      <h6> Hust<br> Media</h6> 
-      </div>
+<a href="https://hust.media/home/" >
+  <div class="text-break bg-pink-200 hover:bg-pink-300 text-gray-800 font-bold px-mot rounded-r  " style="text-align: justify">
+    <h6> Hust<br> Media</h6> 
+    </div>
+</a>
+    
   </div>
   <div  @click="doSomething" class="py-2 px-2" >     
         <svg 
