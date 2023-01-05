@@ -704,5 +704,10 @@ menu2.classList.toggle('hidden');
 </script>
 
 <style>
+.modal-backdrop
+{
+  --bs-backdrop-zindex: 0 !important;
+  z-index: 0 !important;
+}
   .okbaybe{flex-wrap: inherit;}
 </style>

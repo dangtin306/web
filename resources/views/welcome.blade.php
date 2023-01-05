@@ -99,10 +99,10 @@ if ( isset($username))
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/api.php"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/api.php?v=2.0.0"  crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
-    <body>
-        
+
+            <body>
         <div id="app">
             <appvue></appvue>
         </div>     
