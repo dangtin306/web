@@ -286,9 +286,10 @@ data-template="vertical-menu-template-free"
     </ul>
   </aside>
 
-<div class="sticky-top layout-page">
+<div class="layout-page">
   <nav
   class="
+  sticky-top 
    flex-wrap
     flex 
     items-center

@@ -260,6 +260,36 @@
         
       </router-link>
       </div>
+      <div class="col-xl-4   ">
+        <a  href="/payeer?=mienphihust.media" >
+        <div class="max-w-7xl mx-4 py-2 mb-2">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r 
+            from-purple-600 to-pink-600 rounded-lg blur opacity-25 
+            group-hover:opacity-100 transition duration-1000 
+            group-hover:duration-200"></div>
+            <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
+           rounded-2xl leading-none flex items-top justify-start space-x-3">
+           
+              <img  src="data:image/png;base64,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"
+          class="h-12 w-12"> 
+            <!-- <img  src="https://cdn.imgbin.com/9/22/17/imgbin-digital-wallet-payment-system-bitcoin-payeer-ip-card-yviVAi1rJ9fNPBpYpTZzuEa4b.jpg"
+          class="h-10 w-13">  -->
+              <div class="space-y-2">
+                <p class="text-lg text-slate-1000">Nạp qua Payeer </p>
+                <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
+                  Chuyển qua ví Payeer hoặc blockchain Bitcoin, Ethereum, Litecoin  </div>
+
+                  <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+              </div>
+            
+            </div>
+         
+          </div>
+        </div>
+        
+      </a>
+      </div>
 
       <div class="col-xl-4   ">
         <a  href="https://t.me/freefltiktok/24"  >

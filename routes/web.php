@@ -67,6 +67,9 @@ Route::get('/okluon',  function () {
 Route::get('/account ',  function () {
     return view('welcome');
 });
+Route::get('/payeer ',  function () {
+    return view('appvue');
+});
 Route::get('/naptien',  function () {
     return view('welcome');
 });

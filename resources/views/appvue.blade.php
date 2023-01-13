@@ -1,15 +1,42 @@
 <?php 
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
-$client = new \GuzzleHttp\Client();
-$endpoint = "https://tuongtac.fun/loadcute3.php" ;
-$response = $client->request('GET', $endpoint);
-$statusCode = $response->getStatusCode();
-$content = $response->getBody();
-header('Content-type: application/json; charset=UTF-8');
-echo  $content ;
+$ngaunhien2 =  rand(1,2) ;
+  if ( $ngaunhien2 == "1")
+  {
+    $okloadimg = "https://tuongtac.fun/img/icon/loadgau.png" ;
+  }
+  else {
+    $okloadimg = "https://tuongtac.fun/img/icon/loading2.gif" ;
+  }
+?>
+<div id="loadingg">
+  <img id="loading-image" src="<?=$okloadimg;?>" alt="Loading..." />
+</div>
 
-   ?>
+ <style>
+  #loadingg {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+}
+ </style>
+<script>
+
+$(document).ready(function() {
+    setTimeout(function(){
+    $('#loadingg').hide();}, 200)
+});
+</script>
+
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -29,7 +56,7 @@ echo  $content ;
         crossorigin="anonymous"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/api.php?v=2.0.0"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/api.php"  crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         

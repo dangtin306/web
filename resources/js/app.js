@@ -58,6 +58,7 @@ import Ads from 'vue-google-adsense'
     import comment from "./order/comment.vue"; 
     import doithe from "./order/doithe.vue";
     import account from "./order/account.vue"; 
+    import payeer from "./order/payeer.vue"; 
     import laylienket from "./order/laylienket.vue";
     import aboutus from "./congdong/aboutus.vue"; 
     import id from "./order/id.vue"; 
@@ -273,6 +274,11 @@ const routes = [
     path: '/momo',
     name: 'momo',
     component: momo
+  },
+  {
+    path: '/payeer',
+    name: 'payeer',
+    component: payeer
   },
   {
     path: '/profile/truyen-tranh/:id',
