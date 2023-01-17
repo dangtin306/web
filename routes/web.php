@@ -76,6 +76,9 @@ Route::get('/naptien',  function () {
 Route::get('/orders',  function () {
     return view('welcome');
 });
+Route::get('/muathe',  function () {
+    return view('welcome');
+});
 Route::get('/chuyenxu',  function () {
     return view('appvue');
 });

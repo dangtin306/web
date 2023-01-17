@@ -373,7 +373,7 @@ console.log(this.info.fees);
     //   this.timeuoctinh = this.info.time ,
     //   this.name = this.info.name ,
     //   this.content = this.info.content,
-      this.tientra=this.dichvu*( 100 - this.tientra1 )/ 100 ;
+      this.tientra=Math.round(this.dichvu*( 100 - this.tientra1 )/ 100) ;
 
        },
     testFunction(response)

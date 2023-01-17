@@ -62,6 +62,7 @@ import Ads from 'vue-google-adsense'
     import laylienket from "./order/laylienket.vue";
     import aboutus from "./congdong/aboutus.vue"; 
     import id from "./order/id.vue"; 
+    import muathe from "./order/muathe.vue"; 
     const app = createApp(
       {
           // propsData: { foo }
@@ -101,6 +102,11 @@ const routes = [
     path: '/doithe',
     name: 'doithe',
     component: doithe
+  },
+  {
+    path: '/muathe',
+    name: 'muathe',
+    component: muathe
   },
   {
     path: '/truyen-tranh/:name2',

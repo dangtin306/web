@@ -16,8 +16,8 @@
     <div class="mx-2 py-2 bg-green-300 shadow-lg pb-3 rounded-b-3xl">
         <div
             class="flex  rounded-b-3xl bg-gray-100 dark:bg-gray-700 space-y-5 flex-col items-center py-7">
-            <a href="#"> <span
-                  class="text-h1">{{ username }} </span></a>
+            <span @click="saochep(username)"
+            class="text-h1">{{ username }} </span>
                 </div>
         <div
             class="grid px-7 py-2  items-center justify-around grid-cols-4 gap-4 divide-x divide-solid ">
@@ -25,11 +25,12 @@
                 <span class="text-2xl font-bold dark:text-gray-500">{{ money }} </span>
                 <span class="text-lg font-medium 0">Số Dư</span>
             </div>
+             <router-link  to="/plan">
             <div class="col-span-1 px-3 flex flex-col items-center ">
                 <span class="text-2xl font-bold dark:text-gray-500">
-                   Cao Cấp</span>
+                    {{namelevel}} </span>
                 <span class="text-lg font-medium">Cấp độ</span>
-            </div>
+            </div></router-link>
             <div class="col-span-1 px-3 flex flex-col items-center ">
                 <span class="text-2xl font-bold dark:text-gray-500">
            {{ total_nap }}        </span>
@@ -213,13 +214,16 @@
                     </button></a>
             </div>
         </div>
+        <router-link  to="/plan">
+            <div class="flex mx-auto mt-3 w-100 ">
+                <a href=""> <button
+                        class="p-2 shadow-lg rounded-2xl tr-300 w-100 font-medium  bg-green-500 rounded-md hover:bg-green-600 text-gray-50">
+                      Thăng cấp tài khoản </button></a>
+            </div>
+        </router-link>
     </div>
-<br><br>
-    <div class="flex mx-auto mt-3 w-100 ">
-        <a href=""> <button
-                class="p-2 shadow-lg rounded-2xl tr-300 w-100 font-medium  bg-green-500 rounded-md hover:bg-green-600 text-gray-50">
-              Thăng cấp tài khoản </button></a>
-    </div>
+   
+    <br><br><br><br>
 </template>
 <style>
 .áddasasd{
@@ -236,6 +240,7 @@ import Swal from 'sweetalert2' ;
             ok2 : this.$cookies.get("apikey") ,
             money : null ,
             chietkhau: null ,
+            namelevel: 'chờ xíu' ,
             nutorder: 'Ấn đây để xác nhận' ,
             experience: null ,
             thanhcong : '' ,
@@ -258,6 +263,16 @@ import Swal from 'sweetalert2' ;
       chedo: this.chedo 
     })  
                   .then(response => (this.testFunction4(response  ))  )  
+                  .catch(error => console.log(error) ,
+  
+                  console.log(this.btctrk) 
+                  )  
+                  axios    
+                  .post('https://tuongtac.fun/api/profile.php', {
+          apikey: this.ok2 ,
+      chedo: 'checkcapdo'
+    })  
+                  .then(response => (this.testFunction5(response  ))  )  
                   .catch(error => console.log(error) ,
   
                   console.log(this.btctrk) 
@@ -343,7 +358,17 @@ this.info = response.data ,
        
 
           } ,
-        
+          saochep(urlsplit)
+            {
+                
+              navigator.clipboard.writeText(urlsplit);
+                Swal.fire({
+  title: 'Sao chép thành công' ,
+  heightAuto : false,
+ 
+})
+NativeAndroid.copyToClipboard(urlsplit);
+            },
 testFunction4(response)
   {
    
@@ -353,6 +378,12 @@ testFunction4(response)
     this.experience = this.info.experience , 
     this.total_nap = this.info.total_nap ,
     this.username = this.info.username
+  },
+  testFunction5(response)
+  {
+   
+    this.info = response.data ,
+    this.namelevel = this.info.message 
   }
           }
         }
