@@ -110,7 +110,7 @@ Route::get('/link',  function () {
     return view('appvue');
 });
 Route::get('/plan',  function () {
-    return view('appvue');
+    return view('welcome');
 });
 Route::get('/testcode',  function () {
     return view('appvue');
