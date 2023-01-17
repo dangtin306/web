@@ -11,7 +11,7 @@
         <!-- <router-link type="button" class="mx-2  btn btn-primary" to="/okluon">Hướng dẫn</router-link> -->
         <router-link  to="/profile">
         <button type="button" class="mx-2  btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-Xem Tổng xu nạp {{ total_nap }}
+Xem Tổng xu kiếm được {{ total_nap }}
 </button>
 </router-link>
 </div>
