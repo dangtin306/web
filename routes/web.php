@@ -91,7 +91,9 @@ Route::get('/themsdt',  function () {
 Route::get('/themsdtmomo',  function () {
     return view('themsdtmomo');
 });
-
+Route::get('/hellocss',  function () {
+    return view('hellocss');
+});
 Route::get('/public/{name}',  function () {
 ?>
 <script>  window.location="/home/";
