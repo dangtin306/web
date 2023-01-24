@@ -1,4 +1,5 @@
 <template>
+  <v-runtime-template :template="laymetachuan"></v-runtime-template>
 <div class="container">
     <div class="header-container">
       <img :src='linkanh'
@@ -94,6 +95,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
               users: null,
               userss: null,
               size: null ,
+              laymetachuan: null ,
               tentacpham: null ,
               listtruyen: null ,
               mota: null ,
@@ -110,9 +112,30 @@ import VRuntimeTemplate from "vue3-runtime-template";
   },
       created() {
           this.fetchData();
-          
+          this.laymeta();
       },
       methods: {
+        laymeta()
+          {
+            var url = location.href  ;
+var splitter = '/truyen-tranh/' ;
+
+let config = {
+    timeout: 22000,
+};
+var urlsplit = url.split(splitter)[1];
+urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
+console.log(urlsplit);
+              axios
+                  .get(urlsplit ,config)
+                  .then(response => {
+      console.log(response.data);
+                this.laymetachuan = response.data  ;
+                console.log(this.laymetachuan   );
+                $('#loadingg').hide();
+               })
+               ;
+          },
           fetchData() {
           this.linkanh = this.$route.query.id ;
             var url = location.href  ;
@@ -139,8 +162,8 @@ var ahdhajdnhk = 'https://tecom.pro/truyen-tranh/api2.php?' + urlsplit ;
                 this.mota =   this.userss.mota ;
                 this.listtruyen =   this.userss.listtruyen ;
                 this.chap1 =   this.userss.chap1 ;
-                console.log(this.listtruyen   );
-                console.log(this.mota   );
+                // console.log(this.listtruyen   );
+                // console.log(this.mota   );
                
                 // this.size=this.$refs.infoBox.clientWidth;
                 // this.Height= size + 'px' ;

@@ -7,7 +7,18 @@
       
       <div @click="xuong" class="btn float1 my-float"> xuống</div>
     <div class="max-w-2xl px-1 py-4  mx-auto rounded-lg shadow-xl">
- 
+      <div v-if="hientruyen == null" class="container-fluid">
+        <div class="row" style="background-color: #FFB6C1;">
+           <p class="text-center" style="color: #fff;">
+            
+            <div  class="text-center spinner-border" role="status">
+                 
+            </div>
+            <br>
+            Đang tải truyện
+           </p>
+        </div>
+    </div>
             <v-runtime-template :template="hientruyen"></v-runtime-template>
       
 
