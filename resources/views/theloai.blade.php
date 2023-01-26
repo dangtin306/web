@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
     <head>
         <?php
         $urigia = $_SERVER['REQUEST_URI'];
-if (str_contains( $urigia , '/profile/truyen-tranh/') && str_contains( $urigia , '/truyen-tranh/home')) { 
+if (str_contains( $urigia , '/profile/truyen-tranh/') || str_contains( $urigia , '/truyen-tranh/home')) { 
 }
 else if (str_contains( $urigia , '/truyen-tranh/')) {
     $urigia = substr($urigia, strpos($urigia, '/truyen-tranh/') + 14);
