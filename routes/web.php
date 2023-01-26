@@ -172,6 +172,11 @@ Route::get('/nativeapp/{name}', function($name)
 {
     return view('appvue');
 });
+Route::get('/truyen-tranh/home', function()
+{
+
+    return view('appvue');
+});
 Route::get('/truyen-tranh/{name}', function($name)
 {
 

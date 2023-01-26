@@ -47,6 +47,7 @@ import momo from './components/momo.vue'
     import webapp from './congdong/biolink.vue'
     import profile2 from './congdong/profile.vue'
     import sms from './components/sms.vue'
+    import truyentranhhome from './truyen/home.vue'
     import ScriptX from 'vue-scriptx'
 
     import xulytruyen from './components/xulytruyen.vue'
@@ -107,6 +108,11 @@ const routes = [
     path: '/muathe',
     name: 'muathe',
     component: muathe
+  },
+  {
+    path: '/truyen-tranh/home',
+    name: 'truyentranhhome',
+    component: truyentranhhome ,
   },
   {
     path: '/truyen-tranh/:name2',
