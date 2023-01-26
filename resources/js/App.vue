@@ -229,7 +229,7 @@ data-template="vertical-menu-template-free"
       <li class="menu-item">
         <router-link  to="/truyen-tranh/home" class="menu-link layout-menu-toggle">
         <img src="https://tuongtac.fun/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
-        <div data-i18n="Basic">Đọc truyện tranh</div>
+        <div data-i18n="Basic">Đọc truyện tranh :)</div>
       </router-link>
         </li>
       <li class="menu-item">
