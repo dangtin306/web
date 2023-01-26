@@ -5,7 +5,7 @@ import { createApp } from "vue";
 import store from './store/index.js';
 import { createRouter, createWebHistory } from 'vue-router'
 
-import { plugin as vueMetaPlugin } from "vue-meta";
+// import { plugin as vueMetaPlugin } from "vue-meta";
 import { createMetaManager, defaultConfig, plugin as metaPlugin } from 'vue-meta'
 const metaManager = createMetaManager(false, {
     ...defaultConfig,
@@ -50,7 +50,7 @@ import momo from './components/momo.vue'
     import truyentranhhome from './truyen/home.vue'
     import ScriptX from 'vue-scriptx'
 
-    import xulytruyen from './components/xulytruyen.vue'
+    // import xulytruyen from './components/xulytruyen.vue'
   
 import Ads from 'vue-google-adsense'
 
@@ -129,11 +129,6 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
-  },
-  {
-    path: '/xulytruyen',
-    name: 'xulytruyen',
-    component: xulytruyen
   },
   {
     path: '/laylienket/:laylienket',
