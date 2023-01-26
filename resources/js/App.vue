@@ -227,10 +227,10 @@ data-template="vertical-menu-template-free"
          </router-link>
       </li>
       <li class="menu-item">
-        <a href="https://hust.media/hustpro/test.php" class="menu-link">
+        <router-link to="/truyen-tranh/home" class="menu-link">
         <img src="https://tuongtac.fun/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
         <div data-i18n="Basic">Đọc truyện tranh</div>
-        </a>
+      </router-link>
         </li>
       <li class="menu-item">
         <a href="/game/index.php" class="menu-link">
