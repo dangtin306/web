@@ -20,15 +20,7 @@
         </div>
     </div>
             <v-runtime-template :template="hientruyen"></v-runtime-template>
-            <div  style=" height: 70px !important;" >
-                <Adsense
-                data-ad-client="ca-pub-4574266110812955"
-                 data-ad-slot="1627514116"
-                 data-full-width-responsive="no"
-                 data-ad-format="horizontal"
-                 >
-                </Adsense>
-            </div>  
+          
 
     </div>
 
