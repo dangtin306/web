@@ -17,7 +17,7 @@ class orderController extends Controller
  header('access-control-allow-credentials: true' );
  header('Access-Control-Allow-Headers: *' );
  header('access-control-allow-methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS' );
- header('Access-Control-Allow-Origin: '.$http_origin.'' );
+ header('Access-Control-Allow-Origin: *' );
  header('server: hust.media' );
  
  header('x-hustmedia-region: AWS - ap-southeast-1' );
