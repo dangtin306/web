@@ -2,7 +2,13 @@
 
 
 namespace App\Http\Controllers;
-
+header('access-control-allow-credentials: true' );
+ header('Access-Control-Allow-Headers: *' );
+ header('access-control-allow-methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS' );
+ header('Access-Control-Allow-Origin: *' );
+ header('server: hust.media' );
+ 
+ header('x-hustmedia-region: AWS - ap-southeast-1' );
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 use App\Models\Contact;
@@ -13,14 +19,7 @@ class orderController extends Controller
 {
     public function order(Request $request)  
     {
-      $http_origin = $_SERVER['HTTP_ORIGIN'];
- header('access-control-allow-credentials: true' );
- header('Access-Control-Allow-Headers: *' );
- header('access-control-allow-methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS' );
- header('Access-Control-Allow-Origin: *' );
- header('server: hust.media' );
- 
- header('x-hustmedia-region: AWS - ap-southeast-1' );
+     
         $apikey = $request->apikey ;
         $chedo = $request->chedo ;
       // return response()->json([$request->all()]);  
