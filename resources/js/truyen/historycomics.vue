@@ -60,7 +60,7 @@
             const apikey = this.$cookies.get("apikey");
             console.log(apikey);
             axios
-                .post('/order', {
+                .post('https://vip.hust.media/order', {
                   apikey: apikey ,
                   chedo: 'historycomics'
     })
