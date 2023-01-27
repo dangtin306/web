@@ -29,6 +29,7 @@ Route::post('/testapi.php', 'UserController@testapi');
 Route::post('/checkdichvu', 'checkdichvuController@checkdichvu');
 Route::post('/logintest','TestController@check');
 Route::post('/order', 'orderController@order');
+Route::options('/order', 'orderController@order');
 Route::post('/order2', 'order2Controller@order');
 Route::post('/random', 'randomController@random');
 Route::post(
@@ -47,6 +48,7 @@ Route::post(
     '/truyen', 'profileController@profile'
 
 );
+
 Route::get('/test',  function () {
     return view('test'); });
     Route::get('/test2',  function () {
