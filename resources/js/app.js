@@ -48,10 +48,10 @@ import momo from './components/momo.vue'
     import profile2 from './congdong/profile.vue'
     import sms from './components/sms.vue'
     import truyentranhhome from './truyen/home.vue'
+    import historycomics from './truyen/historycomics.vue'
     import ScriptX from 'vue-scriptx'
-
+    import thankuser from './congdong/thankuser.vue'
     // import xulytruyen from './components/xulytruyen.vue'
-  
 import Ads from 'vue-google-adsense'
 
     import VueCookies from 'vue-cookies';
@@ -104,6 +104,11 @@ const routes = [
     name: 'doithe',
     component: doithe
   },
+    {
+    path: '/thankuser',
+    name: 'thankuser',
+    component: thankuser
+  },
   {
     path: '/muathe',
     name: 'muathe',
@@ -113,6 +118,11 @@ const routes = [
     path: '/truyen-tranh/home',
     name: 'truyentranhhome',
     component: truyentranhhome ,
+  },
+   {
+    path: '/nativeapp/historycomics',
+    name: 'historycomics',
+    component: historycomics ,
   },
   {
     path: '/truyen-tranh/:name2',

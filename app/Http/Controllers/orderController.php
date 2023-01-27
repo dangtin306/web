@@ -1,8 +1,5 @@
 <?php
 
-// ************************************
-// Author : Le Van Hiep - vanhiep.net *
-// ************************************
 
 namespace App\Http\Controllers;
 
@@ -22,20 +19,42 @@ class orderController extends Controller
 // echo( response()->json([$request->all()])) ;
 
 $key = DB::table('users')->where('key', $apikey )->first();
-
-$username  = $key->username ;
-if ( $chedo == 'clonetiktok' )
+if ( isset($key->username))
 {
-  $orders = DB::table('orders')->where('category_code', 'clonetiktok' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
-
+  $username  = $key->username ;
+  if ( $chedo == 'clonetiktok' )
+  {
+    $arr = DB::table('orders')->where('category_code', 'clonetiktok' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
+  
+  }
+  else if ( $chedo == 'historycomics' )
+  {
+  //   $arr = array(
+  //     "status" => "10" ,
+  //     "message" => "Tính năng này chưa có "
+  // );
+  // echo json_encode($arr);
+    $arr = DB::table('orders')->where('category_code', 'comics-checkip' )->where('username', $username  )->orderBy('id', 'desc')->limit(10)->get();
+  
+  }
+  else
+  {
+    $arr = DB::table('orders')->where('service_name', 'chuyenxu' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
+  
+  }
+  echo ($arr);
 }
 else
 {
-  $orders = DB::table('orders')->where('service_name', 'chuyenxu' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
-
+  $arr = array(
+    "status" => "10" ,
+    "message" => "Vui lòng đăng nhập! "
+);
+echo json_encode($arr);
 }
 
-echo ($orders);
+
+
 
 
 }}

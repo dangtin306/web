@@ -94,6 +94,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
               loading: false,
               users: null,
               userss: null,
+              theloai: null ,
               size: null ,
               hientruyen: null ,
               listtruyen: null ,
@@ -122,8 +123,8 @@ import VRuntimeTemplate from "vue3-runtime-template";
        console.log(toParams.name2);
        var ewjhrfjwehfjkjewfj = '/truyen-tranh/' + toParams.name2 ;
      
-    },)
-
+    },) ;
+   
       },
       
       methods: {
@@ -148,6 +149,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
 $('#loadingg').hide();
             }
           },
+          
           fetchData() {
         //   this.linkanh = this.$route.query.id ;
             var url = location.href  ;
@@ -158,11 +160,11 @@ let config = {
 };
 var urlsplit = url.split(splitter)[1];
 urlsplit = 'https://tecom.pro/truyen-tranh/apidoctruyen.php/' + urlsplit ;
-console.log(urlsplit);
+// console.log(urlsplit);
               axios
                   .get(urlsplit ,config)
                   .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
                 this.hientruyen = response.data ;
                 $('#loadingg').hide();
                }).catch(error => this.error2(error)   )
@@ -178,16 +180,65 @@ let config = {
 };
 var urlsplit = url.split(splitter)[1];
 urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
-console.log(urlsplit);
+// console.log(urlsplit);
               axios
                   .get(urlsplit ,config)
                   .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
                 this.laymetachuan = response.data  ;
+                setTimeout(() => {     
+        this.checkdateread();  }, 500) ;
                 $('#loadingg').hide();
                })
                ;
-          }
+          },
+          checkdateread() {
+            console.log(document.title)
+            var url = location.href  ;
+            var linkdoctruyen = window.location.href ;
+            var splitter = '/truyen-tranh/' ;
+            var urlsplit = url.split(splitter)[1];
+urlsplit = 'https://tecom.pro/truyen-tranh/checkdateread.php/' + urlsplit ;
+         this.error = this.users = null;
+         this.loading = true;
+         this.apikey = this.$cookies.get("apikey");
+         if ( this.apikey == '' || this.apikey == null )
+           {
+            this.apikey = "guest"   ;
+           } 
+
+         console.log(this.apikey);
+         axios
+             .post( urlsplit, {
+              tentruyendoc: document.title ,
+              linkdoctruyen: linkdoctruyen ,
+          apikey: this.apikey 
+    } )
+             .then(response => {
+                    this.loading = false;
+           this.users = response.data  ;
+this.info = response.data ,
+   this.status = this.info.status     ,
+   this.message = this.info.message  
+   if ( this.status == 10  )
+   {
+     Swal.fire({
+title: this.message ,
+heightAuto : false,
+
+});
+   }
+   else
+   {
+     console.log(this.info);
+           this.gridData  = this.info ;
+
+           var Target  = response.data[0] ;
+           console.log(this.gridData);
+   }
+          
+             });
+     },
       }
       ,
   mounted() {

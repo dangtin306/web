@@ -20,7 +20,7 @@
         </div>
     </div>
             <v-runtime-template :template="hientruyen"></v-runtime-template>
-            <div  style=" height: 50px !important;" >
+            <div  style=" height: 70px !important;" >
                 <Adsense
                 data-ad-client="ca-pub-4574266110812955"
                  data-ad-slot="1627514116"
@@ -174,7 +174,7 @@ let config = {
     timeout: 12000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://hust.media/hustpro/api.php' ;
+urlsplit = 'https://hust.media/the-loai2/home.php' ;
 $('#loadingg').hide();
 console.log(urlsplit);
               axios
