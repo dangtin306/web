@@ -41,7 +41,7 @@ if ( isset($key->username))
   //     "message" => "Tính năng này chưa có "
   // );
   // echo json_encode($arr);
-    $arr = DB::table('orders')->where('category_code', 'comics-checkip' )->where('username', $username  )->orderBy('id', 'desc')->limit(10)->get();
+    $arr = DB::table('orders')->where('category_code', 'comics-checkip' )->where('note', $username  )->orderBy('id', 'desc')->limit(10)->get();
   
   }
   else
