@@ -20,7 +20,7 @@
         </div>
     </div>
             <v-runtime-template :template="hientruyen"></v-runtime-template>
-            <div class="max-h-16">
+   
                 <div class="cards">
              
                   <Adsense
@@ -32,7 +32,7 @@
                data-ad-format="horizontal"
                >
             </Adsense>
-            </div>
+          
           </div>
 
     </div>
