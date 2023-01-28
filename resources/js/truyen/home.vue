@@ -21,23 +21,23 @@
     </div>
             <v-runtime-template :template="hientruyen"></v-runtime-template>
    
-                <div class="cards">
              
-                  <Adsense
-              data-ad-client="ca-pub-4574266110812955"
-               data-ad-slot="8795043992"
-               data-full-width-responsive="no"
-               ins-class="display: block; height: 50px;"
-               ins-style="display: block; height: 50px;"
-               data-ad-format="horizontal"
-               >
-            </Adsense>
-          
-          </div>
-  
-          <br><br><br><br><br><br>
     </div>
+    <div class="cards">
+             
+        <Adsense
+    data-ad-client="ca-pub-4574266110812955"
+     data-ad-slot="8795043992"
+     data-full-width-responsive="no"
+     ins-class="display: block; height: 50px;"
+     ins-style="display: block; height: 50px;"
+     data-ad-format="horizontal"
+     >
+  </Adsense>
 
+</div>
+
+<br><br><br><br><br><br>
   
 </template>
 
