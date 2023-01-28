@@ -162,7 +162,7 @@
         <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
       
          
-          <router-link type="button" to="/momo">
+          <!-- <router-link type="button" to="/momo">
       
             <div class="max-w-7xl mx-2 py-2 mb-2">
               <div class="relative group">
@@ -193,7 +193,7 @@
             </div>
             
     
-        </router-link>
+        </router-link> -->
           <a  href="https://hust.media/momoauto/" >
             <div class="max-w-7xl mx-2 py-2 mb-2">
               <div class="relative group">
