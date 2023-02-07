@@ -133,7 +133,7 @@
         
            
            
-            <a  href="https://hust.media/vietcomauto/" >
+            <a  href="https://hust.media/vietcomauto6.php" >
               <div class="max-w-7xl mx-2 py-2 mb-2">
                 <div class="relative group">
                   <div class="absolute -inset-1 bg-gradient-to-r 
