@@ -51,7 +51,7 @@
 
 <div class="form-group fields"  style="display: block;">
 
-<label  class="control-label" for="order_average_time">thời gian ước tính
+<label v-if="timeuoctinh" class="control-label" for="order_average_time">thời gian ước tính
   
   <br> 
   <button  class="ml-1 mr-1 " data-bs-toggle="tooltip" data-bs-placement="right" title="Thời gian hoàn thành trung bình 10 đơn hàng gần nhất trên 500 đơn vị">
