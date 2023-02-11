@@ -50,19 +50,35 @@
 <br>
 
 <div class="form-group fields"  style="display: block;">
+  <div class="col mt-0" v-if="ádasdacsacas == 1" >
+    <div @click="adbasdasdandsa2" class="mt-4 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500">
+      <div  class="ml-3 h-7 flex justify-end items-center">
+        <button  type="button" class="bg-gray-100 dark:bg-gray-700 m-1 p-3 justify-end rounded-md text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+  </div>
+  <div  class="w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl">
+    Thời gian hoàn thành trung bình 10 đơn hàng gần nhất trên 500 đơn vị
+  </div>
+  <br>
+</div>
+</div>
 
-<label v-if="timeuoctinh" class="control-label" for="order_average_time">thời gian ước tính
+<label v-if="timeuoctinh" class="control-label" >thời gian ước tính
   
   <br> 
-  <button  class="ml-1 mr-1 " data-bs-toggle="tooltip" data-bs-placement="right" title="Thời gian hoàn thành trung bình 10 đơn hàng gần nhất trên 500 đơn vị">
+  <button @click="adbasdasdandsa" class="ml-1 mr-1 " data-bs-toggle="tooltip" data-bs-placement="right" title="Thời gian hoàn thành trung bình 10 đơn hàng gần nhất trên 500 đơn vị">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
       <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
     </svg> 
   </button>
+  
+
    <span class="badge text-bg-secondary"  style="color: black;" >
     {{ timeuoctinh }}
      </span>
+     
 </label>
 </div>
 <div  v-if="chondichvu2 == 1">
@@ -211,6 +227,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
       options3: null ,
       dichvu: null ,
                 lienket: null ,
+                ádasdacsacas: null ,
                 theloai: null ,
                 minorder:null ,
                 maxorder:null ,
@@ -336,6 +353,25 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
     .catch(error => console.log(error) ,
         ) ;
     
+    },
+    adbasdasdandsa2()
+    {
+      this.ádasdacsacas = 0 ;
+    },
+    adbasdasdandsa()
+    {
+      if ( this.ádasdacsacas == 1 )
+      {
+        this.ádasdacsacas = 0 ;
+      }
+      else if ( this.ádasdacsacas == 12 )
+      {
+        this.ádasdacsacas = 2 ;
+      }
+      else if ( this.ádasdacsacas != 12 )
+      {
+        this.ádasdacsacas = 1 ;
+      }
     },
     onChange2() {
        
