@@ -50,7 +50,7 @@
 <br>
 
 <div class="form-group fields"  style="display: block;">
-  <div class="col mt-0" v-if="ádasdacsacas == 1" >
+  <div class="col mt-0" v-if="ádasdacsacas == 1"  >
     <div @click="adbasdasdandsa2" class="mt-4 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500">
       <div  class="ml-3 h-7 flex justify-end items-center">
         <button  type="button" class="bg-gray-100 dark:bg-gray-700 m-1 p-3 justify-end rounded-md text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
