@@ -47,7 +47,24 @@
                   <p>Link bài viết ,video, ảnh cần chạy</p>
 <input class="form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
 <v-runtime-template :template="content"></v-runtime-template>
-thời gian ước tính {{ timeuoctinh }}
+<br>
+
+<div class="form-group fields"  style="display: block;">
+
+<label v-if="timeuoctinh" class="control-label" for="order_average_time">thời gian ước tính
+  
+  <br> 
+  <span type="button" class="ml-1 mr-1 " data-bs-toggle="tooltip" data-bs-placement="right" title="Thời gian hoàn thành trung bình 10 đơn hàng gần nhất trên 500 đơn vị">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+    </svg> 
+  </span>
+   <span class="badge badge-primary"  style="color: black;" >
+    {{ timeuoctinh }}
+     </span>
+</label>
+</div>
 <div  v-if="chondichvu2 == 1">
 <p>Số lượng tăng</p>
 <input @keyup="countamount" class="form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
@@ -327,7 +344,21 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
                     alert('Please điền đầy đủ thông tin')
                     return
                 }
-               axios
+                if(this.social == 'Telegram' ){
+                  axios
+         .post('./checkdichvu', {
+            theloai: this.theloai ,
+    })
+    .then( response => (
+    console.log(response.data ) ,
+    this.testFunction3(response )
+    ))
+    .catch(error => console.log(error) ,
+        ) ;
+                }
+                else
+                {
+                  axios
          .post('./checkdichvu', {
             theloai2: this.theloai ,
     })
@@ -337,6 +368,8 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
     ))
     .catch(error => console.log(error) ,
         ) ;
+                }
+             
     
     },
     onChange3() {
@@ -346,7 +379,21 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
                        alert('Please điền đầy đủ thông tin')
                        return
                    }
-                  axios
+                   if(this.social == 'Telegram' ){
+                    axios
+            .post('./checkdichvu', {
+              dichvu: this.dichvu ,
+       })
+       .then( response => (
+       console.log(response.data ) ,
+       this.testFunction5(response )
+       ))
+       .catch(error => console.log(error) ,
+           ) ;
+                   }
+                   else
+                   {
+                    axios
             .post('./checkdichvu', {
               dichvu2: this.dichvu ,
        })
@@ -356,6 +403,8 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
        ))
        .catch(error => console.log(error) ,
            ) ;
+                   }
+                 
        
        },
     testFunction(response)

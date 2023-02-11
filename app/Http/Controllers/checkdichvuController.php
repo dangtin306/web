@@ -55,7 +55,7 @@ class checkdichvuController extends Controller
        else if (isset($request->dichvu))
        {
        $dichvu = $request->dichvu ;
-       $okk = DB::table('service')->where('webcon', 'hust.media' )->where('status', 'show' )->where('id', $dichvu )->limit(1)->select(array('id', 'stt','minorder', 'maxorder', 'name', 'money', 'status','content' ))->first();
+       $okk = DB::table('service')->where('webcon', 'hust.media' )->where('status', 'show' )->where('id', $dichvu )->limit(1)->select(array('id', 'stt','minorder', 'maxorder', 'name', 'money', 'status','content', 'time'  ))->first();
        $okk = json_encode( $okk);
        echo ($okk);
        
