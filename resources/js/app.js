@@ -38,6 +38,7 @@ import momo from './components/momo.vue'
     import order from './components/order.vue'
     import theloai from './components/theloai.vue'
     import truyentranh from './truyen/truyen.vue'
+    import truyentranhsearch from './truyen/search.vue'
     import truyenchuyen from './truyen/truyenchuyen.vue'
     import profile from './components/profile.vue'
     import link from './components/link.vue'
@@ -118,6 +119,11 @@ const routes = [
     path: '/truyen-tranh/home',
     name: 'truyentranhhome',
     component: truyentranhhome ,
+  },
+  {
+    path: '/nativeapp/search',
+    name: 'truyentranhsearch',
+    component: truyentranhsearch ,
   },
    {
     path: '/nativeapp/historycomics',

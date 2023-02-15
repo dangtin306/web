@@ -26,9 +26,7 @@
 
   
 </template>
-<div id="loadingg">
-  <img id="loading-image" src="<?=$okloadimg;?>" alt="Loading..." />
-</div>
+
 
  <style>
  .float1{
@@ -99,7 +97,6 @@ import VRuntimeTemplate from "vue3-runtime-template";
               hientruyen: null ,
               listtruyen: null ,
               mota: null ,
-              hientruyen: null ,
               laymetachuan: null ,
               error: null,
               linkanh: null,

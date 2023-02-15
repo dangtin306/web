@@ -11,12 +11,12 @@ $ngaunhien2 =  rand(1,2) ;
   }
   
 ?>
-<div id="loadingg">
+<div id="loadinggg">
   <img id="loading-image" src="<?=$okloadimg;?>" alt="Loading..." />
 </div>
 
  <style>
-  #loadingg {
+  #loadinggg {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@ $ngaunhien2 =  rand(1,2) ;
 
 $(document).ready(function() {
     setTimeout(function(){
-    $('#loadingg').hide();}, 200)
+    $('#loadinggg').hide();}, 200)
 });
 </script>
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-        <script src="/js/app.js?v=0.6.3"></script>
+        <script src="/js/app.js?v=0.6.4"></script>
         <script src="https://tuongtac.fun/okok/assets/vendor/js/helpers.js"></script>
         <script src="https://tuongtac.fun/okok/assets/js/config.js"></script>
       <script src="https://tuongtac.fun/okok/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
@@ -84,7 +84,7 @@ $(document).ready(function() {
     <script src="https://tuongtac.fun/okok/assets/js/main.js"></script>
         <script>
             setTimeout(function(){
-            $('#loadingg').hide();}, 200) ;
+            $('#loadinggg').hide();}, 200) ;
         </script>
     </body>
 </html>

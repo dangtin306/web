@@ -120,7 +120,7 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
                     
             </div> -->
             </div>
-                <button  @click="xacnhan"
+                <button  @click="xacnhan" :disabled="disableButton"
                 class='flex break-inside bg-purple-400 hover:bg-purple-300 rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
                 <div class='flex items-center justify-between flex-1'>
                   <div v-if="nutxuly == '1'" class="spinner-border" role="status">
@@ -256,6 +256,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
                 tientra: null ,
                 doisodt: null,
                 message: null ,
+                disableButton: false,
                 magiaodich : '' ,
                 age : '',
                 info : ''
@@ -285,6 +286,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
             this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 ;
           },
           xacnhan(){
+            this.disableButton = true;
             var xulybinhluan = this.name2 ;
             this.nutxuly = 1 ;
             this.binhluan = xulybinhluan.replace(/(?:\r\n|\r|\n)/g, '<br>');
@@ -311,6 +313,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
           },
           dathang(response){
 this.nutorder = 'đặt tiếp luôn nào' ,
+this.disableButton = false;
 this.nutxuly = 0 ,
             this.info1 = response.data ,
       this.status = this.info1.status     ,

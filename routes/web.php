@@ -186,6 +186,11 @@ Route::get('/truyen-tranh/home', function()
 
     return view('theloai');
 });
+Route::get('/nativeapp/search', function()
+{
+
+    return view('theloai');
+});
 Route::get('/truyen-tranh/{name}', function($name)
 {
 
