@@ -391,7 +391,7 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
                     alert('Please điền đầy đủ thông tin')
                     return
                 }
-                if(this.social == 'Telegram' ){
+                if(this.social == 'Telegram'||this.social == 'tiktok' ){
                   axios
          .post('./checkdichvu', {
             theloai: this.theloai ,
@@ -426,7 +426,7 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
                        alert('Please điền đầy đủ thông tin')
                        return
                    }
-                   if(this.social == 'Telegram' ){
+                   if(this.social == 'Telegram' || this.social == 'tiktok' ){
                     axios
             .post('./checkdichvu', {
               dichvu: this.dichvu ,
