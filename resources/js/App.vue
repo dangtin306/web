@@ -13,7 +13,7 @@
   <nav  class="fixed-bottom navbar-light " >
     <link rel="stylesheet" href="https://tuongtac.fun/style.css">
 
-    <div class="container2 itemoknav"  v-scroll-to="onScroll"  :class="{ hide: isHide }" >
+    <div class="container2 itemoknav"    :class="{ hide: isHide }" >
     <div class="tinhchinh2 " ref="element"  v-show="showElement" >
   <div class="row tinhchinh3">
     
