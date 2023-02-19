@@ -428,6 +428,7 @@ this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
                        alert('Please điền đầy đủ thông tin')
                        return
                    }
+                   console.log( this.social);
                    if(this.social == 'Telegram' || this.social == 'Tiktok' ){
                     axios
             .post('./checkdichvu', {
