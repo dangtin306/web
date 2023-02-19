@@ -11,6 +11,7 @@ const metaManager = createMetaManager(false, {
     ...defaultConfig,
     meta: { tag: 'meta', nameless: true },
 });
+
 // import router from "./router.js";
 /**
  * The following block of code may be used to automatically register your
@@ -71,6 +72,7 @@ import Ads from 'vue-google-adsense'
         }
      
     );
+    app.provide(/* key */ 'message', /* value */ 'loading')
     app.use(ScriptX);
     app.use(Ads.Adsense);
     app.use(Ads.InArticleAdsense);
@@ -81,6 +83,7 @@ import Ads from 'vue-google-adsense'
 // app.use(BootstrapVue)
 
 app.use(metaManager);
+
 app.component('appvue', require('./App.vue').default) ;
 app.component('appvue2', require('./App2.vue').default) 
 app.component('webapp', require('./congdong/biolink.vue').default) ;

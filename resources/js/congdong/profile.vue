@@ -375,6 +375,7 @@ testFunction4(response)
     this.info = response.data ,
     this.chietkhau = this.info.chietkhau ,
     this.money = this.info.money  ,
+    document.cookie = `money=${this.money}`,
     this.experience = this.info.experience , 
     this.total_nap = this.info.total_nap ,
     this.username = this.info.username

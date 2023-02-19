@@ -316,12 +316,25 @@ data-template="vertical-menu-template-free"
     <button @click="next"  class="text-break bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-mot rounded-r">
       <h5>Next</h5>   
     </button>
+
 <a href="https://hust.media/home/" >
   <div class="text-break bg-pink-200 hover:bg-pink-300 text-gray-800 font-bold px-mot rounded-r  " style="text-align: justify">
     <h6> Hust<br> Media</h6> 
     </div>
 </a>
-    
+<div v-if="myMoney != null"  class="lienket ">
+  <router-link  to="/naptien">
+
+    <div  class="rounded-pill  bg-blue-500"   >
+    &nbsp;       <span  class="text-break h6 font-weight-bold mb-3" style="color: pink;" id="my_vnd">{{myMoney }}</span>
+
+    <img 
+      src="https://tuongtac.fun/img/icon/coin.webp" class="rounded-circle" 
+      style="width: 25px; height: 25px; display: inline;"   >
+    <!-- <div class="absolutenav ">  </div>   -->
+  </div>
+  </router-link>
+  </div>
   </div>
   <div  @click="doSomething" class="py-2 px-2" >     
         <svg 
@@ -444,6 +457,17 @@ data-template="vertical-menu-template-free"
 </html>
 </template>
 <style>
+.my-pill {
+  border-radius: 0.25rem; /* Giảm kích thước bo tròn đi 50% so với lớp rounded-pill mặc định */
+  display: inline-block; /* Để phần tử hiển thị trên cùng một dòng với các phần tử khác */
+  padding: 0.5rem; /* Thêm khoảng cách lề vào phần tử để giữ cho nó có cùng kích thước với các phần tử khác */
+}
+.absolutenav {
+  position: absolute;
+  right: 65px;
+    top: 2px;
+}
+
 .chatokluon{
   width: 47px;
   height: 3rem;
@@ -592,9 +616,13 @@ top: -6px !important
 
 <script>
 import $ from "jquery";
+import Orders from './order/orders.vue';
 export default {
+  // inject: ['message'],
+
   data() {
       return {
+        myMoney:  this.$cookies.get("money")  ,
         button : document.querySelector('#menubutton'),
         menu2 : document.querySelector('#menu')
       };
@@ -604,6 +632,8 @@ export default {
 
   },
   created() {
+ 
+    console.log(this.message) // injected value
     $(document).ready(function(){
       $('.floatingButton').on('click',
           function(e){
@@ -661,6 +691,9 @@ export default {
           } 
       });
   });
+  setInterval(() => {    
+      this.myMoney =  this.$cookies.get("money") ;
+                  }, 1000 );  
   },
   methods: {
 back(){

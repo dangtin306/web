@@ -206,11 +206,18 @@ import VRuntimeTemplate from "vue3-runtime-template";
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.css' ;
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css' ;
     import '../../../node_modules/bootstrap-select/js/bootstrap-select.js' ;
-
+    import { ref, provide } from 'vue';
     export default {
       components: {
     VRuntimeTemplate
-  },
+  }, 
+  
+  // provide() {
+  //   // use function syntax so that we can access `this`
+  //   return {
+  //     message: this.money
+  //   }
+  // },
       data (){
             return {
               ok2 : this.$cookies.get("apikey")  ,
@@ -226,6 +233,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
       options2: null ,
       options3: null ,
       dichvu: null ,
+      money: 123,
                 lienket: null ,
                 ádasdacsacas: null ,
                 theloai: null ,
@@ -249,7 +257,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
                 social: null,
                 chietkhau: null,
                 ketqua: null  ,
-                money: null ,
+                // money: null ,
                 socmt: null ,
                 response: null,
                 status3: null ,
@@ -511,6 +519,9 @@ console.log(this.options) ;
       this.info = response.data ,
       this.chietkhau = this.info.chietkhau ,
       this.money = this.info.money 
+      document.cookie = `money=${this.money}`;
+
+
     },
     
            
