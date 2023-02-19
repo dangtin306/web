@@ -9,11 +9,12 @@
     <router-link class="btn btn-outline-danger" to="/okluon">Hướng dẫn sử dụng</router-link> |
     <router-link class="btn btn-outline-danger" to="/testcode">Test tính năng</router-link>
   </div> -->
-  <nav class="fixed-bottom navbar-light " >
+  <div >
+  <nav  class="fixed-bottom navbar-light " >
     <link rel="stylesheet" href="https://tuongtac.fun/style.css">
 
-    <div class="container2 ">
-    <div class="tinhchinh2">
+    <div class="container2 itemoknav"  v-scroll-to="onScroll"  :class="{ hide: isHide }" >
+    <div class="tinhchinh2 " ref="element"  v-show="showElement" >
   <div class="row tinhchinh3">
     
   
@@ -455,8 +456,19 @@ data-template="vertical-menu-template-free"
 
 </body>
 </html>
+</div>
 </template>
 <style>
+.itemoknav {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.itemoknav.hide {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
 .my-pill {
   border-radius: 0.25rem; /* Giảm kích thước bo tròn đi 50% so với lớp rounded-pill mặc định */
   display: inline-block; /* Để phần tử hiển thị trên cùng một dòng với các phần tử khác */
@@ -622,17 +634,28 @@ export default {
 
   data() {
       return {
+        isHide: false,
         myMoney:  this.$cookies.get("money")  ,
         button : document.querySelector('#menubutton'),
+        showElement: true,
+        show: true,
+    elementOffsetTop: 0,
         menu2 : document.querySelector('#menu')
+        
       };
   },
- 
+  mounted() {
+  this.elementOffsetTop = this.$refs.element.offsetTop;
+  window.addEventListener('scroll', this.handleScroll);
+},
+beforeUnmount() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
   computed: {
 
   },
   created() {
- 
+    window.addEventListener('scroll', this.handleScroll);
     console.log(this.message) // injected value
     $(document).ready(function(){
       $('.floatingButton').on('click',
@@ -696,6 +719,33 @@ export default {
                   }, 1000 );  
   },
   methods: {
+    onScroll() {
+
+      const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (scrollPos > 0) {
+        console.log(1);
+        this.isHide = true;
+      } else {
+        // console.log(2);
+        // this.isHide = false;
+        // this.showElement = true;
+      }
+    },
+    handleScroll() {
+      this.onScroll();
+    const currentScrollPosition = window.scrollY;
+    const elementTop = this.elementOffsetTop;
+    if (currentScrollPosition > elementTop) {
+      // this.showElement = false;
+      // this.isHide = true;
+    } 
+  if (currentScrollPosition < this.previousScrollPosition) {
+    console.log(2);
+    this.isHide = false;
+        this.showElement = true;
+  }
+  this.previousScrollPosition = currentScrollPosition;
+  },
 back(){
 history.back() ;
 }

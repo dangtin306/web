@@ -65,7 +65,8 @@ import Ads from 'vue-google-adsense'
     import laylienket from "./order/laylienket.vue";
     import aboutus from "./congdong/aboutus.vue"; 
     import id from "./order/id.vue"; 
-    import muathe from "./order/muathe.vue"; 
+    import muathe from "./order/muathe.vue";
+    import VueScrollTo from 'vue-scrollto'; 
     const app = createApp(
       {
           // propsData: { foo }
@@ -74,6 +75,7 @@ import Ads from 'vue-google-adsense'
     );
     app.provide(/* key */ 'message', /* value */ 'loading')
     app.use(ScriptX);
+    app.use(VueScrollTo);
     app.use(Ads.Adsense);
     app.use(Ads.InArticleAdsense);
     app.use(Ads.InFeedAdsense);
