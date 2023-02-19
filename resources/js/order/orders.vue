@@ -233,7 +233,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
       options2: null ,
       options3: null ,
       dichvu: null ,
-      money: 123,
+      money: null,
                 lienket: null ,
                 ádasdacsacas: null ,
                 theloai: null ,
@@ -276,7 +276,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
 
     },
         created() {
-            
+      
                 this.fetchData();
                 this.intervalFetchData() ;
                 console.log(this.getCookie('urlsdt'));
@@ -287,7 +287,9 @@ import VRuntimeTemplate from "vue3-runtime-template";
                     setTimeout(() => {     
          $('.sp1').selectpicker('toggle');  }, 300)
                 }, 300) ;
+                this.btcTrkAPICall();
             },
+            
         methods : {
           countamount()
           {
