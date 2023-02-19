@@ -28,6 +28,7 @@ import { createRouter, createWebHistory } from 'vue-router'
         }
      
     );
+    
     app.use(VueCookies);
     app.use(store);
 // app.use(store);
