@@ -635,6 +635,7 @@ export default {
   data() {
       return {
         isHide: false,
+        sdfsdfsdfsdfv:true ,
         myMoney:  this.$cookies.get("money")  ,
         button : document.querySelector('#menubutton'),
         showElement: true,
@@ -732,7 +733,18 @@ beforeUnmount() {
         // this.showElement = true;
       }
     },
+    addNewTimeout()
+    { 
+if ( this.sdfsdfsdfsdfv == false )
+{
+  console.log(4);
+  this.showElement = false;
+  this.sdfsdfsdfsdfv = true;
+}
+    },
     handleScroll() {
+      let delayTimeout;
+      
       this.onScroll();
     const currentScrollPosition = window.scrollY;
     const elementTop = this.elementOffsetTop;
@@ -741,18 +753,22 @@ beforeUnmount() {
       // this.isHide = true;
     } 
   if (currentScrollPosition < this.previousScrollPosition) {
+  
     console.log(2);
+    clearTimeout(delayTimeout);
     this.isHide = false;
+    this.sdfsdfsdfsdfv = true;
         this.showElement = true;
   }
   else
   {
-    let delayTimeout;
+  
 if (delayTimeout) {
   clearTimeout(delayTimeout);
 }
+this.sdfsdfsdfsdfv = false;
 delayTimeout = setTimeout(() => {
-  this.showElement = false;
+  this.addNewTimeout() ;
 }, 500);
   }
   this.previousScrollPosition = currentScrollPosition;
