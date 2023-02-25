@@ -747,11 +747,12 @@ beforeUnmount() {
   }
   else
   {
-    let isDelayed = false;
-setTimeout(() => {
-  if (!isDelayed) {
-    this.showElement = false;
-  }
+    let delayTimeout;
+if (delayTimeout) {
+  clearTimeout(delayTimeout);
+}
+delayTimeout = setTimeout(() => {
+  this.showElement = false;
 }, 500);
   }
   this.previousScrollPosition = currentScrollPosition;
