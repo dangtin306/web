@@ -294,9 +294,11 @@ const routes = [
     component: sms
   },
   {
-    path: '/the-loai/:id',
+    path: '/the-loai/:tentheloai',
     name: 'theloai',
-    component: theloai
+    component: theloai,
+    props: route => ({ tentheloai: route.params.tentheloai, page: route.query.page })
+    
   },
   {
     path: '/momo',

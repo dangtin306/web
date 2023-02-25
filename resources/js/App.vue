@@ -10,7 +10,7 @@
     <router-link class="btn btn-outline-danger" to="/testcode">Test tính năng</router-link>
   </div> -->
   <div >
-  <nav  class="fixed-bottom navbar-light " >
+  <nav v-if="showElement == true"  class="fixed-bottom navbar-light " >
     <link rel="stylesheet" href="https://tuongtac.fun/style.css">
 
     <div class="container2 itemoknav"    :class="{ hide: isHide }" >
@@ -411,13 +411,13 @@ data-template="vertical-menu-template-free"
 
 </nav>
 <div class="layout-overlay layout-menu-toggle"></div>
-<router-view :key="$route.path" />
+<router-view :key="$route.fullPath" />
 </div>
 
 </div>
 </div>
 
-<div class="floatingButtonWrap">  
+<div class="floatingButtonWrap itemoknav"    :class="{ hide: isHide }">  
   <div  id="getMessage" class="floatingButtonInner">
   <div class="message2">   
                 <h2 class="text-pink"><div class="message"> Hỗ    Trợ    </div></h2> </div>
@@ -725,6 +725,7 @@ beforeUnmount() {
       if (scrollPos > 0) {
         console.log(1);
         this.isHide = true;
+   
       } else {
         // console.log(2);
         // this.isHide = false;
@@ -743,6 +744,12 @@ beforeUnmount() {
     console.log(2);
     this.isHide = false;
         this.showElement = true;
+  }
+  else
+  {
+    setTimeout(() => {
+  this.showElement = false;
+}, 500);
   }
   this.previousScrollPosition = currentScrollPosition;
   },
