@@ -153,10 +153,10 @@ Route::get('the-loai/{name}', function($name)
 {
     return view('theloai');
 });
-Route::get('profile/truyen-tranh/{name}', function($name)
+Route::get('profile/truyen-tranh/{name}', function($slug)
 {
-    return view('theloai');
-});
+    return view('theloai', ['slug' => $slug]);
+})->where('slug', '^[^/]+$');
 Route::get('/realtime', function()
 {
     return view('appvue');
