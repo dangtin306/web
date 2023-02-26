@@ -15,6 +15,20 @@ Xem Tổng xu kiếm được {{ total_nap }}
 </button>
 </router-link>
 </div>
+<div class="max-h-16">
+                <div class="cards">
+             
+                  <Adsense
+              data-ad-client="ca-pub-4574266110812955"
+               data-ad-slot="8795043992"
+               data-full-width-responsive="no"
+               ins-class="display: block; height: 50px;"
+               ins-style="display: block; height: 50px;"
+               data-ad-format="horizontal"
+               >
+            </Adsense>
+            </div>
+          </div>
 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

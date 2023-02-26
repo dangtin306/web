@@ -636,6 +636,8 @@ export default {
       return {
         isHide: false,
         sdfsdfsdfsdfv:true ,
+        delayTimeout: null ,
+        scrollBarHeight : null ,
         myMoney:  this.$cookies.get("money")  ,
         button : document.querySelector('#menubutton'),
         showElement: true,
@@ -726,7 +728,24 @@ beforeUnmount() {
       if (scrollPos > 0) {
         console.log(1);
         this.isHide = true;
-   
+// Lấy chiều cao của thanh cuộn (scroll bar)
+this.scrollBarHeight = window.pageYOffset;
+
+// Lấy chiều cao của trang (khoảng cách từ điểm trên cùng của trang tới điểm cuối cùng của trang)
+const pageHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+
+// Tính khoảng cách từ điểm trên cùng của trang tới điểm trên cùng của trang khi chưa vuốt xuống
+const distanceToTop = pageHeight - this.scrollBarHeight;
+console.log(this.scrollBarHeight)
+if ( this.scrollBarHeight  < 27 )
+{
+  clearTimeout(this.delayTimeout);
+    this.isHide = false;
+  this.showElement = true;
+  this.sdfsdfsdfsdfv = true;
+        console.log(this.sdfsdfsdfsdfv)
+}
+
       } else {
         // console.log(2);
         // this.isHide = false;
@@ -735,7 +754,9 @@ beforeUnmount() {
     },
     addNewTimeout()
     { 
-if ( this.sdfsdfsdfsdfv == false )
+      const self = this;
+      console.log(self.sdfsdfsdfsdfv)
+if ( this.sdfsdfsdfsdfv === false )
 {
   console.log(4);
   this.showElement = false;
@@ -743,7 +764,7 @@ if ( this.sdfsdfsdfsdfv == false )
 }
     },
     handleScroll() {
-      let delayTimeout;
+
       
       this.onScroll();
     const currentScrollPosition = window.scrollY;
@@ -755,19 +776,19 @@ if ( this.sdfsdfsdfsdfv == false )
   if (currentScrollPosition < this.previousScrollPosition) {
   
     console.log(2);
-    clearTimeout(delayTimeout);
+    clearTimeout(this.delayTimeout);
     this.isHide = false;
     this.sdfsdfsdfsdfv = true;
         this.showElement = true;
   }
-  else
+  else if (this.scrollBarHeight  > 27 )
   {
-  
-if (delayTimeout) {
-  clearTimeout(delayTimeout);
+    console.log(3);
+if (this.delayTimeout) {
+  clearTimeout(this.delayTimeout);
 }
 this.sdfsdfsdfsdfv = false;
-delayTimeout = setTimeout(() => {
+this.delayTimeout = setTimeout(() => {
   this.addNewTimeout() ;
 }, 500);
   }
