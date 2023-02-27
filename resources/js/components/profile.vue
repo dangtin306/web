@@ -5,15 +5,15 @@
       <img :src='linkanh'
        alt="" class="header-image" />
       <div class="header">
-        <svg fill="#ffffff" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg" class="header-icon">
+        <svg href="javascript:void(0)" fill="#ffffff" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg" class="header-icon">
           <path d="M0 0h24v24H0z" fill="none"/>
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
         </svg>
-  
+  <router-link to="/nativeapp/search" >
         <svg fill="#ffffff" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg" class="u-float-right header-icon">
           <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
           <path d="M0 0h24v24H0z" fill="none"/>
-        </svg>
+        </svg></router-link>
         <div v-if="listtruyen == null" >
           <h1 class="main-heading">Chờ xíu nhé <br>Đang tải truyện</h1>
    </div>
@@ -53,12 +53,12 @@
       <span class="body-stats">Followers <span>3.5k</span></span>
       <span class="body-stats">Following <span>1.9k</span></span>
       <div class="u-clearfix"></div>
-      <div class="body-info">
+      <div  class="body-info" :class="{ show: showmotatruyen }">
         <p>
             {{ mota }}
         </p>
       </div>
-      <div class="body-more">
+      <div @click="hienmotatruyen" class="body-more">
         <span></span>
         <span></span>
         <span></span>
@@ -103,6 +103,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
               mota: null ,
               hientruyen: null ,
               error: null,
+              showmotatruyen: false,
               linkanh: null,
               infoBox: null,
               width:0,
@@ -117,6 +118,17 @@ import VRuntimeTemplate from "vue3-runtime-template";
           this.laymeta();
       },
       methods: {
+        hienmotatruyen()
+        {
+if (this.showmotatruyen == true )
+{
+  this.showmotatruyen = false
+}
+else
+{
+  this.showmotatruyen = true
+}
+        },
         laymeta()
           {
             var url = location.href  ;
@@ -162,6 +174,10 @@ var ahdhajdnhk = 'https://tecom.pro/truyen-tranh/api2.php?' + urlsplit ;
                 this.tentacpham =   this.userss.tentacpham ;
                 this.linkanh =   this.userss.anhtruyen ;
                 this.mota =   this.userss.mota ;
+                this.mota = this.mota.replace( 'cocomic', 'Hust Media') ;
+       this.mota = this.mota.replace( 'Cocomic', 'Hust Media') ;
+       this.mota = this.mota.replace( 'COCOMIC', 'Hust Media') ;
+
                 this.listtruyen =   this.userss.listtruyen ;
                 this.chap1 =   this.userss.chap1 ;
                 // console.log(this.listtruyen   );
@@ -391,7 +407,13 @@ var ahdhajdnhk = 'https://tecom.pro/truyen-tranh/api2.php?' + urlsplit ;
         overflow: hidden;
         transition: all 600ms ease-out;
       }
-      
+      .body-info.show {
+        clear: left;
+        position: relative;
+        max-height: none;
+        overflow: hidden;
+        transition: all 600ms ease-out;
+      }
       .body-more {
         background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(238,238,238,1) 100%);
         background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(238,238,238,1) 100%);
