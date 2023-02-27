@@ -175,13 +175,14 @@ data-template="vertical-menu-template-free"
       <router-link to="/chuyenxu" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tuongtac.fun/img/icon/coin.svg" style="width:20px;height:20px;bg-white ; "> &nbsp;Chuyển xu
         <i class="ni ni-check-bold"></i>
       </router-link>
-        <a href="https://hust.media/ruttien.php" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua Momo
+        <a href="https://hust.media/ruttien.php" class="menu-link btn-sm  btn-outline-primary dropdown-item"> <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua Momo
 
-        </a>
-        <a href="https://hust.media/rutbank.php" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> 
+        </a>     <li>
+        <a href="https://hust.media/rutbank.php" 
+        class="menu-link btn-sm  btn-outline-primary dropdown-item"> 
           <img src="https://tuongtac.fun/img/icon/imagescoins.png" style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua ngân hàng
 
-        </a>
+        </a></li>
         </li>
         </ul>
         </li>
