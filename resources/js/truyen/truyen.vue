@@ -153,7 +153,7 @@ $('#loadingg').hide();
 var splitter = '/truyen-tranh/' ;
 
 let config = {
-    timeout: 22000,
+    timeout: 27000,
 };
 var urlsplit = url.split(splitter)[1];
 urlsplit = 'https://tecom.pro/truyen-tranh/apidoctruyen.php/' + urlsplit ;
@@ -173,7 +173,7 @@ urlsplit = 'https://tecom.pro/truyen-tranh/apidoctruyen.php/' + urlsplit ;
 var splitter = '/truyen-tranh/' ;
 
 let config = {
-    timeout: 22000,
+    timeout: 27000,
 };
 var urlsplit = url.split(splitter)[1];
 urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
