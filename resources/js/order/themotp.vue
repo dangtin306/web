@@ -61,8 +61,8 @@ img.asdasd {
             
                   <input type="checkbox" id="toggleB" class="sr-only" v-model="isToggleOn" @click="toggleButton">
               
-                  <div class="border dot2 block bg-gray-600 w-14 h-8 rounded-full"></div>
-               
+                  <div style="height: 2rem;" class="border dot2 block bg-gray w-14  rounded-full">
+                </div>
                   <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
                 </div>
                 
@@ -174,7 +174,7 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
                   </svg>
                 </div>
               </button>
-              <div class="max-h-16">
+              <div class="max-h-16" style=" max-height: 4rem !important; */">
                 <div class="cards">
              
                   <Adsense
