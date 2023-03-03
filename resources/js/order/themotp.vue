@@ -235,7 +235,7 @@ Dịch vụ {{minorder }}
                        
                   </div>
                   <br>
-                  Đang load trạng thái
+                  Đang load trạng  thái
                  </p>
               </div>
           </div>
