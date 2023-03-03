@@ -63,7 +63,7 @@ img.asdasd {
               
                   <div style="height: 2rem;" class="border dot2 block bg-gray w-14  rounded-full">
                 </div>
-                  <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+                  <div style="top: 3!important;" class="dot absolute left-1  bg-white w-6 h-6 rounded-full transition"></div>
                 </div>
                 
                 <div class="ml-3 text-gray-700 font-medium">
