@@ -201,12 +201,29 @@ data-template="vertical-menu-template-free"
         <div data-i18n="Analytics">Đổi thẻ sang tiền việt</div>
       </router-link>
         </li>
-      <li class="menu-item">
-        <a class="menu-link"  href="https://hust.media/themotp.php">
-        <img src="https://tuongtac.fun/img/icon/4298126.png" style="width:27px;height:27px">
-        <div data-i18n="Analytics">Thuê sim nhận code lấy mã otp</div>
-      </a>
-        </li>
+
+        <li class="menu-item" style="">
+          <a  class="menu-link  menu-toggle">
+            <img src="https://tuongtac.fun/img/icon/4298126.png" style="width:27px;height:27px">
+          <div data-i18n="Analytics">Thuê sim nhận code lấy mã otp</div>
+          </a>
+          <ul class="menu-sub">
+          <li>
+     
+        <router-link to="/nativeapp/themotp" 
+        class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item">
+         &nbsp;Toàn cầu ( Có chat gpt)
+          <i class="ni ni-check-bold"></i>
+        </router-link>
+          <a href="https://hust.media/themotp.php"
+           class="menu-link btn-sm  btn-outline-primary dropdown-item">
+           &nbsp; Việt Nam
+  
+          </a>    
+          </li>
+          </ul>
+          </li>
+    
       <li class="menu-item ">
         <router-link class="menu-link layout-menu-toggle"  to="/okluon">
           <img src="https://tuongtac.fun/img/icon/giphy (7).gif"

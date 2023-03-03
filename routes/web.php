@@ -161,6 +161,7 @@ Route::get('/realtime', function()
 {
     return view('appvue');
 });
+
 Route::get('/thankuser', function()
 {
     return view('appvue');

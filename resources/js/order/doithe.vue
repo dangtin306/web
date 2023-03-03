@@ -367,7 +367,7 @@ this.info = results ;
 console.log(this.info.fees);
  
     //   this.service = this.info.id ,
-      this.maxorder =  this.info.fees  * 1.04 ,
+      this.maxorder =  Math.round(this.info.fees  * 1.04) ,
       this.minorder = this.dichvu ,
       this.tientra1 = this.info.fees * 1.04 ,
     //   this.timeuoctinh = this.info.time ,

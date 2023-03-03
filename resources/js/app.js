@@ -63,6 +63,7 @@ import Ads from 'vue-google-adsense'
     import account from "./order/account.vue"; 
     import payeer from "./order/payeer.vue"; 
     import laylienket from "./order/laylienket.vue";
+    import themotp from "./order/themotp.vue";
     import aboutus from "./congdong/aboutus.vue"; 
     import id from "./order/id.vue"; 
     import muathe from "./order/muathe.vue";
@@ -134,6 +135,11 @@ const routes = [
     path: '/nativeapp/historycomics',
     name: 'historycomics',
     component: historycomics ,
+  },
+  {
+    path: '/nativeapp/themotp',
+    name: 'themotp',
+    component: themotp ,
   },
   {
     path: '/truyen-tranh/:name2',
