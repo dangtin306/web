@@ -178,6 +178,10 @@ Route::get('/profile', function()
 {
     return view('welcome');
 });
+Route::get('/order', function()
+{
+    return view('appvue');
+});
 Route::get('/nativeapp/{name}', function($name)
 {
     return view('appvue');
