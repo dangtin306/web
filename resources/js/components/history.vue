@@ -1,13 +1,18 @@
 <template>
     <div class="row fixrow">
 
-        <!-- <div class="col-xl-4">
-          <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#napbank">
-            NẠP QUA NGÂN HÀNG cập nhật sau 1 đến 4 tiếng
-          </button>
-        </div> --> 
-        <!-- Button trigger modal -->
-   
+      <div class="cards">
+             
+        <Adsense
+    data-ad-client="ca-pub-4574266110812955"
+     data-ad-slot="8795043992"
+     data-full-width-responsive="no"
+     ins-class="display: block; height: 50px;"
+     ins-style="display: block; height: 50px;"
+     data-ad-format="horizontal"
+     >
+  </Adsense>
+  </div>
 
        
     
