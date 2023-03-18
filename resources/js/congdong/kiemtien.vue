@@ -84,6 +84,7 @@
           nutorder: null,
           currentPostId: null,
           posts: null,
+          sadasdsaasd: 1,
         };
       },
       created(){
@@ -204,7 +205,10 @@ else if ( info.status == 0 )
       },
       handlePostFocus(idpost) {
           console.log(`Post ${idpost} focused`);
-          axios
+          if ( this.sadasdsaasd = 1 )
+          {
+            this.sadasdsaasd = 2 ;
+            axios
            .post('https://tecom.pro/ttc/nhantien.php', {
             key: this.ok2 ,
             idpost: idpost 
@@ -216,6 +220,8 @@ else if ( info.status == 0 )
       ))
       .catch(error => console.log(error) ,
           ) ;
+          }
+         
       },
       dathang(response)
       {
@@ -236,6 +242,7 @@ else if ( info.status == 0 )
           }
           this.isLoading = false;
         setTimeout(() => {
+          this.sadasdsaasd = 1 ;
           this.filteredPosts();
         }, 500); 
       }
