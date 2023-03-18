@@ -44,9 +44,9 @@
             @click.stop="handleLinkClick(post.idpost)"
              :href="post.link" target="_blank" 
             class="px-10 py-2 rounded-md text-sm 
-            font-medium text-white bg-pink-400 hover:bg-purple-400 
+            font-medium text-white bg-red-400 hover:bg-purple-400 
             focus:outline-none focus:ring-2 focus:ring-offset-2 
-            focus:ring-pink-500"
+            focus:ring-red-500"
             >
             
             <div v-if="isLoading && currentPostId == post.idpost" class="spinner-border" role="status"></div>
