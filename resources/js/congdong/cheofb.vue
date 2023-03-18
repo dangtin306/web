@@ -174,7 +174,77 @@ Số điểm hiện tại là {{  sodiem  }}
         
         </div>
         </div>
+        <div class="mt-0 mt-0">
+          <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
+        
+           
+            <router-link type="button" to="/kiemtien/likepagecheo">
+        
+              <div class="max-w-7xl mx-2 py-2 mb-2">
+                <div class="relative group">
+                  <div class="absolute -inset-1 bg-gradient-to-r 
+                  from-purple-600 to-pink-600 rounded-lg blur opacity-25 
+                  group-hover:opacity-100 transition duration-1000 
+                  group-hover:duration-200"></div>
+                  <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
+                 rounded-2xl leading-none flex items-top justify-start space-x-3">
+                 
+                 
+                 
+                    <div class="space-y-2">
+                      
+                      <p class="text-lg text-slate-1000">
+                        <img src="https://hust.media/img/icon/likepageicon.png"
+                        class="h-7 w-7 cananh">  
+                        Like Pages nhận điểm </p>
+                      <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
+                        Active → </div>
+      
+                        <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+                    </div>
+                  
+                  </div>
+               
+                </div>
+              </div>
+              
+      </router-link>
+      
+      <router-link type="button" to="/kiemtien/sharecheo">
+        
+        <div class="max-w-7xl mx-2 py-2 mb-2">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r 
+            from-purple-600 to-pink-600 rounded-lg blur opacity-25 
+            group-hover:opacity-100 transition duration-1000 
+            group-hover:duration-200"></div>
+            <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
+           rounded-2xl leading-none flex items-top justify-start space-x-3">
+           
+           
+           
+              <div class="space-y-2">
+                
+                <p class="text-lg text-slate-1000">
+                  <img src="https://hust.media/img/icon/sharefb.svg"
+                  class="h-5 w-5 cananh">  
+                  Chia sẻ nhận điểm </p>
+                <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
+                  Active → </div>
 
+                  <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+              </div>
+            
+            </div>
+         
+          </div>
+        </div>
+        
+</router-link>
+           
+          
+          </div>
+          </div>
     
       
   
