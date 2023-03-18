@@ -109,6 +109,14 @@
        {
         this.sadasdsaasd = 'Tham gia nhóm' ;
        }
+       else if (this.tenkiemtien == 'likepagecheo' )
+       {
+        this.sadasdsaasd = 'Like Fanpage' ;
+       }
+       else if (this.tenkiemtien == 'sharecheo' )
+       {
+        this.sadasdsaasd = 'Chia sẻ' ;
+       }
   this.reloadPosts() ;
   },
   beforeUnmount() {
