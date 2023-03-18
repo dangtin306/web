@@ -91,20 +91,23 @@
   this.reloadPosts() ;
   },
   beforeUnmount() {
-  window.removeEventListener("focus", this.handleFocus);
+  window.removeEventListener("visibilitychange", this.handleVisibilityChange);
 },
-  mounted() {
-  this.handleFocus = () => {
-    const postId = localStorage.getItem("postId");
-    if (postId) {
-      this.handlePostFocus(postId);
-      setTimeout(() => {
-        localStorage.removeItem("postId");
-      }, 500);
+mounted() {
+  this.handleVisibilityChange = () => {
+    if (document.visibilityState === "visible") {
+      const postId = localStorage.getItem("postId");
+      if (postId) {
+        this.handlePostFocus(postId);
+        setTimeout(() => {
+          localStorage.removeItem("postId");
+        }, 500);
+      }
     }
   };
-  window.addEventListener("focus", this.handleFocus);
+  window.addEventListener("visibilitychange", this.handleVisibilityChange);
 },
+
     methods: {
       asdasdkas(info)
         {
