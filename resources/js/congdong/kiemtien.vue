@@ -89,17 +89,21 @@
       created(){
   this.reloadPosts() ;
   },
-    mounted() {
-      window.addEventListener("focus", () => {
-        const postId = localStorage.getItem("postId");
-        if (postId) {
-          this.handlePostFocus(postId);
-          setTimeout(() => {
-          localStorage.removeItem("postId");
-        }, 1000); // delay 1 giây (1000 milliseconds)
-        }
-      });
-    },
+  beforeUnmount() {
+  window.removeEventListener("focus", this.handleFocus);
+},
+  mounted() {
+  this.handleFocus = () => {
+    const postId = localStorage.getItem("postId");
+    if (postId) {
+      this.handlePostFocus(postId);
+      setTimeout(() => {
+        localStorage.removeItem("postId");
+      }, 500);
+    }
+  };
+  window.addEventListener("focus", this.handleFocus);
+},
     methods: {
       asdasdkas(info)
         {
