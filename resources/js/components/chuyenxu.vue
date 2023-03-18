@@ -10,20 +10,20 @@
   
     <label>Tên tài khoản Hust Media người nhận</label>
     <br>
-    <input class="border-2 border-rose-600 ..." type="text" v-model="name" name="name" placeholder="Nhập tên tài khoản" />
+    <input class="border-2 border-rose-600 h-9" type="text" v-model="name" name="name" placeholder="Nhập tên tài khoản" />
   </div>
   <div class="form-control">
     <label>Số xu gửi  </label>
     <br>
     <input
-    class="border-2 border-rose-600" 
+    class="border-2 border-rose-600 h-9" 
       type="text"
       v-model="age"
       name="age"
       placeholder="Nhập số tiền"
     />
   </div>
-
+<br>
   <button type='submit' :disabled="disableButton"
       class='flex break-inside bg-black rounded-3xl px-8 py-3 mb-3 w-full dark:bg-slate-800 dark:text-white'>
       <div class='flex items-center justify-between flex-1'>

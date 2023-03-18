@@ -93,6 +93,15 @@ Route::get('/sms',  function () {
 Route::get('/themsdt',  function () {
     return view('welcome');
 });
+Route::get('/cheofb',  function () {
+    return view('welcome');
+});
+Route::get('/cauhinh/{name}',  function () {
+    return view('welcome');
+});
+Route::get('/kiemtien',  function () {
+    return view('welcome');
+});
 Route::get('/themsdtmomo',  function () {
     return view('themsdtmomo');
 });
@@ -113,7 +122,13 @@ Route::get('webapp/{name}', function($name)
 Route::get('/history',  function () {
     return view('appvue');
 });
+Route::get('/themcauhinh',  function () {
+    return view('appvue');
+});
 Route::get('/link',  function () {
+    return view('appvue');
+});
+Route::get('/exchangepoints',  function () {
     return view('appvue');
 });
 Route::get('/plan',  function () {

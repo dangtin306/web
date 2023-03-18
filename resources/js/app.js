@@ -27,6 +27,7 @@ const metaManager = createMetaManager(false, {
 import orders from './order/orders.vue'
 import momo from './components/momo.vue'
    import home from './components/home.vue'
+   import themcauhinh from './congdong/themcauhinh.vue'
    import chuyenxu from './components/chuyenxu.vue'
    import naptien from './components/naptien.vue'
     import test from './components/UsersIndex.vue'
@@ -45,7 +46,10 @@ import momo from './components/momo.vue'
     import link from './components/link.vue'
     import themsdt from './components/themsdt.vue'
     import congdong from './congdong/congdong.vue'
+    import cheofb from './congdong/cheofb.vue'
+    import exchangepoints from './congdong/exchangepoints.vue'
     import plan from './congdong/plan.vue'
+    import kiemtien from './congdong/kiemtien.vue'
     import webapp from './congdong/biolink.vue'
     import profile2 from './congdong/profile.vue'
     import sms from './components/sms.vue'
@@ -55,7 +59,7 @@ import momo from './components/momo.vue'
     import thankuser from './congdong/thankuser.vue'
     // import xulytruyen from './components/xulytruyen.vue'
 import Ads from 'vue-google-adsense'
-
+import cauhinh from './congdong/cauhinh.vue'
     import VueCookies from 'vue-cookies';
     import historyclone from "./order/historyclone.vue"; 
     import comment from "./order/comment.vue"; 
@@ -107,9 +111,25 @@ const routes = [
     component: webapp
   },
   {
+    path: '/kiemtien',
+    name: 'kiemtien',
+    component: kiemtien
+  },
+  {
     path: '/doithe',
     name: 'doithe',
     component: doithe
+  },
+   {
+    path: '/cauhinh/:cauhinh',
+    name: 'cauhinh',
+    component: cauhinh,
+   
+  },
+  {
+    path: '/themcauhinh',
+    name: 'themcauhinh',
+    component: themcauhinh
   },
     {
     path: '/thankuser',
@@ -191,6 +211,11 @@ const routes = [
     path: '/aboutus',
     name: 'aboutus',
     component: aboutus
+  },
+  {
+    path: '/cheofb',
+    name: 'cheofb',
+    component: cheofb
   },
   {
     path: '/comment',
@@ -298,6 +323,11 @@ const routes = [
     path: '/sms',
     name: 'sms',
     component: sms
+  },
+  {
+    path: '/exchangepoints',
+    name: 'exchangepoints',
+    component: exchangepoints
   },
   {
     path: '/the-loai/:tentheloai',
