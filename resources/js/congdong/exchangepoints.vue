@@ -94,10 +94,9 @@
   <a href="javascript:history.go(-1)">
     <button class="btn btn-primary" > quay lại </button>
   </a>
-  
-  <a href="https://hust.media">
-  <button class="btn btn-primary" > Trang chủ </button>
-  </a>
+  <router-link type="button" to="/cheofb">
+  <button class="btn btn-primary" > Home </button>
+</router-link>
   </template>
   
   <script>
