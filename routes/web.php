@@ -99,7 +99,7 @@ Route::get('/cheofb',  function () {
 Route::get('/cauhinh/{name}',  function () {
     return view('welcome');
 });
-Route::get('/kiemtien',  function () {
+Route::get('/kiemtien/{name}',  function () {
     return view('welcome');
 });
 Route::get('/themsdtmomo',  function () {

@@ -2,6 +2,20 @@
     <div class="container">
       <div class="row">
           <div class="text-center">
+            <div style="display: flex; justify-content: center; align-items: center; ">
+
+              <p>  Page:  {{tenkiemtien}}</p>
+              <button     type="button"
+              :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
+              :disabled="isLoadingbutton" @click="homeok" >
+                  <div v-if="isLoadingbutton">
+                    Home {{ countdown }}
+                  </div>
+                  <div v-else>
+                    Home
+                  </div>
+                </button>
+            </div>    
               <router-link type="button" class="mx-2  btn-sm btn-primary" to="/exchangepoints">Đổi điểm sang xu</router-link>
               <button     type="button"
               :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
@@ -52,7 +66,7 @@
             <div v-if="isLoading && currentPostId == post.idpost" class="spinner-border" role="status"></div>
             <div v-else>
               <span v-if="currentPostId == post.idpost"> {{ nutorder }} </span>
-              <span v-else>Theo dõi</span>
+              <span v-else>{{ sadasdsaasd }}</span>
             </div>
           </a>
   
@@ -73,7 +87,7 @@
   </style>
     <script>
     import Swal from 'sweetalert2' ;
-    export default {
+    export default { 
       data() {
         return {
           ok2 : this.$cookies.get("apikey")  ,
@@ -87,7 +101,14 @@
           sadasdsaasd: 1,
         };
       },
+      props: ['tenkiemtien' ],
       created(){
+        if (this.tenkiemtien == 'subcheo' )
+        { this.sadasdsaasd = 'Theo dõi' ;}
+       else if (this.tenkiemtien == 'thamgianhomcheo' )
+       {
+        this.sadasdsaasd = 'Tham gia nhóm' ;
+       }
   this.reloadPosts() ;
   },
   beforeUnmount() {
@@ -109,6 +130,10 @@ mounted() {
 },
 
     methods: {
+      homeok()
+      {
+        this.$router.push('/cheofb') ;
+      },
       asdasdkas(info)
         {
 if ( info.status == 3 )
@@ -185,7 +210,9 @@ else if ( info.status == 0 )
       axios
        .post('https://tecom.pro/ttc/profile.php', {
         key: this.ok2 ,
-    chedo: 'getjop'
+    chedo: 'getjop' ,
+    theloai: this.tenkiemtien 
+
   })
   .then(response => (  this.info = response.data
   , console.log(this.info) ,
@@ -208,13 +235,11 @@ else if ( info.status == 0 )
       },
       handlePostFocus(idpost) {
           console.log(`Post ${idpost} focused`);
-          if ( this.sadasdsaasd = 1 )
-          {
-            this.sadasdsaasd = 2 ;
             axios
            .post('https://tecom.pro/ttc/nhantien.php', {
             key: this.ok2 ,
-            idpost: idpost 
+            idpost: idpost ,
+            theloai: this.tenkiemtien 
         // binhluan: this.binhluan
       })
       .then( response => (
@@ -223,7 +248,7 @@ else if ( info.status == 0 )
       ))
       .catch(error => console.log(error) ,
           ) ;
-          }
+          
          
       },
       dathang(response)
@@ -245,7 +270,6 @@ else if ( info.status == 0 )
           }
           this.isLoading = false;
         setTimeout(() => {
-          this.sadasdsaasd = 1 ;
           this.filteredPosts();
         }, 500); 
       }

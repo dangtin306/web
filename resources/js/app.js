@@ -111,9 +111,10 @@ const routes = [
     component: webapp
   },
   {
-    path: '/kiemtien',
+    path: '/kiemtien/:tenkiemtien',
     name: 'kiemtien',
-    component: kiemtien
+    component: kiemtien,
+    props: route => ({ tenkiemtien: route.params.tenkiemtien})
   },
   {
     path: '/doithe',
