@@ -69,6 +69,7 @@ import cauhinh from './congdong/cauhinh.vue'
     import laylienket from "./order/laylienket.vue";
     import themotp from "./order/themotp.vue";
     import aboutus from "./congdong/aboutus.vue"; 
+    import momoauto from "./congdong/momoauto.vue"; 
     import id from "./order/id.vue"; 
     import muathe from "./order/muathe.vue";
     import VueScrollTo from 'vue-scrollto'; 
@@ -120,6 +121,11 @@ const routes = [
     path: '/doithe',
     name: 'doithe',
     component: doithe
+  },
+  {
+    path: '/momoauto',
+    name: 'momoauto',
+    component: momoauto
   },
    {
     path: '/cauhinh/:cauhinh',

@@ -113,7 +113,7 @@
                       class="h-7 w-7 cananh">  
                       Nạp qua MB Bank ấn đây nhé</p>
                     <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
-                      Tối thiểu 100xu → </div>
+                      Tối thiểu 100xu, Chấp nhận chuyển từ ngân hàng khác → </div>
     
                       <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
                   </div>
@@ -152,7 +152,7 @@
                         class="h-7 w-7 cananh">  
                         Nạp qua Vietcombank ấn đây nhé</p>
                       <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
-                        Tối thiểu 100xu → </div>
+                        Tối thiểu 100xu, Chấp nhận chuyển từ ngân hàng khác → </div>
       
                         <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
                     </div>
@@ -234,7 +234,7 @@
             
     
         </router-link>
-          <a  href="https://hust.media/momoauto/" >
+        <router-link type="button" to="/momoauto">
             <div class="max-w-7xl mx-2 py-2 mb-2">
               <div class="relative group">
                 <div class="absolute -inset-1 bg-gradient-to-r 
@@ -263,7 +263,7 @@
               </div>
             </div>
             
-          </a>
+          </router-link>
          
         
         </div>

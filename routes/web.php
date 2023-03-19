@@ -96,6 +96,9 @@ Route::get('/themsdt',  function () {
 Route::get('/cheofb',  function () {
     return view('welcome');
 });
+Route::get('/momoauto',  function () {
+    return view('welcome');
+});
 Route::get('/cauhinh/{name}',  function () {
     return view('welcome');
 });

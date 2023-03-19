@@ -73,9 +73,10 @@
     <button class="btn btn-primary" > quay lại </button>
   </a>
   
-  <router-link  to="/cauhinh">
+  <router-link  to="/cauhinh/3">
   <button class="btn btn-primary" > DANH SÁCH NICK FACEBOOK</button>
   </router-link>
+  
   <br>  <br>  <br>
   </template>
   
