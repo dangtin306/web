@@ -11693,6 +11693,9 @@ video {
 .mt-7 {
   margin-top: 1.75rem;
 }
+.mr-0 {
+  margin-right: 0px;
+}
 .block {
   display: block;
 }

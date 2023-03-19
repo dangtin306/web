@@ -21,10 +21,10 @@
                         <h3 class="text-lg text-muted font-medium mb-0">Thông Tin ví MOMO</h3>
                         <ul class="pl-4 mt-4 space-y-3">
                           <li class="flex items-center">
-                            <span class="mr-2 text-pink-500 font-medium">Số Điện Thoại:</span>
+                            <span class="mr-1 text-pink-500 font-medium">Số Điện Thoại:</span>
                             <input type="text" class="form-control border-pink-600" v-bind:value="site_sdt_momo" id="input1" readonly>
                             <button @click="copyText(1)" class="ml-2 group rounded-2xl h-15 w-48 bg-pink-300 font-bold text-lg text-white relative overflow-hidden">
-                                Sao chép
+                                <span class="text-base"><b>Sao chép</b></span> 
                                 <div class="absolute duration-300 inset-0 w-full h-full transition-all scale-0 group-hover:scale-100 group-hover:bg-white/30 rounded-2xl">
                                 </div>
                             </button>  
@@ -34,11 +34,11 @@
                             <span><b> {{ site_ten_momo }}</b></span>
                           </li>
                           <li class="flex items-center">
-                            <span class="mr-2 text-pink-500 font-medium">Nội dung chuyển tiền</span>
+                            <span class="mr-0 text-pink-500 font-medium">Nội dung chuyển tiền</span>
                             <input type="text" class="form-control border-pink-300" v-bind:value="magiaodich" id="input2" readonly>
                            
                             <button @click="copyText(2)" class="ml-2 group rounded-2xl h-15 w-48 bg-pink-300 font-bold text-lg text-white relative overflow-hidden">
-                                Sao chép
+                                <span class="text-base"><b>Sao chép</b></span>
                                 <div class="absolute duration-300 inset-0 w-full h-full transition-all scale-0 group-hover:scale-100 group-hover:bg-white/30 rounded-2xl">
                                 </div>
                             </button>  
@@ -114,6 +114,20 @@ export default {
   this.site_sdt_momo = info.site_sdt_momo ;
   this.site_ten_momo = info.site_ten_momo ;
   this.magiaodich = info.magiaodich ;
+  axios
+       .post('https://tecom.pro/momoqrcode.php', {
+        key: this.ok2  ,
+        site_sdt_momo: this.site_sdt_momo ,
+        site_ten_momo: this.site_ten_momo ,
+        magiaodich: this.magiaodich ,
+  })
+  .then(response => (  this.info = response.data
+  , 
+  this.qrcode =   this.info
+ ))
+  .catch(error => console.log(error) 
+      )
+
   this.qrcode = info.qrcode ;
 }
 else if ( info.status == 0 )
