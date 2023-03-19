@@ -36,7 +36,7 @@ Chéo Facebook
 </div> -->
 <div class="panel-heading"><h4 class="text-white">DANH SÁCH NICK FACEBOOK</h4></div>
           <div class="panel-body">
-            <div v-if="nickdangdung == null" class="container-fluid">
+            <div v-if="listcauhinh == null" class="container-fluid">
                 <div class="row" style="background-color: #FFB6C1;">
                    <p class="text-center" style="color: #fff;">
                     
@@ -48,13 +48,22 @@ Chéo Facebook
                    </p>
                 </div>
             </div>
-            <div v-if="nickdangdung != null" class="container-fluid">
-                <div id="nickdangdung">
-                    <label class="block font-bold">Nick đang dùng:</label>
-                    <a target="_blank" v-bind:href="nickdangdung.lienketfb" class="flex items-center">
+            <div v-if="listcauhinh != null" class="container-fluid">
+              <div v-if="nickdangdung == null" class="container-fluid">
+             
+                  <p class="text-center" style="color: #fff;" >
+                   <br>
+             <h5> Chọn một tài khoản Facebook bên dưới để làm Jop</h5>   
+                  </p>
+         
+                </div>
+                <div v-if="listcauhinh != null" id="nickdangdung">
+                    <label v-if="nickdangdung != null"  class="block font-bold">Nick đang dùng:</label>
+                    <a v-if="nickdangdung != null"  target="_blank" v-bind:href="nickdangdung.lienketfb" class="flex items-center">
                       <img v-bind:src="nickdangdung.ava" class="w-10 h-10 rounded-full mr-2">
                       <span>{{ nickdangdung.tenfb }}</span>
                     </a>
+                    
                     <div class="form-inline mt-2">
                       <label class="block font-bold mr-2">Chế độ kiếm xu:</label>
                       <select class="form-select" v-model="chedokiemxu">
@@ -137,16 +146,21 @@ export default {
         {
       
 console.log(this.randomNumber);
-if ( info.status == 3 ||  info.status == 0 )
+if (  info.status == 0 )
 {
   this.thongbaosuccess(info.message) ;
   this.$router.push('/cheofb') ;
 }
+else if ( info.status == 3  )
+{
+  this.thongbaosuccess(info.message) ;
+  this.$router.push('/themcauhinh') ;
+}
 else if ( info.status == 1 )
 {
   this.thongbaosuccess(info.message) ;
-  this.$router.push(`/cauhinh/${this.randomNumber}`);
-
+  // this.$router.push(`/cauhinh/${this.randomNumber}`);
+  this.$router.push('/cheofb') ;
 }
 this.nutxuly = 0 ;
         },
