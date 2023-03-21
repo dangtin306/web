@@ -70,6 +70,11 @@ import cauhinh from './congdong/cauhinh.vue'
     import themotp from "./order/themotp.vue";
     import aboutus from "./congdong/aboutus.vue"; 
     import momoauto from "./congdong/momoauto.vue"; 
+    import animehome from "./video/home.vue"; 
+    import animetheloai from "./video/theloai.vue"; 
+    import animeplay from "./video/play.vue"; 
+    import animeprofile from "./video/profile.vue"; 
+    import dsfsdfsdfsfdsfd from "./video/theloai.vue"; 
     import id from "./order/id.vue"; 
     import muathe from "./order/muathe.vue";
     import VueScrollTo from 'vue-scrollto'; 
@@ -110,6 +115,32 @@ const routes = [
     path: '/webapp',
     name: 'webapp',
     component: webapp
+  },
+  {
+    path: '/anime/home',
+    name: 'animehome',
+    component: animehome ,
+  },
+  {
+    path: '/anime/the-loai',
+    name: 'dsfsdfsdfsfdsfd',
+    component: dsfsdfsdfsfdsfd,
+    props: (route) => ({ theloai: route.query.theloai })
+  },
+  {
+    path: '/anime/the-loai/:animetheloai',
+    name: 'animetheloai',
+    component: animetheloai ,
+  },
+  {
+    path: '/anime/play',
+    name: 'animeplay',
+    component: animeplay 
+  },
+  {
+    path: '/anime/profile',
+    name: 'animeprofile',
+    component: animeprofile 
   },
   {
     path: '/kiemtien/:tenkiemtien',

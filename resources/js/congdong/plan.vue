@@ -175,12 +175,6 @@ console.log(jsonArr) ;
     {
       var copyText = id ;
 
-// Select the text field
-
-
-
- // Copy the text inside the text field
-navigator.clipboard.writeText(copyText);
 
 // Alert the copied text
 
