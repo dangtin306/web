@@ -115,7 +115,7 @@ Route::get('/cauhinh/{name}',  function () {
     return view('welcome');
 });
 Route::get('/anime/play',  function () {
-    return view('welcome');
+    return view('theloai');
 });
 Route::get('/kiemtien/{name}',  function () {
     return view('welcome');
