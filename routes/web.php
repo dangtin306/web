@@ -114,6 +114,9 @@ Route::get('/momoauto',  function () {
 Route::get('/cauhinh/{name}',  function () {
     return view('welcome');
 });
+Route::get('/anime/home',  function () {
+    return view('theloai');
+});
 Route::get('/anime/play',  function () {
     return view('theloai');
 });
