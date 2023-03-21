@@ -167,7 +167,7 @@
   
   var urlsplit = url.split(splitter)[1];
   
-  var ahdhajdnhk = 'https://hust.media/anime/profile.php?url=' + urlsplit ;
+  var ahdhajdnhk = 'https://tecom.pro/anime/profile.php?url=' + urlsplit ;
                 this.error = this.users = null;
                 this.loading = true;
                 const apikey = this.$cookies.get("apikey");

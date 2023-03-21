@@ -191,7 +191,7 @@ let config = {
     timeout: 12000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://hust.media/anime/home.php' ;
+urlsplit = 'https://tecom.pro/anime/home.php' ;
 $('#loadingg').hide();
 console.log(urlsplit);
               axios
