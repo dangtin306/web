@@ -33,7 +33,7 @@ $response = curl_exec($curl);
 curl_close($curl);
 echo $response;
 }
-else if ( !str_contains( $urigia , '/anime/home') && !str_contains( $urigia , '/anime/theloai') && str_contains( $urigia , '/anime/') ) { 
+else if ( !str_contains( $urigia , '/anime/home') && !str_contains( $urigia , '/anime/the-loai') && str_contains( $urigia , '/anime/') ) { 
     $urigia = explode("?url=", $urigia)[1];
  
     $urigia = 'https://tecom.pro/anime/meta.php/?url='.$urigia ;
