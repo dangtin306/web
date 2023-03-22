@@ -51,6 +51,16 @@ Route::post(
 Route::get('/anime/home',  function () {
     return view('theloai');
 });
+Route::get('/anime/play',  function () {
+    return view('theloai');
+});
+Route::get('/anime/profile', function()
+{
+    return view('theloai');
+});
+Route::get('/anime/the-loai',  function () {
+    return view('theloai');
+});
 Route::get('/test',  function () {
     return view('test'); });
 
@@ -91,9 +101,6 @@ Route::get('/anime/{name}', function($name)
 {
     return view('appvue');
 });
-Route::get('/anime/the-loai',  function () {
-    return view('appvue');
-});
 Route::get('/anime/the-loai/{name}', function($name)
 {
     return view('appvue');
@@ -117,9 +124,7 @@ Route::get('/cauhinh/{name}',  function () {
     return view('welcome');
 });
 
-Route::get('/anime/play',  function () {
-    return view('theloai');
-});
+
 Route::get('/kiemtien/{name}',  function () {
     return view('welcome');
 });
@@ -136,10 +141,7 @@ Route::get('/public/{name}',  function () {
 
 <?php
 });
-Route::get('/anime/profile', function()
-{
-    return view('theloai');
-});
+
 Route::get('webapp/{name}', function($name)
 {
     return view('biolink');
