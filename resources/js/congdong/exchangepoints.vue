@@ -1,9 +1,9 @@
 <template>
      <div class="max-w-2xl px-1 py-4  mx-auto rounded-lg shadow-xl">
     <div>
-        <p>Chuyển điểm sang xu
-            trong App 
-             ,số điểm chuyển tối thiểu 10 nghìn <br>
+        <p>Chuyển điểm jop facebook sang xu
+            trong App <br>
+             Số điểm chuyển tối thiểu 5 nghìn <br>
              Phí chuyển điểm 0% ,
              Tỷ giá chuyển 1 xu = 1000 điểm  <br>
              Nếu bỏ follow số điểm sẽ giảm

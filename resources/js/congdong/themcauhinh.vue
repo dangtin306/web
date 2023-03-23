@@ -1,22 +1,55 @@
 <template>
-    <div>
-        <p>Điều kiện thêm nick Facebook: <br>
-            - Tên Tiếng Việt, đầy đủ ảnh bìa, đại diện, thông tin <br>
-            - Nick cần đăng ít nhất 5 bài gồm ảnh + bài viết trên tường, ở chế độ CÔNG KHAI <br>
-            - Hoạt động > 7 ngày <br>
-            - Tham gia 1 nhóm <br>
-            - Trên 50 bạn bè hoặc hoạt động như người thật thì ko cần trên 20 bạn bè <br>
-            - Phí thêm tải khoản chéo facebook là 100 xu
-             </p>
-    </div>
-    <form @submit="onSubmit" class="add-form">
  
-    <div class="form-control">
+    <div class="row fixrow">
+
+
+      <div class="col mt-0">
+          <div  class='mt-4 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500 '>
+        
+            <div  class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
+               
+                <div class='max-w-md mx-auto  space-y-6'>
+                  <p v-if="social == 'facebook'" class="text-xs">Điều kiện thêm nick Facebook: <br>
+                    - Tên Tiếng Việt, đầy đủ ảnh bìa, đại diện, thông tin <br>
+                    - Nick cần đăng ít nhất 5 bài gồm ảnh + bài viết trên tường, ở chế độ CÔNG KHAI <br>
+                    - Hoạt động > 7 ngày
+                    - Tham gia 1 nhóm <br>
+                    - Trên 50 bạn bè hoặc hoạt động như người thật thì ko cần trên 20 bạn bè <br>
+                    - Phí thêm tải khoản chéo facebook là 100 xu
+                     </p>
+                     <p v-if="social == 'instagram'" class="text-xs">Điều kiện thêm nick Facebook: <br>
+                      Điều kiện thêm Nick Instagram: <br>
+- Tên Tiếng Việt, đầy đủ ảnh đại diện, thông tin tiểu sử (bio)<br>
+- Có ít nhất 1 người theo dõi<br>
+                       </p>
+                      <div class="col-lg-6">
+                              
+    <form @submit="onSubmit" class="add-form">
+      <div class="form"> 
+      <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn nền tảng</label>
+      <select  id="countries2" class="
+      selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="social">
+      <option v-for="option in options" :value="option.value"
+      :data-content=" `<div style='display: flex; align-items: center;'>  ` +  option.text + `&emsp;` + `<img src='` + option.img + `'` + `class=\'asdasd\'>` +`</div>` "  >
+        <!-- {{ option.text }} -->
+      </option>
+        </select>
+      </div>  <br>
+    <div v-if="social == 'facebook'"  class="form-control">
       <label>Nhập liên kết facebook  </label>
       <br>
       <div class="w-64">
         <input class="w-full border-2 border-rose-600 h-10" type="text"
          v-model="lienket" name="lienket" placeholder="Nhập liên kết hoặc id facebook" />
+      </div>
+      
+    </div>
+    <div v-if="social == 'instagram'"  class="form-control">
+      <label>Nhập liên kết instagram  </label>
+      <br>
+      <div class="w-64">
+        <input class="w-full border-2 border-rose-600 h-10" type="text"
+         v-model="lienket" name="lienket" placeholder="Nhập liên kết hoặc id instagram" />
       </div>
       
     </div>
@@ -52,7 +85,7 @@
     </Adsense>
     </div>
   </div>
-  
+
   
     <!-- {{ ok2 }} -->
     <!-- <div v-if="thanhcong">  
@@ -69,6 +102,9 @@
         <p class="font-normal text-gray-700 dark:text-gray-400">  kết quả {{ info }}.</p>
     </div> -->
   </form>
+
+</div></div></div>
+</div></div></div>
   <a href="javascript:history.go(-1)">
     <button class="btn btn-primary" > quay lại </button>
   </a>
@@ -100,7 +136,14 @@
                 disableButton: false,
                 nutorder: 'Thêm' ,
                 nutxuly: null ,
-                info : ''
+                info : '' ,
+                social: null,
+                randomNumber:  Math.floor(Math.random() * 100) + 1,
+                options: [
+        { text: 'Chọn 1 nền tảng', value: 'vui lòng chọn 1 nền tảng' , img: 'https://static.thenounproject.com/png/2383182-200.png'  } , 
+        { text: 'Thêm tài khoản chéo Facebook', value: 'facebook'  , img: 'https://hust.media/img/icon/fbicon.gif' } ,
+        { text: 'Thêm tài khoản chéo instagram', value: 'instagram' , img: 'https://hust.media/img/icon/giphy%20(5).gif' }  
+      ],
             }
         },
         methods : {
@@ -116,6 +159,12 @@ else if ( info.status == 1 )
   this.thongbaosuccess(info.message) ;
   this.$router.push('/order') ;
 }
+else if ( info.status == 7 )
+{
+  this.thongbaosuccess(info.message) ;
+  this.$router.push(`/nativeapp/cauhinh/${this.randomNumber}`);
+
+}
         },
             onSubmit(e){
               this.disableButton = true;
@@ -129,12 +178,17 @@ else if ( info.status == 1 )
   this.nutxuly = 0 
                     return
                 }
-
-                axios
-         .post('https://tecom.pro/ttc/profile.php', {
+                else
+                {
+                if(this.social == 'facebook')  
+                {
+const ajdjnansdla = 'https://tecom.pro/ttc/profile.php' ;
+axios
+         .post(ajdjnansdla, {
           key: this.ok2 ,
       chedo: 'themcauhinh' ,
       lienket : this.lienket ,
+      social : this.social ,
     })
     .then(response =>    (
       this.info = response.data
@@ -150,6 +204,35 @@ else if ( info.status == 1 )
         this.loi = this.info.error     ,
         console.log( this.info )
         )
+                }
+                else if(this.social == 'instagram')  
+                {
+                  const ajdjnansdla = 'https://tecom.pro/insta/profile.php' ;
+                  axios
+         .post(ajdjnansdla, {
+          key: this.ok2 ,
+      chedo: 'themcauhinh' ,
+      lienket : this.lienket ,
+      social : this.social ,
+    })
+    .then(response =>    (
+      this.info = response.data
+  , console.log(this.info) ,
+  this.asdasdkas(this.info )
+    ,      this.nutorder = 'đặt tiếp luôn nào' ,
+  this.disableButton = false ,
+  this.nutxuly = 0      ))
+    .catch(error => console.log(error) ,
+  
+        this.thanhcong = this.info.order     ,
+  
+        this.loi = this.info.error     ,
+        console.log( this.info )
+        )
+                }
+                }
+
+            
                              
             } ,
             thongbaoerror(error)
@@ -197,7 +280,16 @@ else if ( info.status == 1 )
 
 })
       }
-        }
+        },
+        created() {
+            
+            setTimeout(() => {    
+                  $('.selectpicker').selectpicker('refresh');
+                  setTimeout(() => {     
+       $('.sp1').selectpicker('toggle');  }, 300)
+              }, 300) ;
+          } ,
+    
     }
   </script>
   

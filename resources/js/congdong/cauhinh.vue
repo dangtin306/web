@@ -198,6 +198,10 @@ if ( info.status == 3 )
   this.thongbaosuccess('Vui lòng thêm tài khoản chéo Facebook') ;
   this.$router.push('/themcauhinh') ;
 }
+else if ( info.status == 0 )
+{
+    this.thongbaoerror(info.message) ;
+}
 else if ( info.status == 1 )
 {
   this.thongbaosuccess(info.message) ;

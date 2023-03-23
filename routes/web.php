@@ -117,6 +117,9 @@ Route::get('/themsdt',  function () {
 Route::get('/cheofb',  function () {
     return view('welcome');
 });
+Route::get('/cheoig',  function () {
+    return view('welcome');
+});
 Route::get('/momoauto',  function () {
     return view('welcome');
 });
@@ -224,9 +227,21 @@ Route::get('/order', function()
 {
     return view('appvue');
 });
+Route::get('/nativeapp/cauhinh/{name}', function($name)
+{
+    return view('welcome');
+});
 Route::get('/nativeapp/{name}', function($name)
 {
-    return view('appvue');
+    return view('welcome');
+});
+Route::get('/nativeapp/kiemtien/subcheo', function()
+{
+    return view('welcome');
+});
+Route::get('/nativeapp/kiemtien/timcheo', function()
+{
+    return view('welcome');
 });
 Route::get('/truyen-tranh/home', function()
 {

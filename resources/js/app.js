@@ -75,8 +75,12 @@ import cauhinh from './congdong/cauhinh.vue'
     import animeplay from "./video/play.vue"; 
     import animeprofile from "./video/profile.vue"; 
     import dsfsdfsdfsfdsfd from "./video/theloai.vue"; 
+    import cheoig from "./instagram/cheoig.vue"; 
     import id from "./order/id.vue"; 
     import muathe from "./order/muathe.vue";
+    import instacauhinh from "./instagram/cauhinh.vue";
+    import instakiemtien from "./instagram/kiemtien.vue";
+    import instaexchangepoints from "./instagram/exchangepoints.vue";
     import VueScrollTo from 'vue-scrollto'; 
     const app = createApp(
       {
@@ -120,6 +124,11 @@ const routes = [
     path: '/anime/home',
     name: 'animehome',
     component: animehome ,
+  },
+  {
+    path: '/cheoig',
+    name: 'cheoig',
+    component: cheoig ,
   },
   {
     path: '/anime/the-loai',
@@ -185,6 +194,11 @@ const routes = [
     component: truyentranhhome ,
   },
   {
+    path: '/nativeapp/cauhinh/:cauhinh',
+    name: 'instacauhinh',
+    component: instacauhinh ,
+  },
+  {
     path: '/nativeapp/search',
     name: 'truyentranhsearch',
     component: truyentranhsearch ,
@@ -209,6 +223,12 @@ const routes = [
     name: 'truyenchuyen',
     component: truyenchuyen
     
+  },
+  {
+       path: '/nativeapp/kiemtien/:tenkiemtien',
+    name: 'instakiemtien',
+    component: instakiemtien,
+    props: route => ({ tenkiemtien: route.params.tenkiemtien})
   },
   {
     path: '/',
@@ -367,6 +387,12 @@ const routes = [
     name: 'exchangepoints',
     component: exchangepoints
   },
+  {
+    path: '/nativeapp/exchangepoints',
+    name: 'instaexchangepoints',
+    component: instaexchangepoints
+  },
+
   {
     path: '/the-loai/:tentheloai',
     name: 'theloai',
