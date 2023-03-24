@@ -667,8 +667,14 @@ margin: auto;
 .menu-vertical, .menu-vertical .menu-block, .menu-vertical .menu-inner > .menu-item, .menu-vertical .menu-inner > .menu-header {
   width: 18.25rem !important;
 }
-.layout-menu-fixed:not(.layout-menu-collapsed) .layout-page,.layout-menu-fixed-offcanvas:not(.layout-menu-collapsed) .layout-page {
-  padding-left: 18.25rem !important;
+@media(min-width: 1200px) {
+
+  .layout-menu-fixed:not(.layout-menu-collapsed) .layout-page,.layout-menu-fixed-offcanvas:not(.layout-menu-collapsed) .layout-page {
+      padding-left: 18.25rem!important
+  }
+}
+html:not(.layout-navbar-fixed):not(.layout-menu-fixed):not(.layout-menu-fixed-offcanvas) .layout-page,html:not(.layout-navbar-fixed) .layout-content-navbar .layout-page {
+  padding-top: 0!important
 }
   .topok
 {
