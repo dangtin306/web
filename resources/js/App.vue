@@ -258,6 +258,12 @@ data-template="vertical-menu-template-free"
         <div data-i18n="Basic">Đọc truyện tranh :)</div>
       </router-link>
         </li>
+        <li class="menu-item">
+          <router-link  to="/anime/home" class="menu-link layout-menu-toggle">
+          <img src="https://gifdb.com/images/high/icon-happy-cute-anime-girl-4pq05vxulhcty9x3.gif" style="width:27px;height:27px">
+          <div data-i18n="Basic">Xem Hoạt hình</div>
+        </router-link>
+          </li>
       <li class="menu-item">
         <a href="/game/index.php" class="menu-link">
         <img src="https://tuongtac.fun/img/icon/images.png" style="width:27px;height:27px">
@@ -645,6 +651,25 @@ margin: auto;
 }
 </style>
 <style>
+.menu-vertical .menu-item .menu-link {
+  font-size: 0.8375rem;
+}
+.menu-vertical .menu-item .menu-toggle {
+  padding-right: calc(0rem + 0em);
+}
+.menu-vertical .menu-item .menu-link, .menu-vertical .menu-block {
+  padding: 0.2rem 0.7rem !important;
+}
+.menu-vertical .menu-header {
+  margin: 0rem 0 0rem 0 !important;
+  padding: 0.625rem 2rem 0.625rem 2rem;
+}
+.menu-vertical, .menu-vertical .menu-block, .menu-vertical .menu-inner > .menu-item, .menu-vertical .menu-inner > .menu-header {
+  width: 18.25rem !important;
+}
+.layout-menu-fixed:not(.layout-menu-collapsed) .layout-page,.layout-menu-fixed-offcanvas:not(.layout-menu-collapsed) .layout-page {
+  padding-left: 18.25rem !important;
+}
   .topok
 {
 top: -6px !important
