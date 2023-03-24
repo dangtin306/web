@@ -44,22 +44,7 @@
          </div>
  </div>
  <!-- Modal -->
-     <div class="max-h-16 ">
-                <div class="cards">
-             
-                  <Adsense
-              data-ad-client="ca-pub-4574266110812955"
-               data-ad-slot="8795043992"
-               data-full-width-responsive="no"
-               ins-class="display: block; height: 50px;"
-               ins-style="display: block; height: 50px;"
-
-               
-               >
-            </Adsense>
-            </div>
-          
-          </div>
+ 
         
          <div class="mt-0">
          <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
