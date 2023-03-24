@@ -22,10 +22,10 @@
     <div v-else>
         <div class="flex flex-col shadow-xl justify-center  " style="position: relative;">
             <div class="container-fluid flex space-x-4 mb-auto">
-              <button v-if="FBO != '' " @click="hienvideo = 'FBO'" class="bg-pink-300 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
+              <button v-if="FBO != '' && FBO != null" @click="hienvideo = 'FBO'" class="bg-pink-300 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
                Server instagram
               </button>
-              <button v-if="VPRO != ''" @click="hienvideo = 'VPRO'" class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded">
+              <button v-if="VPRO != '' && VPRO != null" @click="hienvideo = 'VPRO'" class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded">
                Server Hust Media
               </button>
               <a href="javascript:history.go(-1)">
@@ -62,15 +62,39 @@
                 HOME
                </button>
            </router-link>  
+          
                 </div>
                </div>
-       
+               <div class="max-h-16 ">
+                <div class="cards">
+             
+                  <Adsense
+              data-ad-client="ca-pub-4574266110812955"
+               data-ad-slot="8795043992"
+               data-full-width-responsive="no"
+               ins-class="display: block; height: 50px;"
+               ins-style="display: block; height: 50px;"
+
+               
+               >
+            </Adsense>
+            </div>
+          
+          </div>
+          
             </div>
     </div>
-</div> </div>
-
+    <div v-if="listtap" style="display: flex; justify-content: center; align-items: center; ">
+      <div>
+        <v-runtime-template :template="listtap"></v-runtime-template> 
+      </div>
+      
     </div>
+</div> 
 
+</div>
+    </div>
+    <br><br> <br><br> <br>
   
 </template>
 
@@ -92,6 +116,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
               userss: null,
               theloai: null ,
               size: null ,
+              listtap: null ,
               hienvideo: null ,
               listtruyen: null ,
               mota: null ,
@@ -191,6 +216,7 @@ urlsplit = 'https://tecom.pro/anime/play.php?url=' + urlsplit ;
                 this.videos = response.data ;
                 this.videos =  JSON.stringify(this.videos) ;
                   this.videos =  JSON.parse(this.videos) ;
+                  this.listtap = this.videos.listtap ;
   this.VPRO = this.videos.VPRO  ;
   this.FBO = this.videos.FBO  ;
                 $('#loadingg').hide();

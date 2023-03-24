@@ -1,5 +1,22 @@
 <template>
+  <div class="max-h-16 ">
+    <div class="cards">
+ 
+      <Adsense
+  data-ad-client="ca-pub-4574266110812955"
+   data-ad-slot="8795043992"
+   data-full-width-responsive="no"
+   ins-class="display: block; height: 50px;"
+   ins-style="display: block; height: 50px;"
+
+   
+   >
+</Adsense>
+</div>
+
+</div>
    <div class="max-w-2xl px-1 py-4  mx-auto rounded-lg shadow-xl">
+    
     <div v-if="info == null" class="container-fluid">
       <div class="row" style="background-color: #FFB6C1;">
          <p class="text-center" style="color: #fff;">
