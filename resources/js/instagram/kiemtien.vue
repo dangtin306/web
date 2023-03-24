@@ -16,7 +16,7 @@
                   </div>
                 </button>
             </div>    
-              <router-link type="button" class="mx-2  btn-sm btn-primary" to="/exchangepoints">Đổi điểm sang xu</router-link>
+              <router-link type="button" class="mx-2  btn-sm btn-primary" to="/nativeapp/exchangepoints">Đổi điểm sang xu</router-link>
               <button     type="button"
               :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
               :disabled="isLoadingbutton" @click="reloadPosts" >

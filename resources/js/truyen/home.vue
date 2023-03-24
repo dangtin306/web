@@ -23,20 +23,10 @@
    
              
     </div>
-    <div class="cards">
-             
-        <Adsense
-    data-ad-client="ca-pub-4574266110812955"
-     data-ad-slot="8795043992"
-     data-full-width-responsive="no"
-     ins-class="display: block; height: 50px;"
-     ins-style="display: block; height: 50px;"
-     data-ad-format="horizontal"
-     >
-  </Adsense>
-
-</div>
-
+   
+    <div>
+      <div class="ads" ref="adContainer"></div>
+    </div>
 <br><br><br><br><br><br>
   
 </template>
@@ -134,7 +124,13 @@ import VRuntimeTemplate from "vue3-runtime-template";
       components: {
     VRuntimeTemplate
   },
-  
+  mounted() {
+    const adScript = document.createElement('script');
+    adScript.setAttribute('data-cfasync', 'false');
+    adScript.setAttribute('type', 'text/javascript');
+    adScript.setAttribute('src', '//buzzonclick.com/a/display.php?r=6856746');
+    this.$refs.adContainer.appendChild(adScript);
+  },
       created() {
         setTimeout(function(){
     $('#loadingg').hide();}, 8000) ;
