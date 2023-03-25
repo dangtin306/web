@@ -13,7 +13,7 @@
 }
 
 .inner.show {
-  max-height: 302px !important;
+  max-height: auto !important;
 }
 </style>
 <template>
@@ -26,16 +26,16 @@
   
       <div  class='w-full max-w-lg px-10 py-3 mx-auto bg-white rounded-lg shadow-xl'>
          
-          <div class='max-w-md mx-auto  space-y-5'>
+          <div  ref="socialpro"  class='max-w-md mx-auto  space-y-5'>
          
              
                     <div class="form-group">
                       <label for="social" class="text-center block mb-1 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn nền tảng</label>
       
-                <select  ref="social"   id="social" class="form-control
+                <select   ref="social"   id="social" class="form-control
                 selectpicker sp1 " data-style=" absdakjsbdka hover:bg-red-300 rounded"    name="nhamang" v-model="social">
                
-                    <option v-for="option in options" :value="option.value"  :data-content=" `<div style='display: flex; align-items: center;'>  ` +  option.text + `&emsp;` + `<img src='` + option.img + `'` + `class=\'asdasd\'>` +`</div>` " >
+                    <option  v-for="option in options" :value="option.value"  :data-content=" `<div style='display: flex; align-items: center;'>  ` +  option.text + `&emsp;` + `<img src='` + option.img + `'` + `class=\'asdasd\'>` +`</div>` " >
                     </option>
               
                   </select>
@@ -52,7 +52,7 @@
                   </select> </div>
                   <div v-if="chedook != null">
                     <label   for="category" class="text-center block mb-1 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn chuyên mục</label>
-                    <select  id="category"
+                    <select data-header="Chọn 1 chuyên mục"  id="category"
                     data-style="bg-pink-200 asdasdasdasdasddasd hover:bg-red-300 font-bold py-2 px-4 rounded" 
                     class="form-control selectpicker sp3"  @change="onChange3()"   name="category" v-model="category">
                     <option v-for="option in options3" :value="option.code" 
@@ -66,9 +66,9 @@
                     <div @click="onChange4()">
                       <select ref="dichvu" 
                       data-style="bg-pink-200 adasdasdasdadacas hover:bg-red-300 font-bold py-2 px-4 rounded" 
-                      id="dichvu" class="form-control selectpicker sp4 max-w-full max-height: 300px;"  data-size="3"  data-live-search="true"     name="dichvu" v-model="dichvu">
+                      id="dichvu" class="form-control selectpicker sp4  " show-tick  data-size="6"  data-live-search="true"     name="dichvu" v-model="dichvu">
                         <option  v-for="option in options4" :value="option.id"
-                        :data-content="`<span class='fs-6 max-w-full whitespace-pre-wrap'   >  ${option.name} <br> (${option.money} Xu) ${option.id}</span>`"  >
+                        :data-content="`<span class='fs-6 '   >  <span class='whitespace-nowrap inline-block bg-pink-300 rounded-md px-1 py-1 text-xs font-semibold text-white mr-1 mb-1 break-words whitespace-pre-wrap' style='width: `+ chieurongok +`;'>${option.name}</span> <br> (${option.money} Xu) ${option.id}</span>`"  >
                  
                         </option>
 
@@ -239,7 +239,20 @@ Tối đa {{maxorder  }}
         </div>
    
         </div>
-        <br><br><br><br><br><br>
+        <div class="max-h-16">
+          <div class="cards">
+       
+            <Adsense
+        data-ad-client="ca-pub-4574266110812955"
+         data-ad-slot="8795043992"
+         data-full-width-responsive="no"
+         ins-class="display: block; height: 50px;"
+         ins-style="display: block; height: 50px;"
+         >
+      </Adsense>
+      </div>
+    </div>
+        <br><br><br><br><br><br><br><br>
       </div>
     </div>
   
@@ -277,6 +290,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
                 selected: null ,
                 thongsopost: null ,
                 typedichvu : null ,
+                chieurongok : null ,
       options: [
         { text: 'Chọn 1 nền tảng', value: '', img: 'https://static.thenounproject.com/png/2383182-200.png' } , 
         { text: 'Tăng tương tác TikTok', value:  [ { social: 'Tiktok', chedo: 1 }], img: 'https://hust.media/img/icon/tiktok.gif' }  ,
@@ -359,6 +373,8 @@ import VRuntimeTemplate from "vue3-runtime-template";
           
           $(this.$refs.social).on('hidden.bs.select', () => {
 this.onChange();
+this.chieurongok = this.$refs.socialpro.offsetWidth / 10 * 9 ;
+        console.log(chieurongok) ;
   });
   $('.sp4').on('hidden.bs.select', () => {
 // this.onChange4();
@@ -367,7 +383,7 @@ console.log(1);
 
     },
         created() {
-      
+     
                 this.fetchData();
                 this.intervalFetchData() ;
                 console.log(this.getCookie('urlsdt'));
@@ -378,6 +394,7 @@ console.log(1);
                     setTimeout(() => {     
          $('.sp1').selectpicker('toggle');  }, 300)
                 }, 300) ;
+           
                 this.btcTrkAPICall();
             },
             
