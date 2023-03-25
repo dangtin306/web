@@ -161,7 +161,12 @@ data-template="vertical-menu-template-free"
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
   
-
+      <li class="menu-item ">
+        <a href="https://hust.media/home/" class="menu-link">
+        <img src="data:image/jpeg;base64,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" style="width:32px;height:32px">
+        <div data-i18n="Analytics">Trang chủ</div>
+        </a>
+        </li>
       <li class="menu-item" style="">
         <a  class="menu-link  menu-toggle">
         <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:27px;height:27px">
@@ -190,10 +195,10 @@ data-template="vertical-menu-template-free"
           <span class="menu-header-text">Dịch vụ </span>
           </li>
       <li class="menu-item ">
-        <a href="https://hust.media/home/" class="menu-link">
+        <router-link to="/orders" class="menu-link">
         <img src="https://tuongtac.fun/img/icon/tiktok2.gif" style="width:32px;height:32px">
         <div data-i18n="Analytics">Tăng tương tác mạng xã hội</div>
-        </a>
+      </router-link>
         </li>
       <li class="menu-item ">
         <router-link class="menu-link layout-menu-toggle"   to="/doithe">
@@ -658,7 +663,7 @@ margin: auto;
   padding-right: calc(0rem + 0em);
 }
 .menu-vertical .menu-item .menu-link, .menu-vertical .menu-block {
-  padding: 0.2rem 0.7rem !important;
+  padding: 0.3rem 0.7rem !important;
 }
 .menu-vertical .menu-header {
   margin: 0rem 0 0rem 0 !important;
