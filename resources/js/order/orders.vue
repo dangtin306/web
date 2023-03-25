@@ -60,7 +60,7 @@
                   <div  v-if="chondichvu == 1" x-show="showen">
                     <label for="dichvu" class="text-center block mb-1 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn dịch vụ</label>
                     <div @click="onChange4()">
-                      <select
+                      <select ref="dichvu" 
                       data-style="bg-pink-200 adasdasdasdadacas hover:bg-red-300 font-bold py-2 px-4 rounded" 
                       id="dichvu" class="form-control selectpicker sp4" data-width="auto" data-size="7"  data-live-search="true"     name="dichvu" v-model="dichvu">
                         <option v-for="option in options4" :value="option.id"
@@ -354,6 +354,10 @@ import VRuntimeTemplate from "vue3-runtime-template";
           $(this.$refs.social).on('hidden.bs.select', () => {
 this.onChange();
   });
+  $('.sp4').on('hidden.bs.select', () => {
+// this.onChange4();
+console.log(1);
+  });
 
     },
         created() {
@@ -544,11 +548,10 @@ else if (  this.chedook  == 2 )
      
       this.loaddichvu = false ;
 
-    if(!this.category){
-                    alert('Please điền đầy đủ thông tin')
-                    return
-                }
-               
+                if(!this.category){
+                       alert('Please điền đầy đủ thông tin')
+                       return
+                   }
                   axios
          .post('https://hust.media/getservice/service.php', {
           category: this.category ,
@@ -566,13 +569,19 @@ else if (  this.chedook  == 2 )
     
     },
     onChange4() {
-       if(!this.dichvu){
+      if(!this.dichvu){
+      if(this.options4){
+      this.dichvu =  this.options4[0].id ;
+      }
+                }
+                
+                if(!this.dichvu){
                        alert('Please điền đầy đủ thông tin')
                        return
                    }
-                   else
-                   {
-                    this.info  =  this.options4.find(service => service.id === this.dichvu);
+                else
+                {
+                  this.info  =  this.options4.find(service => service.id === this.dichvu);
 if(this.info )
 {
   this.chondichvu2 = 1 ,
@@ -587,8 +596,10 @@ if(this.info )
       this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 
 
 }
+                }
+              
      
-                   }
+                
             
        
        },
