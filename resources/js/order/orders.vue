@@ -11,6 +11,10 @@
 .adasdasdasdadacas{
   background-color: rgb(234, 255, 231) !important;
 }
+
+.inner.show {
+  max-height: 302px !important;
+}
 </style>
 <template>
 
@@ -62,10 +66,9 @@
                     <div @click="onChange4()">
                       <select ref="dichvu" 
                       data-style="bg-pink-200 adasdasdasdadacas hover:bg-red-300 font-bold py-2 px-4 rounded" 
-                      id="dichvu" class="form-control selectpicker sp4" data-width="auto" data-size="7"  data-live-search="true"     name="dichvu" v-model="dichvu">
-                        <option v-for="option in options4" :value="option.id"
-                        :data-content="`<span class='fs-6'   >  ${option.name} <br> (${option.money}
-                          Xu) ${option.id}</span>`"  >
+                      id="dichvu" class="form-control selectpicker sp4 max-w-full max-height: 300px;"  data-size="3"  data-live-search="true"     name="dichvu" v-model="dichvu">
+                        <option  v-for="option in options4" :value="option.id"
+                        :data-content="`<span class='fs-6 max-w-full whitespace-pre-wrap'   >  ${option.name} <br> (${option.money} Xu) ${option.id}</span>`"  >
                  
                         </option>
 

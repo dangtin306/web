@@ -732,10 +732,13 @@ export default {
         sdfsdfsdfsdfv:true ,
         delayTimeout: null ,
         scrollBarHeight : null ,
+        chieudaidavuot: null ,
         myMoney:  this.$cookies.get("money")  ,
         button : document.querySelector('#menubutton'),
         showElement: true,
         show: true,
+        davuottruoc: null ,
+        davuotsau: null ,
     elementOffsetTop: 0,
         menu2 : document.querySelector('#menu')
         
@@ -830,15 +833,29 @@ const pageHeight = Math.max(document.body.scrollHeight, document.body.offsetHeig
 
 // Tính khoảng cách từ điểm trên cùng của trang tới điểm trên cùng của trang khi chưa vuốt xuống
 const distanceToTop = pageHeight - this.scrollBarHeight;
-console.log(this.scrollBarHeight)
-if ( this.scrollBarHeight  < 27 )
+// console.log(this.scrollBarHeight)
+this.davuotsau = this.scrollBarHeight ;
+if ( this.davuottruoc == null )
+{
+  this.davuottruoc = this.scrollBarHeight ;
+}
+else
+{
+this.chieudaidavuot =  this.davuotsau -  this.davuottruoc ;
+
+  if ( this.scrollBarHeight  < 27 ||  this.chieudaidavuot < 27  )
 {
   clearTimeout(this.delayTimeout);
     this.isHide = false;
   this.showElement = true;
   this.sdfsdfsdfsdfv = true;
-        console.log(this.sdfsdfsdfsdfv)
+       
+        console.log(this.chieudaidavuot) ;
 }
+
+
+}
+
 
       } else {
         // console.log(2);
@@ -868,14 +885,14 @@ if ( this.sdfsdfsdfsdfv === false )
       // this.isHide = true;
     } 
   if (currentScrollPosition < this.previousScrollPosition) {
-  
+    this.davuottruoc = null  ;
     console.log(2);
     clearTimeout(this.delayTimeout);
     this.isHide = false;
     this.sdfsdfsdfsdfv = true;
         this.showElement = true;
   }
-  else if (this.scrollBarHeight  > 27 )
+  else if (this.scrollBarHeight  > 27 && this.chieudaidavuot > 27  )
   {
     console.log(3);
 if (this.delayTimeout) {
