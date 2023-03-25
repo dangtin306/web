@@ -68,7 +68,7 @@
                       data-style="bg-pink-200 adasdasdasdadacas hover:bg-red-300 font-bold py-2 px-4 rounded" 
                       id="dichvu" class="form-control selectpicker sp4  " show-tick  data-size="6"  data-live-search="true"     name="dichvu" v-model="dichvu">
                         <option  v-for="option in options4" :value="option.id"
-                        :data-content="`<span class='fs-6 '   >  <span class='whitespace-nowrap inline-block bg-pink-300 rounded-md px-1 py-1 text-xs font-semibold text-white mr-1 mb-1 break-words whitespace-pre-wrap' style='width: `+ chieurongok +`;'>${option.name}</span> <br> (${option.money} Xu) ${option.id}</span>`"  >
+                        :data-content="`<span class='text-xs '   >  <span class='whitespace-nowrap inline-block bg-pink-300 rounded-md px-1 py-1 text-xs font-semibold text-white mr-1 mb-1 break-words whitespace-pre-wrap' style='width: `+ chieurongok +`;'>${option.name}</span> <br> (${option.money} Xu) ${option.id}</span>`"  >
                  
                         </option>
 
@@ -239,6 +239,7 @@ Tối đa {{maxorder  }}
         </div>
    
         </div>
+        <br><br>
         <div class="max-h-16">
           <div class="cards">
        
@@ -252,7 +253,7 @@ Tối đa {{maxorder  }}
       </Adsense>
       </div>
     </div>
-        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
       </div>
     </div>
   
