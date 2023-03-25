@@ -195,7 +195,7 @@ data-template="vertical-menu-template-free"
           <span class="menu-header-text">Dịch vụ </span>
           </li>
       <li class="menu-item ">
-        <router-link to="/orders" class="menu-link">
+        <router-link to="/orders" class="menu-link layout-menu-toggle">
         <img src="https://tuongtac.fun/img/icon/tiktok2.gif" style="width:32px;height:32px">
         <div data-i18n="Analytics">Tăng tương tác mạng xã hội</div>
       </router-link>
