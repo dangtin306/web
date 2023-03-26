@@ -15,6 +15,12 @@
 .inner.show {
   max-height: auto !important;
 }
+.form-control-pink {
+  border-color: rgb(253, 186, 197) !important;
+}
+.form-control-pink:focus {
+  border-color: rgb(185, 255, 212) !important;
+}
 </style>
 <template>
 
@@ -91,8 +97,8 @@
                       </div>
                   </div>
                   
-                  <p class="mt-2">Link bài viết ,video, ảnh cần chạy</p>
-<input class="mt-2 form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
+                  <p class="mt-2">Link bài viết ,video, username cần chạy</p>
+<input class="mt-2 border-3 form-control-pink form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
 
 <v-runtime-template v-if="content" :template="content">
 </v-runtime-template>
@@ -130,8 +136,15 @@
 </label>
 </div>
 <div class="mt-2"  v-if="chondichvu2 == 1 && typedichvu != 'comment'">
-<p>Số lượng tăng</p>
-<input @keyup="countamount" class="mt-2 form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
+<p class="my-1">Số lượng tăng</p>
+<input @keyup="countamount" class="mt-0 my-1  
+border-3 form-control-pink form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
+<span class="text-xs" >
+  Tối thiểu {{minorder }} 
+  &emsp; 
+  Tối đa {{maxorder  }}
+</span>
+
 </div>
       
     
@@ -223,14 +236,19 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
                                 d="M4.95197 5.5577C5.08473 5.5577 5.19235 5.45008 5.19235 5.31732C5.19235 5.18456 5.08473 5.07693 4.95197 5.07693"
                                 stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </section> &emsp;  <h1 class="text-base font-semibold text-zinc-700 antialiased">Tổng : {{ tientra }}</h1>
+                    </section> &emsp;  <h1 class="text-base font-semibold text-zinc-700 antialiased">Tổng :
+                      {{ parseFloat((tientra).toFixed(2)) !== parseInt((tientra)) ? (tientra).toFixed(2) : parseInt((tientra)) }}
+                  </h1>
                   </div>  
                   
                   <p class="text-sm font-medium text-zinc-400 antialiased">
-Tối thiểu {{minorder }} 
-&emsp; 
-Tối đa {{maxorder  }}
-
+                  
+                      Số lượng tăng {{ soluongtang  }}   &emsp;
+                      <span v-if="chietkhau != null && chietkhau > 0"
+                         class="text-sm font-medium text-zinc-400 antialiased" >
+                      Chiết khấu giảm {{chietkhau }}%
+                    </span>
+                   
                         </p>
                     </section>
                   
@@ -359,7 +377,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
                 socmt: null ,
                 response: null,
                 status3: null ,
-                tientra: null ,
+                tientra: 0 ,
                 doisodt: null,
                 message: null ,
                 disableButton: false,
@@ -462,6 +480,10 @@ this.nutxuly = 0 ,
   const adnasas = this.info1.error ;
    this.thongbaoerror(adnasas) ;
    console.log(adnasas)
+ }
+ else
+ {
+  this.thongbaosuccess('Mua hàng thành công, cảm ơn bạn') ;
  }
 
           } ,
