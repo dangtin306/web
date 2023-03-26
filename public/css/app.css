@@ -11843,14 +11843,8 @@ video {
 .max-w-screen-lg {
   max-width: 1024px;
 }
-.max-w-full {
-  max-width: 100%;
-}
 .max-w-4xl {
   max-width: 56rem;
-}
-.max-w-xs {
-  max-width: 20rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -12080,9 +12074,6 @@ video {
 .overflow-y-scroll {
   overflow-y: scroll;
 }
-.whitespace-normal {
-  white-space: normal;
-}
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -12091,9 +12082,6 @@ video {
 }
 .break-words {
   overflow-wrap: break-word;
-}
-.break-all {
-  word-break: break-all;
 }
 .rounded-full {
   border-radius: 9999px;

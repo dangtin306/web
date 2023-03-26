@@ -455,7 +455,7 @@ this.nutxuly = 0 ,
    if (this.info1.order  )
  {
   const adnasas = this.info1.order ;
-   this.thongbaosuccess('Thankiuu Bạn là người thứ ' + order + ' ủng hộ Hust Media') ;
+   this.thongbaosuccess('Thankiuu Bạn là người thứ ' + adnasas + ' ủng hộ Hust Media') ;
  }
  else if ( this.info1.error )
  {
