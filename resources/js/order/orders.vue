@@ -16,7 +16,7 @@
   max-height: auto !important;
 }
 .form-control-pink {
-  border-color: rgb(253, 186, 197) !important;
+  border-color: rgb(247, 188, 197) !important;
 }
 .form-control-pink:focus {
   border-color: rgb(185, 255, 212) !important;
