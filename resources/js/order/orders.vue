@@ -97,8 +97,8 @@
                       </div>
                   </div>
                   
-                  <p class="mt-2">Link bài viết ,video, username cần chạy</p>
-<input class="mt-2 border-3 form-control-pink form-control form-control-alternative" v-model="lienketchay" placeholder="Sao chéo liên kết điền vô đây" />
+                  <p class="mt-2 text-xs">Link,id bài viết ,video, username cần thực thi</p>
+<input class="mt-2 border-3 form-control-pink form-control form-control-alternative" v-model="lienketchay" placeholder="Copy và điền liên kết ở đây" />
 
 <v-runtime-template v-if="content" :template="content">
 </v-runtime-template>
@@ -138,7 +138,7 @@
 <div class="mt-2"  v-if="chondichvu2 == 1 && typedichvu != 'comment'">
 <p class="my-1">Số lượng tăng</p>
 <input @keyup="countamount" class="mt-0 my-1  
-border-3 form-control-pink form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng" />
+border-3 form-control-pink form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng mong muốn" />
 <span class="text-xs" >
   Tối thiểu {{minorder }} 
   &emsp; 
