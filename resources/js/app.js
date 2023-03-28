@@ -28,6 +28,7 @@ import orders from './order/orders.vue'
 import momo from './components/momo.vue'
    import home from './components/home.vue'
    import themcauhinh from './congdong/themcauhinh.vue'
+      import FacebookEmojis from './order/FacebookEmojis.vue'
    import chuyenxu from './components/chuyenxu.vue'
    import naptien from './components/naptien.vue'
     import test from './components/UsersIndex.vue'
@@ -376,6 +377,11 @@ const routes = [
     path: '/link',
     name: 'link',
     component: link
+  },
+   {
+    path: '/FacebookEmojis',
+    name: 'FacebookEmojis',
+    component: FacebookEmojis
   },
   {
     path: '/sms',
