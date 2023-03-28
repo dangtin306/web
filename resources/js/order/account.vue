@@ -1,4 +1,20 @@
 <template>
+  <div class="max-h-16 ">
+    <div class="cards">
+ 
+      <Adsense
+  data-ad-client="ca-pub-4574266110812955"
+   data-ad-slot="8795043992"
+   data-full-width-responsive="no"
+   ins-class="display: block; height: 50px;"
+   ins-style="display: block; height: 50px;"
+
+   
+   >
+</Adsense>
+</div>
+
+</div>
     <div class="row fixrow">
 
         <div class="text-center">
@@ -6,6 +22,7 @@
 
         
 </div>
+
         <div class="col mt-0">
             <div  class='mt-4 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500 '>
           
@@ -43,14 +60,14 @@
         
 <!-- Modal -->
 
-<div v-if="hientkclone == 1">  
+<div v-if="hientkclone == 1 && damualendau == true">  
   <div class="relative py-3 sm:max-w-xl sm:mx-auto">
     <div class="flex flex-col items-center justify-center py-2">
       <div class="absolute inset-0 bg-gradient-to-r from-indigo-200 to-purple-600 shadow-lg transform rotate-6 rounded-3xl">
 
       </div>
       <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-       <h2 class="text-3xl text-break font-bold">
+       <h2 class="text-3xl text-sm text-break font-bold">
           Thông tin đầy đủ : {{ clonethem }}
       </h2></div></div></div>
   </div>      
@@ -110,7 +127,7 @@
     
             </div>
             <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-             <h2 class="text-3xl text-break font-bold">
+             <h2 class="text-3xl text-sm text-break font-bold">
                 Thông tin đầy đủ : {{ clonethem }}
             </h2></div></div></div>
         </div>
@@ -147,6 +164,7 @@ import Swal from 'sweetalert2' ;
                 idservice: null ,
                 clonetruoc : null ,
                 clonesau : null ,
+                damualendau: false ,
                 clonethem : null ,
                 dasaochep: null,
                 options: [
@@ -196,7 +214,7 @@ import Swal from 'sweetalert2' ;
     },
     onChange() {
     
-   
+      this.damualendau = false ;
         
     if(!this.chedomuaacc){
                     alert('Please điền đầy đủ thông tin')
@@ -238,6 +256,7 @@ import Swal from 'sweetalert2' ;
         ) ;
 this.hientkclone = 1 ;
 Swal.fire('Mua thành công') ;
+this.damualendau = true ;
         }
     },
     testFunction2(response)
