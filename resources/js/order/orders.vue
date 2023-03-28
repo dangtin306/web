@@ -98,9 +98,9 @@
                       </div>
                   </div>
                   <div v-if="typedichvu == 'reaction'">
-                    <p class="mt-1 my-1 text-xs">Chọn một cảm xúc</p>
+                    <p class="mt-1 my-1 text-xs">Chọn một cảm xúc {{ camxucfb }}</p>
                     <FacebookEmojis v-bind:selectedEmoji="camxucfb" v-on:update:selectedEmoji="updateCamxucfb" />
-                    <p class="text-center text-xs"> {{ camxucfb }}</p>
+                  
                   </div>    
                   <p class="mt-2 text-xs">Link,id bài viết ,video, username cần thực thi</p>
 <input class="mt-2 border-3 form-control-pink form-control form-control-alternative" v-model="lienketchay" placeholder="Copy và điền liên kết ở đây" />

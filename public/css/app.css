@@ -11828,14 +11828,14 @@ video {
 .w-64 {
   width: 16rem;
 }
-.w-9 {
-  width: 2.25rem;
-}
 .w-11 {
   width: 2.75rem;
 }
 .w-8 {
   width: 2rem;
+}
+.w-9 {
+  width: 2.25rem;
 }
 .max-w-sm {
   max-width: 24rem;

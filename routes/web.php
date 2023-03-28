@@ -227,6 +227,10 @@ Route::get('/order', function()
 {
     return view('appvue');
 });
+Route::get('/historyclone', function()
+{
+    return view('appvue');
+});
 Route::get('/nativeapp/cauhinh/{name}', function($name)
 {
     return view('welcome');

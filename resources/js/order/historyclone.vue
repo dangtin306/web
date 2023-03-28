@@ -1,7 +1,12 @@
 <template>
     <div class="users">
         <div class="loading" v-if="loading">
-            Loading...
+          <div class="l-container ádasdasdasdasd">
+            <div  ref="infoBox">
+            <div class="b-game-card" >
+                <div class="b-game-card__cover">
+            <div class="b-game-card__cover" style="background-image: url(https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw340);"></div>
+          </div></div></div></div>
         </div>
         <div v-if="users">
         <form id="search">
@@ -26,8 +31,12 @@
                
        
         </ul> -->
+        <br><br><br><br><br>
     </div>
   </template>
+  <style lang="scss" scoped>
+  @import "../components/truyen.scss"; //new scss file from resources/sass directory
+</style>
   <script>
   import axios from 'axios';
   import DemoGrid from '../components/Grid2.vue'
@@ -35,12 +44,22 @@
     components: {
     DemoGrid
   },
+  mounted() {
+        // var size = window.innerHeight / 30 ;
+        var size = this.$refs.infoBox.clientHeight / 20;
+       
+        this.Height= size + 'px' ;
+    
+        console.log(this.Height);
+    
+      },
   data: () => ({
     loading: false,
             users: null,
             error: null,
+            infoBox: null,
     searchQuery: '',
-    gridColumns: ['url', 'money','createdate'],
+    gridColumns: ['service_name','url', 'money','createdate'],
     gridData:''
   }),
 

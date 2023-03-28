@@ -31,7 +31,7 @@ if ( isset($key->username))
   $username  = $key->username ;
   if ( $chedo == 'clonetiktok' )
   {
-    $arr = DB::table('orders')->where('category_code', 'clonetiktok' )->where('username', $username  )->orderBy('id', 'desc')->limit(5)->get();
+    $arr = DB::table('orders')->where('category_code', 'clonetiktok' )->where('username', $username  )->orderBy('id', 'desc')->limit(7)->get();
   
   }
   else if ( $chedo == 'historycomics' )

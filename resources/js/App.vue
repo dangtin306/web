@@ -238,8 +238,8 @@ data-template="vertical-menu-template-free"
       </li>
       <li class="menu-item ">
         <router-link class="menu-link layout-menu-toggle"  to="/orders">
-        <img src="https://tuongtac.fun/img/icon/telegram.png" style="width:27px;height:27px">
-        <div data-i18n="Analytics">Tăng mem Telegram Việt Nam</div>
+        <img src="https://cdn.sanity.io/images/bl383u0v/production/3e0a187d04a5edb85b57ba4014ad4ea26227174a-1500x1000.gif" style="width:17px;height:17px">
+        <div data-i18n="Analytics">Mua tài khoản,via tiktok, Chat GPT</div>
       </router-link>
         </li>
       <!-- Components -->

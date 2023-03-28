@@ -43,7 +43,17 @@
         
 <!-- Modal -->
 
-       
+<div v-if="hientkclone == 1">  
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div class="flex flex-col items-center justify-center py-2">
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-200 to-purple-600 shadow-lg transform rotate-6 rounded-3xl">
+
+      </div>
+      <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+       <h2 class="text-3xl text-break font-bold">
+          Thông tin đầy đủ : {{ clonethem }}
+      </h2></div></div></div>
+  </div>      
     
 <div v-if="luachonacc == 1 ">
         <table class="table-fixed relative w-full border border-separate text-break text-sm">
