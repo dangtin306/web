@@ -21,17 +21,22 @@
     </div>
     <div v-else>
         <div class="flex flex-col shadow-xl justify-center  " style="position: relative;">
-            <div class="container-fluid flex space-x-4 mb-auto">
+
+  <div class="mt-1 inline-block text-white px-2 py-1 rounded-full">{{tieude}}</div>
+
+          
+
+          <div class="mt-2 container-fluid flex space-x-4 mb-auto">
               <button v-if="FBO != '' && FBO != null" @click="hienvideo = 'FBO'" class="bg-pink-300 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded">
                Server instagram
               </button>
               <button v-if="VPRO != '' && VPRO != null" @click="hienvideo = 'VPRO'" class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded">
                Server Hust Media
               </button>
-              <a href="javascript:history.go(-1)">
+                <router-link v-if="hrefprofile" :to="hrefprofile">
               <button class="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
                 Quay lại
-               </button></a>
+               </button>   </router-link>
             </div>
             
             <div  style="  bottom: 0;">
@@ -127,6 +132,8 @@ import VRuntimeTemplate from "vue3-runtime-template";
               videoSrc: null ,
               infoBox: 1 ,
               videoHeight: null ,
+              hrefprofile: null ,
+              tieude: null ,
               width:0,
               height:0 ,
               isLoaded: false 
@@ -139,15 +146,12 @@ import VRuntimeTemplate from "vue3-runtime-template";
     hienvideo() {
         this.mota = "andasaskdm" ;
         this.isLoaded = false;
-        const width = this.$refs.infoBox.offsetWidth;
-        console.log(width) ;
-    const height = width * 11 / 16;
-    this.videoHeight = height;
+     
 this.infoBox = 0 ;
 this.videoSrc = this.videos[this.hienvideo];
         setTimeout(() => {
             this.nsdnakasmdkam();
-          }, 3000) ;
+          }, 3700) ;
    
     }
   },
@@ -163,11 +167,19 @@ this.videoSrc = this.videos[this.hienvideo];
        var ewjhrfjwehfjkjewfj = '/truyen-tranh/' + toParams.name2 ;
      
     },) ;
-   
+    setTimeout(() => {
+            this.dokhoangcach();
+          }, 3000) ;
       },
       
       methods: {
-        
+        dokhoangcach()
+        {
+          const width = this.$refs.infoBox.offsetWidth;
+        console.log(width) ;
+    const height = width * 11 / 16;
+    this.videoHeight = height;
+        },
         nsdnakasmdkam()
         {
             this.infoBox = 1 ;
@@ -217,6 +229,8 @@ urlsplit = 'https://tecom.pro/anime/play.php?url=' + urlsplit ;
                 this.videos =  JSON.stringify(this.videos) ;
                   this.videos =  JSON.parse(this.videos) ;
                   this.listtap = this.videos.listtap ;
+                  this.tieude = this.videos.tile ;
+                  this.hrefprofile = this.videos.hrefprofile ;
   this.VPRO = this.videos.VPRO  ;
   this.FBO = this.videos.FBO  ;
                 $('#loadingg').hide();
