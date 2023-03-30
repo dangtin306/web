@@ -41,10 +41,9 @@
       
                 <select   ref="social"   id="social" class="form-control
                 selectpicker sp1 " data-style=" absdakjsbdka hover:bg-red-300 rounded"    name="nhamang" v-model="social">
-               
-                    <option  v-for="option in options" :value="option.value"  :data-content=" `<div style='display: flex; align-items: center;'>  ` +  option.text + `&emsp;` + `<img src='` + option.img + `'` + `class=\'asdasd\'>` +`</div>` " >
-                    </option>
               
+                    <option v-for="option in options" :value="option.value" :data-content="getOptionContent(option)">
+                    </option>
                   </select>
                   <br>
                   <div v-if="chedook != null && chedook != 2 && chedook != 3">
@@ -324,7 +323,13 @@ import VRuntimeTemplate from "vue3-runtime-template";
         { text: 'Tăng tương tác Youtube', value: [ { social: 'Youtube', chedo: 2 }], img: 'https://hust.media/img/icon/%C3%A1dasdasd.gif' }  ,
         { text: 'Tăng tương tác Shopee', value: [ { social: 'Shopee', chedo: 2 }] , img: 'https://hust.media/img/icon/sadasdasd.gif' }  ,
         { text: 'Tăng tương tác Telegram', value: [ { social: 'Telegram', chedo: 2 }] , img: 'https://hust.media/img/icon/telegram.png' }  ,
-        { text: 'Các nền tảng khác', value: [ { social: 'All', chedo: 2 }] , img: `data:image/png;base64,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` }  ,
+        { text: 'Các nền tảng khác', value: [ { social: 'All', chedo: 2 }] , 
+        img: ['https://hust.media/img/icon/twitter.png',
+         'https://hust.media/img/icon/soundcloud.png', 'https://hust.media/img/icon/twitch.png'
+        , 'https://hust.media/img/icon/discord.png'
+        , 'https://hust.media/img/icon/spotify.png']
+      
+      }  ,
       ],
       options2save: [] ,
       options2: [] ,
@@ -425,6 +430,21 @@ console.log(1);
             },
             
         methods : {
+          getOptionContent(option) {
+    let content = '<div style="display: flex; align-items: center;">' + option.text + `&emsp;` ;
+
+    if (Array.isArray(option.img)) {
+      option.img.forEach((img) => {
+        content += '<img src="' + img + '" class="asdasd">';
+      });
+    } else if (option.img) {
+      content += '<img src="' + option.img + '" class="asdasd">';
+    }
+
+    content += '</div>';
+
+    return content;
+  },
           updateCamxucfb(value) {
       this.camxucfb = value;
     },
@@ -473,7 +493,7 @@ console.log(1);
 };
 
             }
-            axios.post('https://hust.media/testapi.php', this.thongsopost )
+            axios.post('https://tecom.pro/testapi.php', this.thongsopost )
     .then( response => (
     console.log(response.data ) ,
     this.dathang(response )
@@ -584,7 +604,7 @@ this.options2 = [] ;
                 {
                   this.loaddichvu = false ;
                axios
-         .post('https://hust.media/getservice/category.php', {
+         .post('https://tecom.pro/getservice/category.php', {
             social: this.socialok ,
             theloai: this.theloai 
     })
@@ -626,7 +646,7 @@ this.options2 = [] ;
                        return
                    }
                   axios
-         .post('https://hust.media/getservice/service.php', {
+         .post('https://tecom.pro/getservice/service.php', {
           category: this.category ,
     })
     .then( response => (
