@@ -7,10 +7,10 @@
         <img :src="'https://i.pinimg.com/originals/3f/94/76/3f9476d56c7f7bf244bf9ba0b83f19da.gif'" :alt="'LOVE'" class="w-11 h-9" /> <!-- Thay "/heart.png" bằng đường dẫn đến biểu tượng tương ứng -->
       </div>
       <div v-on:click="selectEmoji('CARE')" class="facebook-emoji" v-bind:class="{ 'facebook-emoji-active': selectedEmoji === 'CARE' }">
-        <img :src="'https://media.tenor.com/PqWloRzw0R0AAAAC/facebook-emoji.gif'" :alt="'CARE'" class="w-8 h-8" /> <!-- Thay "/care.png" bằng đường dẫn đến biểu tượng tương ứng -->
+        <img :src="'https://hust.media/img/icon/thuongthuong.gif'" :alt="'CARE'" class="w-8 h-8" /> <!-- Thay "/care.png" bằng đường dẫn đến biểu tượng tương ứng -->
       </div>
       <div v-on:click="selectEmoji('WOW')" class="facebook-emoji" v-bind:class="{ 'facebook-emoji-active': selectedEmoji === 'WOW' }">
-        <img :src="'https://media.tenor.com/l5_u4JytFLYAAAAC/wow-emoji.gif'" :alt="'WOW'" class="w-10 h-10" /> <!-- Thay "/care.png" bằng đường dẫn đến biểu tượng tương ứng -->
+        <img :src="'https://hust.media/img/icon/wow-emoji.gif'" :alt="'WOW'" class="w-10 h-10" /> <!-- Thay "/care.png" bằng đường dẫn đến biểu tượng tương ứng -->
       </div>
       <div v-on:click="selectEmoji('HAHA')" class="facebook-emoji" v-bind:class="{ 'facebook-emoji-active': selectedEmoji === 'HAHA' }">
         <img :src="'https://gifdb.com/images/high/laughing-teary-eye-emoji-s8c8d73quzytzbob.gif'" :alt="'HAHA'" class="w-10 h-10" /> <!-- Thay "/care.png" bằng đường dẫn đến biểu tượng tương ứng -->

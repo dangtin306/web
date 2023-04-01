@@ -152,8 +152,9 @@ border-3 form-control-pink form-control form-control-alternative" v-model="soluo
       
     
                     <div v-if="typedichvu == 'comment'" x-show="showen" class="mt-3 space-y-2 text-gray-700" x-data="{isshow:false}">
-                <label class="block font-medium text-sm   mx-auto " for="password">
+                <label  class="mt-0 my-1 block font-medium text-sm   mx-auto " for="password">
                   Số bình luận tăng là: {{ socmt }}
+                    
 </label>                <div class="relative  focus-within:text-gray-900 dark:focus-within:text-gray-800 ">
     
     <div aria-hidden="true" class="absolute inset-y-0 flex items-center px-4 pointer-events-none">
@@ -179,11 +180,14 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
 </svg>                            </button>
     </div>
-    </div>
-
-                    
-      
+    </div>       
+    <span class="text-xs mt-0 my-1" >
+      Tối thiểu {{minorder }} 
+      &emsp; 
+      Tối đa {{maxorder  }}
+    </span>  
             </div>
+          
                 <button  @click="xacnhan" :disabled="disableButton"
                 class='flex break-inside bg-purple-400 hover:bg-purple-300 rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
                 <div class='flex items-center justify-between flex-1'>
@@ -240,7 +244,7 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
                                 stroke="#21ce8f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </section> &emsp;  <h1 class="text-base font-semibold text-zinc-700 antialiased">Tổng :
-                      {{ parseFloat((tientra).toFixed(2)) !== parseInt((tientra)) ? (tientra).toFixed(2) : parseInt((tientra)) }}
+                      {{ parseFloat((tientra2).toFixed(2)) !== parseInt((tientra2)) ? (tientra2).toFixed(2) : parseInt((tientra2)) }}
                   </h1>
                   </div>  
                   
@@ -250,6 +254,9 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
                       <span v-if="chietkhau != null && chietkhau > 0"
                          class="text-sm font-medium text-zinc-400 antialiased" >
                       Chiết khấu giảm {{chietkhau }}%
+                      <br>
+                      Giá ưu đãi giảm còn :
+                      {{ parseFloat((tientra).toFixed(2)) !== parseInt((tientra)) ? (tientra).toFixed(2) : parseInt((tientra)) }}
                     </span>
                    
                         </p>
@@ -321,7 +328,6 @@ import VRuntimeTemplate from "vue3-runtime-template";
         { text: 'Tăng tương tác Facebook', value: [ { social: 'Facebook', chedo: 1 }], img: 'https://hust.media/img/icon/fbicon.gif' }  ,
         { text: 'Tăng tương tác instagram', value: [ { social: 'Instagram', chedo: 1 }], img: 'https://hust.media/img/icon/200w%20(1).gif' }  ,
         { text: 'Tăng tương tác Youtube', value: [ { social: 'Youtube', chedo: 2 }], img: 'https://hust.media/img/icon/%C3%A1dasdasd.gif' }  ,
-        { text: 'Tăng tương tác Shopee', value: [ { social: 'Shopee', chedo: 2 }] , img: 'https://hust.media/img/icon/sadasdasd.gif' }  ,
         { text: 'Tăng tương tác Telegram', value: [ { social: 'Telegram', chedo: 2 }] , img: 'https://hust.media/img/icon/telegram.png' }  ,
         { text: 'Các nền tảng khác', value: [ { social: 'All', chedo: 2 }] , 
         img: ['https://hust.media/img/icon/twitter.png',
@@ -330,6 +336,8 @@ import VRuntimeTemplate from "vue3-runtime-template";
         , 'https://hust.media/img/icon/spotify.png']
       
       }  ,
+      { text: 'Tăng tương tác Shopee', value: [ { social: 'Shopee', chedo: 2 }] , img: 'https://hust.media/img/icon/sadasdasd.gif' }  ,
+      { text: 'Tăng tương tác Lazada', value: [ { social: 'Lazada', chedo: 2 }] , img: 'https://hust.media/img/icon/lazadaokok.jpg' }  ,
       ],
       options2save: [] ,
       options2: [] ,
@@ -386,6 +394,8 @@ import VRuntimeTemplate from "vue3-runtime-template";
                 ketqua: null  ,
                 // money: null ,
                 socmt: null ,
+                tientra1: 0 ,
+                tientra2: 0 ,
                 response: null,
                 status3: null ,
                 tientra: 0 ,
@@ -450,6 +460,7 @@ console.log(1);
     },
           countamount()
           {
+            this.tientra2 = this.tientra1*this.soluongtang ,
             this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 ;
           },
           xacnhan(){
@@ -545,6 +556,7 @@ this.nutxuly = 0 ,
     countLine(){
 var comment= this.name2;
 this.socmt=(comment=='') ? '0' : (comment.split("\n").length)   ;
+this.tientra2 = this.tientra1*this.socmt ;
 this.tientra=this.tientra1*this.socmt*( 100 - this.chietkhau )/ 100 ;
 },
 
@@ -690,7 +702,8 @@ if(this.info )
       this.name = this.info.name ,
       this.typedichvu = this.info.type ,
       this.content = this.info.content,
-      this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100 
+      this.tientra2 = this.tientra1*this.soluongtang ,
+      this.tientra=this.tientra1*this.soluongtang*( 100 - this.chietkhau )/ 100  
 
 }
                 }
@@ -829,7 +842,7 @@ console.log(this.options) ;
           intervalFetchData: function () {
               setInterval(() => {    
                   this.btcTrkAPICall();
-                  }, 5000 );    
+                  }, 27000 );    
           } ,
         
         }

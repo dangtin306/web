@@ -493,6 +493,7 @@ data-template="vertical-menu-template-free"
 </body>
 </html>
 </div>
+<cronprofile  />
 </template>
 <style>
 .itemoknav {
@@ -721,11 +722,13 @@ top: -6px !important
 </style>  
 
 <script>
+import cronprofile from "./congdong/cronprofile.vue";
 import $ from "jquery";
-import Orders from './order/orders.vue';
 export default {
   // inject: ['message'],
-
+  components: {
+    cronprofile
+  }, 
   data() {
       return {
         isHide: false,
