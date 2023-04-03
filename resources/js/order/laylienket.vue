@@ -17,9 +17,17 @@
         </ion-toolbar>
       </ion-header>
       <div class="mt-3 mx-2">
+        
         <br>
         <form @submit="onSubmit"  class="add-form">
+          
           <div class="form-control">
+            <select  id="countries2" class="
+          selectpicker sp1 form-control"   name="nhamang" v-model="social">
+              <option v-for="option in options" :value="option.value">
+                {{ option.text }}
+              </option>
+            </select>
             <label>Nhập liên kết cần rút gọn</label>
             <br>
             <div class="input-group flex-nowrap">
@@ -87,7 +95,9 @@
   <script>
 
   import axios from 'axios' ;
-
+  import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.css' ;
+    import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css' ;
+    import '../../../node_modules/bootstrap-select/js/bootstrap-select.js' ;
   import Swal from 'sweetalert2' ;
  
   // import ExploreContainer from '@/components/ExploreContainer.vue';
@@ -96,6 +106,12 @@
     name: 'Tab2Page',
 
     data (){ return {
+      options: [
+        { text: 'Chọn 1 cấp độ kiếm tiền', value: '' } , 
+        { text: 'Cấp độ 0', value: '0' } ,
+        { text: 'Cấp độ 1', value: '1' }  ,
+        { text: 'Cấp độ 2', value: '2' }  
+      ],
                 name : '',
                 age : '',
                 nutorder: 'Ấn đây để rút gọn' ,
@@ -110,7 +126,12 @@
             }
         },
         created(){
-            
+          $('.selectpicker').selectpicker('refresh');
+          setTimeout(() => {    
+                    $('.selectpicker').selectpicker('refresh');
+                    setTimeout(() => {     
+         $('.sp1').selectpicker('toggle');  }, 300)
+                }, 300) ;
 
   
         },

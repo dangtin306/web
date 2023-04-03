@@ -72,7 +72,7 @@
                     <div @click="onChange4()">
                       <select ref="dichvu" 
                       data-style="bg-pink-200 adasdasdasdadacas hover:bg-red-300 font-bold py-2 px-4 rounded" 
-                      id="dichvu" class="form-control selectpicker sp4  " show-tick  data-size="6"  data-live-search="true"     name="dichvu" v-model="dichvu">
+                      id="dichvu" class="form-control selectpicker sp4  " show-tick  data-size="6"  data-live-search="true"  data-live-search-placeholder="tìm kiếm.."   name="dichvu" v-model="dichvu">
                         <option  v-for="option in options4" :value="option.id"
                         :data-content="`<span class='text-xs '   >  <span class='whitespace-nowrap inline-block bg-pink-300 rounded-md px-1 py-1 text-xs font-semibold text-white mr-1 mb-1 break-words whitespace-pre-wrap' style='width: `+ chieurongok +`;'>${option.name}</span> <br> (${option.money} Xu) ${option.id}</span>`"  >
                  
@@ -138,7 +138,7 @@
     </button>
 </label>
 </div>
-<div class="mt-2"  v-if="chondichvu2 == 1 && typedichvu != 'comment'">
+<div class="mt-1"  v-if="chondichvu2 == 1 && typedichvu != 'comment'">
 <p class="my-1 text-xs">Số lượng tăng</p>
 <input @keyup="countamount" class="mt-0 my-1  
 border-3 form-control-pink form-control form-control-alternative" v-model="soluongtang" placeholder="Nhập số lượng mong muốn" />
@@ -149,7 +149,13 @@ border-3 form-control-pink form-control form-control-alternative" v-model="soluo
 </span>
 
 </div>
-      
+<div class="mt-1"  v-if="chondichvu2 == 1 && typedichvu == 'Comment Likes'">
+  <p class="my-1 text-xs">Username of id</p>
+  <input  class="mt-0 my-1  
+  border-3 form-control-pink form-control form-control-alternative" v-model="idbinhluan" placeholder="id người viết bình luận" />
+
+  
+  </div>
     
                     <div v-if="typedichvu == 'comment'" x-show="showen" class="mt-3 space-y-2 text-gray-700" x-data="{isshow:false}">
                 <label  class="mt-0 my-1 block font-medium text-sm   mx-auto " for="password">
@@ -395,6 +401,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
                 // money: null ,
                 socmt: null ,
                 tientra1: 0 ,
+                idbinhluan: '' ,
                 tientra2: 0 ,
                 response: null,
                 status3: null ,
@@ -490,6 +497,17 @@ console.log(1);
   link: this.lienketchay,
   action: 'add' ,
   comments: this.camxucfb
+};
+            }
+            else if  ( this.typedichvu == 'Comment Likes')
+            {
+              this.thongsopost = {
+  key: this.ok2,
+  service: this.service,
+  quantity: this.soluongtang,
+  link: this.lienketchay,
+  action: 'add' ,
+  username: this.idbinhluan
 };
             }
             else
