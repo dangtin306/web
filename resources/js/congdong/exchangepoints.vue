@@ -1,11 +1,12 @@
 <template>
-     <div class="max-w-2xl px-1 py-4  mx-auto rounded-lg shadow-xl">
+     <div class="max-w-3xl px-3 py-4  mx-auto rounded-lg shadow-xl">
     <div>
         <p>Chuyển điểm jop facebook sang xu
             trong App <br>
-             Số điểm chuyển tối thiểu 5 nghìn <br>
+             Số điểm chuẩn thành xu tối thiểu 6 nghìn <br>
              Phí chuyển điểm 0% ,
-             Tỷ giá chuyển 1 xu = 1000 điểm  <br>
+             <br>  1000 điểm chuẩn = 1 xu  <br>
+             1 điểm thưởng chéo follow = 2 xu  <br>
              Nếu bỏ follow số điểm sẽ giảm
              </p>
     </div>
@@ -26,9 +27,23 @@
       <div style="display: flex; justify-content: center; align-items: center; ">
   
         <div v-if="sodiem" >
-          Số điểm hiện tại là {{  sodiem  }}
-                  </div>        </div>
+          Số điểm chuẩn hiện tại là {{  sodiem  }}
+                  </div>   &emsp;
+                  <div v-if="malucsub" >
+                   Điểm thưởng chéo Follow {{  malucsub  }}
+                            </div>    
+                </div>
       <div class="form-control">
+        <div class="form"> 
+          <label for="countries2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Chọn kiểu chuyển xu</label>
+          <select  id="countries2" class="
+          selectpicker sp1 form-control"   @change="onChange()"   name="nhamang" v-model="social">
+          <option v-for="option in options" :value="option.value"
+          :data-content=" `<div style='display: flex; align-items: center;'>  ` +  option.text   +`</div>` "  >
+            <!-- {{ option.text }} -->
+          </option>
+            </select>
+          </div>  <br>
         <label>Số điểm chuyển sang xu  </label>
         <br>
         <input
@@ -120,17 +135,26 @@
                 nutorder: 'Chuyển điểm ngay' ,
                 nutxuly: null ,
                 info : null ,
+                malucsub : null ,
                 info2 : null ,
-                sodiem: null 
+                social: null ,
+                sodiem: null ,
+                options: [
+        { text: 'Chọn 1 nền tảng', value: ''  } , 
+        { text: 'Chuyển điểm chuẩn thành xu', value: 'xu'  } ,
+        { text: 'Chuyển điểm thưởng Follow thành xu', value: 'malucsub' }  
+      ],
             }
         },
         created()
       {
+      
         if(!this.ok2){
                   alert('Vui lòng đăng nhập')
               }
               else
               {
+               
                 this.checktk() ;
               }
       
@@ -138,14 +162,20 @@
         methods : {
           asdasdkas(info)
         {
+          this.malucsub  = info.malucsub ;
           this.sodiem = info.sodiem ;
+          setTimeout(() => {    
+                  $('.selectpicker').selectpicker('refresh');
+                  setTimeout(() => {     
+       $('.sp1').selectpicker('toggle');  }, 300)
+              }, 300)
         },
           checktk()
         {
           axios
        .post('https://tecom.pro/ttc/profile.php', {
         key: this.ok2 ,
-    chedo: 'kiemtradangnhap'
+    chedo: 'kiemtradiem'
   })
   .then(response => (  this.info2 = response.data
   , console.log(this.info2) ,
@@ -171,12 +201,14 @@
          .post('https://tecom.pro/ttc/profile.php', {
           key: this.ok2 ,
       money: this.amount ,
-      chedo: 'nhanxu'
+      chedo: 'nhanxu' ,
+      option: this.social ,
     })
     .then(response => (this.info = response.data.message
     ,      this.nutorder = 'đặt tiếp luôn nào' ,
   this.disableButton = false ,
-  this.nutxuly = 0 ))
+  this.nutxuly = 0 
+  )) 
     .catch(error => console.log(error) ,
   
         this.thanhcong = this.info.order     ,

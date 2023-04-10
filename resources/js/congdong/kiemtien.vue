@@ -1,5 +1,21 @@
 <template>
     <div class="container">
+      <div class="max-h-16 ">
+        <div class="cards">
+     
+          <Adsense
+      data-ad-client="ca-pub-4574266110812955"
+       data-ad-slot="8795043992"
+       data-full-width-responsive="no"
+       ins-class="display: block; height: 50px;"
+       ins-style="display: block; height: 50px;"
+    
+       
+       >
+    </Adsense>
+    </div>
+    
+    </div>
       <div class="row">
           <div class="text-center">
             <div style="display: flex; justify-content: center; align-items: center; ">
