@@ -20,7 +20,7 @@
     <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
   
      
-      <router-link type="button" to="/order">
+      <a type="button" href="https://hust.media/reactapp/nhatkyorders">
   
         <div class="max-w-7xl mx-2 py-2 mb-2">
           <div class="relative group">
@@ -51,7 +51,7 @@
         </div>
         
 
-    </router-link>
+    </a>
         <router-link type="button" to="/test">
         <div class="max-w-7xl mx-2 py-2 mb-2">
           <div class="relative group">
