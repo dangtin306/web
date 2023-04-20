@@ -38,7 +38,6 @@ import momo from './components/momo.vue'
     import game from './components/game.vue'
     import okluon from './components/test.vue'
     import testcode from './components/testcode.vue'
-    import order from './components/order.vue'
     import theloai from './components/theloai.vue'
     import truyentranh from './truyen/truyen.vue'
     import truyentranhsearch from './truyen/search.vue'
@@ -257,8 +256,8 @@ const routes = [
     component: home
   },
   {
-    path: '/orders',
-    name: 'orders',
+    path: '/1.4.4s',
+    name: '1.4.4s',
     component: orders
   },
   {
@@ -344,15 +343,6 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: naptien
-  }
-  ,
-  {
-    path: '/order',
-    name: 'order',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: order
   }
   ,
   {

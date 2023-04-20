@@ -40,10 +40,10 @@
     <div class="overlay-header"></div>
     
     <div class="bodyok">
-        <router-link :to="chap1">
+        <a :href="chap1">
             <img  src="https://i.pinimg.com/originals/50/8f/11/508f1181449ccca9dc2f8f49afdc928b.gif"
              alt="Hugh Jackman" class="body-image ava" />
-        </router-link>
+        </a>
       <div class="body-action-button u-flex-center">
         <svg fill="#ffffff" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
           <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
