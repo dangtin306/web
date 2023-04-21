@@ -34,8 +34,8 @@
             <div class="l-container ádasdasdasdasd">
                 <li v-for="{ tentruyen , sochap , linktruyen , linkanh } in userss"> 
                     <!-- <a :href="'https://hust.media' + linktruyen" > -->
-                        <router-link class="md:p-4 py-2 block hover:text-purple-400" :to="{
-                            path:  '/profile' + linktruyen  
+                        <a class="md:p-4 py-2 block hover:text-purple-400" :href="{
+                            path:   linktruyen  
                            
                     }" >
                     <!-- ,query: { id: linkanh } -->
@@ -49,7 +49,7 @@
                                 <img :src= linkanh  alt="Girl in a jacket" width="500" height="600">
                             </div>
                         </div>
-                    </router-link>
+                    </a>
                     
                     <!-- </a> -->
                    
