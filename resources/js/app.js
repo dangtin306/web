@@ -256,8 +256,8 @@ const routes = [
     component: home
   },
   {
-    path: '/1.4.4s',
-    name: '1.4.4s',
+    path: '/orders',
+    name: 'orders',
     component: orders
   },
   {
