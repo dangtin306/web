@@ -34,12 +34,9 @@
             <div class="l-container ádasdasdasdasd">
                 <li v-for="{ tentruyen , sochap , linktruyen , linkanh } in userss"> 
                     <!-- <a :href="'https://hust.media' + linktruyen" > -->
-                        <a class="md:p-4 py-2 block hover:text-purple-400" :href="
-                           linktruyen  
-                           
-                    " >
+                        <div @click="tattruyen(linktruyen)"  class="md:p-4 py-2 block hover:text-purple-400" >
                     <!-- ,query: { id: linkanh } -->
-                        <div @click="tattruyen" class="b-game-card" ref="infoBox" >
+                        <div  class="b-game-card" ref="infoBox" >
                             <div class="b-game-card__cover">
                                 <span class="test" 
                                 :style="{ 'font-size': Height }" >{{ tentruyen  }}  </span>
@@ -49,7 +46,7 @@
                                 <img :src= linkanh  alt="Girl in a jacket" width="500" height="600">
                             </div>
                         </div>
-                    </a>
+                    </div>
                     
                     <!-- </a> -->
                    
@@ -169,9 +166,11 @@
                     // console.log(this.size);
                       });
               },
-              tattruyen(){
+              tattruyen(link){
+                window.location.assign(link);
                 this.userss = '' ;
                 this.hientruyen = 'ok' ;
+                this.loading = true ;
                 console.log(this.userss);
               }
           }
