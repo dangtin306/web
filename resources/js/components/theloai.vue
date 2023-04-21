@@ -34,10 +34,10 @@
             <div class="l-container ádasdasdasdasd">
                 <li v-for="{ tentruyen , sochap , linktruyen , linkanh } in userss"> 
                     <!-- <a :href="'https://hust.media' + linktruyen" > -->
-                        <a class="md:p-4 py-2 block hover:text-purple-400" :href="{
-                            path:   linktruyen  
+                        <a class="md:p-4 py-2 block hover:text-purple-400" :href="
+                           linktruyen  
                            
-                    }" >
+                    " >
                     <!-- ,query: { id: linkanh } -->
                         <div @click="tattruyen" class="b-game-card" ref="infoBox" >
                             <div class="b-game-card__cover">
