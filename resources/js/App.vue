@@ -913,7 +913,7 @@ history.back() ;
 }
 ,
 tap1(){
-this.$router.push('/home/') 
+  window.location.href = "https://hust.media";
 },
 tap2(){
 this.$router.push('/okluon') 
