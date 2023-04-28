@@ -42,7 +42,6 @@ import momo from './components/momo.vue'
     import truyentranh from './truyen/truyen.vue'
     import truyentranhsearch from './truyen/search.vue'
     import truyenchuyen from './truyen/truyenchuyen.vue'
-    import profile from './components/profile.vue'
     import link from './components/link.vue'
     import themsdt from './components/themsdt.vue'
     import congdong from './congdong/congdong.vue'
@@ -66,7 +65,6 @@ import cauhinh from './congdong/cauhinh.vue'
     import doithe from "./order/doithe.vue";
     import account from "./order/account.vue"; 
     import payeer from "./order/payeer.vue"; 
-    import laylienket from "./order/laylienket.vue";
     import themotp from "./order/themotp.vue";
     import aboutus from "./congdong/aboutus.vue"; 
     import momoauto from "./congdong/momoauto.vue"; 
@@ -235,16 +233,7 @@ const routes = [
     name: 'home',
     component: home
   },
-  {
-    path: '/laylienket/:laylienket',
-    name: 'laylienket',
-    component: laylienket
-  },
-  {
-    path: '/laylienket',
-    name: 'laylienket',
-    component: laylienket
-  },
+
   {
     path: '/id',
     name: 'id',
@@ -339,9 +328,6 @@ const routes = [
   {
     path: '/naptien',
     name: 'naptien',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: naptien
   }
   ,
@@ -406,11 +392,7 @@ const routes = [
     name: 'payeer',
     component: payeer
   },
-  {
-    path: '/profile/truyen-tranh/:id',
-    name: 'profile',
-    component: profile
-  },
+
   {
     path: '/realtime',
     name: 'realtime',
