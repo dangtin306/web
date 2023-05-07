@@ -62,7 +62,6 @@ import cauhinh from './congdong/cauhinh.vue'
     import VueCookies from 'vue-cookies';
     import historyclone from "./order/historyclone.vue"; 
     import comment from "./order/comment.vue"; 
-    import doithe from "./order/doithe.vue";
     import account from "./order/account.vue"; 
     import payeer from "./order/payeer.vue"; 
     import themotp from "./order/themotp.vue";
@@ -155,11 +154,7 @@ const routes = [
     component: kiemtien,
     props: route => ({ tenkiemtien: route.params.tenkiemtien})
   },
-  {
-    path: '/doithe',
-    name: 'doithe',
-    component: doithe
-  },
+
   {
     path: '/momoauto',
     name: 'momoauto',

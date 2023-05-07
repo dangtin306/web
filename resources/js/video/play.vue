@@ -186,14 +186,7 @@ this.videoSrc = this.videos[this.hienvideo];
             this.isLoaded = true;
 
         },
-        keolen()
-        {
-            window.scrollTo(0,0);
-        },
-        xuong()
-        {
-            window.scrollTo(0,document.body.scrollHeight);
-        },
+    
         error2(error)
           {
             console.log(error.name) ;
