@@ -25,7 +25,6 @@ const metaManager = createMetaManager(false, {
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 import orders from './order/orders.vue'
-import momo from './components/momo.vue'
    import home from './components/home.vue'
    import themcauhinh from './congdong/themcauhinh.vue'
       import FacebookEmojis from './order/FacebookEmojis.vue'
@@ -377,11 +376,7 @@ const routes = [
     props: route => ({ tentheloai: route.params.tentheloai, page: route.query.page })
     
   },
-  {
-    path: '/momo',
-    name: 'momo',
-    component: momo
-  },
+
   {
     path: '/payeer',
     name: 'payeer',
