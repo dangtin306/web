@@ -222,7 +222,7 @@
                       class="h-5 w-5 cananh">  
                      Cộng xu từ mã giao dịch momo </p>
                     <div class="text-xs  block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
-                      Tối thiểu 100 xu <br> tối đa 6k xu → </div>
+                      Tối thiểu 100 xu <br> tối đa 30k xu → </div>
     
                       <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
                   </div>
@@ -253,7 +253,7 @@
                       class="h-7 w-7 cananh">  
                       Nạp xu qua MoMo ✓ </p>
                     <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
-                      Tối thiểu 6k xu → </div>
+                      Tối thiểu 5005 vnd → </div>
     
                       <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
                   </div>
