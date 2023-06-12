@@ -128,7 +128,7 @@
         
         </div>
         </div>
-        <div class="col-xl-4 mt-0">
+        <!-- <div class="col-xl-4 mt-0">
           <div class="d-grid gap-1" style="grid-template-columns:1fr " >
         
            
@@ -167,7 +167,7 @@
            
           
           </div>
-          </div>
+          </div> -->
 <!--      
        <div class="col-xl-4   ">
         <router-link  to="/sms">
