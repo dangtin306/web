@@ -63,7 +63,7 @@
       
          
          
-          <a  href="https://hust.media/vietcomauto/" >
+          <a  href="https://hust.media/shop/donate/acb" >
             <div class="max-w-7xl mx-2 py-2 mb-2">
               <div class="relative group">
                 <div class="absolute -inset-1 bg-gradient-to-r 
@@ -94,7 +94,7 @@
             
           </a>
        
-            <a  href="https://hust.media/vietcomauto4.php" >
+            <a  href="https://hust.media/shop/donate/mb" >
             <div class="max-w-7xl mx-2 py-2 mb-2">
               <div class="relative group">
                 <div class="absolute -inset-1 bg-gradient-to-r 
