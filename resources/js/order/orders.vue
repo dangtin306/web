@@ -23,6 +23,11 @@
 }
 </style>
 <template>
+  <div v-if="laymetachuan" >
+    <v-runtime-template :template="laymetachuan"></v-runtime-template>
+    
+    </div>
+<div :key="componentKey">
 
 
     <div class="fixrow row">
@@ -51,8 +56,8 @@
                   <select  id="countries"
                   data-style="bg-pink-200 sdsasdasdasdasd hover:bg-red-300 font-bold py-2 px-4 rounded" 
                    class="form-control selectpicker sp2"
-                     @change="onChange2()"   name="theloai" v-model="theloai">
-                     <option v-for="option in options2" :value="option.value"  :data-content=" `<div style='display: flex; align-items: center;'>  ` +  option.text + `&emsp;` + `<img src='` + option.img + `'` + `class=\'asdasd\'>` +`</div>` " >
+                     @change="onChange2truoc()"   name="theloai" v-model="theloai">
+                     <option v-for="option in options2" :value="`${option.value}+${option.uri}`"  :data-content=" `<div style='display: flex; align-items: center;'>  ` +  option.text + `&emsp;` + `<img src='` + option.img + `'` + `class=\'asdasd\'>` +`</div>` " >
                     </option>
                 
                   </select> </div>
@@ -296,18 +301,22 @@ focus:ring-gray-800 ring-gray-400 ring focus:ring-offset-2 focus:ring-offset-whi
 
 
   </div>
+</div>
+
   </template>
 
   <script>
 //   import $ from 'jquery' ;
+import { useRouter } from 'vue-router';
 import FacebookEmojis from "./FacebookEmojis";
 import VRuntimeTemplate from "vue3-runtime-template";
     import Swal from 'sweetalert2' ;
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.css' ;
     import '../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css' ;
     import '../../../node_modules/bootstrap-select/js/bootstrap-select.js' ;
-    import { ref, provide } from 'vue';
+    import { ref, provide ,watch } from 'vue';
     export default {
+ 
       components: {
     VRuntimeTemplate ,
     FacebookEmojis
@@ -349,19 +358,19 @@ import VRuntimeTemplate from "vue3-runtime-template";
       options2: [] ,
       options2ok: [
       { Tiktok:  [ 
-        { text: 'Tăng người theo dõi TikTok', value: 'fltiktok' , img: 'https://hust.media/img/icon/followtiktok.jfif' }  ,
-        { text: 'Tăng tương tác Video', value: 'tiktok' , img: 'https://hust.media/img/icon/upload.jpg' }  ,
-        { text: 'Tăng người xem Video,Story TikTok', value: 'videotiktok' , img: 'https://hust.media/img/icon/viewtiktok.svg' } ,
-        { text: 'Tăng tương tác livestream' , value: 'livetiktok' , img: 'https://hust.media/img/icon/livetiktokok.png'  }] } , 
+        { text: 'Tăng người theo dõi TikTok', value: 'fltiktok' , img: 'https://hust.media/img/icon/followtiktok.jfif' , uri: 'fltik' }  ,
+        { text: 'Tăng tương tác Video', value: 'tiktok' , img: 'https://hust.media/img/icon/upload.jpg' , uri: 'timtik'  }  ,
+        { text: 'Tăng người xem Video,Story TikTok', value: 'videotiktok' , img: 'https://hust.media/img/icon/viewtiktok.svg' , uri: 'videotik' } ,
+        { text: 'Tăng tương tác livestream' , value: 'livetiktok' , img: 'https://hust.media/img/icon/livetiktokok.png'  , uri: 'livetik' }] } , 
         { Facebook:  [ 
-        { text: 'Tăng người theo dõi,bạn bè Facebook', value: 'followfb',  img: 'https://hust.media/img/icon/followfbok.png'  }  ,
-        { text: 'Tăng tương tác Facebook', value: 'like|Facebook',  img: 'https://hust.media/img/icon/meta.png'  }  ,
-        { text: 'Facebook reels, view, story', value: 'Facebook|video',  img: 'https://hust.media/img/icon/reelsfb.svg'  } ,
-        { text: 'Tăng tương tác Page, nhóm, sự kiện' , value: 'page' ,  img: 'https://hust.media/img/icon/likepageicon.png'   }] },
+        { text: 'Tăng người theo dõi,bạn bè Facebook', value: 'followfb',  img: 'https://hust.media/img/icon/followfbok.png', uri: 'followfb'  }  ,
+        { text: 'Tăng tương tác Facebook', value: 'like|Facebook',  img: 'https://hust.media/img/icon/meta.png' , uri: 'likefb'  }  ,
+        { text: 'Facebook reels, view, story', value: 'Facebook|video',  img: 'https://hust.media/img/icon/reelsfb.svg'  , uri: 'videofb' } ,
+        { text: 'Tăng tương tác Page, nhóm, sự kiện' , value: 'page' ,  img: 'https://hust.media/img/icon/likepageicon.png' , uri: 'pagefb'  }] },
         { Instagram:  [ 
-        { text: 'Tăng Người theo dõi insta', value: 'flins',  img: 'https://hust.media/img/icon/flins.png'  }  ,
-        { text: 'Tăng tương tác insta', value: 'timins',  img: 'https://hust.media/img/icon/timins.png'  }  ,
-        { text: 'Lượt xem insta reel, story, Live Stream, IGTV', value: 'viewins',  img: 'https://hust.media/img/icon/reelsfb.svg'  } ,
+        { text: 'Tăng Người theo dõi insta', value: 'flins',  img: 'https://hust.media/img/icon/flins.png', uri: 'flins'  }  ,
+        { text: 'Tăng tương tác insta', value: 'timins',  img: 'https://hust.media/img/icon/timins.png' , uri: 'timins' }  ,
+        { text: 'Lượt xem insta reel, story, Live Stream, IGTV', value: 'viewins',  img: 'https://hust.media/img/icon/reelsfb.svg'  , uri: 'viewins' } ,
      ] },
         { text: 'Telegram', value: 'Telegram' } ,
         { text: 'Youtube', value: 'Youtube' }  ,
@@ -415,10 +424,15 @@ import VRuntimeTemplate from "vue3-runtime-template";
                 info : '' ,
                 loaddichvu : true ,
                 previousOption: null ,
+                componentKey: 1 , 
+                reload: false ,
+                uri: null ,
+                laymetachuan : null 
             }
         },
         mounted() {
-          
+            // Lấy giá trị tentheloai từ URL
+        
           $(this.$refs.social).on('hidden.bs.select', () => {
 this.onChange();
 this.chieurongok = this.$refs.socialpro.offsetWidth / 10 * 9 ;
@@ -430,20 +444,31 @@ console.log(1);
   });
 
     },
+
+
+// beforeRouteUpdate(to, from) {
+//     const targetKeyword = '/orders'; // Từ khóa mục tiêu trong URL
+
+// if (from.fullPath.includes(targetKeyword)) {
+//   console.log('1'); // Hiển thị 1 nếu URL chứa "/orders"
+//   this.setCookie('isRouteUpdateBlocked', 'true'); // Lưu giá trị isRouteUpdateBlocked vào cookie
+//   const isRouteUpdateBlocked = this.getCookie('isRouteUpdateBlocked'); // Lấy giá trị isRouteUpdateBlocked từ cookie
+//   console.log(  isRouteUpdateBlocked);
+// } else {
+//   this.deleteCookie('isRouteUpdateBlocked'); // Xóa giá trị isRouteUpdateBlocked khỏi cookie
+//   console.log('0'); // Hiển thị 0 cho các trường hợp khác
+// }
+//   },
+
         created() {
-     
+
+
                 this.fetchData();
                 this.intervalFetchData() ;
                 console.log(this.getCookie('urlsdt'));
-                $('.selectpicker').selectpicker('refresh');
-                setTimeout(() => {    
-                    console.log(this.getCookie('urlsdt'));
-                    $('.selectpicker').selectpicker('refresh');
-                    setTimeout(() => {     
-         $('.sp1').selectpicker('toggle');  }, 300)
-                }, 300) ;
-           
-                this.btcTrkAPICall();
+            
+                setTimeout(() => {     
+         this.modau() }, 300)
             },
             
         methods : {
@@ -465,6 +490,30 @@ console.log(1);
           updateCamxucfb(value) {
       this.camxucfb = value;
     },
+    modau() {
+   
+      if ( this.$route.params.tentheloai ) {
+    const tentheloai = this.$route.params.tentheloai;
+    console.log(tentheloai);
+    if ( tentheloai != '' )
+    {
+      this.theloai = tentheloai ;
+      this.theloaiok() ;
+    } ;
+  }
+  else
+  {
+    setTimeout(() => {   
+      $('.selectpicker').selectpicker('refresh'); 
+                    console.log(this.getCookie('urlsdt'));
+                    $('.selectpicker').selectpicker('refresh');
+                    setTimeout(() => {     
+         $('.sp1').selectpicker('toggle');  }, 300)
+                }, 300) ;
+  };
+    },
+   
+
           countamount()
           {
             this.tientra2 = this.tientra1*this.soluongtang ,
@@ -625,13 +674,78 @@ this.options2 = [] ;
   
     
     },
+    theloaiok() {
+      
+      axios
+         .get('https://tecom.pro/getservice/theloai.php?theloai=' + this.theloai )
+    .then( response => (
+    console.log(response.data ) ,
+    this.socialok = response.data.option ,
+    this.theloai = response.data.code ,
+    this.chedook = 1 ,
+    this.reload = true ,
+ this.onChange2truoc2(response.data)
+
+    ))
+    .catch(error => console.log(error) ,
+        ) ;
+
+    },
+    onChange2truoc2(response)
+    {
+   
+      if ( response.meta )
+    {
+      var metaDecoded = document.createElement('textarea');
+metaDecoded.innerHTML =  response.meta;
+var decodedHTML = metaDecoded.value;
+
+console.log(decodedHTML);
+      this.laymetachuan =  decodedHTML ;
+      this.onChange2()
+    }
+    else
+    {
+      this.onChange2()
+    }
+    },
+    onChange2truoc3(response)
+    {
+   
+      if ( response.meta )
+    {
+      var metaDecoded = document.createElement('textarea');
+metaDecoded.innerHTML =  response.meta;
+var decodedHTML = metaDecoded.value;
+
+console.log(decodedHTML);
+      this.laymetachuan =  decodedHTML ;
+    }
+    else
+    {
+     
+    }
+    },
+    onChange2truoc(){
+      console.log(this.theloai ) ;
+      const [value1, value2] = this.theloai.split("+");
+
+      this.theloai = value1 ; // "fltiktok"
+      this.uri = value2 ; // "fltik"
+      this.onChange2() ;
+
+    },
     onChange2() {
+    
       if(!this.theloai){
                     alert('Please điền đầy đủ thông tin')
                     return
                 }
                 else
                 {
+                 
+         
+               
                   this.loaddichvu = false ;
                axios
          .post('https://tecom.pro/getservice/category.php', {
@@ -645,6 +759,20 @@ this.options2 = [] ;
     ))
     .catch(error => console.log(error) ,
         ) ;
+        if ( this.uri )
+                  {
+                    const newUri = '/orders/' + this.uri ;
+                    window.history.replaceState({}, '', newUri);
+                      axios
+         .get('https://tecom.pro/getservice/theloai.php?theloai=' + this.uri )
+    .then( response => (
+    console.log(response.data ) ,
+ this.onChange2truoc3(response.data)
+
+    ))
+    .catch(error => console.log(error) ,
+        ) ;
+                  }
                 }
                
     },
@@ -862,7 +990,15 @@ console.log(this.options) ;
                   this.btcTrkAPICall();
                   }, 27000 );    
           } ,
-        
+          setCookie(name, value) {
+      const date = new Date();
+      date.setTime(date.getTime() + (1 * 60 * 1000)); // Thời gian hết hạn là 1 phút
+      const expires = `expires=${date.toUTCString()}`;
+      document.cookie = `${name}=${value}; ${expires}; path=/`;
+    },
+    deleteCookie(name) {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    },
         }
     }
     

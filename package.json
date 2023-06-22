@@ -31,6 +31,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.2.1",
         "@fortawesome/vue-fontawesome": "^3.0.2",
         "bootstrap-select": "^1.13.18",
+        "cheerio": "^1.0.0-rc.12",
         "es6-tween": "^5.5.11",
         "firebase": "^9.13.0",
         "jquery": "^3.6.4",

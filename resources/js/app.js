@@ -240,8 +240,14 @@ const routes = [
   },
   {
     path: '/orders',
-    name: 'orders',
+    name: 'ordersAll',
     component: orders
+  },
+   {
+    path: '/orders/:tentheloai',
+    name: 'ordersCategory',
+    component: orders
+    
   },
   {
     path: '/historyclone',

@@ -93,6 +93,9 @@ Route::get('/naptien',  function () {
 Route::get('/orders',  function () {
     return view('welcome');
 });
+Route::get('/orders/{name}',  function () {
+    return view('welcome');
+});
 Route::get('/muathe',  function () {
     return view('welcome');
 });
