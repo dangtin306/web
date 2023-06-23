@@ -974,7 +974,7 @@ console.log(this.options) ;
             btcTrkAPICall: function () {
               this.chedo = 'checkxu3' ;
               axios    
-                  .post('./checkmomo', {
+                  .post('../checkmomo', {
           apikey: this.ok2 ,
       magiaodich: this.magiaodich ,
       chedo: this.chedo 
