@@ -67,7 +67,7 @@
                     data-style="bg-pink-200 asdasdasdasdasddasd hover:bg-red-300 font-bold py-2 px-4 rounded" 
                     class="form-control selectpicker sp3"  @change="onChange3()"   name="category" v-model="category">
                     <option v-for="option in options3" :value="option.code" 
-                     :data-content="`<div style='display: flex; align-items: center;'>${option.name}&emsp;${option.img ? `<img src='${option.img}' class='asdasd'>` : ''}</div>`">    </option>
+                     :data-content="`<div style='display: flex; align-items: center;'>${option.name}&nbsp;${option.img ? `<img src='${option.img}' class='asdasd'>` : ''}</div>`">    </option>
 
                     </select>
                   </div>
