@@ -254,7 +254,7 @@ import Swal from 'sweetalert2' ;
                     { text: 'Xem tên tài khoản', value: 'showusername' } ,
         { text: 'Thay tên tài khoản', value: 'username' } ,
         { text: 'Lấy api key', value: 'apikey' } ,
-                    { text: 'xem mật khẩu', value: 'showpassword' } ,
+                    { text: 'Xem mật khẩu', value: 'showpassword' } ,
         { text: 'Thay mật khẩu', value: 'password' } , 
     
       ],
