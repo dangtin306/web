@@ -98,9 +98,13 @@
         <div class="absolute inset-0 bg-gradient-to-r from-indigo-200 to-purple-600 shadow-lg transform rotate-6 rounded-3xl">
 
         </div>
-        <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-         <h2 class="text-3xl text-break font-bold">
-          kết quả {{ thanhcong }}</h2></div></div></div>
+        <div class="relative px-4 py-5 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+         <h2  class="text-3xl mb-0 text-break font-bold">
+          kết quả {{ thanhcong }}</h2>
+          <button class="mt-1 text-xs float-right" @click="saochep(thanhcong)">
+    sao chép
+  </button>
+        </div> </div></div>
     </div>
                       <button  @click="xacnhan"
                       class='flex break-inside bg-purple-400 hover:bg-purple-300 rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
@@ -136,7 +140,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="text-lg font-medium">Đổi tên tài khoản
+                        <span class="text-lg font-medium">Xem, Đổi tên tài khoản
                         </span>
                     </button>
             </div>
@@ -152,7 +156,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                         </svg>
-                        <span class="text-lg font-medium">Đổi mật khẩu</span>
+                        <span class="text-lg font-medium">Xem, Đổi mật khẩu</span>
                     </button></div>
             </div>
         </div>
@@ -182,7 +186,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
-                        <span class="text-lg font-medium">Thống kê giới thiệu</span>
+                        <span class="text-lg font-medium">Thống kê rải link zalo</span>
                     </button></a>
             </div>
         </div>
@@ -247,9 +251,12 @@ import Swal from 'sweetalert2' ;
             nutxuly: 0 ,
             options: [
                     { text: 'Vui lòng chọn 1 lựa chọn', value: 'vuilongchon1cai' } ,
-        { text: 'Thay mật khẩu', value: 'password' } , 
+                    { text: 'Xem tên tài khoản', value: 'showusername' } ,
+        { text: 'Thay tên tài khoản', value: 'username' } ,
         { text: 'Lấy api key', value: 'apikey' } ,
-        { text: 'Thay tên tài khoản', value: 'username' }
+                    { text: 'xem mật khẩu', value: 'showpassword' } ,
+        { text: 'Thay mật khẩu', value: 'password' } , 
+    
       ],
             total_nap: null 
           }},
@@ -268,7 +275,7 @@ import Swal from 'sweetalert2' ;
                   console.log(this.btctrk) 
                   )  
                   axios    
-                  .post('https://tuongtac.fun/api/profile.php', {
+                  .post('https://tecom.pro/api/profile.php', {
           apikey: this.ok2 ,
       chedo: 'checkcapdo'
     })  
@@ -322,7 +329,7 @@ this.thanhcong =  this.ok2 ;
         else
         {
             axios
-         .post('https://tuongtac.fun/api/profile.php', {
+         .post('https://tecom.pro/api/profile.php', {
           apikey: this.ok2 ,
           chedo: 'profile' ,
           option: this.chedoprofile ,
