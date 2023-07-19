@@ -10,7 +10,7 @@
       <router-link class="btn btn-outline-danger" to="/testcode">Test tính năng</router-link>
     </div> -->
     <nav class="fixed-bottom navbar-light " >
-      <link rel="stylesheet" href="https://tuongtac.fun/style.css">
+      <link rel="stylesheet" href="https://tecom.pro/style.css">
   
       <div class="container2 ">
       <div class="tinhchinh2">
@@ -168,15 +168,15 @@
         </li>
         <li class="menu-item" style="">
           <a  class="menu-link  menu-toggle">
-          <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/nap.webp " style="width:27px;height:27px">
           <div data-i18n="Analytics">Rút tiền và nạp tiền </div>
           </a>
           <ul class="menu-sub">
           <li>
-            <router-link to="/naptien" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; "> Nạp tiền
+            <router-link to="/naptien" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tecom.pro/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; "> Nạp tiền
           <i class="ni ni-check-bold"></i>
         </router-link>
-          <a href="https://hust.media/ruttien.php" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tuongtac.fun/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; "> Rút tiền
+          <a href="https://hust.media/ruttien.php" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tecom.pro/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; "> Rút tiền
 
           </a>
           </li>
@@ -187,7 +187,7 @@
             </li>
         <li class="menu-item ">
           <a href="https://hust.media/home/" class="menu-link">
-          <img src="https://tuongtac.fun/img/icon/tiktok2.gif" style="width:32px;height:32px">
+          <img src="https://tecom.pro/img/icon/tiktok2.gif" style="width:32px;height:32px">
           <div data-i18n="Analytics">Tăng tương tác mạng xã hội</div>
           </a>
           </li>
@@ -199,20 +199,20 @@
           </li>
         <li class="menu-item">
           <a class="menu-link"  href="https://hust.media/themotp.php">
-          <img src="https://tuongtac.fun/img/icon/4298126.png" style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/4298126.png" style="width:27px;height:27px">
           <div data-i18n="Analytics">Thuê sim nhận code lấy mã otp</div>
         </a>
           </li>
         <li class="menu-item ">
           <router-link class="menu-link layout-menu-toggle"  to="/okluon">
-            <img src="https://tuongtac.fun/img/icon/giphy (7).gif"
+            <img src="https://tecom.pro/img/icon/giphy (7).gif"
            style="width:27px;height:27px">
             <div data-i18n="Analytics">Hướng dẫn sử dụng</div>
           </router-link>
         </li>
         <li class="menu-item ">
           <router-link class="menu-link layout-menu-toggle"  to="/orders">
-          <img src="https://tuongtac.fun/img/icon/telegram.png" style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/telegram.png" style="width:27px;height:27px">
           <div data-i18n="Analytics">Tăng mem Telegram Việt Nam</div>
         </router-link>
           </li>
@@ -221,25 +221,25 @@
         <!-- Cards -->
         <li class="menu-item">
           <router-link class="menu-link layout-menu-toggle"  to="/history">
-          <img src="https://tuongtac.fun/img/icon/history.svg" style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/history.svg" style="width:27px;height:27px">
           <div data-i18n="Basic">Nhật ký đơn hàng</div>
         </router-link>
           </li>
         <li class="menu-item">
           <router-link class="menu-link layout-menu-toggle"  to="/id">
-          <img src="https://tuongtac.fun/img/icon/idcards.png" style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/idcards.png" style="width:27px;height:27px">
             <div data-i18n="Basic">Tìm lấy id facebook , tiktok , instagram</div>
            </router-link>
         </li>
         <li class="menu-item">
           <a href="https://hust.media/hustpro/test.php" class="menu-link">
-          <img src="https://tuongtac.fun/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
           <div data-i18n="Basic">Đọc truyện tranh</div>
           </a>
           </li>
         <li class="menu-item">
           <a href="/game/index.php" class="menu-link">
-          <img src="https://tuongtac.fun/img/icon/images.png" style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/images.png" style="width:27px;height:27px">
             <div data-i18n="Basic">Chơi game vui vẻ</div>
           </a>
         </li>
@@ -248,13 +248,13 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Thông tin &amp; Thêm</span></li>
         <li class="menu-item">
               <a href="/apismm.php" class="menu-link">
-              <img src="https://tuongtac.fun/img/icon/source.gif" style="width:27px;height:27px">
+              <img src="https://tecom.pro/img/icon/source.gif" style="width:27px;height:27px">
                 <div data-i18n="Without navbar">Api mua dịch vụ</div>
               </a>
             </li>
             <li class="menu-item <?=$active1;?>">
           <a href="https://github.com/dangtin306" class="menu-link">
-          <img src="https://tuongtac.fun/img/icon/internet1.gif" style="width:27px;height:27px">
+          <img src="https://tecom.pro/img/icon/internet1.gif" style="width:27px;height:27px">
             <div data-i18n="Layouts">Tạo web site riêng</div>
           </a>
         </li>

@@ -2,7 +2,7 @@
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
 $client = new \GuzzleHttp\Client();
-$endpoint = "https://tuongtac.fun/loadcute3.php" ;
+$endpoint = "https://tecom.pro/loadcute3.php" ;
 $response = $client->request('GET', $endpoint);
 $statusCode = $response->getStatusCode();
 $content = $response->getBody();
@@ -14,8 +14,8 @@ echo  $content ;
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <title>Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID </title>
-        <link rel="icon" href="https://tuongtac.fun/img/icon/idcards.png">
-    <meta property="og:image" content="https://tuongtac.fun/img/icon/idcards.png">
+        <link rel="icon" href="https://tecom.pro/img/icon/idcards.png">
+    <meta property="og:image" content="https://tecom.pro/img/icon/idcards.png">
     <meta property="og:title" content="Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID ">
     <meta property="og:description" content="Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.">
     <meta name="description" content="Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.">
@@ -34,7 +34,7 @@ echo  $content ;
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         @include('hellocss');
-        {{-- <link rel="stylesheet" href="https://tuongtac.fun/okok/assets/vendor/api.php"  crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+        {{-- <link rel="stylesheet" href="https://tecom.pro/okok/assets/vendor/api.php"  crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     </head>
     <body>
         
@@ -48,12 +48,12 @@ echo  $content ;
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       
         <script src="/js/app.js?v=0.4.6"></script>
-        <script src="https://tuongtac.fun/okok/assets/vendor/js/helpers.js"></script>
-        <script src="https://tuongtac.fun/okok/assets/js/config.js"></script>
-      <script src="https://tuongtac.fun/okok/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="https://tecom.pro/okok/assets/vendor/js/helpers.js"></script>
+        <script src="https://tecom.pro/okok/assets/js/config.js"></script>
+      <script src="https://tecom.pro/okok/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     
-    <script src="https://tuongtac.fun/okok/assets/vendor/js/menu.js"></script>
-    <script src="https://tuongtac.fun/okok/assets/js/main.js"></script>
+    <script src="https://tecom.pro/okok/assets/vendor/js/menu.js"></script>
+    <script src="https://tecom.pro/okok/assets/js/main.js"></script>
         <script>
             setTimeout(function(){
             $('#loadingg').hide();}, 200) ;
