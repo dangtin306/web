@@ -258,7 +258,7 @@ data-template="vertical-menu-template-free"
          </router-link>
       </li>
       <li class="menu-item">
-        <a  href="https://hust.media/truyen-hay/home" class="menu-link layout-menu-toggle">
+        <a  href="https://hust.media/truyen-hay/home" class="menu-link">
         <img src="https://tecom.pro/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
         <div data-i18n="Basic">Đọc truyện tranh :)</div>
         </a>
