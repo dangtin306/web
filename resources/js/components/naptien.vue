@@ -180,7 +180,7 @@
             <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
            rounded-2xl leading-none flex items-top justify-start space-x-3">
            
-              <img src="https://tuongtac.fun/img/icon/giphy (7).gif"
+              <img src="https://tecom.pro/img/icon/giphy (7).gif"
           class="h-12 w-12"> 
            
               <div class="space-y-2">
@@ -342,7 +342,7 @@
             <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
            rounded-2xl leading-none flex items-top justify-start space-x-3">
            
-              <img  src="https://tuongtac.fun/img/icon/YouTube_full-color_icon_(2017).svg.webp"
+              <img  src="https://tecom.pro/img/icon/YouTube_full-color_icon_(2017).svg.webp"
           class="h-12 w-12"> 
            
               <div class="space-y-2">
@@ -372,7 +372,7 @@
             <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
            rounded-2xl leading-none flex items-top justify-start space-x-3">
            
-              <img  src="https://tuongtac.fun/img/icon/zalo.png"
+              <img  src="https://tecom.pro/img/icon/zalo.png"
           class="h-12 w-12"> 
            
               <div class="space-y-2">
@@ -401,7 +401,7 @@
             <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
            rounded-2xl leading-none flex items-top justify-start space-x-3">
            
-           <img src="https://tuongtac.fun/img/icon/tiktok.gif"
+           <img src="https://tecom.pro/img/icon/tiktok.gif"
           class="h-12 w-12"> 
            
               <div class="space-y-2">
@@ -433,7 +433,7 @@
            
               <div class="space-y-2">
                 <p class="text-lg text-slate-1000">
-                  <img src="https://tuongtac.fun/img/icon/ava.png"
+                  <img src="https://tecom.pro/img/icon/ava.png"
                   class="h-12 w-14 cananh">
                   iu bạn nhiều lém cảm ơn đã tin tưởng nhé
             <br>    - Hệ thống nạp tự động, ghi đúng nội dung CK sẽ nhận xu sau 1-3p.

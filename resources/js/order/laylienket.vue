@@ -148,7 +148,7 @@
                     return
                 }
                 axios
-       .post('https://tuongtac.fun/ionic/addlink.php', {
+       .post('https://tecom.pro/ionic/addlink.php', {
         lienket: this.inputlienket ,
         apikey: this.apikey ,
         mota: this.inputmota ,
