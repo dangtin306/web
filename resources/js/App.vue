@@ -916,7 +916,7 @@ tap1(){
   window.location.href = "https://hust.media";
 },
 tap2(){
-this.$router.push('/okluon') 
+  window.location.href = 'https://hust.media/menu' ;
 },
 tap3(){
 this.$router.push('/history') 

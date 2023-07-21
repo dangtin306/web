@@ -81,6 +81,13 @@ Route::get('/momo',  function () {
 Route::get('/okluon',  function () {
     return view('welcome');
 });
+Route::get('/huongdan',  function () {
+    return view('welcome');
+});
+Route::get('/huongdan/{name}', function($name)
+{
+    return view('welcome');
+});
 Route::get('/account ',  function () {
     return view('welcome');
 });

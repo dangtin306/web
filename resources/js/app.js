@@ -341,6 +341,18 @@ const routes = [
   }
   ,
   {
+    path: '/huongdan',
+    name: 'huongdanPage',
+    component: okluon
+  }
+  ,
+  {
+    path: '/huongdan/:tenhuongdan',
+    name: 'huongdanDetailPage',
+    component: okluon,
+    
+  },
+  {
     path: '/testcode',
     name: 'testcode',
     // route level code-splitting
