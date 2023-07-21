@@ -303,11 +303,17 @@
             <label class="btn btn-outline-danger" @click="payout" for="payout"
               >Rút tiền</label
             >
+            <label class="btn btn-outline-danger" @click="hanmuc" for="hanmuc"
+              >Hạn mức rút tiền miễn phí</label
+            >
             <div v-if="picked == 'donate'">
               <div id="donate"></div>
             </div>
             <div v-if="picked == 'payout'">
               <div id="payout"></div>
+            </div>
+            <div v-if="picked == 'hanmuc'">
+              <div id="hanmuc"></div>
             </div>
           </div>
           <div
@@ -465,6 +471,16 @@ export default {
         postscribe(
           "#payout",
           `<script data-telegram-post="freefltiktok/80" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`
+        );
+      }, 200);
+    },
+    hanmuc() {
+      this.picked = "hanmuc";
+      this.message = this.message.split("").reverse().join("");
+      setTimeout(function () {
+        postscribe(
+          "#hanmuc",
+          `<script data-telegram-post="freefltiktok/36" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`
         );
       }, 200);
     },
