@@ -46,7 +46,7 @@
                         
                 </div>
                 </div>
-                <div v-if="urlsdt != '/profile' && urlsdt != '/momo' && urlsdt != 'https://hust.media/ruttien.php' " class="col-lg-6">
+                <!-- <div v-if="urlsdt != '/profile' && urlsdt != '/momo' && urlsdt != 'https://hust.media/ruttien.php' " class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="input-first-name">Chọn Nhà mạng</label>
       
@@ -56,7 +56,7 @@
                     </option>
                   </select>
                     </div>
-                  </div>
+                  </div> -->
           
                 <button v-if="urlsdt != '/profile' && urlsdt != '/momo' && urlsdt != 'https://hust.media/ruttien.php' " type='submit' @click="onSubmit"
                 class='flex break-inside bg-black rounded-3xl px-8 py-2 mb-3 w-full dark:bg-slate-800 dark:text-white'>
@@ -162,7 +162,7 @@
                 status2: null ,
                 opentele: null ,
                 phonechuan: null ,
-                nhamang: null,
+                nhamang: 'VIETTEL' ,
                 selected: null ,
                 ketqua: null  ,
                 money: null ,
@@ -259,7 +259,7 @@
         else
         {
        
-        this.$router.push(this.urlsdt) 
+          window.location.href = 'https://hust.media/sub.php' ;
         }
     },
     doiso()
@@ -298,7 +298,7 @@
 
              
         // var selectedItem = $('.selectpicker').val();
-      this.nhamang = this.selected ;
+      // this.nhamang = this.selected ;
       console.log(this.nhamang) ,
               this.chedo = 'phone2' ,
               // this.intervalFetchData(); 
