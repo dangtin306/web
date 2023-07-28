@@ -38,7 +38,7 @@
         </div> --> 
         <!-- Button trigger modal -->
         <div class="text-center">
-        <router-link type="button" class="mx-2  btn btn-primary" to="/exchangepoints">Chuyển điểm sang xu</router-link>
+        <a href="https://hust.media/reactapp/exchangepoints" type="button" class="mx-2  btn btn-primary" >Chuyển điểm sang xu</a>
         <div v-if="sodiem" >
 Số điểm hiện tại là {{  sodiem  }}
         </div>
@@ -140,7 +140,7 @@ Số điểm hiện tại là {{  sodiem  }}
                     <p class="text-lg text-slate-1000">
                       <img src="https://hust.media/img/icon/followfb.svg"
                       class="h-7 w-7 cananh">  
-                      Follow Chéo nhận điểm </p>
+                      Follow Chéo nhận tiền </p>
                     <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                       Active → </div>
     
@@ -173,7 +173,7 @@ Số điểm hiện tại là {{  sodiem  }}
                     <p class="text-lg text-slate-1000">
                        <img src="https://hust.media/img/icon/groupsfb.png"
                       class="h-7 w-7 cananh">  
-                    Tham gia nhóm nhận điểm  </p>
+                    Tham gia nhóm nhận tiền  </p>
                     <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                       Active → </div>
     
@@ -213,7 +213,7 @@ Số điểm hiện tại là {{  sodiem  }}
                       <p class="text-lg text-slate-1000">
                         <img src="https://hust.media/img/icon/likepageicon.png"
                         class="h-7 w-7 cananh">  
-                        Like Pages nhận điểm </p>
+                        Like Pages nhận tiền </p>
                       <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                         Active → </div>
       
@@ -226,6 +226,47 @@ Số điểm hiện tại là {{  sodiem  }}
               </div>
               
       </router-link>
+      
+      <router-link type="button" to="/kiemtien/cmtcheo">
+        
+        <div class="max-w-7xl mx-2 py-2 mb-2">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r 
+            from-purple-600 to-pink-600 rounded-lg blur opacity-25 
+            group-hover:opacity-100 transition duration-1000 
+            group-hover:duration-200"></div>
+            <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
+           rounded-2xl leading-none flex items-top justify-start space-x-3">
+           
+           
+           
+              <div class="space-y-2">
+                
+                <p class="text-lg text-slate-1000">
+                  <img src="https://hust.media/img/icon/commentfb.svg"
+                  class="h-5 w-5 cananh">  
+                 Bình luận nhận tiền </p>
+                <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
+                  Active → </div>
+
+                  <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+              </div>
+            
+            </div>
+         
+          </div>
+        </div>
+        
+</router-link>
+           
+          
+          </div>
+          </div>
+          <div class="mt-0 mt-0">
+          <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr" >
+        
+           
+      
       
       <router-link type="button" to="/kiemtien/sharecheo">
         
@@ -245,7 +286,7 @@ Số điểm hiện tại là {{  sodiem  }}
                 <p class="text-lg text-slate-1000">
                   <img src="https://hust.media/img/icon/sharefb.svg"
                   class="h-5 w-5 cananh">  
-                  Chia sẻ nhận điểm </p>
+                  Chia sẻ nhận tiền </p>
                 <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                   Active → </div>
 
@@ -262,7 +303,6 @@ Số điểm hiện tại là {{  sodiem  }}
           
           </div>
           </div>
-    
       
   
    
@@ -273,6 +313,7 @@ Số điểm hiện tại là {{  sodiem  }}
     
       <div class="mt-0   ">
         <div class="max-w-7xl mx-4 py-2 mb-2">
+          
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r 
             from-purple-600 to-pink-600 rounded-lg blur opacity-25 
@@ -287,9 +328,9 @@ Số điểm hiện tại là {{  sodiem  }}
                 <p class="text-lg text-slate-1000">
                   <img src="https://tecom.pro/img/icon/ava.png"
                   class="h-12 w-14 cananh">
-                  iu bạn nhiều lém cảm ơn đã tin tưởng nhé
-            <br>    - Hệ thống nhận tiền tự động, 1 tiếng làm jop chăm có thể kiếm được 10k xu .
-            <br>       - Tỉ lệ chuyển đổi 1xu = 1vnd.
+                 Chéo facebook là tính năng kiếm tiền đầu tiên của App
+            <br>    - Hệ thống nhận tiền tự động, 1 tiếng làm jop chăm có thể kiếm được 15k VND .
+            <br>       - Tỉ lệ chuyển đổi xem ở đổi điểm sang xu
             <br>      - Nếu thao tác sai ko nhận được xu vui lòng liên hệ với app trong 24h cùng ngày . </p>
                 <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                  Quy định </div>

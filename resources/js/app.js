@@ -45,7 +45,7 @@ import orders from './order/orders.vue'
     import themsdt from './components/themsdt.vue'
     import congdong from './congdong/congdong.vue'
     import cheofb from './congdong/cheofb.vue'
-    import exchangepoints from './congdong/exchangepoints.vue'
+    // import exchangepoints from './congdong/exchangepoints.vue'
     import plan from './congdong/plan.vue'
     import kiemtien from './congdong/kiemtien.vue'
     import webapp from './congdong/biolink.vue'
@@ -375,11 +375,6 @@ const routes = [
     path: '/sms',
     name: 'sms',
     component: sms
-  },
-  {
-    path: '/exchangepoints',
-    name: 'exchangepoints',
-    component: exchangepoints
   },
   {
     path: '/nativeapp/exchangepoints',

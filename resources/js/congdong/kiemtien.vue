@@ -32,7 +32,7 @@
                   </div>
                 </button>
             </div>    
-              <router-link type="button" class="mx-2  btn-sm btn-primary" to="/exchangepoints">Đổi điểm sang xu</router-link>
+              <a type="button" class="mx-2  btn-sm btn-primary" href="https://hust.media/reactapp/exchangepoints">Đổi điểm sang xu</a>
               <button     type="button"
               :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
               :disabled="isLoadingbutton" @click="reloadPosts" >
@@ -68,7 +68,35 @@
           :key="index"
         >
         
-          <div class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
+          <div v-if="tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo'" class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
+            <h5 class="card-title ">{{ post.idpost }}</h5>
+            <a
+            @click.stop="handleLinkClick(post.idpost)"
+             :href="post.link" target="_blank" 
+            class="px-10 py-2 rounded-md text-sm 
+            font-medium text-white bg-red-400 hover:bg-purple-400 
+            focus:outline-none focus:ring-2 focus:ring-offset-2 
+            focus:ring-red-500"
+            >
+            
+            <div v-if="isLoading && currentPostId == post.idpost" class="spinner-border" role="status"></div>
+            <div v-else>
+              <span v-if="currentPostId == post.idpost"> {{ nutorder }} </span>
+              <span v-else>{{ sadasdsaasd }}</span>
+            </div>
+          </a>
+          <div class="overflow-y-auto max-h-64 border border-gray-300 rounded">
+      <div
+        @click="saochep(value)"
+        v-for="(value, key) in post.nd"
+        :key="key"
+        class="p-4  py-2 px-2  border bg-white border-gray-300 rounded"
+      >
+        {{ value }}
+      </div>
+    </div>
+          </div>
+          <div v-else class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
             <h5 class="card-title ">{{ post.idpost }}</h5>
             <a
             @click.stop="handleLinkClick(post.idpost)"
@@ -89,6 +117,7 @@
   
           </div>
         </div>    
+        
       </div>
     </div>
     <br>  <br>  <br>
@@ -119,6 +148,7 @@
       },
       props: ['tenkiemtien' ],
       created(){
+        
         if (this.tenkiemtien == 'subcheo' )
         { this.sadasdsaasd = 'Theo dõi' ;}
        else if (this.tenkiemtien == 'thamgianhomcheo' )
@@ -129,9 +159,17 @@
        {
         this.sadasdsaasd = 'Like Fanpage' ;
        }
+       else if (this.tenkiemtien == 'danhgiapage' )
+       {
+        this.sadasdsaasd = 'Đánh giá Page' ;
+       }
        else if (this.tenkiemtien == 'sharecheo' )
        {
         this.sadasdsaasd = 'Chia sẻ' ;
+       }
+       else if (this.tenkiemtien == 'cmtcheo' )
+       {
+        this.sadasdsaasd = 'Bình luận' ;
        }
   this.reloadPosts() ;
   },
@@ -175,6 +213,7 @@ else if ( info.status == 0 )
   this.thongbaoerror(info.message) ;
 }
         },
+   
       thongbaoerror(error)
       {
         this.openappleok = 'no' ;
@@ -220,7 +259,18 @@ else if ( info.status == 0 )
 
 })
       },
+      async saochep(urlsplit) {
+          this.ketqua = 'đã sao chép ' ;
+   
+      await navigator.clipboard.writeText(urlsplit);
+     
+      this.ketqua = 'đã sao chép ' ;
+      this.thongbaosuccess('đã sao chép') ;
+      NativeAndroid.copyToClipboard(urlsplit);
+     
+  },
       reloadPosts() {
+        this.currentPostId = null ;
         this.posts = null ;
       this.isLoadingbutton = true;
       this.countdown = 15; // Khởi tạo giá trị ban đầu cho countdown
