@@ -31,8 +31,10 @@
                     Home
                   </div>
                 </button>
+
             </div>    
-              <router-link type="button" class="mx-2  btn-sm btn-primary" to="/nativeapp/exchangepoints">Đổi điểm sang xu</router-link>
+              <a type="button" class="mx-2 text-white  btn-sm btn-primary" @click="doidiem"
+              >Đổi điểm sang xu</a>
               <button     type="button"
               :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
               :disabled="isLoadingbutton" @click="reloadPosts" >
@@ -76,7 +78,7 @@
         >
         
           <div class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
-            <h5 v-if="socail == tiktok" class="card-title ">{{ post.link }}</h5>
+            <h5 v-if="social == 'tiktok'" class="card-title ">{{ post.link }}</h5>
             <h5 v-else class="card-title ">{{ post.idpost }}</h5>
             <a
             @click.stop="handleLinkClick(post.idpost)"
@@ -160,6 +162,17 @@ mounted() {
       homeok()
       {
         this.$router.push('/cheoig') ;
+      },
+      doidiem()
+      {
+     if ( this.social == 'tiktok' )
+     {
+      window.location.href = "https://hust.media/reactapp/exchangepoints" ;
+     }
+     else
+     { 
+      this.$router.push('/nativeapp/exchangepoints') ;
+      }   
       },
       asdasdkas(info)
         {

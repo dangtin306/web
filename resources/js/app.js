@@ -75,6 +75,7 @@ import cauhinh from './congdong/cauhinh.vue'
     import id from "./order/id.vue"; 
     import muathe from "./order/muathe.vue";
     import instacauhinh from "./instagram/cauhinh.vue";
+    import tiktokcauhinh from "./instagram/cauhinhtiktok.vue";
     import instakiemtien from "./instagram/kiemtien.vue";
     import instaexchangepoints from "./instagram/exchangepoints.vue";
     import VueScrollTo from 'vue-scrollto'; 
@@ -199,6 +200,11 @@ const routes = [
     component: instacauhinh ,
   },
   {
+    path: '/cauhinhtiktok/:cauhinh',
+    name: 'tiktokcauhinh',
+    component: tiktokcauhinh ,
+  },
+  {
     path: '/nativeapp/search',
     name: 'truyentranhsearch',
     component: truyentranhsearch ,
@@ -271,6 +277,12 @@ const routes = [
     path: '/cheofb',
     name: 'cheofb',
     component: cheofb
+  },
+  {
+    path: '/jop/:social',
+    name: 'cheook',
+    component: cheofb ,
+    props: route => ({ social: route.params.social})
   },
   {
     path: '/comment',

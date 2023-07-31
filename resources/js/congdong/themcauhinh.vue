@@ -17,7 +17,11 @@
                     - Trên 50 bạn bè hoặc hoạt động như người thật thì ko cần trên 20 bạn bè <br>
                     - Phí thêm tải khoản chéo facebook là 100 xu
                      </p>
-                     <p v-if="social == 'instagram'" class="text-xs">Điều kiện thêm nick Facebook: <br>
+                     <p v-if="social == 'tiktok'" class="text-xs">Điều kiện thêm nick TikTok: <br>
+                    - Tên Tiếng Việt, đầy đủ ảnh bìa, đại diện, thông tin <br>
+                    - Nếu có ảnh đại diện rồi vẫn báo lỗi thì đổi 1 ảnh khác
+                     </p>
+                     <p v-if="social == 'instagram'" class="text-xs">
                       Điều kiện thêm Nick Instagram: <br>
 - Tên Tiếng Việt, đầy đủ ảnh đại diện, thông tin tiểu sử (bio)<br>
 - Có ít nhất 1 người theo dõi<br>
@@ -50,6 +54,15 @@
       <div class="w-64">
         <input class="w-full border-2 border-rose-600 h-10" type="text"
          v-model="lienket" name="lienket" placeholder="Nhập liên kết hoặc id instagram" />
+      </div>
+      
+    </div>
+    <div v-if="social == 'tiktok'"  class="form-control">
+      <label>Nhập id tiktok  </label>
+      <br>
+      <div class="w-64">
+        <input class="w-full border-2 border-rose-600 h-10" type="text"
+         v-model="lienket" name="lienket" placeholder="Nhập usersname tiktok" />
       </div>
       
     </div>
@@ -112,7 +125,9 @@
   <router-link  to="/cauhinh/3">
   <button class="btn btn-primary" > DANH SÁCH NICK FACEBOOK</button>
   </router-link>
-  
+  <router-link  to="/cauhinhtiktok/3">
+  <button class="btn btn-primary" > DANH SÁCH NICK TIKTOK</button>
+  </router-link>
   <br>  <br>  <br>
   </template>
   
@@ -142,6 +157,7 @@
                 options: [
         { text: 'Chọn 1 nền tảng', value: 'vui lòng chọn 1 nền tảng' , img: 'https://static.thenounproject.com/png/2383182-200.png'  } , 
         { text: 'Thêm tài khoản chéo Facebook', value: 'facebook'  , img: 'https://hust.media/img/icon/fbicon.gif' } ,
+        { text: 'Thêm tài khoản chéo TikTok', value: 'tiktok' , img: 'https://hust.media/img/icon/tiktok.gif' }  ,
         { text: 'Thêm tài khoản chéo instagram', value: 'instagram' , img: 'https://hust.media/img/icon/giphy%20(5).gif' }  
       ],
             }
@@ -180,7 +196,7 @@ else if ( info.status == 7 )
                 }
                 else
                 {
-                if(this.social == 'facebook')  
+                if(this.social == 'facebook' || this.social == 'tiktok' )  
                 {
 const ajdjnansdla = 'https://tecom.pro/ttc/profile.php' ;
 axios

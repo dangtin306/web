@@ -136,7 +136,9 @@ Route::get('/momoauto',  function () {
 Route::get('/cauhinh/{name}',  function () {
     return view('welcome');
 });
-
+Route::get('/jop/{name}',  function () {
+    return view('welcome');
+});
 
 Route::get('/kiemtien/{name}',  function () {
     return view('welcome');
@@ -245,6 +247,10 @@ Route::get('/historyclone', function()
     return view('appvue');
 });
 Route::get('/nativeapp/cauhinh/{name}', function($name)
+{
+    return view('welcome');
+});
+Route::get('/cauhinhtiktok/{name}', function($name)
 {
     return view('welcome');
 });

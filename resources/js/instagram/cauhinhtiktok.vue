@@ -12,12 +12,12 @@
     <!-- <router-link type="button" class="mx-2  btn btn-primary" to="/okluon">Hướng dẫn</router-link> -->
     <router-link  to="/themcauhinh">
     <button type="button" class="mx-2  btn-sm btn-primary" >
-        THÊM NICK insta ĐỂ CHẠY
+        THÊM NICK tiktok ĐỂ CHẠY
 </button>
 </router-link>
-<router-link  to="/cheoig">
+<router-link  to="/jop/tiktok">
 <button type="button" class="mx-2  btn-sm btn-primary" >
-Chéo insta 
+Chéo tiktok 
 </button>
 </router-link>
 </div>
@@ -34,7 +34,7 @@ Chéo insta
           </div>
         </div>
 </div> -->
-<div class="panel-heading"><h4 class="text-white">DANH SÁCH NICK insta</h4></div>
+<div class="panel-heading"><h4 class="text-white">DANH SÁCH NICK tiktok</h4></div>
       <div class="panel-body">
         <div v-if="listcauhinh == null" class="container-fluid">
             <div class="row" style="background-color: #FFB6C1;">
@@ -53,14 +53,14 @@ Chéo insta
          
               <p class="text-center" style="color: #fff;" >
                <br>
-         <p class="text-sm"> Chọn một tài khoản insta bên dưới để làm Jop</p>   
+         <p class="text-sm"> Chọn một tài khoản tiktok bên dưới để làm Jop</p>   
               </p>
      
             </div>
             <div v-if="listcauhinh != null" id="nickdangdung">
                 <label v-if="nickdangdung != null"  class="block font-bold">Nick đang dùng:</label>
                 <a v-if="nickdangdung != null"  target="_blank" v-bind:href="nickdangdung.lienketfb" class="flex items-center">
-                  <img v-bind:src="'data:image/jpeg;base64,' + nickdangdung.ava" class="w-10 h-10 rounded-full mr-2">
+                  <!-- <img v-bind:src="'data:image/jpeg;base64,' + nickdangdung.ava" class="w-10 h-10 rounded-full mr-2"> -->
                   <span>{{ nickdangdung.tenfb }}</span>
                 </a>
                 
@@ -76,9 +76,9 @@ Chéo insta
                   <li v-for="user in listcauhinh" :key="user.id" class="list-group-item">
                       <label class="radio-inline flex items-center">
                         <input  v-model="idfacebook" :id="user.id" type="radio" :name="'chk'" :value="user.idfacebook" class="form-radio form-radio-lg h-6 w-6 text-pink-500">
-                        <a :href="user.lienketfb" target="_blank" class="flex items-center">
-                          <img :src="'data:image/jpeg;base64,' + user.ava" class="w-10 h-10 rounded-full ml-2 mr-2">
-                          <span>{{user.tenfb}}</span>
+                        <a  :href="user.lienketfb" target="_blank" class="flex items-center">
+                          <!-- <img :src="'data:image/jpeg;base64,' + user.ava" class="w-10 h-10 rounded-full ml-2 mr-2"> -->
+                          &emsp; <span>{{user.tenfb}}</span>
                         </a>
                       </label>
                     </li>
@@ -158,7 +158,7 @@ else if ( info.status == 1 )
 {
 this.thongbaosuccess(info.message) ;
 // this.$router.push(`/cauhinh/${this.randomNumber}`);
-this.$router.push('/cheoig') ;
+this.$router.push('/jop/tiktok') ;
 }
 else if ( info.status == 4  )
 {
@@ -173,11 +173,12 @@ xacnhan()
 console.log(this.idfacebook) ;
 console.log(this.chedokiemxu) ;
 axios
-     .post('https://tecom.pro/insta/profile.php', {
+     .post('https://tecom.pro/ttc/profile.php', {
       key: this.ok2 ,
       idfacebook: this.idfacebook ,
       chedo: 'choncauhinh' ,
-      chedokiemxu: this.chedokiemxu
+      chedokiemxu: this.chedokiemxu ,
+      social: 'tiktok'
 })
 .then(response =>    (
   this.info = response.data
@@ -219,9 +220,10 @@ this.chedokiemxu = info.chedokiemxu ;
     checktk()
     {
       axios
-   .post('https://tecom.pro/insta/profile.php', {
+   .post('https://tecom.pro/ttc/profile.php', {
     key: this.ok2 ,
-chedo: 'listcauhinh'
+chedo: 'listcauhinh' ,
+social: 'tiktok'
 })
 .then(response => (  this.info = response.data
 , console.log(this.info) ,
