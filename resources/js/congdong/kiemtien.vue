@@ -146,7 +146,8 @@
           sadasdsaasd: 1,
         };
       },
-      props: ['tenkiemtien' ],
+      props: ['tenkiemtien', 'social'] ,
+
       created(){
         
         if (this.tenkiemtien == 'subcheo' )
@@ -170,6 +171,10 @@
        else if (this.tenkiemtien == 'cmtcheo' )
        {
         this.sadasdsaasd = 'Bình luận' ;
+       }
+       else if (this.tenkiemtien == 'subcheo' )
+       {
+        this.sadasdsaasd = 'Theo dõi' ;
        }
   this.reloadPosts() ;
   },
@@ -285,7 +290,8 @@ else if ( info.status == 0 )
        .post('https://tecom.pro/ttc/profile.php', {
         key: this.ok2 ,
     chedo: 'getjop' ,
-    theloai: this.tenkiemtien 
+    theloai: this.tenkiemtien ,
+    social: this.social
 
   })
   .then(response => (  this.info = response.data

@@ -76,7 +76,8 @@
         >
         
           <div class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
-            <h5 class="card-title ">{{ post.idpost }}</h5>
+            <h5 v-if="socail == tiktok" class="card-title ">{{ post.link }}</h5>
+            <h5 v-else class="card-title ">{{ post.idpost }}</h5>
             <a
             @click.stop="handleLinkClick(post.idpost)"
              :href="post.lienket" target="_blank" 
@@ -126,7 +127,7 @@
           sadasdsaasd: 1,
         };
       },
-      props: ['tenkiemtien' ],
+      props: ['tenkiemtien', 'social'] ,
       created(){
         if (this.tenkiemtien == 'subcheo' )
         { this.sadasdsaasd = 'Theo dõi' ;}
@@ -166,6 +167,11 @@ if ( info.status == 3 )
 {
   this.thongbaoerror(info.message) ;
   this.$router.push('/cheoig') ;
+}
+else if ( info.status == 7 )
+{
+  this.thongbaoerror(info.message) ;
+  this.$router.push('/cheofb') ;
 }
 else if ( info.status == 1 )
 {
@@ -237,7 +243,8 @@ else if ( info.status == 0 )
        .post('https://tecom.pro/insta/profile.php', {
         key: this.ok2 ,
     chedo: 'getjop' ,
-    theloai: this.tenkiemtien 
+    theloai: this.tenkiemtien ,
+    social: this.social
 
   })
   .then(response => (  this.info = response.data
@@ -275,7 +282,8 @@ else if ( info.status == 0 )
            .post('https://tecom.pro/insta/nhantien.php', {
             key: this.ok2 ,
             idpost: this.savefollowing ,
-            theloai: this.tenkiemtien 
+            theloai: this.tenkiemtien ,
+            social: this.social 
         // binhluan: this.binhluan
       })
       .then( response => (
@@ -294,7 +302,8 @@ else if ( info.status == 0 )
            .post('https://tecom.pro/insta/nhantien.php', {
             key: this.ok2 ,
             idpost: idpost ,
-            theloai: this.tenkiemtien 
+            theloai: this.tenkiemtien ,
+            social: this.social 
         // binhluan: this.binhluan
       })
       .then( response => (

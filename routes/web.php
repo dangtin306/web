@@ -141,6 +141,9 @@ Route::get('/cauhinh/{name}',  function () {
 Route::get('/kiemtien/{name}',  function () {
     return view('welcome');
 });
+Route::get('/kiemtien/{theloai}/{name}',  function () {
+    return view('welcome');
+});
 Route::get('/themsdtmomo',  function () {
     return view('themsdtmomo');
 });

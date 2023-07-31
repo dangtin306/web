@@ -153,7 +153,15 @@ const routes = [
     component: kiemtien,
     props: route => ({ tenkiemtien: route.params.tenkiemtien})
   },
-
+  {
+    path: '/kiemtien/:social/:tenkiemtien',
+    name: 'kiemtienok',
+    component: instakiemtien,
+    props: route => ({
+      tenkiemtien: route.params.tenkiemtien,
+      social: route.params.social
+    })
+  },
   {
     path: '/momoauto',
     name: 'momoauto',
