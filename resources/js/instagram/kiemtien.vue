@@ -161,7 +161,14 @@ mounted() {
     methods: {
       homeok()
       {
-        this.$router.push('/cheoig') ;
+        if ( this.social == 'tiktok' )
+     {
+        this.$router.push('/tiktok') ;
+     }
+     else
+     {
+      this.$router.push('/cheoig') ;
+     }
       },
       doidiem()
       {
