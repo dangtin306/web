@@ -188,6 +188,11 @@ if ( info.status == 3 )
   this.thongbaoerror(info.message) ;
   this.$router.push('/cheoig') ;
 }
+else if ( info.status == 8 )
+{
+  this.thongbaoerror(info.message) ;
+  this.$router.push('/cauhinhtiktok/3') ;
+}
 else if ( info.status == 7 )
 {
   this.thongbaoerror(info.message) ;
