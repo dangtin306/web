@@ -173,7 +173,10 @@ if ( info.status == 3 ||  info.status == 0 )
 else if ( info.status == 1 )
 {
   this.thongbaosuccess(info.message) ;
-  this.$router.push('/order') ;
+   setTimeout(() => {    
+    window.location.href = 'https://hust.media/reactapp/nhatkyorders' ;
+              }, 1000) ;
+  // this.$router.push('/order') ;
 }
 else if ( info.status == 7 )
 {
