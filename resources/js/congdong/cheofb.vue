@@ -65,7 +65,7 @@ Số điểm hiện tại là {{  sodiem  }}
                
                   <div class="space-y-2">
                     
-                    <p class="text-lg text-slate-1000">
+                    <p class="text-base text-slate-1000">
                       <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png"
                       class="h-7 w-7 cananh">  
                      Thêm tài khoản chéo Facebook, TikTok</p>
@@ -140,8 +140,8 @@ Số điểm hiện tại là {{  sodiem  }}
                   <div class="space-y-2">
                     
                     <p class="text-lg text-slate-1000">
-                       <img src="https://hust.media/img/icon/groupsfb.png"
-                      class="h-7 w-7 cananh">  
+                       <img src="https://hust.media/img/icon/followtiktok.jfif"
+                      class="h-8 w-8 cananh">  
                     Follow nhận tiền  </p>
                     <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
                       Active → </div>
@@ -466,7 +466,8 @@ else
           axios
        .post('https://tecom.pro/ttc/profile.php', {
         key: this.ok2 ,
-    chedo: 'kiemtradangnhap'
+    chedo: 'kiemtradangnhap' ,
+    social: this.social 
   })
   .then(response => (  this.info = response.data
   , console.log(this.info) ,
