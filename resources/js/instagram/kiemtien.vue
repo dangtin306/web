@@ -163,7 +163,7 @@ mounted() {
       {
         if ( this.social == 'tiktok' )
      {
-        this.$router.push('/tiktok') ;
+        this.$router.push('/jop/tiktok') ;
      }
      else
      {
@@ -353,7 +353,7 @@ else if ( info.status == 0 )
       {
         this.ahbsdjaksjd = false ;
           this.info1 = response.data ;
-          if (this.info1.error )
+          if (this.info1.error || this.info1.error2 )
           {
           if (this.info1.error.includes("nhiệm vụ rồi nhận điểm") )
           {
@@ -363,6 +363,12 @@ else if ( info.status == 0 )
        else   if (this.info1.error )
           {
             this.thongbaoerror(this.info1.error   ) ;
+              this.nutorder = 'lỗi' ;
+              this.savefollowing = null ;
+          }
+          else   if (this.info1.error2 )
+          {
+            this.thongbaoerror(this.info1.error2   ) ;
               this.nutorder = 'lỗi' ;
               this.savefollowing = null ;
           }
