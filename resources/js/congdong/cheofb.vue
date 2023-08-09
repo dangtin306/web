@@ -154,7 +154,36 @@ Số điểm hiện tại là {{  sodiem  }}
               </div>    
                </router-link>
             </div>
-            
+            <div  class="max-w-7xl mx-2 py-2 mb-2">
+              <!-- <router-link type="button" :disabled="true" to="/kiemtien"> -->
+                <router-link type="button" to="/kiemtien/tiktok/kiemtien">
+              <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r 
+                from-purple-600 to-pink-600 rounded-lg blur opacity-25 
+                group-hover:opacity-100 transition duration-1000 
+                group-hover:duration-200"></div>
+                <div class="relative px-3 py-3 bg-gradient-to-r from-blue-100 to-pink-200 hover:from-pink-400 hover:to-yellow-300 ring-1 ring-gray-900/5 
+               rounded-2xl leading-none flex items-top justify-start space-x-3">
+               
+               
+               
+                  <div class="space-y-2">
+                    
+                    <p class="text-lg text-slate-1000">
+                       <img src="https://hust.media/img/icon/hearttiktok.png"
+                      class="h-8 w-8 cananh">  
+                    Thả tim nhận tiền  </p>
+                    <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200" target="_blank">
+                      Active → </div>
+    
+                      <span class="absolute  rounded-2xl inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+                  </div>
+                
+                </div>
+             
+              </div>    
+               </router-link>
+            </div>
    
          
         

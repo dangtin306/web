@@ -78,7 +78,7 @@
         >
         
           <div class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
-            <h5 v-if="social == 'tiktok'" class="card-title ">{{ post.link }}</h5>
+            <h5 v-if="social == 'tiktok' && tenkiemtien != 'kiemtien' " class="card-title ">{{ post.link }}</h5>
             <h5 v-else class="card-title ">{{ post.idpost }}</h5>
             <a
             @click.stop="handleLinkClick(post.idpost)"
@@ -133,7 +133,7 @@
       created(){
         if (this.tenkiemtien == 'subcheo' )
         { this.sadasdsaasd = 'Theo dõi' ;}
-       else if (this.tenkiemtien == 'timcheo' )
+       else if (this.tenkiemtien == 'timcheo' ||  this.tenkiemtien == 'kiemtien'  )
        {
         this.sadasdsaasd = 'Thả Tim' ;
        }
@@ -320,7 +320,7 @@ else if ( info.status == 0 )
           
         },
       handlePostFocus(idpost) {
-        if ( this.tenkiemtien == 'timcheo' )
+        if ( this.tenkiemtien == 'timcheo' ||  this.tenkiemtien == 'kiemtien' )
         {
             console.log(`Post ${idpost} focused`);
             axios
