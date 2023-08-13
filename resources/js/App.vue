@@ -183,7 +183,7 @@ data-template="vertical-menu-template-free"
         <a href="https://hust.media/ruttien.php" class="menu-link btn-sm  btn-outline-primary dropdown-item"> <img src="https://tecom.pro/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua Momo
 
         </a>     <li>
-        <a href="https://hust.media/rutbank.php" 
+        <a href="https://hust.media/shop/wallet/paybank" 
         class="menu-link btn-sm  btn-outline-primary dropdown-item"> 
           <img src="https://tecom.pro/img/icon/imagescoins.png" style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua ngân hàng
 
