@@ -123,7 +123,7 @@
        
       </div>
       <div v-if="opentele" >
-      <button @click="tele" class='flex items-center justify-center text-xs font-medium rounded-full px-4 py-2 space-x-1 bg-white text-black'>
+      <button @click="xacnhantele" class='flex items-center justify-center text-xs font-medium rounded-full px-4 py-2 space-x-1 bg-white text-black'>
         <span >Bước cuối ấn xác nhận</span>
         <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
             <path d='M5 12h13M12 5l7 7-7 7' />
@@ -359,6 +359,22 @@
        
   
         ) ;
+            },
+            xacnhantele()
+            {
+              if(!this.name2){
+                    // alert('Vui lòng điền lại sdt')
+                    
+                }
+             else
+             {
+                this.chedo = 'checkxu2'
+                axios
+         .get('https://hust.media/api/telegram/xacthuctele.php?apikey=' + this.ok2 + '&phone=' + this.name2 )
+    .then(response => (  this.testFunction2(response )))
+    .catch(error => console.log(error) 
+        )
+             }
             },
             tele(){
     
