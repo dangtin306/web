@@ -226,7 +226,7 @@ export default {
     reloadPosts() {
       this.posts = null;
       this.isLoadingbutton = true;
-      this.countdown = 17; // Khởi tạo giá trị ban đầu cho countdown
+      this.countdown = 15; // Khởi tạo giá trị ban đầu cho countdown
       const intervalId = setInterval(() => {
         this.countdown--; // Giảm giá trị countdown mỗi giây
         if (this.countdown === 0) {
