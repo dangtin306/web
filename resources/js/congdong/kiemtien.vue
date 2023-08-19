@@ -1,85 +1,71 @@
 <template>
-    <div class="container">
-      <div class="max-h-16 ">
-        <div class="cards">
-     
-          <Adsense
-          :key="adsenseKey"
-      data-ad-client="ca-pub-4574266110812955"
-       data-ad-slot="8795043992"
-       data-full-width-responsive="no"
-       ins-class="display: block; height: 50px;"
-       ins-style="display: block; height: 50px;"
-    
-       
-       >
-    </Adsense>
-    </div>
-    
-    </div>
-      <div class="row">
-          <div class="text-center">
-            <div style="display: flex; justify-content: center; align-items: center; ">
+  <div class="container">
+    <div class="max-h-16 ">
+      <div class="cards">
 
-              <p>  Page:  {{tenkiemtien}}</p>
-              <button     type="button"
-              :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
-              :disabled="isLoadingbutton" @click="homeok" >
-                  <div v-if="isLoadingbutton">
-                    Home {{ countdown }}
-                  </div>
-                  <div v-else>
-                    Home
-                  </div>
-                </button>
-            </div>    
-              <a type="button" class="mx-2  btn-sm btn-primary" href="https://hust.media/reactapp/exchangepoints">Đổi điểm sang xu</a>
-              <button     type="button"
-              :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
-              :disabled="isLoadingbutton" @click="reloadPosts" >
-                  <div v-if="isLoadingbutton">
-                    Tải lại danh sách {{ countdown }}
-                  </div>
-                  <div v-else>
-                    Tải lại danh sách
-                  </div>
-                </button>
-              
+        <Adsense :key="adsenseKey" data-ad-client="ca-pub-4574266110812955" data-ad-slot="8795043992"
+          data-full-width-responsive="no" ins-class="display: block; height: 50px;"
+          ins-style="display: block; height: 50px;">
+        </Adsense>
       </div>
-      <div  v-if="posts == null" >
+
+    </div>
+    <div class="row">
+      <div class="text-center">
+        <div style="display: flex; justify-content: center; align-items: center; ">
+
+          <p> Page: {{ tenkiemtien }}</p>
+          <button type="button" :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
+            :disabled="isLoadingbutton" @click="homeok">
+            <div v-if="isLoadingbutton">
+              Home {{ countdown }}
+            </div>
+            <div v-else>
+              Home
+            </div>
+          </button>
+        </div>
+        <a type="button" class="mx-2  btn-sm btn-primary" href="https://hust.media/reactapp/exchangepoints">Đổi điểm sang
+          xu</a>
+        <button type="button" :class="{ 'btn-sm btn-primary': true, 'disabledok': isLoadingbutton }"
+          :disabled="isLoadingbutton" @click="reloadPosts">
+          <div v-if="isLoadingbutton">
+            Tải lại danh sách {{ countdown }}
+          </div>
+          <div v-else>
+            Tải lại danh sách
+          </div>
+        </button>
+
+      </div>
+      <div v-if="posts == null">
         <br>
         <div class="container-fluid">
           <div class="row" style="background-color: #FFB6C1;">
-             <p class="text-center" style="color: #fff;">
-              
-              <div  class="text-center spinner-border" role="status">
-                   
-              </div>
-              <br>
-              Đang tải danh sách
-             </p>
+            <p class="text-center" style="color: #fff;">
+
+            <div class="text-center spinner-border" role="status">
+
+            </div>
+            <br>
+            Đang tải danh sách
+            </p>
           </div>
+        </div>
       </div>
-      </div>
-     
- 
-        <div v-else
-          class="col-6 col-md-4 col-lg-3 mb-4"
-          v-for="(post, index) in posts"
-          :key="index"
-        >
-        
-          <div v-if="tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo'" class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
-            <h5 class="card-title ">{{ post.idpost }}</h5>
-            <a
-            @click.stop="handleLinkClick(post.idpost)"
-             :href="post.link" target="_blank" 
-            class="px-10 py-2 rounded-md text-sm 
+
+
+      <div v-else class="col-6 col-md-4 col-lg-3 mb-4" v-for="(post, index) in posts" :key="index">
+
+        <div v-if="tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo'"
+          class="card d-flex align-items-center justify-content-center"
+          :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
+          <h5 class="card-title ">{{ post.idpost }}</h5>
+          <a @click.stop="handleLinkClick(post.idpost)" :href="post.link" target="_blank" class="px-10 py-2 rounded-md text-sm 
             font-medium text-white bg-red-400 hover:bg-purple-400 
             focus:outline-none focus:ring-2 focus:ring-offset-2 
-            focus:ring-red-500"
-            >
-            
+            focus:ring-red-500">
+
             <div v-if="isLoading && currentPostId == post.idpost" class="spinner-border" role="status"></div>
             <div v-else>
               <span v-if="currentPostId == post.idpost"> {{ nutorder }} </span>
@@ -87,51 +73,44 @@
             </div>
           </a>
           <div class="overflow-y-auto max-h-64 border border-gray-300 rounded">
-      <div
-        @click="saochep(value)"
-        v-for="(value, key) in post.nd"
-        :key="key"
-        class="p-4  py-2 px-2  border bg-white border-gray-300 rounded"
-      >
-        {{ value }}
-      </div>
-    </div>
+            <div @click="saochep(value)" v-for="(value, key) in post.nd" :key="key"
+              class="p-4  py-2 px-2  border bg-white border-gray-300 rounded">
+              {{ value }}
+            </div>
           </div>
-          <div v-else class="card d-flex align-items-center justify-content-center" :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
-            <h5 class="card-title ">{{ post.idpost }}</h5>
-            <a
-            @click.stop="handleLinkClick(post.idpost)"
-             :href="post.link" target="_blank" 
-            class="px-10 py-2 rounded-md text-sm 
+        </div>
+        <div v-else class="card d-flex align-items-center justify-content-center"
+          :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
+          <h5 class="card-title ">{{ post.idpost }}</h5>
+          <a @click.stop="handleLinkClick(post.idpost)" :href="post.link" target="_blank" class="px-10 py-2 rounded-md text-sm 
             font-medium text-white bg-red-400 hover:bg-purple-400 
             focus:outline-none focus:ring-2 focus:ring-offset-2 
-            focus:ring-red-500"
-            >
-            
+            focus:ring-red-500">
+
             <div v-if="isLoading && currentPostId == post.idpost" class="spinner-border" role="status"></div>
             <div v-else>
               <span v-if="currentPostId == post.idpost"> {{ nutorder }} </span>
               <span v-else>{{ sadasdsaasd }}</span>
             </div>
           </a>
-  
-  
-          </div>
-        </div>    
-        
+
+
+        </div>
       </div>
+
     </div>
-    <br>  <br>  <br>
-  </template>
+  </div>
+  <br> <br> <br>
+</template>
     
-  <style scoped>
+<style scoped>
 .disabledok {
   background-color: #72afff;
   cursor: not-allowed;
   opacity: 0.6;
 }
 </style>
-    <script>
+<script>
 import Swal from "sweetalert2";
 export default {
   data() {
@@ -146,6 +125,7 @@ export default {
       currentPostId: null,
       posts: null,
       sadasdsaasd: 1,
+      start: false
     };
   },
   props: ["tenkiemtien", "social"],
@@ -166,6 +146,7 @@ export default {
     } else if (this.tenkiemtien == "subcheo") {
       this.sadasdsaasd = "Theo dõi";
     }
+    this.start = true;
     this.reloadPosts();
   },
   beforeUnmount() {
@@ -272,12 +253,17 @@ export default {
           social: this.social,
         })
         .then(
-          (response) => (
+          (response) => {
             (this.info = response.data),
-            console.log(this.info),
-            this.asdasdkas(this.info) ,
-            this.adsenseKey++
-          )
+              console.log(this.info),
+              this.asdasdkas(this.info);
+            if (!this.start) {
+              this.adsenseKey++;
+            }
+            else {
+              this.start = false;
+            }
+          }
         )
         .catch((error) => console.log(error));
     },
