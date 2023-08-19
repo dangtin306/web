@@ -1,21 +1,18 @@
 <template>
     <div class="container">
-      <div class="max-h-16 ">
-        <div class="cards">
-     
-          <Adsense
-      data-ad-client="ca-pub-4574266110812955"
-       data-ad-slot="8795043992"
-       data-full-width-responsive="no"
-       ins-class="display: block; height: 50px;"
-       ins-style="display: block; height: 50px;"
-    
-       
-       >
-    </Adsense>
+    <div class="max-h-16">
+    <div class="cards">
+      <Adsense
+        :key="adsenseKey"
+        data-ad-client="ca-pub-4574266110812955"
+        data-ad-slot="8795043992"
+        data-full-width-responsive="no"
+        ins-class="display: block; height: 50px;"
+        ins-style="display: block; height: 50px;"
+      >
+      </Adsense>
     </div>
-    
-    </div>
+  </div>
       <div class="row">
           <div class="text-center">
             <div style="display: flex; justify-content: center; align-items: center; ">
@@ -116,6 +113,7 @@
     export default { 
       data() {
         return {
+          adsenseKey: 0, // Khởi tạo key ban đầu
           ok2 : this.$cookies.get("apikey")  ,
           isLoadingbutton: false,
           isLoading: false,
@@ -254,6 +252,7 @@ else if ( info.status == 0 )
 })
       },
       reloadPosts() {
+        this.adsenseKey++;
         this.posts = null ;
       this.isLoadingbutton = true;
       this.countdown = 15; // Khởi tạo giá trị ban đầu cho countdown
