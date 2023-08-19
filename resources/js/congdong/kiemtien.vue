@@ -4,6 +4,7 @@
         <div class="cards">
      
           <Adsense
+          :key="adsenseKey"
       data-ad-client="ca-pub-4574266110812955"
        data-ad-slot="8795043992"
        data-full-width-responsive="no"
@@ -124,159 +125,136 @@
   </template>
     
   <style scoped>
-  .disabledok {
-      background-color: #72afff;
-      cursor: not-allowed;
-      opacity: 0.6;
-    }
-  </style>
+.disabledok {
+  background-color: #72afff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+</style>
     <script>
-    import Swal from 'sweetalert2' ;
-    export default { 
-      data() {
-        return {
-          ok2 : this.$cookies.get("apikey")  ,
-          isLoadingbutton: false,
-          isLoading: false,
-          countdown: 0, // Thêm countdown vào data
-          demnguoc: null ,
-          nutorder: null,
-          currentPostId: null,
-          posts: null,
-          sadasdsaasd: 1,
-        };
-      },
-      props: ['tenkiemtien', 'social'] ,
+import Swal from "sweetalert2";
+export default {
+  data() {
+    return {
+      adsenseKey: 1,
+      ok2: this.$cookies.get("apikey"),
+      isLoadingbutton: false,
+      isLoading: false,
+      countdown: 0, // Thêm countdown vào data
+      demnguoc: null,
+      nutorder: null,
+      currentPostId: null,
+      posts: null,
+      sadasdsaasd: 1,
+    };
+  },
+  props: ["tenkiemtien", "social"],
 
-      created(){
-        
-        if (this.tenkiemtien == 'subcheo' )
-        { this.sadasdsaasd = 'Theo dõi' ;}
-       else if (this.tenkiemtien == 'thamgianhomcheo' )
-       {
-        this.sadasdsaasd = 'Tham gia nhóm' ;
-       }
-       else if (this.tenkiemtien == 'likepagecheo' )
-       {
-        this.sadasdsaasd = 'Like Fanpage' ;
-       }
-       else if (this.tenkiemtien == 'danhgiapage' )
-       {
-        this.sadasdsaasd = 'Đánh giá Page' ;
-       }
-       else if (this.tenkiemtien == 'sharecheo' )
-       {
-        this.sadasdsaasd = 'Chia sẻ' ;
-       }
-       else if (this.tenkiemtien == 'cmtcheo' )
-       {
-        this.sadasdsaasd = 'Bình luận' ;
-       }
-       else if (this.tenkiemtien == 'subcheo' )
-       {
-        this.sadasdsaasd = 'Theo dõi' ;
-       }
-  this.reloadPosts() ;
+  created() {
+    if (this.tenkiemtien == "subcheo") {
+      this.sadasdsaasd = "Theo dõi";
+    } else if (this.tenkiemtien == "thamgianhomcheo") {
+      this.sadasdsaasd = "Tham gia nhóm";
+    } else if (this.tenkiemtien == "likepagecheo") {
+      this.sadasdsaasd = "Like Fanpage";
+    } else if (this.tenkiemtien == "danhgiapage") {
+      this.sadasdsaasd = "Đánh giá Page";
+    } else if (this.tenkiemtien == "sharecheo") {
+      this.sadasdsaasd = "Chia sẻ";
+    } else if (this.tenkiemtien == "cmtcheo") {
+      this.sadasdsaasd = "Bình luận";
+    } else if (this.tenkiemtien == "subcheo") {
+      this.sadasdsaasd = "Theo dõi";
+    }
+    this.reloadPosts();
   },
   beforeUnmount() {
-  window.removeEventListener("visibilitychange", this.handleVisibilityChange);
-},
-mounted() {
-  this.handleVisibilityChange = () => {
-    if (document.visibilityState === "visible") {
-      const postId = localStorage.getItem("postId");
-      if (postId) {
-        this.handlePostFocus(postId);
-        setTimeout(() => {
-          localStorage.removeItem("postId");
-        }, 500);
+    window.removeEventListener("visibilitychange", this.handleVisibilityChange);
+  },
+  mounted() {
+    this.handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        const postId = localStorage.getItem("postId");
+        if (postId) {
+          this.handlePostFocus(postId);
+          setTimeout(() => {
+            localStorage.removeItem("postId");
+          }, 500);
+        }
       }
-    }
-  };
-  window.addEventListener("visibilitychange", this.handleVisibilityChange);
-},
+    };
+    window.addEventListener("visibilitychange", this.handleVisibilityChange);
+  },
 
-    methods: {
-      homeok()
-      {
-        this.$router.push('/cheofb') ;
-      },
-      asdasdkas(info)
-        {
-if ( info.status == 3 )
-{
-  this.thongbaoerror(info.message) ;
-  this.$router.push('/cheofb') ;
-}
-else if ( info.status == 1 )
-{
-  this.thongbaosuccess('Lấy danh sách jop thành công') ;
-  this.posts = info.message ;
-}
-else if ( info.status == 0 )
-{
-  this.thongbaoerror(info.message) ;
-}
+  methods: {
+    homeok() {
+      this.$router.push("/cheofb");
+    },
+    asdasdkas(info) {
+      if (info.status == 3) {
+        this.thongbaoerror(info.message);
+        this.$router.push("/cheofb");
+      } else if (info.status == 1) {
+        this.thongbaosuccess("Lấy danh sách jop thành công");
+        this.posts = info.message;
+      } else if (info.status == 0) {
+        this.thongbaoerror(info.message);
+      }
+    },
+
+    thongbaoerror(error) {
+      this.openappleok = "no";
+      Swal.mixin({
+        toast: true,
+        position: "top-right",
+        iconColor: "white",
+        customClass: {
+          popup: "colored-toast",
         },
-   
-      thongbaoerror(error)
-      {
-        this.openappleok = 'no' ;
-        Swal.mixin({
-    toast: true,
-  position: 'top-right',
-  iconColor: 'white',
-  customClass: {
-    popup: 'colored-toast'
-  },
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-}).fire({
-    icon: 'error',
-    title:  error
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      }).fire({
+        icon: "error",
+        title: error,
+      });
+    },
+    thongbaosuccess(success) {
+      Swal.mixin({
+        toast: true,
+        position: "top-right",
+        iconColor: "white",
+        customClass: {
+          popup: "colored-toast",
+        },
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      }).fire({
+        icon: "success",
+        title: success,
+      });
+    },
+    async saochep(urlsplit) {
+      this.ketqua = "đã sao chép ";
 
-})  
-      },
-      thongbaosuccess(success)
-      {
-        Swal.mixin({
-    toast: true,
-  position: 'top-right',
-  iconColor: 'white',
-  customClass: {
-    popup: 'colored-toast'
-  },
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-}).fire({
-    icon: 'success',
-    title: success
-
-})
-      },
-      async saochep(urlsplit) {
-          this.ketqua = 'đã sao chép ' ;
-   
       await navigator.clipboard.writeText(urlsplit);
-     
-      this.ketqua = 'đã sao chép ' ;
-      this.thongbaosuccess('đã sao chép') ;
+
+      this.ketqua = "đã sao chép ";
+      this.thongbaosuccess("đã sao chép");
       NativeAndroid.copyToClipboard(urlsplit);
-     
-  },
-      reloadPosts() {
-        this.currentPostId = null ;
-        this.posts = null ;
+    },
+    reloadPosts() {
+      this.currentPostId = null;
+      this.posts = null;
       this.isLoadingbutton = true;
       this.countdown = 15; // Khởi tạo giá trị ban đầu cho countdown
       const intervalId = setInterval(() => {
@@ -287,73 +265,67 @@ else if ( info.status == 0 )
         }
       }, 1000);
       axios
-       .post('https://tecom.pro/ttc/profile.php', {
-        key: this.ok2 ,
-    chedo: 'getjop' ,
-    theloai: this.tenkiemtien ,
-    social: this.social
-
-  })
-  .then(response => (  this.info = response.data
-  , console.log(this.info) ,
-  this.asdasdkas(this.info )
- ))
-  .catch(error => console.log(error) 
-      )
+        .post("https://tecom.pro/ttc/profile.php", {
+          key: this.ok2,
+          chedo: "getjop",
+          theloai: this.tenkiemtien,
+          social: this.social,
+        })
+        .then(
+          (response) => (
+            (this.info = response.data),
+            console.log(this.info),
+            this.asdasdkas(this.info) ,
+            this.adsenseKey++
+          )
+        )
+        .catch((error) => console.log(error));
     },
-      filteredPosts() {
-              if (this.currentPostId) {
-                this.posts = this.posts.filter((post) => post.idpost !== this.currentPostId);
-              } else {
-                this.posts = this.posts;
-              }
-            },
-      handleLinkClick(idpost) {
-          this.isLoading = true;
-          this.currentPostId = idpost;
-        localStorage.setItem("postId", idpost);
-      },
-      handlePostFocus(idpost) {
-          console.log(`Post ${idpost} focused`);
-            axios
-           .post('https://tecom.pro/ttc/nhantien.php', {
-            key: this.ok2 ,
-            idpost: idpost ,
-            theloai: this.tenkiemtien 
-        // binhluan: this.binhluan
-      })
-      .then( response => (
-      console.log(response.data ) ,
-      this.dathang(response )
-      ))
-      .catch(error => console.log(error) ,
-          ) ;
-          
-         
-      },
-      dathang(response)
-      {
-          this.info1 = response.data ;
-          if (this.info1.error )
-          {
-            this.thongbaoerror(this.info1.error   ) ;
-              this.nutorder = 'lỗi' ;
-          }
-          else if (this.info1.mess.includes("điểm")) {
-            this.thongbaosuccess(this.info1.mess   ) ;
-              this.nutorder = 'thành công' ;
-}
-          else if(this.info1.mess   )
-          {
-            this.thongbaoerror(this.info1.mess   ) ;
-              this.nutorder = 'lỗi' ;
-          }
-          this.isLoading = false;
-        setTimeout(() => {
-          this.filteredPosts();
-        }, 500); 
+    filteredPosts() {
+      if (this.currentPostId) {
+        this.posts = this.posts.filter(
+          (post) => post.idpost !== this.currentPostId
+        );
+      } else {
+        this.posts = this.posts;
       }
     },
-      
-    };
-    </script>
+    handleLinkClick(idpost) {
+      this.isLoading = true;
+      this.currentPostId = idpost;
+      localStorage.setItem("postId", idpost);
+    },
+    handlePostFocus(idpost) {
+      console.log(`Post ${idpost} focused`);
+      axios
+        .post("https://tecom.pro/ttc/nhantien.php", {
+          key: this.ok2,
+          idpost: idpost,
+          theloai: this.tenkiemtien,
+          // binhluan: this.binhluan
+        })
+        .then(
+          (response) => (console.log(response.data), this.dathang(response))
+        )
+        .catch((error) => console.log(error));
+    },
+    dathang(response) {
+      this.info1 = response.data;
+      if (this.info1.error) {
+        this.thongbaoerror(this.info1.error);
+        this.nutorder = "lỗi";
+      } else if (this.info1.mess.includes("điểm")) {
+        this.thongbaosuccess(this.info1.mess);
+        this.nutorder = "thành công";
+      } else if (this.info1.mess) {
+        this.thongbaoerror(this.info1.mess);
+        this.nutorder = "lỗi";
+      }
+      this.isLoading = false;
+      setTimeout(() => {
+        this.filteredPosts();
+      }, 500);
+    },
+  },
+};
+</script>

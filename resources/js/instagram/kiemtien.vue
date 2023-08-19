@@ -252,7 +252,6 @@ else if ( info.status == 0 )
 })
       },
       reloadPosts() {
-        this.adsenseKey++;
         this.posts = null ;
       this.isLoadingbutton = true;
       this.countdown = 15; // Khởi tạo giá trị ban đầu cho countdown
@@ -273,7 +272,8 @@ else if ( info.status == 0 )
   })
   .then(response => (  this.info = response.data
   , console.log(this.info) ,
-  this.asdasdkas(this.info )
+  this.asdasdkas(this.info ) ,
+  this.adsenseKey++
  ))
   .catch(error => console.log(error) 
       )
@@ -312,7 +312,8 @@ else if ( info.status == 0 )
       })
       .then( response => (
       console.log(response.data ) ,
-      this.dathang(response )
+      this.dathang(response ) ,
+      this.adsenseKey++
       ))
       .catch(error => console.log(error) ,
           ) ;
