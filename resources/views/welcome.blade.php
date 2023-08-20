@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Auth;
   $ngaunhien2 =  rand(1,2) ;
   if ( $ngaunhien2 == "1")
   {
-    $okloadimg = "https://tecom.pro/img/icon/loadgau.png" ;
+    $okloadimg = "https://hust.media/img/icon/loadgau.png" ;
   }
   else {
-    $okloadimg = "https://tecom.pro/img/icon/loading2.gif" ;
+    $okloadimg = "https://hust.media/img/icon/loading2.gif" ;
   }
 ?>
 <div id="loadinggg">

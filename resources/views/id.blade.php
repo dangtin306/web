@@ -2,7 +2,7 @@
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
 $client = new \GuzzleHttp\Client();
-$endpoint = "https://tecom.pro/loadcute3.php" ;
+$endpoint = "https:///loadcute3.php" ;
 $response = $client->request('GET', $endpoint);
 $statusCode = $response->getStatusCode();
 $content = $response->getBody();
@@ -14,8 +14,8 @@ echo  $content ;
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <title>Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID </title>
-        <link rel="icon" href="https://tecom.pro/img/icon/idcards.png">
-    <meta property="og:image" content="https://tecom.pro/img/icon/idcards.png">
+        <link rel="icon" href="https://hust.media/img/icon/idcards.png">
+    <meta property="og:image" content="https://hust.media/img/icon/idcards.png">
     <meta property="og:title" content="Tìm lấy id ,uid Facebook, TikTok ,instagram Online | Find ID ">
     <meta property="og:description" content="Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.">
     <meta name="description" content="Công cụ hoàn toàn miễn phí giúp dễ dàng tìm kiếm UID , id Facebook , TikTok , instagram bạn bè, người like, comment ... một cách đơn giản và dễ dàng.">

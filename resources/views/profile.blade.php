@@ -2,7 +2,7 @@
 use Illuminate\Support\Collection ;
 use Illuminate\Support\Facades\DB;
 $client = new \GuzzleHttp\Client();
-$endpoint = "https://tecom.pro/loadcute3.php" ;
+$endpoint = "https://hust.media/loadcute3.php" ;
 $response = $client->request('GET', $endpoint);
 $statusCode = $response->getStatusCode();
 $content = $response->getBody();
