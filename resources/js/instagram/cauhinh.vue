@@ -173,7 +173,7 @@ xacnhan()
 console.log(this.idfacebook) ;
 console.log(this.chedokiemxu) ;
 axios
-     .post('https://tecom.pro/insta/profile.php', {
+     .post('https://hust.media/insta/profile.php', {
       key: this.ok2 ,
       idfacebook: this.idfacebook ,
       chedo: 'choncauhinh' ,
@@ -219,7 +219,7 @@ this.chedokiemxu = info.chedokiemxu ;
     checktk()
     {
       axios
-   .post('https://tecom.pro/insta/profile.php', {
+   .post('https://hust.media/insta/profile.php', {
     key: this.ok2 ,
 chedo: 'listcauhinh'
 })
