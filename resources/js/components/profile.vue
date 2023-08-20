@@ -138,7 +138,7 @@ let config = {
     timeout: 22000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
+urlsplit = 'https://hust.media/truyen-tranh/metadoctruyen.php/' + urlsplit ;
 console.log(urlsplit);
               axios
                   .get(urlsplit ,config)
@@ -158,7 +158,7 @@ var splitter = '/truyen-tranh/' ;
 
 var urlsplit = url.split(splitter)[1];
 
-var ahdhajdnhk = 'https://tecom.pro/truyen-tranh/api2.php?' + urlsplit ;
+var ahdhajdnhk = 'https://hust.media/truyen-tranh/api2.php?' + urlsplit ;
               this.error = this.users = null;
               this.loading = true;
               const apikey = this.$cookies.get("apikey");

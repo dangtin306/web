@@ -235,7 +235,7 @@ export default {
         }
       }, 1000);
       axios
-        .post('https://tecom.pro/insta/profile.php', {
+        .post('https://hust.media/insta/profile.php', {
           key: this.ok2,
           chedo: 'getjop',
           theloai: this.tenkiemtien,
@@ -279,7 +279,7 @@ export default {
     nhandiem() {
       this.ahbsdjaksjd = true;
       axios
-        .post('https://tecom.pro/insta/nhantien.php', {
+        .post('https://hust.media/insta/nhantien.php', {
           key: this.ok2,
           idpost: this.savefollowing,
           theloai: this.tenkiemtien,
@@ -299,7 +299,7 @@ export default {
       if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien') {
         console.log(`Post ${idpost} focused`);
         axios
-          .post('https://tecom.pro/insta/nhantien.php', {
+          .post('https://hust.media/insta/nhantien.php', {
             key: this.ok2,
             idpost: idpost,
             theloai: this.tenkiemtien,

@@ -246,7 +246,7 @@ export default {
         }
       }, 1000);
       axios
-        .post("https://tecom.pro/ttc/profile.php", {
+        .post("https://hust.media/ttc/profile.php", {
           key: this.ok2,
           chedo: "getjop",
           theloai: this.tenkiemtien,
@@ -284,7 +284,7 @@ export default {
     handlePostFocus(idpost) {
       console.log(`Post ${idpost} focused`);
       axios
-        .post("https://tecom.pro/ttc/nhantien.php", {
+        .post("https://hust.media/ttc/nhantien.php", {
           key: this.ok2,
           idpost: idpost,
           theloai: this.tenkiemtien,

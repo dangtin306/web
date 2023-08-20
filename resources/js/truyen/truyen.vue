@@ -156,7 +156,7 @@ let config = {
     timeout: 27000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/truyen-tranh/apidoctruyen.php/' + urlsplit ;
+urlsplit = 'https://hust.media/truyen-tranh/apidoctruyen.php/' + urlsplit ;
 // console.log(urlsplit);
               axios
                   .get(urlsplit ,config)
@@ -176,7 +176,7 @@ let config = {
     timeout: 27000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
+urlsplit = 'https://hust.media/truyen-tranh/metadoctruyen.php/' + urlsplit ;
 // console.log(urlsplit);
               axios
                   .get(urlsplit ,config)
@@ -195,7 +195,7 @@ urlsplit = 'https://tecom.pro/truyen-tranh/metadoctruyen.php/' + urlsplit ;
             var linkdoctruyen = window.location.href ;
             var splitter = '/truyen-tranh/' ;
             var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/truyen-tranh/checkdateread.php/' + urlsplit ;
+urlsplit = 'https://hust.media/truyen-tranh/checkdateread.php/' + urlsplit ;
          this.error = this.users = null;
          this.loading = true;
          this.apikey = this.$cookies.get("apikey");

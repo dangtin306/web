@@ -144,7 +144,7 @@
     
     
     var urlsplit = url.split(splitter)[1];
-    var dbshcfhsajkhcjas = 'https://tecom.pro/the-loai/api.php?' + urlsplit ;
+    var dbshcfhsajkhcjas = 'https://hust.media/the-loai/api.php?' + urlsplit ;
     
                   this.error = this.users = null;
                   this.loading = true;

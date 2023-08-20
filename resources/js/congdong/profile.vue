@@ -275,7 +275,7 @@ import Swal from 'sweetalert2' ;
                   console.log(this.btctrk) 
                   )  
                   axios    
-                  .post('https://tecom.pro/api/profile.php', {
+                  .post('https://hust.media/api/profile.php', {
           apikey: this.ok2 ,
       chedo: 'checkcapdo'
     })  
@@ -329,7 +329,7 @@ this.thanhcong =  this.ok2 ;
         else
         {
             axios
-         .post('https://tecom.pro/api/profile.php', {
+         .post('https://hust.media/api/profile.php', {
           apikey: this.ok2 ,
           chedo: 'profile' ,
           option: this.chedoprofile ,

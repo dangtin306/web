@@ -115,7 +115,7 @@ export default {
   this.site_ten_momo = info.site_ten_momo ;
   this.magiaodich = info.magiaodich ;
   axios
-       .post('https://tecom.pro/momoqrcode.php', {
+       .post('https://hust.media/momoqrcode.php', {
         key: this.ok2  ,
         site_sdt_momo: this.site_sdt_momo ,
         site_ten_momo: this.site_ten_momo ,
@@ -142,7 +142,7 @@ else if ( info.status == 0 )
     laymamomo()
     {
         axios
-       .post('https://tecom.pro/momoautoapi.php', {
+       .post('https://hust.media/momoautoapi.php', {
         key: this.ok2  ,
         chedo: 'laymamomo'
   })

@@ -170,7 +170,7 @@ this.nutxuly = 0 ;
 console.log(this.idfacebook) ;
 console.log(this.chedokiemxu) ;
 axios
-         .post('https://tecom.pro/ttc/profile.php', {
+         .post('https://hust.media/ttc/profile.php', {
           key: this.ok2 ,
           idfacebook: this.idfacebook ,
           chedo: 'choncauhinh' ,
@@ -216,7 +216,7 @@ else if ( info.status == 1 )
         checktk()
         {
           axios
-       .post('https://tecom.pro/ttc/profile.php', {
+       .post('https://hust.media/ttc/profile.php', {
         key: this.ok2 ,
     chedo: 'listcauhinh'
   })

@@ -576,7 +576,7 @@ console.log(1);
 };
 
             }
-            axios.post('https://tecom.pro/testapi.php', this.thongsopost )
+            axios.post('https://hust.media/testapi.php', this.thongsopost )
     .then( response => (
     console.log(response.data ) ,
     this.dathang(response )
@@ -682,7 +682,7 @@ this.options2 = [] ;
     theloaiok() {
       
       axios
-         .get('https://tecom.pro/getservice/theloai.php?theloai=' + this.theloai )
+         .get('https://hust.media/getservice/theloai.php?theloai=' + this.theloai )
     .then( response => (
     console.log(response.data ) ,
     this.socialok = response.data.option ,
@@ -753,7 +753,7 @@ console.log(decodedHTML);
                
                   this.loaddichvu = false ;
                axios
-         .post('https://tecom.pro/getservice/category.php', {
+         .post('https://hust.media/getservice/category.php', {
             social: this.socialok ,
             theloai: this.theloai 
     })
@@ -769,7 +769,7 @@ console.log(decodedHTML);
                     const newUri = '/orders/' + this.uri ;
                     window.history.replaceState({}, '', newUri);
                       axios
-         .get('https://tecom.pro/getservice/theloai.php?theloai=' + this.uri )
+         .get('https://hust.media/getservice/theloai.php?theloai=' + this.uri )
     .then( response => (
     console.log(response.data ) ,
  this.onChange2truoc3(response.data)
@@ -809,7 +809,7 @@ console.log(decodedHTML);
                        return
                    }
                   axios
-         .post('https://tecom.pro/getservice/service.php', {
+         .post('https://hust.media/getservice/service.php', {
           category: this.category ,
     })
     .then( response => (

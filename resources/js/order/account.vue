@@ -198,7 +198,7 @@ import Swal from 'sweetalert2' ;
                     return
                 }
                axios
-         .post('https://tecom.pro/api/account.php', {
+         .post('https://hust.media/api/account.php', {
             chedo: 'muaacc' ,
             service : this.idservice  ,
             apikey : this.ok2 ,
@@ -221,7 +221,7 @@ import Swal from 'sweetalert2' ;
                     return
                 }
                axios
-         .post('https://tecom.pro/api/account.php', {
+         .post('https://hust.media/api/account.php', {
             chedo: 'laytrangthai' ,
             chedomuaacc : this.chedomuaacc 
     })
@@ -244,7 +244,7 @@ import Swal from 'sweetalert2' ;
         else if ( this.info.status == "1" )
         {
             axios
-         .post('https://tecom.pro/api/account.php', {
+         .post('https://hust.media/api/account.php', {
             chedo: 'laythongtin' ,
             apikey : this.ok2 ,
     })

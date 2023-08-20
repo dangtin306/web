@@ -114,7 +114,7 @@ let config = {
     timeout: 27000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/nhat-ky-order2.php?listtrang=' + this.listtrang 
+urlsplit = 'https://hust.media/nhat-ky-order2.php?listtrang=' + this.listtrang 
 + '&apikey=' + this.ok2 ;
 // console.log(urlsplit);
               axios

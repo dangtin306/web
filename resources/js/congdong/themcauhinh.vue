@@ -201,7 +201,7 @@ else if ( info.status == 7 )
                 {
                 if(this.social == 'facebook' || this.social == 'tiktok' )  
                 {
-const ajdjnansdla = 'https://tecom.pro/ttc/profile.php' ;
+const ajdjnansdla = 'https://hust.media/ttc/profile.php' ;
 axios
          .post(ajdjnansdla, {
           key: this.ok2 ,
@@ -226,7 +226,7 @@ axios
                 }
                 else if(this.social == 'instagram')  
                 {
-                  const ajdjnansdla = 'https://tecom.pro/insta/profile.php' ;
+                  const ajdjnansdla = 'https://hust.media/insta/profile.php' ;
                   axios
          .post(ajdjnansdla, {
           key: this.ok2 ,

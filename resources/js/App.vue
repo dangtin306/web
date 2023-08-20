@@ -11,7 +11,7 @@
   </div> -->
   <div >
   <nav v-if="showElement == true"  class="fixed-bottom navbar-light " >
-    <link rel="stylesheet" href="https://tecom.pro/style.css">
+    <link rel="stylesheet" href="https://hust.media/style.css">
 
     <div class="container2 itemoknav"    :class="{ hide: isHide }" >
     <div class="tinhchinh2 " ref="element"  v-show="showElement" >
@@ -169,23 +169,23 @@ data-template="vertical-menu-template-free"
         </li>
       <li class="menu-item" style="">
         <a  class="menu-link  menu-toggle">
-        <img src="https://tecom.pro/img/icon/nap.webp " style="width:27px;height:27px">
+        <img src="https://hust.media/img/icon/nap.webp " style="width:27px;height:27px">
         <div data-i18n="Analytics">Rút tiền và nạp tiền </div>
         </a>
         <ul class="menu-sub">
         <li>
-          <router-link to="/naptien" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tecom.pro/img/icon/kimcuong.gif" style="width:20px;height:20px;bg-white ; ">&nbsp; Nạp tiền
+          <router-link to="/naptien" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://hust.media/img/icon/kimcuong.gif" style="width:20px;height:20px;bg-white ; ">&nbsp; Nạp tiền
         <i class="ni ni-check-bold"></i>
       </router-link>
-      <router-link to="/chuyenxu" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://tecom.pro/img/icon/coin.svg" style="width:20px;height:20px;bg-white ; "> &nbsp;Chuyển xu
+      <router-link to="/chuyenxu" class="menu-link layout-menu-toggle btn-sm  btn-outline-primary dropdown-item"> <img src="https://hust.media/img/icon/coin.svg" style="width:20px;height:20px;bg-white ; "> &nbsp;Chuyển xu
         <i class="ni ni-check-bold"></i>
       </router-link>
-        <a href="https://hust.media/ruttien.php" class="menu-link btn-sm  btn-outline-primary dropdown-item"> <img src="https://tecom.pro/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua Momo
+        <a href="https://hust.media/ruttien.php" class="menu-link btn-sm  btn-outline-primary dropdown-item"> <img src="https://hust.media/img/icon/nap.webp " style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua Momo
 
         </a>     <li>
         <a href="https://hust.media/shop/wallet/paybank" 
         class="menu-link btn-sm  btn-outline-primary dropdown-item"> 
-          <img src="https://tecom.pro/img/icon/imagescoins.png" style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua ngân hàng
+          <img src="https://hust.media/img/icon/imagescoins.png" style="width:20px;height:20px;bg-white ; ">&nbsp; Rút tiền qua ngân hàng
 
         </a></li>
         </li>
@@ -196,7 +196,7 @@ data-template="vertical-menu-template-free"
           </li>
       <li class="menu-item ">
         <router-link to="/orders" class="menu-link layout-menu-toggle">
-        <img src="https://tecom.pro/img/icon/tiktok2.gif" style="width:32px;height:32px">
+        <img src="https://hust.media/img/icon/tiktok2.gif" style="width:32px;height:32px">
         <div data-i18n="Analytics">Tăng tương tác mạng xã hội</div>
       </router-link>
         </li>
@@ -209,7 +209,7 @@ data-template="vertical-menu-template-free"
 
         <li class="menu-item" style="">
           <a  class="menu-link  menu-toggle">
-            <img src="https://tecom.pro/img/icon/4298126.png" style="width:27px;height:27px">
+            <img src="https://hust.media/img/icon/4298126.png" style="width:27px;height:27px">
           <div data-i18n="Analytics">Thuê sim nhận code lấy mã otp</div>
           </a>
           <ul class="menu-sub">
@@ -231,7 +231,7 @@ data-template="vertical-menu-template-free"
     
       <li class="menu-item ">
         <router-link class="menu-link layout-menu-toggle"  to="/okluon">
-          <img src="https://tecom.pro/img/icon/giphy (7).gif"
+          <img src="https://hust.media/img/icon/giphy (7).gif"
          style="width:27px;height:27px">
           <div data-i18n="Analytics">Hướng dẫn sử dụng</div>
         </router-link>
@@ -247,19 +247,19 @@ data-template="vertical-menu-template-free"
       <!-- Cards -->
       <li class="menu-item">
         <router-link class="menu-link layout-menu-toggle"  to="/history">
-        <img src="https://tecom.pro/img/icon/history.svg" style="width:27px;height:27px">
+        <img src="https://hust.media/img/icon/history.svg" style="width:27px;height:27px">
         <div data-i18n="Basic">Nhật ký đơn hàng</div>
       </router-link>
         </li>
       <li class="menu-item">
         <router-link class="menu-link layout-menu-toggle"  to="/id">
-        <img src="https://tecom.pro/img/icon/idcards.png" style="width:27px;height:27px">
+        <img src="https://hust.media/img/icon/idcards.png" style="width:27px;height:27px">
           <div data-i18n="Basic">Tìm lấy id facebook , tiktok , instagram</div>
          </router-link>
       </li>
       <li class="menu-item">
         <a  href="https://hust.media/truyen-hay/home" class="menu-link">
-        <img src="https://tecom.pro/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
+        <img src="https://hust.media/img/icon/zero-two-icon.gif" style="width:27px;height:27px">
         <div data-i18n="Basic">Đọc truyện tranh :)</div>
         </a>
         </li>
@@ -271,7 +271,7 @@ data-template="vertical-menu-template-free"
           </li>
       <li class="menu-item">
         <a href="/game/index.php" class="menu-link">
-        <img src="https://tecom.pro/img/icon/images.png" style="width:27px;height:27px">
+        <img src="https://hust.media/img/icon/images.png" style="width:27px;height:27px">
           <div data-i18n="Basic">Chơi game vui vẻ</div>
         </a>
       </li>
@@ -280,13 +280,13 @@ data-template="vertical-menu-template-free"
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Thông tin &amp; Thêm</span></li>
       <li class="menu-item">
             <a href="/apismm.php" class="menu-link">
-            <img src="https://tecom.pro/img/icon/source.gif" style="width:27px;height:27px">
+            <img src="https://hust.media/img/icon/source.gif" style="width:27px;height:27px">
               <div data-i18n="Without navbar">Api mua dịch vụ</div>
             </a>
           </li>
           <li class="menu-item <?=$active1;?>">
         <a href="https://github.com/dangtin306" class="menu-link">
-        <img src="https://tecom.pro/img/icon/internet1.gif" style="width:27px;height:27px">
+        <img src="https://hust.media/img/icon/internet1.gif" style="width:27px;height:27px">
           <div data-i18n="Layouts">Tạo web site riêng</div>
         </a>
       </li>
@@ -366,7 +366,7 @@ data-template="vertical-menu-template-free"
     &nbsp;       <span  class="text-break h6 font-weight-bold mb-3" style="color: pink;" id="my_vnd">{{myMoney }}</span>
 
     <img 
-      src="https://tecom.pro/img/icon/coin.webp" class="rounded-circle" 
+      src="https://hust.media/img/icon/coin.webp" class="rounded-circle" 
       style="width: 25px; height: 25px; display: inline;"   >
     <!-- <div class="absolutenav ">  </div>   -->
   </div>

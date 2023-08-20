@@ -392,7 +392,7 @@ Số điểm hiện tại là {{  sodiem  }}
            
               <div class="space-y-2">
                 <p v-if="social == 'tiktok'" class="text-lg text-slate-1000">
-                  <img src="https://tecom.pro/img/icon/ava.png"
+                  <img src="https://hust.media/img/icon/ava.png"
                   class="h-12 w-14 cananh">
                  Jop TikTok kiếm tiền với mục đích giúp các bạn rút tiền miễn phí
                 nên nó hoàn toàn khác và riêng biệt với chéo tiktok kiếm xu
@@ -400,7 +400,7 @@ Số điểm hiện tại là {{  sodiem  }}
             <br>       - Tỉ lệ chuyển đổi xem ở đổi điểm sang xu
             <br>      - Nếu thao tác sai ko nhận được xu vui lòng liên hệ với app trong 24h cùng ngày . </p>
             <p v-else class="text-lg text-slate-1000">
-                  <img src="https://tecom.pro/img/icon/ava.png"
+                  <img src="https://hust.media/img/icon/ava.png"
                   class="h-12 w-14 cananh">
                  Chéo facebook là tính năng kiếm tiền đầu tiên của App
             <br>    - Hệ thống nhận tiền tự động, 1 tiếng làm jop chăm có thể kiếm được 15k VND .
@@ -493,7 +493,7 @@ else
         checktk()
         {
           axios
-       .post('https://tecom.pro/ttc/profile.php', {
+       .post('https://hust.media/ttc/profile.php', {
         key: this.ok2 ,
     chedo: 'kiemtradangnhap' ,
     social: this.social 

@@ -283,7 +283,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
     },
         created() {
             axios
-         .get('https://tecom.pro/otp/laydanhsachdichvu.php')
+         .get('https://hust.media/otp/laydanhsachdichvu.php')
     .then( response => (
   
     this.options =  response.data ,
@@ -303,7 +303,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
                
                 this.btcTrkAPICall();
                 axios
-         .get('https://tecom.pro/otp/listcountry.php')
+         .get('https://hust.media/otp/listcountry.php')
     .then( response => (
   
     this.listcountry =  response.data ,
@@ -389,7 +389,7 @@ this.options2 = [
                     return
                 }
                axios
-         .post('https://tecom.pro/otp/laydanhsachquocgia.php', {
+         .post('https://hust.media/otp/laydanhsachquocgia.php', {
             social: this.social ,
     })
     .then( response => (

@@ -148,7 +148,7 @@
       timeout: 22000,
   };
   var urlsplit = url.split(splitter)[1];
-  urlsplit = 'https://tecom.pro/anime/meta.php/?url=' + urlsplit ;
+  urlsplit = 'https://hust.media/anime/meta.php/?url=' + urlsplit ;
   console.log(urlsplit);
                 axios
                     .get(urlsplit ,config)
@@ -167,7 +167,7 @@
   
   var urlsplit = url.split(splitter)[1];
   
-  var ahdhajdnhk = 'https://tecom.pro/anime/profile.php?url=' + urlsplit ;
+  var ahdhajdnhk = 'https://hust.media/anime/profile.php?url=' + urlsplit ;
                 this.error = this.users = null;
                 this.loading = true;
                 const apikey = this.$cookies.get("apikey");

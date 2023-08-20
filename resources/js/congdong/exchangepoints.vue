@@ -173,7 +173,7 @@
           checktk()
         {
           axios
-       .post('https://tecom.pro/ttc/profile.php', {
+       .post('https://hust.media/ttc/profile.php', {
         key: this.ok2 ,
     chedo: 'kiemtradiem'
   })
@@ -198,7 +198,7 @@
                 }
 
                 axios
-         .post('https://tecom.pro/ttc/profile.php', {
+         .post('https://hust.media/ttc/profile.php', {
           key: this.ok2 ,
       money: this.amount ,
       chedo: 'nhanxu' ,

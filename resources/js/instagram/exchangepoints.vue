@@ -143,7 +143,7 @@
          checktk()
        {
          axios
-      .post('https://tecom.pro/insta/profile.php', {
+      .post('https://hust.media/insta/profile.php', {
        key: this.ok2 ,
    chedo: 'kiemtradangnhap'
  })
@@ -168,7 +168,7 @@
                }
 
                axios
-        .post('https://tecom.pro/insta/profile.php', {
+        .post('https://hust.media/insta/profile.php', {
          key: this.ok2 ,
      money: this.amount ,
      chedo: 'nhanxu'

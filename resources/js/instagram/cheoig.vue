@@ -254,7 +254,7 @@
             
                <div class="space-y-2">
                  <p class="text-lg text-slate-1000">
-                   <img src="https://tecom.pro/img/icon/ava.png"
+                   <img src="https://hust.media/img/icon/ava.png"
                    class="h-12 w-14 cananh">
                    iu bạn nhiều lém cảm ơn đã tin tưởng nhé
              <br>    - Hệ thống nhận tiền tự động, 1 tiếng làm jop chăm có thể kiếm được 10k xu .
@@ -334,7 +334,7 @@
          checktk()
          {
            axios
-        .post('https://tecom.pro/insta/profile.php', {
+        .post('https://hust.media/insta/profile.php', {
          key: this.ok2 ,
      chedo: 'kiemtradangnhap'
    })

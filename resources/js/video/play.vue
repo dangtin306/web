@@ -212,7 +212,7 @@ let config = {
     timeout: 27000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/anime/play.php?url=' + urlsplit ;
+urlsplit = 'https://hust.media/anime/play.php?url=' + urlsplit ;
 // console.log(urlsplit);
               axios
                   .get(urlsplit ,config)
@@ -240,7 +240,7 @@ let config = {
     timeout: 27000,
 };
 var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/anime/meta.php?url=' + urlsplit ;
+urlsplit = 'https://hust.media/anime/meta.php?url=' + urlsplit ;
 // console.log(urlsplit);
               axios
                   .get(urlsplit ,config)
@@ -259,7 +259,7 @@ urlsplit = 'https://tecom.pro/anime/meta.php?url=' + urlsplit ;
             var linkdoctruyen = window.location.href ;
             var splitter = '/truyen-tranh/' ;
             var urlsplit = url.split(splitter)[1];
-urlsplit = 'https://tecom.pro/truyen-tranh/checkdateread.php/' + urlsplit ;
+urlsplit = 'https://hust.media/truyen-tranh/checkdateread.php/' + urlsplit ;
          this.error = this.users = null;
          this.loading = true;
          this.apikey = this.$cookies.get("apikey");

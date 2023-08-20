@@ -151,7 +151,7 @@
     
     
     var urlsplit = url.split(splitter)[1];
-    var dbshcfhsajkhcjas = 'https://tecom.pro/anime/the-loai.php?theloai=' + urlsplit ;
+    var dbshcfhsajkhcjas = 'https://hust.media/anime/the-loai.php?theloai=' + urlsplit ;
     
                   this.error = this.users = null;
                   this.loading = true;

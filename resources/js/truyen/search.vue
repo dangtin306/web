@@ -196,11 +196,11 @@ import { useMeta } from 'vue-meta' ;
     useMeta(
       computed(() => ({
     og: {
-    image: 'https://tecom.pro/img/icon/idcards.png' ,
+    image: 'https://hust.media/img/icon/idcards.png' ,
     title: 'Tìm kiếm truyện Hust Media',
     description : 'Hust Media Pro.' 
   },link: [
-      { rel: 'icon', href: 'https://tecom.pro/img/icon/idcards.png' }
+      { rel: 'icon', href: 'https://hust.media/img/icon/idcards.png' }
     ],
   description: {
       content: 'Tìm kiếm truyện Hust Media.' }
@@ -296,7 +296,7 @@ import { useMeta } from 'vue-meta' ;
             this.nutxuly = 1 ;
             this.nutorder = 'chờ xíu nhé' ;
             axios
-         .post('https://tecom.pro/truyen-tranh/search.php', {
+         .post('https://hust.media/truyen-tranh/search.php', {
             keyword: this.lienketchay
       // binhluan: this.binhluan
     })

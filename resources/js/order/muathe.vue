@@ -213,7 +213,7 @@ Chiết khấu {{maxorder  }}
 
             this.nutorder = 'chờ xíu nhé' ;
             axios
-         .post('https://tecom.pro/doithepost.php', {
+         .post('https://hust.media/doithepost.php', {
           key: this.ok2 ,
           loaithe: this.social ,
           menhgia: this.dichvu ,
@@ -266,7 +266,7 @@ layjsondoithe()
     timeout: 7000,
 };
 
-var urlsplit = 'https://tecom.pro/doithejson2.php' ;
+var urlsplit = 'https://hust.media/doithejson2.php' ;
 
               axios
                   .get(urlsplit ,config)
@@ -427,7 +427,7 @@ console.log(this.options) ;
     },
     apilaylichsudoithe()
     {
-      var urllaylsdoithe = 'https://tecom.pro/doithels.php?' + this.ok2  ;
+      var urllaylsdoithe = 'https://hust.media/doithels.php?' + this.ok2  ;
                   axios    
                   .get(urllaylsdoithe)  
                   .then(response => (

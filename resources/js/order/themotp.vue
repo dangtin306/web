@@ -337,7 +337,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
         created() {
             this.apilaylichsudoithe() ;
             axios
-         .get('https://tecom.pro/otp/laydanhsachdichvu.php')
+         .get('https://hust.media/otp/laydanhsachdichvu.php')
     .then( response => (
   
     this.options =  response.data ,
@@ -357,7 +357,7 @@ import VRuntimeTemplate from "vue3-runtime-template";
                
                 this.btcTrkAPICall();
                 axios
-         .get('https://tecom.pro/otp/listcountry.php')
+         .get('https://hust.media/otp/listcountry.php')
     .then( response => (
   
     this.listcountry =  response.data ,
@@ -433,7 +433,7 @@ setTimeout(() => {
             this.binhluan = xulybinhluan.replace(/(?:\r\n|\r|\n)/g, '<br>');
             this.nutorder = 'chờ xíu nhé' ;
             axios
-         .post('https://tecom.pro/otp/themotp.php', {
+         .post('https://hust.media/otp/themotp.php', {
           key: this.ok2 ,
           service: this.service ,
           codecountry: this.selectedOption ,
@@ -481,7 +481,7 @@ this.nutxuly = 0 ,
     },  
     apilaylichsudoithe()
     {
-      var urllaylsdoithe = 'https://tecom.pro/otp/lichsuotp.php?' + this.ok2  ;
+      var urllaylsdoithe = 'https://hust.media/otp/lichsuotp.php?' + this.ok2  ;
                   axios    
                   .get(urllaylsdoithe)  
                   .then(response => (
@@ -509,7 +509,7 @@ this.nutxuly = 0 ,
                     return
                 }
                axios
-         .post('https://tecom.pro/otp/laydanhsachquocgia.php', {
+         .post('https://hust.media/otp/laydanhsachquocgia.php', {
             social: this.social ,
     })
     .then( response => (
