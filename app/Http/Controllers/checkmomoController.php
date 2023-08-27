@@ -44,7 +44,6 @@ $settings = DB::table('settings')->where('webcon', 'hust.media' )->first();
 
 $checkchedo  = $settings->checkchedo ;
 $username2  = $key->username ;
-$keyweb = $key->keyweb ;
 $checkxu = $key->money ;
 $checkmomo = DB::table('checkmomo')->where('username', $username2 )->first();
 if ( $chedo == 'phone' )
@@ -69,7 +68,6 @@ if ( $chedo == 'phone' )
                 $affected = DB::table('checkmomo')
                   ->where('username', $username2)
                   ->update(['phone' => $phone ,
-                  'keyweb' => $keyweb ,
                   'checkgiaodich' => 'NO'
                 
                 ]);
@@ -85,7 +83,6 @@ if ( $chedo == 'phone' )
             
             DB::table('checkmomo')->insertOrIgnore([
                 'username' => $username2  ,
-                'keyweb' => $keyweb ,
                 'phone' => $phone ,
                 'checkgiaodich' => 'NO'
 
@@ -124,7 +121,6 @@ else if ( $chedo == 'phone2' )
                 $affected = DB::table('checkmomo')
                   ->where('username', $username2)
                   ->update(['phone' => $phone ,
-                  'keyweb' => $keyweb ,
                   'nhamang' => $nhamang ,
                   'checkgiaodich' => 'NO'
                 
@@ -141,7 +137,6 @@ else if ( $chedo == 'phone2' )
             
             DB::table('checkmomo')->insertOrIgnore([
                 'username' => $username2  ,
-                'keyweb' => $keyweb ,
                 'phone' => $phone ,
                 'nhamang' => $nhamang ,
                 'checkgiaodich' => 'NO'
@@ -294,7 +289,6 @@ else if ( $chedo == 'doiso' )
           ->where('username', $username2)
           ->update(['phone' => '' ,
           'chedo' => '' ,
-          'keyweb' => $keyweb ,
           'checkgiaodich' => 'NO'
         
         ]);
