@@ -206,7 +206,6 @@ else if ( $chedo == 'checkprofile' )
       'username' => $key->username ,
       'money' => $checkxu ,
       'chietkhau' => $key->ck ,
-      'experience' => $key->experience , 
       'total_nap' => $key->total_nap 
       
       ]);
