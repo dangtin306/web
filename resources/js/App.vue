@@ -471,10 +471,10 @@ data-template="vertical-menu-template-free"
                   
       <ul class="floatingMenu">
       <li>
-              <a href="https://t.me/freetiktokfb"> Liên hệ Hỗ trợ </a>
+              <a href="https://t.me/dangbaiok"> Nhóm thảo luận </a>
           </li>
              <li>
-              <a href="https://t.me/hustmedia"> Liên kết hỗ trợ zalo </a>
+              <a href="https://t.me/hustmedia"> Nhắn tin với admin </a>
           </li>
            <li>
               <a href="https://www.facebook.com/groups/3847726625345377"> Liên hệ facebook </a>
@@ -483,7 +483,7 @@ data-template="vertical-menu-template-free"
               <a href="https://zalo.me/g/vzufiz588"> Nhóm zalo  </a>
           </li>
           <li>
-              <a href="https://zalo.me/g/mvezii813">  liên hệ phụ </a>
+              <a href="https://t.me/freefltiktok">  Tính năng mới </a>
           </li>
          </ul>
   </div>
