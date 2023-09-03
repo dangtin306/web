@@ -3,10 +3,13 @@
     <div class="max-h-16 ">
       <div class="cards">
 
-        <Adsense :key="adsenseKey" data-ad-client="ca-pub-4574266110812955" data-ad-slot="8795043992"
-          data-full-width-responsive="no" ins-class="display: block; height: 50px;"
-          ins-style="display: block; height: 50px;">
-        </Adsense>
+        <Adsense :key="adsenseKey"
+            data-ad-client="ca-pub-4574266110812955"
+             data-ad-slot="1627514116"
+             data-full-width-responsive="no"
+             data-ad-format="horizontal"
+             >
+            </Adsense>
       </div>
 
     </div>
