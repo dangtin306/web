@@ -43,7 +43,6 @@ import orders from './order/orders.vue'
     import truyenchuyen from './truyen/truyenchuyen.vue'
     import link from './components/link.vue'
     import themsdt from './components/themsdt.vue'
-    import congdong from './congdong/congdong.vue'
     import cheofb from './congdong/cheofb.vue'
     // import exchangepoints from './congdong/exchangepoints.vue'
     import plan from './congdong/plan.vue'
@@ -337,12 +336,6 @@ const routes = [
     path: '/account',
     name: 'account',
     component: account
-  }
-  ,
-  {
-    path: '/congdong',
-    name: 'congdong',
-    component: congdong
   }
   ,
   {

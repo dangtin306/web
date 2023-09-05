@@ -1,15 +1,14 @@
 <template>
+   <div>
+        <v-runtime-template :template="vipads"></v-runtime-template>
+    </div>
   <div class="container">
     <div class="max-h-16">
       <div class="cards">
 
-        <Adsense :key="adsenseKey"
-            data-ad-client="ca-pub-4574266110812955"
-             data-ad-slot="1627514116"
-             data-full-width-responsive="no"
-             data-ad-format="horizontal"
-             >
-            </Adsense>
+        <Adsense :key="adsenseKey" data-ad-client="ca-pub-4574266110812955" data-ad-slot="1627514116"
+          data-full-width-responsive="no" data-ad-format="horizontal">
+        </Adsense>
       </div>
     </div>
     <div class="row">
@@ -101,6 +100,7 @@
 </style>
 <script>
 import Swal from 'sweetalert2';
+import VRuntimeTemplate from "vue3-runtime-template";
 export default {
   data() {
     return {
@@ -113,14 +113,19 @@ export default {
       nutorder: null,
       currentPostId: null,
       savefollowing: null,
+      vipads: null,
       posts: null,
       ahbsdjaksjd: false,
       sadasdsaasd: 1,
       start: false
     };
   },
+  components: {
+    VRuntimeTemplate
+  },
   props: ['tenkiemtien', 'social'],
   created() {
+    this.vipads = '<script src="https://www.vipads.live/vn/c-726-25.js">' + `</sc` + `ript>`  ;
     if (this.tenkiemtien == 'subcheo') { this.sadasdsaasd = 'Theo dõi'; }
     else if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien') {
       this.sadasdsaasd = 'Thả Tim';
@@ -248,8 +253,8 @@ export default {
         })
         .then(response => {
           this.info = response.data
-          , console.log(this.info),
-          this.asdasdkas(this.info);
+            , console.log(this.info),
+            this.asdasdkas(this.info);
           if (!this.start) {
             this.adsenseKey++;
           }
