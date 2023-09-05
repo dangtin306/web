@@ -1,10 +1,23 @@
 <template>
  
     <div class="row fixrow">
-
+      <div class="max-h-16">
+        <div class="cards">
+     
+          <Adsense
+      data-ad-client="ca-pub-4574266110812955"
+       data-ad-slot="8795043992"
+       data-full-width-responsive="no"
+       ins-class="display: block; height: 50px;"
+       ins-style="display: block; height: 50px;"
+       data-ad-format="horizontal"
+       >
+    </Adsense>
+    </div>
+  </div>
 
       <div class="col mt-0">
-          <div  class='mt-4 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500 '>
+          <div  class='mt-2 mx-2 items-center justify-center from-teal-100 via-teal-300 to-teal-500 '>
         
             <div  class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
                
@@ -84,21 +97,10 @@
           </svg>
         </div>
       </button>
-      <div class="max-h-16">
-        <div class="cards">
-     
-          <Adsense
-      data-ad-client="ca-pub-4574266110812955"
-       data-ad-slot="8795043992"
-       data-full-width-responsive="no"
-       ins-class="display: block; height: 50px;"
-       ins-style="display: block; height: 50px;"
-       data-ad-format="horizontal"
-       >
-    </Adsense>
-    </div>
-  </div>
-
+  
+<div >
+  <div id="themquangcao"></div>
+</div>
   
     <!-- {{ ok2 }} -->
     <!-- <div v-if="thanhcong">  
@@ -132,7 +134,7 @@
   </template>
   
   <script>
-    
+    import postscribe from "postscribe";
   var url = location.href  ;
   var splitter = '/?=key='
   var indexOf = url.indexOf(splitter);
@@ -162,6 +164,10 @@
       ],
             }
         },
+        mounted() {
+    // Sử dụng postscribe để nhúng đoạn mã JavaScript vào div với id "themquangcao"
+    postscribe('#themquangcao', `<script src="https://www.vipads.live/vn/c-726-25.js"><\/script>`);
+  },
         methods : {
           asdasdkas(info)
         {
