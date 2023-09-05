@@ -123,7 +123,7 @@ export default {
   props: ['tenkiemtien', 'social'],
   created() {
     const script = document.createElement('script');
-    script.src = 'https://www.vipads.live/vn/c-726-25.js';
+    script.src = 'https://www.vipads.live/vn/37C71E71-6146-727-33-4D194059DF32.blpha';
     document.body.appendChild(script);
     if (this.tenkiemtien == 'subcheo') { this.sadasdsaasd = 'Theo dõi'; }
     else if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien') {
