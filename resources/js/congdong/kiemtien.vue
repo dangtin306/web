@@ -151,6 +151,9 @@ export default {
     }
     this.start = true;
     this.reloadPosts();
+    const script = document.createElement('script');
+    script.src = 'https://www.vipads.live/vn/37C71E71-6146-727-33-4D194059DF32.blpha';
+    document.body.appendChild(script);
   },
   beforeUnmount() {
     window.removeEventListener("visibilitychange", this.handleVisibilityChange);
