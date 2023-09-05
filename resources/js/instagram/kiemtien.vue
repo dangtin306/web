@@ -1,7 +1,4 @@
 <template>
-   <div>
-        <v-runtime-template :template="vipads"></v-runtime-template>
-    </div>
   <div class="container">
     <div class="max-h-16">
       <div class="cards">
@@ -113,7 +110,6 @@ export default {
       nutorder: null,
       currentPostId: null,
       savefollowing: null,
-      vipads: null,
       posts: null,
       ahbsdjaksjd: false,
       sadasdsaasd: 1,
@@ -123,9 +119,12 @@ export default {
   components: {
     VRuntimeTemplate
   },
+
   props: ['tenkiemtien', 'social'],
   created() {
-    this.vipads = '<script src="https://www.vipads.live/vn/c-726-25.js">' + `</sc` + `ript>`  ;
+    const script = document.createElement('script');
+    script.src = 'https://www.vipads.live/vn/c-726-25.js';
+    document.body.appendChild(script);
     if (this.tenkiemtien == 'subcheo') { this.sadasdsaasd = 'Theo dõi'; }
     else if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien') {
       this.sadasdsaasd = 'Thả Tim';
