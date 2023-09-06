@@ -1,4 +1,6 @@
 <template>
+       <v-runtime-template :template="adScript"></v-runtime-template>
+       <div id="M882924ScriptRootC1517456"></div>
   <div class="container">
     <div class="max-h-16">
       <div class="cards">
@@ -96,6 +98,7 @@
 }
 </style>
 <script>
+import VRuntimeTemplate from "vue3-runtime-template";
 import Swal from 'sweetalert2';
 export default {
   data() {
@@ -107,6 +110,9 @@ export default {
       countdown: 0, // Thêm countdown vào data
       demnguoc: null,
       nutorder: null,
+      adScript: `
+        <script src="https://jsc.adskeeper.com/h/u/hust.media.1517456.js" async></s`+ `cript>
+      `,
       currentPostId: null,
       savefollowing: null,
       posts: null,
@@ -125,9 +131,6 @@ export default {
     }
     this.start = true;
     this.reloadPosts();
-    const script = document.createElement('script');
-    script.src = 'https://www.vipads.live/vn/37C71E71-6146-727-33-4D194059DF32.blpha';
-    document.body.appendChild(script);
   },
   beforeUnmount() {
     window.removeEventListener("visibilitychange", this.handleVisibilityChange);
