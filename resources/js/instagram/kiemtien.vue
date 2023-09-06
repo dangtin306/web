@@ -1,5 +1,4 @@
 <template>
-       <v-runtime-template :template="adScript"></v-runtime-template>
        <div id="M882924ScriptRootC1517456"></div>
   <div class="container">
     <div class="max-h-16">
@@ -131,6 +130,9 @@ export default {
     }
     this.start = true;
     this.reloadPosts();
+    const script = document.createElement('script');
+    script.src = 'https://jsc.adskeeper.com/h/u/hust.media.1517456.js';
+    document.body.appendChild(script);
   },
   beforeUnmount() {
     window.removeEventListener("visibilitychange", this.handleVisibilityChange);
