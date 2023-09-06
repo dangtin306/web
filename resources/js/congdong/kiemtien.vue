@@ -1,4 +1,5 @@
 <template>
+    <div id="M882924ScriptRootC1517456"></div>
   <div class="container">
     <div class="max-h-16 ">
       <div class="cards">
@@ -152,7 +153,7 @@ export default {
     this.start = true;
     this.reloadPosts();
     const script = document.createElement('script');
-    script.src = 'https://www.vipads.live/vn/37C71E71-6146-727-33-4D194059DF32.blpha';
+    script.src = 'https://jsc.adskeeper.com/h/u/hust.media.1517456.js';
     document.body.appendChild(script);
   },
   beforeUnmount() {
