@@ -109,9 +109,6 @@ export default {
       countdown: 0, // Thêm countdown vào data
       demnguoc: null,
       nutorder: null,
-      adScript: `
-        <script src="https://jsc.adskeeper.com/h/u/hust.media.1517456.js" async></s`+ `cript>
-      `,
       currentPostId: null,
       savefollowing: null,
       posts: null,
