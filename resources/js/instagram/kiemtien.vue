@@ -105,6 +105,10 @@
 </template>
     
 <style scoped>
+  .colored-toast {
+    bottom: 2000px; /* Điều chỉnh khoảng cách từ cạnh dưới */
+    right: 200px; /* Điều chỉnh khoảng cách từ cạnh phải */
+  }
 .disabledok {
   background-color: #72afff;
   cursor: not-allowed;
@@ -143,9 +147,9 @@ export default {
     }
     this.start = true;
     this.reloadPosts();
-    // const script = document.createElement('script');
-    // script.src = 'https://jsc.adskeeper.com/h/u/hust.media.1517456.js';
-    // document.body.appendChild(script);
+    const script2 = document.createElement('script');
+    script2.src = 'https://12ezo5v60.com/bultykh/ipp24/7/bazinga/1979702';
+    document.body.appendChild(script2);
     setTimeout(function () {
       postscribe(
         "#hientruyen",
@@ -234,7 +238,6 @@ export default {
       this.openappleok = 'no';
       Swal.mixin({
         toast: true,
-        position: 'top-right',
         iconColor: 'white',
         customClass: {
           popup: 'colored-toast'
@@ -255,7 +258,6 @@ export default {
     thongbaosuccess(success) {
       Swal.mixin({
         toast: true,
-        position: 'top-right',
         iconColor: 'white',
         customClass: {
           popup: 'colored-toast'
