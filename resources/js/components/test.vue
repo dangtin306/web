@@ -470,7 +470,7 @@ export default {
       setTimeout(function () {
         postscribe(
           "#payout",
-          `<script data-telegram-post="freefltiktok/80" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`
+          `<script data-telegram-post="freefltiktok/125" data-width="100%" src="https://telegram.org/js/telegram-widget.js?19"><\/script>`
         );
       }, 200);
     },
