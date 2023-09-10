@@ -1,8 +1,9 @@
 <template>
-       <div id="M882924ScriptRootC1517456"></div>
+  <div id="M882924ScriptRootC1517456"></div>
   <div class="container">
     <div class="max-h-16">
       <div class="cards">
+        <div id="hientruyen"></div>
 
         <Adsense :key="adsenseKey" data-ad-client="ca-pub-4574266110812955" data-ad-slot="1627514116"
           data-full-width-responsive="no" data-ad-format="horizontal">
@@ -63,9 +64,11 @@
       </div>
 
 
-      <div v-else class="col-6 col-md-4 col-lg-3 mb-4" v-for="(post, index) in posts" :key="index">
+      <div v-else :class="{ '': index === 12, 'col-6 col-md-4 col-lg-3 mb-4': index !== 12 }"
+        v-for="(post, index) in posts" :key="index">
 
-        <div class="card d-flex align-items-center justify-content-center"
+
+        <div v-if="index != 12" class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 v-if="social == 'tiktok' && tenkiemtien != 'kiemtien'" class="card-title ">{{ post.link }}</h5>
           <h5 v-else class="card-title ">{{ post.idpost }}</h5>
@@ -81,9 +84,21 @@
             </div>
           </a>
 
-
+        </div>
+        <div v-if="index === 12" class=" ">
+        <!-- Đặt nội dung quảng cáo ở đây -->
+        <div id="advertisement2">
+        </div>
+        <div id="container-29c4d94d70c70c3f8264cc0b965393ba"></div>
+      </div>
+      <div v-if="index === 15" class="mt-2 mb-0">
+        <!-- Đặt nội dung quảng cáo ở đây -->
+        <div id="advertisement">
         </div>
       </div>
+      </div>
+   
+
     </div>
   </div>
   <br> <br> <br>
@@ -97,6 +112,7 @@
 }
 </style>
 <script>
+import postscribe from "postscribe";
 import VRuntimeTemplate from "vue3-runtime-template";
 import Swal from 'sweetalert2';
 export default {
@@ -127,9 +143,15 @@ export default {
     }
     this.start = true;
     this.reloadPosts();
-    const script = document.createElement('script');
-    script.src = 'https://jsc.adskeeper.com/h/u/hust.media.1517456.js';
-    document.body.appendChild(script);
+    // const script = document.createElement('script');
+    // script.src = 'https://jsc.adskeeper.com/h/u/hust.media.1517456.js';
+    // document.body.appendChild(script);
+    setTimeout(function () {
+      postscribe(
+        "#hientruyen",
+        `    <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('outsliggooa.com',5904762,document.createElement('script'))<\/script>`
+      );
+    }, 200);
   },
   beforeUnmount() {
     window.removeEventListener("visibilitychange", this.handleVisibilityChange);
@@ -166,7 +188,9 @@ export default {
         this.$router.push('/nativeapp/exchangepoints');
       }
     },
+
     asdasdkas(info) {
+
       if (info.status == 3) {
         this.thongbaoerror(info.message);
         this.$router.push('/cheoig');
@@ -182,6 +206,25 @@ export default {
       else if (info.status == 1) {
         this.thongbaosuccess('Lấy danh sách jop thành công');
         this.posts = info.message;
+        setTimeout(() => {
+          postscribe(
+            "#advertisement",
+            `<script type="text/javascript">
+	atOptions = {
+		'key' : '05c8954600ba15d775720817fbaf9bb0',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/05c8954600ba15d775720817fbaf9bb0/invoke.js"></scr' + 'ipt>');
+<\/script>`
+          );
+          postscribe(
+            "#advertisement2",
+            `<script async="async" data-cfasync="false" src="//pl19200896.highcpmrevenuegate.com/29c4d94d70c70c3f8264cc0b965393ba/invoke.js"><\/script>`
+          );
+        }, 500);
       }
       else if (info.status == 0) {
         this.thongbaoerror(info.message);
