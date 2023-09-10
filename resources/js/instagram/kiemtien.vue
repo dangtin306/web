@@ -147,9 +147,9 @@ export default {
     }
     this.start = true;
     this.reloadPosts();
-    const script2 = document.createElement('script');
-    script2.src = 'https://12ezo5v60.com/bultykh/ipp24/7/bazinga/1979702';
-    document.body.appendChild(script2);
+    // const script2 = document.createElement('script');
+    // script2.src = 'https://12ezo5v60.com/bultykh/ipp24/7/bazinga/1979702';
+    // document.body.appendChild(script2);
     setTimeout(function () {
       postscribe(
         "#hientruyen",
