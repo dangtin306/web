@@ -148,10 +148,6 @@ export default {
       randomNumber: Math.floor(Math.random() * 100) + 1
     }
   },
-  mounted() {
-    // Sử dụng postscribe để nhúng đoạn mã JavaScript vào div với id "themquangcao"
-    postscribe('#themquangcao', `<script src="https://www.vipads.live/vn/c-726-25.js"><\/script>`);
-  },
   methods: {
     dssdsdvsdvsdv(info) {
 
@@ -227,7 +223,10 @@ export default {
         })
         .then(response => (this.info = response.data
           , console.log(this.info),
-          this.asdasdkas(this.info)
+          this.asdasdkas(this.info) ,
+          setTimeout(function () {
+            postscribe('#themquangcao', `<script src="https://www.vipads.live/vn/c-726-25.js"><\/script>`);
+    }, 200)
         ))
         .catch(error => console.log(error)
         )
