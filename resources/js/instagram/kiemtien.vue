@@ -154,7 +154,7 @@
 }
 
 .colored-toast2 {
-  top: -15px;
+  top: -107px;
 }
 
 .colored-toast2 .swal2-close {
