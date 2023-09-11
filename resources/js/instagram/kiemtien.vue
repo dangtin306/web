@@ -68,7 +68,7 @@
         v-for="(post, index) in posts" :key="index">
 
 
-        <div v-if="index != 12 && (tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo') && social == 'tiktok'" 
+        <div v-if="index != 12 && (tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo') && social == 'tiktok'"
           class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 class="card-title ">{{ post.idpost }}</h5>
@@ -91,7 +91,8 @@
           </div>
         </div>
 
-        <div v-if="index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo'" class="card d-flex align-items-center justify-content-center"
+        <div v-if="index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo'"
+          class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 v-if="social == 'tiktok' && tenkiemtien != 'kiemtien'" class="card-title ">{{ post.link }}</h5>
           <h5 v-else class="card-title ">{{ post.idpost }}</h5>
@@ -126,13 +127,42 @@
   </div>
   <br> <br> <br>
 </template>
-    
-<style scoped>
-.colored-toast {
-  bottom: 2000px;
-  /* Điều chỉnh khoảng cách từ cạnh dưới */
-  right: 200px;
-  /* Điều chỉnh khoảng cách từ cạnh phải */
+
+<style >
+.colored-toast2.swal2-icon-success {
+  background-color: #a5dc86 !important;
+}
+
+.colored-toast2.swal2-icon-error {
+  background-color: #f27474 !important;
+}
+
+.colored-toast2.swal2-icon-warning {
+  background-color: #f8bb86 !important;
+}
+
+.colored-toast2.swal2-icon-info {
+  background-color: #3fc3ee !important;
+}
+
+.colored-toast2.swal2-icon-question {
+  background-color: #87adbd !important;
+}
+
+.colored-toast2 .swal2-title {
+  color: white;
+}
+
+.colored-toast2 {
+  top: -15px;
+}
+
+.colored-toast2 .swal2-close {
+  color: white;
+}
+
+.colored-toast2 .swal2-html-container {
+  color: white;
 }
 
 .disabledok {
@@ -173,7 +203,7 @@ export default {
     }
     else if (this.tenkiemtien == "cmtcheo") {
       this.sadasdsaasd = "Bình luận";
-    } 
+    }
     this.start = true;
     this.reloadPosts();
     // const script2 = document.createElement('script');
@@ -276,8 +306,9 @@ export default {
       Swal.mixin({
         toast: true,
         iconColor: 'white',
+        position: 'bottom-right',
         customClass: {
-          popup: 'colored-toast'
+          popup: 'colored-toast2'
         },
         showConfirmButton: false,
         timer: 3000,
@@ -296,8 +327,9 @@ export default {
       Swal.mixin({
         toast: true,
         iconColor: 'white',
+        position: 'bottom-right',
         customClass: {
-          popup: 'colored-toast'
+          popup: 'colored-toast2'
         },
         showConfirmButton: false,
         timer: 3000,
@@ -385,7 +417,7 @@ export default {
 
     },
     handlePostFocus(idpost) {
-      if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien' || this.tenkiemtien == 'cmtcheo' ) {
+      if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien' || this.tenkiemtien == 'cmtcheo') {
         console.log(`Post ${idpost} focused`);
         axios
           .post('https://hust.media/insta/nhantien.php', {
