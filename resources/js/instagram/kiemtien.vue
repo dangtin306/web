@@ -68,7 +68,30 @@
         v-for="(post, index) in posts" :key="index">
 
 
-        <div v-if="index != 12" class="card d-flex align-items-center justify-content-center"
+        <div v-if="index != 12 && (tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo') && social == 'tiktok'" 
+          class="card d-flex align-items-center justify-content-center"
+          :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
+          <h5 class="card-title ">{{ post.idpost }}</h5>
+          <a @click.stop="handleLinkClick(post.idpost)" :href="post.link" target="_blank" class="px-10 py-2 rounded-md text-sm 
+            font-medium text-white bg-red-400 hover:bg-purple-400 
+            focus:outline-none focus:ring-2 focus:ring-offset-2 
+            focus:ring-red-500">
+
+            <div v-if="isLoading && currentPostId == post.idpost" class="spinner-border" role="status"></div>
+            <div v-else>
+              <span v-if="currentPostId == post.idpost"> {{ nutorder }} </span>
+              <span v-else>{{ sadasdsaasd }}</span>
+            </div>
+          </a>
+          <div class="overflow-y-auto max-h-64 border border-gray-300 rounded">
+            <div @click="saochep(value)" v-for="(value, key) in post.nd" :key="key"
+              class="p-4  py-2 px-2  border bg-white border-gray-300 rounded">
+              {{ value }}
+            </div>
+          </div>
+        </div>
+
+        <div v-if="index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo'" class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 v-if="social == 'tiktok' && tenkiemtien != 'kiemtien'" class="card-title ">{{ post.link }}</h5>
           <h5 v-else class="card-title ">{{ post.idpost }}</h5>
@@ -86,18 +109,18 @@
 
         </div>
         <div v-if="index === 12" class=" ">
-        <!-- Đặt nội dung quảng cáo ở đây -->
-        <div id="advertisement2">
+          <!-- Đặt nội dung quảng cáo ở đây -->
+          <div id="advertisement2">
+          </div>
+          <div id="container-29c4d94d70c70c3f8264cc0b965393ba"></div>
         </div>
-        <div id="container-29c4d94d70c70c3f8264cc0b965393ba"></div>
-      </div>
-      <div v-if="index === 15" class="mt-2 mb-0">
-        <!-- Đặt nội dung quảng cáo ở đây -->
-        <div id="advertisement">
+        <div v-if="index === 15" class="mt-2 mb-0">
+          <!-- Đặt nội dung quảng cáo ở đây -->
+          <div id="advertisement">
+          </div>
         </div>
       </div>
-      </div>
-   
+
 
     </div>
   </div>
@@ -105,10 +128,13 @@
 </template>
     
 <style scoped>
-  .colored-toast {
-    bottom: 2000px; /* Điều chỉnh khoảng cách từ cạnh dưới */
-    right: 200px; /* Điều chỉnh khoảng cách từ cạnh phải */
-  }
+.colored-toast {
+  bottom: 2000px;
+  /* Điều chỉnh khoảng cách từ cạnh dưới */
+  right: 200px;
+  /* Điều chỉnh khoảng cách từ cạnh phải */
+}
+
 .disabledok {
   background-color: #72afff;
   cursor: not-allowed;
@@ -145,6 +171,9 @@ export default {
     else if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien') {
       this.sadasdsaasd = 'Thả Tim';
     }
+    else if (this.tenkiemtien == "cmtcheo") {
+      this.sadasdsaasd = "Bình luận";
+    } 
     this.start = true;
     this.reloadPosts();
     // const script2 = document.createElement('script');
@@ -192,7 +221,15 @@ export default {
         this.$router.push('/nativeapp/exchangepoints');
       }
     },
+    async saochep(urlsplit) {
+      this.ketqua = "đã sao chép ";
 
+      await navigator.clipboard.writeText(urlsplit);
+
+      this.ketqua = "đã sao chép ";
+      this.thongbaosuccess("đã sao chép");
+      NativeAndroid.copyToClipboard(urlsplit);
+    },
     asdasdkas(info) {
 
       if (info.status == 3) {
@@ -348,7 +385,7 @@ export default {
 
     },
     handlePostFocus(idpost) {
-      if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien') {
+      if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien' || this.tenkiemtien == 'cmtcheo' ) {
         console.log(`Post ${idpost} focused`);
         axios
           .post('https://hust.media/insta/nhantien.php', {
