@@ -264,7 +264,13 @@ export default {
 
       if (info.status == 3) {
         this.thongbaoerror(info.message);
-        this.$router.push('/cheoig');
+        if (this.social == 'tiktok') {
+          this.$router.push('/jop/tiktok');
+        }
+        else {
+          this.$router.push('/cheoig');
+        }
+
       }
       else if (info.status == 8) {
         this.thongbaoerror(info.message);
