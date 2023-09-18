@@ -152,13 +152,13 @@ export default {
     }
     this.start = true;
     this.reloadPosts();
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://cdn.aanetwork.vn/code/e/b/eba0dc302bcd9a273f8bbb72be3a687b.js';
-    script.crossOrigin = 'anonymous';
+    // const script = document.createElement('script');
+    // script.async = true;
+    // script.src = 'https://cdn.aanetwork.vn/code/e/b/eba0dc302bcd9a273f8bbb72be3a687b.js';
+    // script.crossOrigin = 'anonymous';
 
-    // Thêm thẻ script vào phần head
-    document.head.appendChild(script);
+    // // Thêm thẻ script vào phần head
+    // document.head.appendChild(script);
   },
   beforeUnmount() {
     window.removeEventListener("visibilitychange", this.handleVisibilityChange);
