@@ -101,14 +101,14 @@
                   </div>
                 </button>
               </div>
-              <a href="https://hust.media/okioki.php/tele">
+            </form>
+            <a href="https://hust.media/okioki.php/tele">
                 <div class="flex mx-auto mt-3 w-100 ">
                 <button
                       class="p-2 shadow-lg rounded-2xl px-2 py-1 font-medium text-xs bg-green-500 rounded-md hover:bg-green-600 text-gray-50">
                       Quà sau khi đã kết nối </button>
                 </div>
               </a>
-            </form>
           </div>
 
         </div>
