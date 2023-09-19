@@ -8,6 +8,7 @@
     </div>
 
   </div>
+  <div id="hientruyen"></div>
   <div class="max-w-2xl px-1 py-4  mx-auto rounded-lg shadow-xl">
 
     <div v-if="info == null" class="container-fluid">
@@ -480,6 +481,7 @@
 }
 </style>
 <script>
+import postscribe from "postscribe";
 import Swal from 'sweetalert2';
 export default {
   // props: ['foo'],
@@ -503,7 +505,13 @@ export default {
     else {
       this.checktk();
     }
-
+    setTimeout(function () {
+      postscribe(
+        "#hientruyen",
+        `  <script async="async" data-cfasync="false" src="//ophoacit.com/1?z=5904788">
+<\/script>`
+      );
+    }, 200);
   },
   methods: {
     asdasdkas(info) {

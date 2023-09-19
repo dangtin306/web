@@ -6,8 +6,8 @@
         ins-class="display: block; height: 50px;" ins-style="display: block; height: 50px;">
       </Adsense>
     </div>
-    <div id="hientruyen"></div>
   </div>
+  <div id="hientruyen"></div>
   <div class="max-w-2xl px-1 py-4  mx-auto rounded-lg shadow-xl">
 
     <div v-if="info == null" class="container-fluid">
@@ -314,7 +314,7 @@ export default {
     setTimeout(function () {
       postscribe(
         "#hientruyen",
-        `    <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('outsliggooa.com',5904762,document.createElement('script'))<\/script>`
+        `  <script async="async" data-cfasync="false" src="//ophoacit.com/1?z=5904788"><\/script>`
       );
     }, 200);
 
