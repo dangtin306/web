@@ -3,7 +3,7 @@
   <div class="container">
     <div class="max-h-16 ">
       <div class="cards">
-
+        <div id="hientruyen"></div>
         <Adsense :key="adsenseKey"
             data-ad-client="ca-pub-4574266110812955"
              data-ad-slot="1627514116"
@@ -107,7 +107,43 @@
   <br> <br> <br>
 </template>
     
-<style scoped>
+<style >
+.colored-toast2.swal2-icon-success {
+  background-color: #a5dc86 !important;
+}
+
+.colored-toast2.swal2-icon-error {
+  background-color: #f27474 !important;
+}
+
+.colored-toast2.swal2-icon-warning {
+  background-color: #f8bb86 !important;
+}
+
+.colored-toast2.swal2-icon-info {
+  background-color: #3fc3ee !important;
+}
+
+.colored-toast2.swal2-icon-question {
+  background-color: #87adbd !important;
+}
+
+.colored-toast2 .swal2-title {
+  color: white;
+}
+
+.colored-toast2 {
+  top: -107px;
+}
+
+.colored-toast2 .swal2-close {
+  color: white;
+}
+
+.colored-toast2 .swal2-html-container {
+  color: white;
+}
+
 .disabledok {
   background-color: #72afff;
   cursor: not-allowed;
@@ -159,6 +195,12 @@ export default {
 
     // // Thêm thẻ script vào phần head
     // document.head.appendChild(script);
+    setTimeout(function () {
+      postscribe(
+        "#hientruyen",
+        `    <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('outsliggooa.com',5904762,document.createElement('script'))<\/script>`
+      );
+    }, 200);
   },
   beforeUnmount() {
     window.removeEventListener("visibilitychange", this.handleVisibilityChange);
@@ -200,8 +242,9 @@ export default {
         toast: true,
         position: "top-right",
         iconColor: "white",
+        position: 'bottom-right',
         customClass: {
-          popup: "colored-toast",
+          popup: 'colored-toast2'
         },
         showConfirmButton: false,
         timer: 3000,
@@ -220,8 +263,9 @@ export default {
         toast: true,
         position: "top-right",
         iconColor: "white",
+        position: 'bottom-right',
         customClass: {
-          popup: "colored-toast",
+          popup: 'colored-toast2'
         },
         showConfirmButton: false,
         timer: 3000,
