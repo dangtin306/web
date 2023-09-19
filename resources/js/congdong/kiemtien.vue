@@ -151,6 +151,7 @@
 }
 </style>
 <script>
+import postscribe from "postscribe";
 import Swal from "sweetalert2";
 export default {
   data() {
