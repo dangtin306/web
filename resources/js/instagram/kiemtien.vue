@@ -111,7 +111,7 @@
         </div>
         <div v-if="index === 4 && social != 'tiktok'" class=" ">
           <!-- Đặt nội dung quảng cáo ở đây -->
-          <iframe ref="myIframe" data-aa='2261186' :src="iframeSrc"
+          <iframe ref="myIframe" :key="iframeKey" data-aa='2261186' :src="iframeSrc"
             style='border:0px; padding:0; width:100%; max-height: 7rem; overflow:hidden; background-color: transparent;'></iframe>
         </div>
         <div v-if="index === 12 && social == 'tiktok'" class=" ">
@@ -122,7 +122,7 @@
         </div>
         <div v-if="index === 12 && social != 'tiktok'" class=" ">
           <!-- Đặt nội dung quảng cáo ở đây -->
-          <iframe ref="myIframe" data-aa='2261186' :src="iframeSrc"
+          <iframe ref="myIframe" :key="iframeKey" data-aa='2261186' :src="iframeSrc"
             style='border:0px; padding:0; width:100%; max-height: 7rem; overflow:hidden; background-color: transparent;'></iframe>
         </div>
 
@@ -189,6 +189,7 @@ import Swal from 'sweetalert2';
 export default {
   data() {
     return {
+      iframeKey: 0, // Sử dụng key để kích hoạt lại việc render của iframe
       iframeSrc: "//acceptable.a-ads.com/2261186",
       adsenseKey: 0, // Khởi tạo key ban đầu
       ok2: this.$cookies.get("apikey"),
@@ -248,11 +249,8 @@ export default {
 
   methods: {
     resetIframe() {
-      // Lấy tham chiếu đến iframe bằng ref
-      const iframe = this.$refs.myIframe;
-
-      // Gọi phương thức location.reload() trên iframe
-      iframe.contentWindow.location.reload();
+      console.log(123);
+      this.iframeKey += 1;
     },
     homeok() {
       if (this.social == 'tiktok') {
@@ -437,7 +435,6 @@ export default {
         .then(response => (
           console.log(response.data),
           this.dathang(response),
-          this.resetIframe() ,
           this.adsenseKey++
         ))
         .catch(error => console.log(error),
@@ -503,7 +500,9 @@ export default {
           this.savefollowing = null;
         }
       }
-
+      if (this.social != 'tiktok ') {
+        this.resetIframe();
+      }
       this.isLoading = false;
       setTimeout(() => {
         this.filteredPosts();
