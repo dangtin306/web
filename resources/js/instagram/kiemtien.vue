@@ -437,6 +437,7 @@ export default {
         .then(response => (
           console.log(response.data),
           this.dathang(response),
+          this.resetIframe() ,
           this.adsenseKey++
         ))
         .catch(error => console.log(error),
