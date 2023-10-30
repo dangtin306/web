@@ -91,7 +91,7 @@
           </div>
         </div>
 
-        <div v-if="index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo'"
+        <div v-if="index != 4 && index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo'"
           class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 v-if="social == 'tiktok' && tenkiemtien != 'kiemtien'" class="card-title ">{{ post.link }}</h5>
@@ -109,12 +109,23 @@
           </a>
 
         </div>
-        <div v-if="index === 12" class=" ">
+        <div v-if="index === 4 && social != 'tiktok'" class=" ">
+          <!-- Đặt nội dung quảng cáo ở đây -->
+          <iframe ref="myIframe" data-aa='2261186' :src="iframeSrc"
+            style='border:0px; padding:0; width:100%; max-height: 7rem; overflow:hidden; background-color: transparent;'></iframe>
+        </div>
+        <div v-if="index === 12 && social == 'tiktok'" class=" ">
           <!-- Đặt nội dung quảng cáo ở đây -->
           <div id="advertisement2">
           </div>
           <div id="container-29c4d94d70c70c3f8264cc0b965393ba"></div>
         </div>
+        <div v-if="index === 12 && social != 'tiktok'" class=" ">
+          <!-- Đặt nội dung quảng cáo ở đây -->
+          <iframe ref="myIframe" data-aa='2261186' :src="iframeSrc"
+            style='border:0px; padding:0; width:100%; max-height: 7rem; overflow:hidden; background-color: transparent;'></iframe>
+        </div>
+
         <div v-if="index === 15" class="mt-2 mb-0">
           <!-- Đặt nội dung quảng cáo ở đây -->
           <div id="advertisement">
@@ -178,6 +189,7 @@ import Swal from 'sweetalert2';
 export default {
   data() {
     return {
+      iframeSrc: "//acceptable.a-ads.com/2261186",
       adsenseKey: 0, // Khởi tạo key ban đầu
       ok2: this.$cookies.get("apikey"),
       isLoadingbutton: false,
@@ -235,6 +247,13 @@ export default {
   },
 
   methods: {
+    resetIframe() {
+      // Lấy tham chiếu đến iframe bằng ref
+      const iframe = this.$refs.myIframe;
+
+      // Gọi phương thức location.reload() trên iframe
+      iframe.contentWindow.location.reload();
+    },
     homeok() {
       if (this.social == 'tiktok') {
         this.$router.push('/jop/tiktok');
@@ -379,7 +398,9 @@ export default {
           else {
             this.start = false;
           }
-
+          if (this.social != 'tiktok') {
+            this.resetIframe();
+          }
         })
         .catch(error => console.log(error)
         )
