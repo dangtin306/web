@@ -91,7 +91,8 @@
           </div>
         </div>
 
-        <div v-if="index != 4 && index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo'"
+        <div
+          v-if="index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo' && (social == 'tiktok') || (social != 'tiktok' && index != 4)"
           class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 v-if="social == 'tiktok' && tenkiemtien != 'kiemtien'" class="card-title ">{{ post.link }}</h5>
@@ -109,6 +110,7 @@
           </a>
 
         </div>
+
         <div v-if="index === 4 && social != 'tiktok'" class=" ">
           <!-- Đặt nội dung quảng cáo ở đây -->
           <iframe ref="myIframe" :key="iframeKey" data-aa='2271984' :src="iframeSrc"
@@ -203,7 +205,8 @@ export default {
       posts: null,
       ahbsdjaksjd: false,
       sadasdsaasd: 1,
-      start: false
+      start: false,
+      cauhinh: null
     };
   },
 
@@ -300,6 +303,9 @@ export default {
       else if (info.status == 1) {
         this.thongbaosuccess('Lấy danh sách jop thành công');
         this.posts = info.message;
+        if (info.cauhinh) {
+          this.cauhinh = info.cauhinh;
+        };
         setTimeout(() => {
           postscribe(
             "#advertisement",
