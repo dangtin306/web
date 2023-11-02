@@ -83,7 +83,7 @@
           <ul id="dsnick" class="list-group mt-3 max-h-80 overflow-y-scroll">
             <li v-for="user in listcauhinh" :key="user.id" class="list-group-item">
               <label class="radio-inline flex items-center">
-                <input v-model="idfacebook" :id="user.id" type="radio" :name="'chk'" :value="user.idfacebook"
+                <input v-model="idfacebook" :id="user.id" type="radio" :name="'chk'" :value="user"
                   class="form-radio form-radio-lg h-6 w-6 text-pink-500">
                 <a :href="user.lienketfb" target="_blank" class="flex items-center">
                   <img :src="'data:image/jpeg;base64,' + user.ava" class="w-10 h-10 rounded-full ml-2 mr-2">
@@ -144,6 +144,7 @@ export default {
       chedokiemxu: 1,
       nutxuly: null,
       idfacebook: null,
+      username_ig: '' ,
       randomNumber: Math.floor(Math.random() * 100) + 1
     }
   },
@@ -172,14 +173,17 @@ export default {
     },
     xacnhan() {
       this.nutxuly = 1;
+      this.username_ig= this.idfacebook.tenfb; // Lấy giá trị của idfacebook
+      this.idfacebook = this.idfacebook.idfacebook; // Lấy giá trị của tenfb
       console.log(this.idfacebook);
-      console.log(this.chedokiemxu);
+      console.log(this.username_ig);
       axios
         .post('https://hust.media/insta/profile.php', {
           key: this.ok2,
           idfacebook: this.idfacebook,
           chedo: 'choncauhinh',
-          chedokiemxu: this.chedokiemxu
+          chedokiemxu: this.chedokiemxu ,
+          username_ig: this.username_ig
         })
         .then(response => (
           this.info = response.data

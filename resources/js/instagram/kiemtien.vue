@@ -46,6 +46,9 @@
           <div v-else> Nhận Tất Cả điểm</div>
 
         </button>
+        <div class="text-xs mb-0" v-if="username_ig && social != 'tiktok'">
+            Nick cấu hình {{ username_ig }}
+          </div>
       </div>
       <div v-if="posts == null">
         <br>
@@ -62,7 +65,6 @@
           </div>
         </div>
       </div>
-
 
       <div v-else :class="{ '': index === 12, 'col-6 col-md-4 col-lg-3 mb-4': index !== 12 }"
         v-for="(post, index) in posts" :key="index">
@@ -206,7 +208,8 @@ export default {
       ahbsdjaksjd: false,
       sadasdsaasd: 1,
       start: false,
-      cauhinh: null
+      cauhinh: null,
+      username_ig: null,
     };
   },
 
@@ -231,6 +234,12 @@ export default {
         `    <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('outsliggooa.com',5904762,document.createElement('script'))<\/script>`
       );
     }, 200);
+    if (this.social == 'tiktok') {
+
+    }
+    else {
+      this.laycauhinh('');
+    }
   },
   beforeUnmount() {
     window.removeEventListener("visibilitychange", this.handleVisibilityChange);
@@ -254,6 +263,20 @@ export default {
     resetIframe() {
       console.log(123);
       this.iframeKey += 1;
+    },
+    laycauhinh() {
+      axios
+        .get('https://hust.media/insta/laycauhinh.php?apikey=' + this.ok2)
+        .then(response => {
+          this.info = response.data
+            , console.log(this.info)
+          if (this.info) {
+            this.username_ig = this.info;
+            console.log(this.username_ig)
+          }
+        })
+        .catch(error => console.log(error)
+        )
     },
     homeok() {
       if (this.social == 'tiktok') {
