@@ -31,8 +31,9 @@
          </div> -->
       <!-- Button trigger modal -->
       <div class="text-center">
-        <router-link type="button" class="mx-2  btn btn-primary" to="/nativeapp/exchangepoints">Chuyển điểm sang
-          xu</router-link>
+        <a type="button" class="mx-2  btn btn-primary" href="https://hust.media/reactapp/exchangepoints/insta">Chuyển điểm
+          sang
+          xu</a>
         <div v-if="sodiem">
           Số điểm hiện tại là {{ sodiem }}
         </div>
@@ -197,7 +198,7 @@
 
 
 
-          <router-link type="button" to="/nativeapp/exchangepoints">
+          <a type="button" href="https://hust.media/reactapp/exchangepoints/insta">
 
             <div class="max-w-7xl mx-2 py-2 mb-2">
               <div class="relative group">
@@ -227,7 +228,7 @@
               </div>
             </div>
 
-          </router-link>
+          </a>
 
 
         </div>

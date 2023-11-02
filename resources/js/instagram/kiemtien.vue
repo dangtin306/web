@@ -265,7 +265,7 @@ export default {
         window.location.href = "https://hust.media/reactapp/exchangepoints";
       }
       else {
-        this.$router.push('/nativeapp/exchangepoints');
+        window.location.href = "https://hust.media/reactapp/exchangepoints/insta";
       }
     },
     async saochep(urlsplit) {
