@@ -126,8 +126,8 @@
         </div>
         <div v-if="index === 12 && social != 'tiktok'" class=" ">
           <!-- Đặt nội dung quảng cáo ở đây -->
-          <iframe ref="myIframe" :key="iframeKey" data-aa='2271984' :src="iframeSrc"
-            style='border:0px; padding:0; width:100%; max-height: 7rem; overflow:hidden; background-color: transparent;'></iframe>
+          <!-- <iframe ref="myIframe" :key="iframeKey" data-aa='2271984' :src="iframeSrc"
+            style='border:0px; padding:0; width:100%; max-height: 7rem; overflow:hidden; background-color: transparent;'></iframe> -->
         </div>
 
         <div v-if="index === 15" class="mt-2 mb-0">
