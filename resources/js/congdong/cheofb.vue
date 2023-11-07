@@ -9,7 +9,7 @@
 
   </div>
   <div id="hientruyen"></div>
-  <div class="max-w-2xl px-1 py-4  mx-auto rounded-lg shadow-xl">
+  <div class="max-w-3xl px-1 py-4  mx-auto rounded-lg shadow-xl">
 
     <div v-if="info == null" class="container-fluid">
       <div class="row" style="background-color: #FFB6C1;">
@@ -118,6 +118,10 @@
 
       <div v-if="social == 'tiktok'">
         <div class="mt-0 mt-0">
+          <div align="center">
+            <iframe data-aa='2271984' src='//ad.a-ads.com/2271984?size=320x50'
+              style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+          </div>
           <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr">
 
 
@@ -221,9 +225,13 @@
               </router-link>
             </div>
 
+          </div>
 
-
-
+          <div class="flex flex-wrap justify-center">
+            <iframe data-aa='2271984' src='//ad.a-ads.com/2271984?size=320x50'
+              style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+            <iframe data-aa='2271984' src='//ad.a-ads.com/2271984?size=320x50'
+              style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
           </div>
         </div>
       </div>
