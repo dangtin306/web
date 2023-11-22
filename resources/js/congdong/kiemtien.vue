@@ -293,7 +293,7 @@ export default {
       this.currentPostId = null;
       this.posts = null;
       this.isLoadingbutton = true;
-      this.countdown = 7; // Khởi tạo giá trị ban đầu cho countdown
+      this.countdown = 5; // Khởi tạo giá trị ban đầu cho countdown
       const intervalId = setInterval(() => {
         this.countdown--; // Giảm giá trị countdown mỗi giây
         if (this.countdown === 0) {
