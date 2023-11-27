@@ -332,7 +332,7 @@
       </div>
 
       <div class="col-xl-4   ">
-        <a  href="https://t.me/freefltiktok/24"  >
+        <a  href="https://hust.media/jop/pay/blog.php?tele=freefltiktok/24"  >
         <div class="max-w-7xl mx-4 py-2 mb-2">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r 
@@ -362,7 +362,7 @@
       </div>
 
       <div class="col-xl-4   ">
-        <a  href="https://t.me/freefltiktok/17"  >
+        <a  href="https://hust.media/jop/pay/blog.php?tele=freefltiktok/17"  >
         <div class="max-w-7xl mx-4 py-2 mb-2">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r 
@@ -391,7 +391,7 @@
       </a>
       </div>
       <div class="col-xl-4   ">
-        <a   href="https://hust.media/followtiktok.php" >
+        <a   href="https://hust.media/reactapp/jop/cheotiktok" >
         <div class="max-w-7xl mx-4 py-2 mb-2">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r 
