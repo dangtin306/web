@@ -94,7 +94,7 @@
         </div>
 
         <div
-          v-if="index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo' && (social == 'tiktok') || (social != 'tiktok' && index != 4)"
+          v-if="index != 12 && tenkiemtien != 'danhgiapage'  && tenkiemtien != 'cmtcheo' && (social == 'tiktok') || (social != 'tiktok' && index != 4)"
           class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 v-if="social == 'tiktok' && tenkiemtien != 'kiemtien'" class="card-title ">{{ post.link }}</h5>
@@ -222,6 +222,9 @@ export default {
     }
     else if (this.tenkiemtien == "cmtcheo") {
       this.sadasdsaasd = "Bình luận";
+    }
+    else if (this.tenkiemtien == "danhgiapage") {
+      this.sadasdsaasd = "Reviews Page";
     }
     this.start = true;
     this.reloadPosts();
@@ -471,7 +474,7 @@ export default {
 
     },
     handlePostFocus(idpost) {
-      if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien' || this.tenkiemtien == 'cmtcheo') {
+      if (this.tenkiemtien == 'timcheo' || this.tenkiemtien == 'kiemtien' || this.tenkiemtien == 'cmtcheo' || this.tenkiemtien == 'danhgiapage' ) {
         console.log(`Post ${idpost} focused`);
         axios
           .post('https://hust.media/insta/nhantien.php', {
