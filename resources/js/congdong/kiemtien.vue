@@ -179,7 +179,7 @@ export default {
     } else if (this.tenkiemtien == "likepagecheo") {
       this.sadasdsaasd = "Like Fanpage";
     } else if (this.tenkiemtien == "danhgiapage") {
-      this.sadasdsaasd = "Đánh giá Page";
+      this.sadasdsaasd = "Reviews Page";
     } else if (this.tenkiemtien == "sharecheo") {
       this.sadasdsaasd = "Chia sẻ";
     } else if (this.tenkiemtien == "cmtcheo") {

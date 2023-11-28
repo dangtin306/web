@@ -443,7 +443,7 @@ rounded-2xl leading-none flex items-top justify-start space-x-3">
                     <div class="space-y-2">
 
                       <p class="text-lg text-slate-1000">
-                        <img src="https://hust.media/img/icon/sharefb.svg" class="h-5 w-5 cananh">
+                        <img src="https://hust.media/img/icon/reviews.png" class="h-5 w-5 cananh">
                        Reviews Page Nhận Tiền
                       </p>
                       <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200"
