@@ -76,6 +76,13 @@
               <span v-else>{{ sadasdsaasd }}</span>
             </div>
           </a>
+          
+          <a  v-if="tenkiemtien == 'danhgiapage'" @click.stop="handleLinkClick(post.idpost)" :href="'https://www.facebook.com/' + post.idpost" target="_blank" class="px-10 py-2 rounded-md text-sm 
+            font-medium text-white bg-red-400 hover:bg-purple-400 
+            focus:outline-none focus:ring-2 focus:ring-offset-2 
+            focus:ring-red-500">
+            <span>Link id</span>
+          </a>
           <div class="overflow-y-auto max-h-64 border border-gray-300 rounded">
             <div @click="saochep(value)" v-for="(value, key) in post.nd" :key="key"
               class="p-4  py-2 px-2  border bg-white border-gray-300 rounded">
