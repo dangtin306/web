@@ -8,6 +8,8 @@
     </div>
 
   </div>
+  <div id="M882924ScriptRootC1520508"></div>
+  <div id="adskeeper"></div>
   <div id="hientruyen"></div>
   <div class="max-w-3xl px-1 py-4  mx-auto rounded-lg shadow-xl">
 
@@ -115,13 +117,12 @@
 
         </div>
       </div>
-
       <div v-if="social == 'tiktok'">
         <div class="mt-0 mt-0">
-          <div align="center">
+          <!-- <div align="center">
             <iframe data-aa='2271984' src='//ad.a-ads.com/2271984?size=320x50'
               style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-          </div>
+          </div> -->
           <div class="d-grid gap-1" style="grid-template-columns:1fr 1fr">
 
 
@@ -227,12 +228,12 @@
 
           </div>
 
-          <div class="flex flex-wrap justify-center">
+          <!-- <div class="flex flex-wrap justify-center">
             <iframe data-aa='2271984' src='//ad.a-ads.com/2271984?size=320x50'
               style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
             <iframe data-aa='2271984' src='//ad.a-ads.com/2271984?size=320x50'
               style='width:320px; height:50px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-          </div>
+          </div> -->
         </div>
       </div>
       <div v-else>
@@ -444,7 +445,7 @@ rounded-2xl leading-none flex items-top justify-start space-x-3">
 
                       <p class="text-lg text-slate-1000">
                         <img src="https://hust.media/img/icon/reviews.png" class="h-5 w-5 cananh">
-                       Reviews Page Nhận Tiền
+                        Reviews Page Nhận Tiền
                       </p>
                       <div class="block text-indigo-400 group-hover:text-slate-800 transition duration-200"
                         target="_blank">
@@ -523,6 +524,7 @@ rounded-2xl leading-none flex items-top justify-start space-x-3">
 <script>
 import postscribe from "postscribe";
 import Swal from 'sweetalert2';
+import VRuntimeTemplate from "vue3-runtime-template";
 export default {
   // props: ['foo'],
   data() {
@@ -537,6 +539,9 @@ export default {
       info: null
     }
   },
+  components: {
+    VRuntimeTemplate
+  },
   props: ['social'],
   created() {
     if (!this.ok2) {
@@ -550,6 +555,10 @@ export default {
         "#hientruyen",
         `  <script async="async" data-cfasync="false" src="//ophoacit.com/1?z=5904788">
 <\/script>`
+      );
+      postscribe(
+        "#adskeeper",
+        `  <script async="async"  src="https://jsc.adskeeper.com/h/u/hust.media.1520508.js" ><\/script>`
       );
     }, 200);
   },

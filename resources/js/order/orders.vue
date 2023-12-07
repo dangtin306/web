@@ -344,15 +344,15 @@ import VRuntimeTemplate from "vue3-runtime-template";
         { text: 'Tăng tương tác instagram', value: [ { social: 'Instagram', chedo: 1 }], img: 'https://hust.media/img/icon/200w%20(1).gif' }  ,
         { text: 'Tăng tương tác Youtube', value: [ { social: 'Youtube', chedo: 1 }], img: 'https://hust.media/img/icon/%C3%A1dasdasd.gif' }  ,
         { text: 'Tăng tương tác Telegram', value: [ { social: 'Telegram', chedo: 2 }] , img: 'https://hust.media/img/icon/telegram.png' }  ,
+        { text: 'Tăng tương tác X.com', value: [ { social: 'Twitter', chedo: 2 }] , img: 'https://hust.media/img/icon/x.com.webp' }  ,
         { text: 'Các nền tảng khác', value: [ { social: 'All', chedo: 2 }] , 
-        img: ['https://hust.media/img/icon/twitter.png',
+        img: [
          'https://hust.media/img/icon/soundcloud.png', 'https://hust.media/img/icon/twitch.png'
         , 'https://hust.media/img/icon/discord.png'
         , 'https://hust.media/img/icon/spotify.png']
       
       }  ,
       { text: 'Tăng tương tác Shopee', value: [ { social: 'Shopee', chedo: 2 }] , img: 'https://hust.media/img/icon/sadasdasd.gif' }  ,
-      { text: 'Tăng tương tác Lazada', value: [ { social: 'Lazada', chedo: 2 }] , img: 'https://hust.media/img/icon/lazadaokok.jpg' }  ,
       ],
       options2save: [] ,
       options2: [] ,
