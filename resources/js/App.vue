@@ -263,12 +263,12 @@ data-template="vertical-menu-template-free"
         <div data-i18n="Basic">Đọc truyện tranh :)</div>
         </a>
         </li>
-        <li class="menu-item">
+        <!-- <li class="menu-item">
           <router-link  to="/anime/home" class="menu-link layout-menu-toggle">
           <img src="https://gifdb.com/images/high/icon-happy-cute-anime-girl-4pq05vxulhcty9x3.gif" style="width:27px;height:27px">
           <div data-i18n="Basic">Xem Hoạt hình</div>
         </router-link>
-          </li>
+          </li> -->
       <li class="menu-item">
         <a href="/game/index.php" class="menu-link">
         <img src="https://hust.media/img/icon/images.png" style="width:27px;height:27px">
