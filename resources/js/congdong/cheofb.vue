@@ -241,7 +241,7 @@
 
                       <p class="text-lg text-slate-1000">
                         <img src="https://hust.media/img/icon/commentfb.svg" class="h-5 w-5 cananh">
-                        Bình luận chưa hoạt động
+                        Bình luận nhận xu 2
                       </p>
                       <div class="text-xs block text-indigo-400 group-hover:text-slate-800 transition duration-200"
                         target="_blank">
