@@ -70,8 +70,29 @@
         v-for="(post, index) in posts" :key="index">
 
 
-        <div
-          v-if="index != 12 && (tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo' || tenkiemtien == 'tiktok_comment') && social == 'tiktok'"
+        <div v-if="index != 12 && (tenkiemtien == 'tiktok_comment') && social == 'tiktok'"
+          class="card d-flex align-items-center justify-content-center"
+          :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
+          <h5 class="card-title ">{{ post.idpost }}</h5>
+          <a @click.stop="handleLinkClick(post.idpost)" :href="post.link" target="_blank" class="px-10 py-2 rounded-md text-sm 
+            font-medium text-white bg-red-400 hover:bg-purple-400 
+            focus:outline-none focus:ring-2 focus:ring-offset-2 
+            focus:ring-red-500">
+
+            <div v-if="isLoading && currentPostId == post.idpost" class="spinner-border" role="status"></div>
+            <div v-else>
+              <span v-if="currentPostId == post.idpost"> {{ nutorder }} </span>
+              <span v-else>{{ sadasdsaasd }}</span>
+            </div>
+          </a>
+          <div class="overflow-y-auto max-h-64 border border-gray-300 rounded">
+            <div @click="saochep(value)" v-for="(value, key) in post.nd" :key="key"
+              class="p-4  py-2 px-2  border bg-white border-gray-300 rounded">
+              {{ value.comment }}
+            </div>
+          </div>
+        </div>
+        <div v-if="index != 12 && (tenkiemtien == 'danhgiapage' || tenkiemtien == 'cmtcheo') && social == 'tiktok'"
           class="card d-flex align-items-center justify-content-center"
           :style="{ backgroundImage: 'url(https://picsum.photos/300/200?random=' + post.idpost + ')', backgroundSize: 'cover' }">
           <h5 class="card-title ">{{ post.idpost }}</h5>
@@ -93,7 +114,6 @@
             </div>
           </div>
         </div>
-
         <div
           v-if="index != 12 && tenkiemtien != 'danhgiapage' && tenkiemtien != 'cmtcheo' && tenkiemtien != 'tiktok_comment' && (social == 'tiktok') || (social != 'tiktok' && index != 4)"
           class="card d-flex align-items-center justify-content-center"
@@ -211,6 +231,7 @@ export default {
       start: false,
       cauhinh: null,
       username_ig: null,
+      id_cmt: '',
     };
   },
 
@@ -256,7 +277,12 @@ export default {
       if (document.visibilityState === "visible") {
         const postId = localStorage.getItem("postId");
         if (postId) {
-          this.handlePostFocus(postId);
+          if (this.tenkiemtien == 'tiktok_comment') {
+            this.handlePostFocus(this.id_cmt);
+          }
+          else {
+            this.handlePostFocus(postId);
+          }
           setTimeout(() => {
             localStorage.removeItem("postId");
           }, 500);
@@ -302,13 +328,23 @@ export default {
       }
     },
     async saochep(urlsplit) {
-      this.ketqua = "đã sao chép ";
+      if (this.tenkiemtien == 'tiktok_comment') {
+        this.ketqua = "đã sao chép ";
+        this.id_cmt = urlsplit.idpost;
+        await navigator.clipboard.writeText(urlsplit.comment);
+        this.ketqua = "đã sao chép ";
+        this.thongbaosuccess("đã sao chép");
+        NativeAndroid.copyToClipboard(urlsplit.comment);
+      }
+      else {
+        this.ketqua = "đã sao chép ";
 
-      await navigator.clipboard.writeText(urlsplit);
+        await navigator.clipboard.writeText(urlsplit);
 
-      this.ketqua = "đã sao chép ";
-      this.thongbaosuccess("đã sao chép");
-      NativeAndroid.copyToClipboard(urlsplit);
+        this.ketqua = "đã sao chép ";
+        this.thongbaosuccess("đã sao chép");
+        NativeAndroid.copyToClipboard(urlsplit);
+      }
     },
     asdasdkas(info) {
 
@@ -449,7 +485,10 @@ export default {
     handleLinkClick(idpost) {
       this.isLoading = true;
       this.currentPostId = idpost;
-      if (this.savefollowing == null) {
+      if (this.tenkiemtien == 'tiktok_comment') {
+        this.savefollowing = this.id_cmt;
+      }
+      else if (this.savefollowing == null) {
         this.savefollowing = idpost;
       }
       else {
