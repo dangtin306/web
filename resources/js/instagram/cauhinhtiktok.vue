@@ -84,7 +84,7 @@
             <li v-for="user in listcauhinh" :key="user.id" class="list-group-item">
               <label class="radio-inline flex items-center">
                 <input v-model="idfacebook" :id="user.id" type="radio" :name="'chk'" :value="user.idfacebook"
-                  class="form-radio form-radio-lg h-6 w-6 text-pink-500">
+                  @change="handleChange(user.tenfb)" class="form-radio form-radio-lg h-6 w-6 text-pink-500">
                 <a :href="user.lienketfb" target="_blank" class="flex items-center">
                   <!-- <img :src="'data:image/jpeg;base64,' + user.ava" class="w-10 h-10 rounded-full ml-2 mr-2"> -->
                   &emsp; <span>{{ user.tenfb }}</span>
@@ -143,6 +143,7 @@ export default {
       listcauhinh: null,
       nickdangdung: null,
       chedokiemxu: 1,
+      tenfb: '',
       nutxuly: null,
       idfacebook: null,
       randomNumber: Math.floor(Math.random() * 100) + 1
@@ -170,6 +171,9 @@ export default {
       }
       this.nutxuly = 0;
     },
+    handleChange(value) {
+      this.tenfb = value;
+    },
     xacnhan() {
       this.nutxuly = 1;
       console.log(this.idfacebook);
@@ -180,7 +184,8 @@ export default {
           idfacebook: this.idfacebook,
           chedo: 'choncauhinh',
           chedokiemxu: this.chedokiemxu,
-          social: 'tiktok'
+          social: 'tiktok',
+          tenfb: this.tenfb
         })
         .then(response => (
           this.info = response.data
@@ -223,10 +228,10 @@ export default {
         })
         .then(response => (this.info = response.data
           , console.log(this.info),
-          this.asdasdkas(this.info) ,
+          this.asdasdkas(this.info),
           setTimeout(function () {
             postscribe('#themquangcao', `<script src="https://www.vipads.live/vn/c-726-25.js"><\/script>`);
-    }, 200)
+          }, 200)
         ))
         .catch(error => console.log(error)
         )
